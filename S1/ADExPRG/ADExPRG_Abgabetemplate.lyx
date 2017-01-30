@@ -1,0 +1,812 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\begin_preamble
+\usepackage{listings}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\renewcommand{\thesection}{\arabic{section}} 
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,shadows,arrows,chains}
+\lstdefinestyle{DOS}
+{
+    backgroundcolor=\color{white},
+    basicstyle=\scriptsize\color{black}\ttfamily,
+    numbers=none,
+    columns=fixed,
+    keywordstyle=\color{black},
+    frame=lrtb
+}
+\end_preamble
+\use_default_options true
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language={[XSC]Pascal},aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\ttfamily},numbers=left,numbersep=4pt,numberstyle={\scriptsize\color{gray}},keywordstyle={\color{blue}},commentstyle={\color{dkgreen}},stringstyle={\color{mauve}},breaklines=true,breakatwhitespace=true,tabsize=2"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+PRO1x & ADE1x WS 1X/1X, Übung X 
+\end_layout
+
+\begin_layout Author
+Name Name
+\end_layout
+
+\begin_layout Date
+1X.0X.201X
+\end_layout
+
+\begin_layout Section
+Aufgabe 1
+\end_layout
+
+\begin_layout Subsection
+Lösungsidee
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+ eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+ voluptua.
+ At vero eos et accusam et justo duo dolores et ea rebum.
+ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+ sit amet.
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+ eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+ voluptua.
+ At vero eos et accusam et justo duo dolores et ea rebum.
+ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+ sit amet.
+\end_layout
+
+\begin_layout Subsection
+Ablaufdiagramm
+\end_layout
+
+\begin_layout Paragraph
+Beispielablaufdiagramm.
+ 
+\end_layout
+
+\begin_layout Standard
+no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle{connector} = [->]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzset{     
+\end_layout
+
+\begin_layout Plain Layout
+
+ triangle/.style = {
+\end_layout
+
+\begin_layout Plain Layout
+
+					draw,
+\end_layout
+
+\begin_layout Plain Layout
+
+					fill=white, 
+\end_layout
+
+\begin_layout Plain Layout
+
+					regular polygon, 
+\end_layout
+
+\begin_layout Plain Layout
+
+					regular polygon sides=3
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+    node rotated/.style = {rotate=180},
+\end_layout
+
+\begin_layout Plain Layout
+
+    border rotated/.style = {shape border rotate=180}
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (starttext) at (0:0) {SumPositiveEvenAndOdd};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (start)[below of=starttext,yshift=4mm][triangle, border rotated,minimum
+ size=1cm]  {};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (init)[below of=start,align=left,yshift=-1cm] { sumEven := 0
+\backslash
+
+\backslash
+ sumOdd := 0}  edge [<-] (start);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (readvalue)[below of=init]{read ($
+\backslash
+uparrow$value)} edge [<-] (init);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (while)[chamfered rectangle, chamfered rectangle xsep=2cm, draw,below
+ of=readvalue]{while value <> 0} edge [<-] (readvalue);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (ifpositive)[below of=while,yshift=-1cm]{value > 0} edge [<-] node[left]
+ {yes} (while);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (ifeven)[below of=ifpositive,xshift=1cm,yshift=-1cm]{value mod 2 =
+ 0} edge [<-]  node[left] {yes} (ifpositive);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (addodd) [right of=ifeven,xshift=4cm] {sumOdd := sumOdd + value } edge
+ [<-] node[above] {no} (ifeven);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (addeven) [below of=addodd,yshift=-1cm] {sumEven := sumEven + value
+ };
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (readvaluewhile) [below of=addeven] {read ($
+\backslash
+uparrow$value)} 
+\end_layout
+
+\begin_layout Plain Layout
+
+																	edge [<-] (addeven);
+\end_layout
+
+\begin_layout Plain Layout
+
+																									
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [connector] (addodd.east) -- ++(0,0)  |-  (readvaluewhile.east);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [connector] (ifeven.south) -- ++(0,0)  |- node[left] {yes} (addeven.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [connector] (readvaluewhile.south) -- ++(0,0)  -| (while.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [connector] (ifpositive.west) -- node[left] {no} ++(0,0) |-  (readvaluewhile.
+west);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (write) [right of=while, xshift=8cm] {write($
+\backslash
+downarrow$ sumEven $
+\backslash
+downarrow$ sumOdd)} edge [<-] node[above] {no}  (while.east);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (stop) [below of=write,triangle,border rotated,minimum size=1cm,yshift=-8cm
+] {} edge [<-] (write);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Layers
+\end_layout
+
+\begin_layout Paragraph
+Beispiel Layers.
+ 
+\end_layout
+
+\begin_layout Standard
+no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[
+\end_layout
+
+\begin_layout Plain Layout
+
+	scale=0.75,
+\end_layout
+
+\begin_layout Plain Layout
+
+	start chain=1 going below, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	start chain=2 going right,
+\end_layout
+
+\begin_layout Plain Layout
+
+	node distance=1mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+	desc/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		scale=0.75,
+\end_layout
+
+\begin_layout Plain Layout
+
+		on chain=2,
+\end_layout
+
+\begin_layout Plain Layout
+
+		rectangle,
+\end_layout
+
+\begin_layout Plain Layout
+
+		rounded corners,
+\end_layout
+
+\begin_layout Plain Layout
+
+		draw=black, 
+\end_layout
+
+\begin_layout Plain Layout
+
+		very thick,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text centered,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text width=8cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		minimum height=12mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		fill=blue!30
+\end_layout
+
+\begin_layout Plain Layout
+
+		},
+\end_layout
+
+\begin_layout Plain Layout
+
+	it/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		fill=blue!10
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	level/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		scale=0.75,
+\end_layout
+
+\begin_layout Plain Layout
+
+		on chain=1,
+\end_layout
+
+\begin_layout Plain Layout
+
+		minimum height=12mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text width=2cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text centered
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	every node/.style={font=
+\backslash
+sffamily}
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Levels
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (DataLayer) {Daten};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (PersistenceLayer) {Persistenz};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (BusinessLayer) {Logik};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 1.5) { };
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Descriptions
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+chainin (DataLayer);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc] (XXX) {XXX Unit};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc, it, continue chain=going below] (YYY) {YYY Unit};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc] (ZZZ) {ZZZ Unit};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Implementierung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  Hello World
+\end_layout
+
+\begin_layout Plain Layout
+
+  @author(Jan <lorem@ippsum.pascal>)
+\end_layout
+
+\begin_layout Plain Layout
+
+  @abstract(dummy dummy dummy)
+\end_layout
+
+\begin_layout Plain Layout
+
+  @created(2017-01-01)
+\end_layout
+
+\begin_layout Plain Layout
+
+  Meep
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+PROGRAM Dummy;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  WriteLn('Hello World');
+\end_layout
+
+\begin_layout Plain Layout
+
+END.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Testfälle
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "style=DOS"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Hello World!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "style=DOS"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Hello World!
+\end_layout
+
+\begin_layout Plain Layout
+
+Hello World!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
