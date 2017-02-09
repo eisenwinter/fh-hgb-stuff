@@ -1,0 +1,4479 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usetikzlibrary{positioning}
+\usetikzlibrary{trees}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{arrows.meta}
+\usepackage{tikz-qtree}
+
+% Improves spacing
+\usepackage{circuitikz}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.4in,left=.2in,right=.2in,bottom=.4in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+
+
+\makeatother
+
+
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+\end_preamble
+\options landscape
+\use_default_options false
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{titlec}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\series bold
+LGI v1.3.6
+\series default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ LGI, MIT, https://github.com/eisenwinter/fh-hgb-stuff 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Aussagen formalisieren
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\lang english
+\begin_inset Tabular
+<lyxtabular version="3" rows="23" columns="2">
+<features tabularvalignment="middle">
+<column alignment="none" valignment="top" special="@{}l">
+<column alignment="none" valignment="top" special="l@{}">
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+nicht A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+\begin_inset Formula $\lnot A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+A und B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+\begin_inset Formula $A\land B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+A oder B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+\begin_inset Formula $A\lor B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+wenn A dann B 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="none" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+\begin_inset Formula $A\implies B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+B ist notwendig für A
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Aus A folgt B
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+A ist hinreichend für B
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Genau dann A, wenn B
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="none" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+\begin_inset Formula $A\Leftrightarrow B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Dann und nur dann A, wenn B
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+A ist gleichwertig mit B
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+A ist äquivalent zu B 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+A ist notwendig und hinreichend für B
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Für alle x ist A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="none" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underset{x}{\forall}A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Jedes x erfüllt A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Es ist A(x) für alle x
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Für alle x aus M ist A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="none" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underset{x\in M}{\forall}A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Jedes x der Menge M erfüllt A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Es ist A(x) für alle x in M
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Es gibt ein x mit A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="none" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underset{x}{\exists}A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Es existiert ein x, so dass A(x) gilt
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Für mindestens ein x gilt A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Es gibt ein x aus M mit A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="none" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underset{x\in M}{\exists}A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+Für mindestens ein x in M gilt A(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aussagen formalisieren Beispiele
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Es gibt genau ein x mit der Eigenschaft A
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{x,y}{\forall}A_{x\rightarrow y}\land A_{x}\implies x=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Es gibt höchstens ein x mit der Eigenschaft A
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{Existenz}{\underbrace{\underset{x}{\exists}A}}\land\underset{Eindeutigkeit}{\underbrace{\underset{x,y}{\forall}A_{x}\land A_{x\rightarrow y}\implies x=y}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Es gibt 
+\series bold
+genau zwei
+\series default
+ Dinge mit der Eigenschaft A
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{x}{\exists}\underset{y}{\exists}x\neq y\land A(x)\land A(y)\land\lnot\underset{z}{\exists}z\neq x\land z\neq y\land A(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Alle Vögel haben Flügel aber nicht alle fliegen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\underset{Vogel(x)}{\forall}hatFlügel(x))\land(\lnot\underset{Vogel(x)}{\forall}fliegt(x))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Superlativ (3 ist die kleinste mit Eigenschaft)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Eig(x)\land\underset{x}{\forall}Eig(x)\implies x\geq3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Standarform Allquantor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{c\in A\cup B}{\forall\dots}$
+\end_inset
+
+wird 
+\begin_inset Formula $\underset{c}{\forall}c\in A\cup B\boldsymbol{\implies}\dots$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Standarform Existenzquantor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{a\in s}{\exists\dots}$
+\end_inset
+
+wird 
+\begin_inset Formula $\underset{a}{\exists}a\in s\boldsymbol{\land}\dots$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+All- / Existenzquantor Negation
+\end_layout
+
+\begin_layout Standard
+Aus 
+\begin_inset Formula $\lnot(\exists\dots)$
+\end_inset
+
+ wird 
+\begin_inset Formula $\forall\lnot\dots$
+\end_inset
+
+ und aus 
+\begin_inset Formula $\lnot(\forall\dots)$
+\end_inset
+
+ wird 
+\begin_inset Formula $\exists\lnot\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{x\in\mathbb{N}}{\exists}x<10$
+\end_inset
+
+ wird zu 
+\begin_inset Formula $\lnot(\underset{x\in\text{€}}{\exists}x<10)$
+\end_inset
+
+ auflösen 
+\begin_inset Formula $\underset{x\in\text{€}}{\forall}\lnot(x<10)$
+\end_inset
+
+ und 
+\begin_inset Formula $\lnot(x<10)\Leftrightarrow x\geq10$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+All- / Existenzquantor Beweisen
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\exists$
+\end_inset
+
+ konkreten fixen Wert wählen
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\forall$
+\end_inset
+
+ beliebig, fix wählen
+\end_layout
+
+\begin_layout Section
+Problemspezifikation : Muster
+\end_layout
+
+\begin_layout Description
+Gegben Werte (a,b,x,y) (Eingabe)
+\end_layout
+
+\begin_layout Description
+wobei a irgendwas ist, b > 0, x 
+\begin_inset Formula $\in\mathbb{Z}$
+\end_inset
+
+ (Eingabebedingung)
+\end_layout
+
+\begin_layout Description
+Gesucht k (Ausgabe)
+\end_layout
+
+\begin_layout Description
+so-dass Bedingung (Ausgabebedingung)
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel Problemspezifikation: Runden
+\end_layout
+
+\begin_layout Description
+Gegben x (Eingabe)
+\end_layout
+
+\begin_layout Description
+wobei x 
+\begin_inset Formula $\in\mathbb{R}$
+\end_inset
+
+ (Eingabebedingung)
+\end_layout
+
+\begin_layout Description
+Gesucht y (Ausgabe)
+\end_layout
+
+\begin_layout Description
+so-dass 
+\begin_inset Formula $|x-z|\leq\frac{1}{2}\land\overset{0,5\rightarrow aufrunden}{\overbrace{(|x-y|=\frac{1}{2}\implies x>y)}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel Problemspezifikation: Wurzel reeler Zahl (Ohne 
+\begin_inset Formula $\sqrt{}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+Gegben z (Eingabe)
+\end_layout
+
+\begin_layout Description
+wobei 
+\begin_inset Formula $z\in\mathbb{R},\:z\geq0$
+\end_inset
+
+ (Eingabebedingung)
+\end_layout
+
+\begin_layout Description
+Gesucht w (Ausgabe)
+\end_layout
+
+\begin_layout Description
+so-dass 
+\begin_inset Formula $w\in\mathbb{R}\land\overset{w^{2}}{\overbrace{w*w}}=z$
+\end_inset
+
+ (Ausgabebedingung)
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel Problemspezifikation: Folgen
+\end_layout
+
+\begin_layout Standard
+zwei aufeinanderfolgenden Positionen einer gegebenen endlichen Folgen s
+ ein neues Objekt n einfügen.
+\end_layout
+
+\begin_layout Description
+Gegben s
+\end_layout
+
+\begin_layout Description
+wobei s eine endliche Folge
+\end_layout
+
+\begin_layout Description
+Gesucht a, eine endliche Folge mit Länge l(s)*2-1
+\end_layout
+
+\begin_layout Description
+so-dass 
+\begin_inset Formula $(\underset{1\leq i\leq l(a)-1}{\forall}a_{2*i-1}=s_{i})\land(\underset{1\leq j\leq l(a)}{\forall}a_{2*i}=n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Definieren : Muster
+\end_layout
+
+\begin_layout Description
+Aussage 
+\begin_inset Formula $Name(p,a,r):\Leftrightarrow\underset{y\in\mathbb{N}}{\exists}Aussage(p,a,r)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Funktion 
+\begin_inset Formula $Name(p,a,r):=p*a*r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel Definition: Primzahl
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Prim(x):\Leftrightarrow\overset{\textrm{Für alle Teiler ≠1 oder x}}{\overbrace{(\underset{t\neq x,t\neq1}{\forall}\lnot(t|x))}}\land x>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel Definition: istEnthalten von 2 Folgen a,b (Aussage)
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $istEnthalten(a,b):\Leftrightarrow\underset{1\leq x<l(a)}{\forall}\underset{1\leq y\leq l(b)}{\exists}a_{x}=b_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Gesetze der Logik
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $a\implies b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $a\Leftrightarrow b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\lnot a\lor b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\lnot(A\land B)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $(\lnot A)\lor(\lnot B)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\lnot(A\lor B)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $(\lnot A)\land(\lnot B)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\lnot(A\implies B)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+ 
+\begin_inset Formula $(A\land\lnot B)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\lnot(A\Leftrightarrow B)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\begin_inset Formula $(A\land B)$
+\end_inset
+
+ o.
+\begin_inset Formula $(A\Leftrightarrow(\lnot B)$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\lnot\underset{x}{\forall}A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\underset{x}{\exists}\lnot A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\lnot\underset{x}{\exists}A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\underset{x}{\forall}\lnot A(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Syntaxanalyse Muster
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.8}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{Quantoraussage}{\underbrace{\overset{Q}{\overbrace{\underset{i}{\forall}}}\underset{Junktoraussage}{\underbrace{\underset{Junktoraussage}{\underbrace{\underset{\textrm{atomare Aus.}}{\underbrace{\overset{PK_{2}}{\overbrace{\leqq}}(\overset{OK}{\overbrace{4}},\overset{V}{\overbrace{i}})}}\overset{J}{\overbrace{\land}}\underset{\textrm{atomare Aus.}}{\underbrace{\overset{PK_{2}}{\overbrace{<}}(\overset{V}{\overbrace{i}},\overset{K}{\overbrace{n}})}}}}\overset{J}{\overbrace{\implies}}\underset{\textrm{atomare Aussage}}{\underbrace{\overset{Pk_{2}}{\overbrace{\geq}}(\underset{Term}{\underbrace{\overset{FK_{2}}{\overbrace{hoch}}(\overset{OK}{\overbrace{2}},\overset{V}{\overbrace{i}})}},\underset{Term}{\underbrace{\overset{Fk_{2}}{\overbrace{hoch}}(\overset{V}{\overbrace{i}},\overset{OK}{\overbrace{2}})}})}}}}}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Achtung Auch Mengenlehreoperationen wie 
+\begin_inset Quotes gld
+\end_inset
+
+Vereinigt
+\begin_inset Quotes grd
+\end_inset
+
+ (
+\begin_inset Formula $\cup$
+\end_inset
+
+) sind Funktionen.
+\end_layout
+
+\begin_layout Section
+Mengenlehre
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Definition of circles
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+firstcircle{(0,0) circle (0.5cm)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+secondcircle{(0:0.8cm) circle (0.5cm)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+thirdcircle{(1.8cm:0.3cm) circle (0.2cm)}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+colorlet{circle edge}{red!50}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+colorlet{circle area}{red!20}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
+\end_layout
+
+\begin_layout Plain Layout
+
+    outline/.style={draw=circle edge, thick}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parskip}{2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Set A and B
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+clip 
+\backslash
+firstcircle;
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+fill[filled] 
+\backslash
+secondcircle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[outline] 
+\backslash
+firstcircle node {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[outline] 
+\backslash
+secondcircle node {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[anchor=south] at (current bounding box.north) {$A 
+\backslash
+cap B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%Set A or B but not (A and B) also known a A xor B
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[filled, even odd rule] 
+\backslash
+firstcircle node {$A$}
+\end_layout
+
+\begin_layout Plain Layout
+
+                                 
+\backslash
+secondcircle node{$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[anchor=south] at (current bounding box.north) {$ A 
+\backslash
+Delta B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Set A or B
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[filled] 
+\backslash
+firstcircle node {$A$}
+\end_layout
+
+\begin_layout Plain Layout
+
+                  
+\backslash
+secondcircle node {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[anchor=south] at (current bounding box.north) {$A 
+\backslash
+cup B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cap U:=\{x|\underset{x\in U}{\forall}x\in a\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.7}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A\Delta B:=\{x|(x\in A\land x\notin B)\lor(x\in B\land x\notin A)\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cup U:=\{x|\underset{a\text{\in U}}{\exists}x\in a\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Set A but not B
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+clip 
+\backslash
+firstcircle;
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+draw[filled, even odd rule] 
+\backslash
+firstcircle node {$A$}
+\end_layout
+
+\begin_layout Plain Layout
+
+                                     
+\backslash
+secondcircle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[outline] 
+\backslash
+firstcircle
+\end_layout
+
+\begin_layout Plain Layout
+
+                   
+\backslash
+secondcircle node {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[anchor=south] at (current bounding box.north) {$A 
+\backslash
+textbackslash B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Set B but not A
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+clip 
+\backslash
+secondcircle;
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+draw[filled, even odd rule] 
+\backslash
+firstcircle
+\end_layout
+
+\begin_layout Plain Layout
+
+                                     
+\backslash
+secondcircle node {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[outline] 
+\backslash
+firstcircle node {$A$}
+\end_layout
+
+\begin_layout Plain Layout
+
+                   
+\backslash
+secondcircle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[anchor=south] at (current bounding box.north) {$B 
+\backslash
+textbackslash A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Set B Subseteq A
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[filled] 
+\backslash
+firstcircle node {$B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+                  
+\backslash
+thirdcircle node {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[anchor=south] at (current bounding box.north) {$A 
+\backslash
+subseteq B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.7}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A\textbackslash B:=\{x|(x\in A)\land(x\notin B)\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.7}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A^{B}:=\{x|(x\in B)\land(x\notin A)\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\subseteq B:\Leftrightarrow\underset{x\in A}{\forall}x\in B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Schreibweisen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+aufzählend
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+prädikativ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\{1,2,3,4,5\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\{x|1\leq x\leq5\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mengelehre Operationen
+\end_layout
+
+\begin_layout Standard
+Stets die leere Menge in betracht ziehen!
+\end_layout
+
+\begin_layout Subsubsection
+Teilmengenbeziehung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\subseteq y:\Leftrightarrow\underset{z}{\forall}(z\in x\implies z\in y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Teilmengenbeziehung ist partiell geordnet wenn
+\end_layout
+
+\begin_layout Description
+Reflexivität weil 
+\begin_inset Formula $A\subseteq A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Antisymmetrie weil 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ und 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ heißt 
+\begin_inset Formula $A=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Transitivität weil 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ und 
+\begin_inset Formula $B\subseteq C$
+\end_inset
+
+ heißt 
+\begin_inset Formula $A\subseteq C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Potenzmenge
+\end_layout
+
+\begin_layout Standard
+Die Potenzmenge ist die Menge aller Teilmengen.
+ 
+\begin_inset Formula $Pot(A):=\{M|m\subseteq A\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Leere Menge: 
+\begin_inset Formula $Pot(\textrm{Ø)=\{Ø\}}$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow Pot(Pot(Ø))=\{Ø,\{Ø\}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Anzahl nach Potenzierung 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+wobei n die Anzahl der Objekte (inkl.
+ leere Menge) in der Ursprungsmenge sind.
+\end_layout
+
+\begin_layout Subsubsection
+Karthesisches Produkt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\times B:=\{(a,b)|a\in A\land b\in B\}$
+\end_inset
+
+ z.B.
+ 
+\begin_inset Formula $\{1,2\}\times\{4,5,6\}=\{(1,4),(1,5),(1,6),(2,4),(2,5),(2,6)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Landau Notation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(g):\Leftrightarrow\underset{c>0}{\exists}\underset{n_{0\in\mathbb{N}}}{\exists}\underset{n>n_{0}}{\forall}|f(n)|\leq c*|g(n)|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zum Beweisen wähle ein 
+\begin_inset Formula $c\geq1$
+\end_inset
+
+ damit 
+\begin_inset Formula $f(n)\leq c$
+\end_inset
+
+ erfüllt ist.
+\end_layout
+
+\begin_layout Section
+Relationen & Funktionen
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R$
+\end_inset
+
+ ist 
+\series bold
+Relation zwischem
+\series default
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ und 
+\begin_inset Formula $N$
+\end_inset
+
+ 
+\begin_inset Formula $:\Leftrightarrow R\subseteq M\times N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R$
+\end_inset
+
+ ist eine 
+\series bold
+Relation auf 
+\series default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\begin_inset Formula $:\Leftrightarrow R\subseteq M\times M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $f$
+\end_inset
+
+ ist eine 
+\series bold
+partielle Funktion
+\series default
+ von 
+\begin_inset Formula $M$
+\end_inset
+
+ nach 
+\begin_inset Formula $N$
+\end_inset
+
+ 
+\begin_inset Formula $:\Leftrightarrow(f\subseteq M\times N)\land\boldsymbol{(\underset{x,y,y'}{\forall}(x,y)\in f\land(x,y')\in f\implies y=y')}$
+\end_inset
+
+, 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Quotes gld
+\end_inset
+
+Eine partielle Funktion hat für jeden Wert einen einzigartigen Rückgabewert.
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset Formula $f$
+\end_inset
+
+ ist eine 
+\series bold
+totale Funktion
+\series default
+ von 
+\begin_inset Formula $M$
+\end_inset
+
+ nach 
+\begin_inset Formula $N$
+\end_inset
+
+ 
+\begin_inset Formula $:\Leftrightarrow:\Leftrightarrow(f\subseteq M\times N)\land\underset{partiell}{\underbrace{(\underset{x,y,y'}{\forall}(x,y)\in f\land(x,y')\in f\implies y=y')}}\land\boldsymbol{(\underset{x\in M}{\forall}\underset{y\in N}{\exists}(x,y)\in f)}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Quotes gld
+\end_inset
+
+Eine totale Funktion hat für jeden Wert aus der Menge einen definierten
+ und einzigartigen Rückgabewert.
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Funktionsdefinition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:M\rightarrow N,x\mapsto t$
+\end_inset
+
+ bedeutet 
+\begin_inset Formula $f:\{(x,t)|x\text{\in M\}\land\underset{x\in M}{\forall}f(x)\in N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Zum Beispiel 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:\mathbb{N}_{5}\rightarrow\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $x\mapsto x\text{²}$
+\end_inset
+
+ entspricht 
+\begin_inset Formula $f$
+\end_inset
+
+ der Menge 
+\begin_inset Formula $\{(x,x^{2})|x\in\mathbb{N}_{5}\}=\{(1,1),(2,4),(3,9),(4,16),(5,25)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Bild, Urbild.Inverse
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:M\rightarrow N,A\subseteq M,B\subseteq N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Bild 
+\begin_inset Formula $f(A):=\{f(x)|x\in A\}$
+\end_inset
+
+ Bild von A unter F
+\end_layout
+
+\begin_layout Description
+Urbild 
+\begin_inset Formula $f^{-1}(B):=\{x\in M|f(x)\in B\}$
+\end_inset
+
+ Urbild von B unter f.
+ Sprich, 
+\begin_inset Formula $f^{-1}(\{\overset{f(x)}{\overbrace{4,5}}\})=\{4,\dots\}$
+\end_inset
+
+, bei welchen Paramtern kommt dieses Ergebnis.
+ Achtung! Nur die die tatsächlich getroffen werden.
+\end_layout
+
+\begin_layout Description
+Inverse Allgemein: 
+\begin_inset Formula $f^{-1}:f(M)\rightarrow M$
+\end_inset
+
+.
+ Falls f injektive 
+\begin_inset Formula $f^{-1}\{(y,x)|(x,y)\in f\}$
+\end_inset
+
+, Tuppel umdrehen.
+ Falls f bijektiv drehen sich Quell- und Zielraum um (Beispiel 
+\begin_inset Formula $f:M\rightarrow N\dots f^{-1}:N\rightarrow M$
+\end_inset
+
+ )
+\end_layout
+
+\begin_layout Subsection
+Injektiv, Surjektiv, Bijektiv
+\end_layout
+
+\begin_layout Description
+injektiv nie gleicher Funktionswert für verschiedene Argumente, jedes 
+\begin_inset Formula $x\in N$
+\end_inset
+
+ hat höchstens einen Verweis.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\underset{m,n\in\mathbb{N}}{\forall}f(m)=f(n)\implies m=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+surjektiv nur wenn alle Werte aus Bereich für Argumente funktionieren; jedes
+ 
+\begin_inset Formula $x\in N$
+\end_inset
+
+ hat minestens einen Verweis.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\underset{n\in\mathbb{N}}{\forall}\underset{m\in\mathbb{N}}{\exists}f(m)=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+bijektiv ist surjektiv und injektiv, jedes 
+\begin_inset Formula $x\in N$
+\end_inset
+
+ hat genau einen Verweis 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+beide Menge sind gleich groß.
+ 
+\series bold
+Bijektiv wenn Surjektiv und Injektiv!
+\end_layout
+
+\begin_layout Subsection
+Hintereinander ausführen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g\circ f=g(f(x))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Achtung auf korrekte Zahlenräumen!
+\end_layout
+
+\begin_layout Subsection
+Eigenschaften von Relationen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eigenschaft
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+für alle x,y,z ∈ M
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+reflexiv
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $xRx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Jeder Knoten besitzt eine Schleife
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+irreflexiv
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $¬(xRx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Kein Knoten besitzt eine Schleife
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+symmetrisch
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $xRy\text{⇒}yRx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Jeder Pfeil besitzt einen 
+\begin_inset Quotes gld
+\end_inset
+
+Gegenpfeil“
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+asymmetrisch
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $xRy\text{⇒}\text{¬}(yRx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Kein Pfeil besitzt einen 
+\begin_inset Quotes gld
+\end_inset
+
+Gegenpfeil“, es gibt auch keine Schleifen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+antisymmetrisch
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $xRy\text{∧}yRx\text{⇒}x=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Kein Pfeil zwischen zwei verschiedenen Knoten besitzt einen 
+\begin_inset Quotes gld
+\end_inset
+
+Gegenpfeil“
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+transitiv
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $xRy\text{∧}yRz\text{⇒}xRz$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Jede 
+\begin_inset Quotes gld
+\end_inset
+
+Pfeilkette“ aus zwei Pfeilen besitzt einen ”Überbrückungspfeil“
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Symterie
+\end_layout
+
+\begin_layout Description
+Beispiel 
+\begin_inset Formula $A:=\{1,2,3\}$
+\end_inset
+
+ 
+\begin_inset Formula $R:=\{(1,2),(2,1),(1,1)$
+\end_inset
+
+ 
+\begin_inset Formula $R\subseteqq A\times A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{scope}[every node/.style={circle,thick,draw}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) at (0,0) {1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) at (1.5,0) {2};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (C) at (2.8,0) {3};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{scope}[>={Stealth[black]},
+\end_layout
+
+\begin_layout Plain Layout
+
+              every node/.style={fill=white,circle},
+\end_layout
+
+\begin_layout Plain Layout
+
+              every edge/.style={draw=red,very thick}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path [->] (A) edge [bend left] (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [->] (B) edge [bend left] (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [->] (A) edge [loop above] (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Symetrisch weil 
+\begin_inset Formula $\underset{a,b\in A}{\forall}(a,b)\in R\implies(b,a)\in R$
+\end_inset
+
+ , isolierte Knoten sind damit egal!
+\end_layout
+
+\begin_layout Subsubsection
+Transitiv
+\end_layout
+
+\begin_layout Description
+Beispiel 
+\begin_inset Formula $A:=\{1,2,3\}$
+\end_inset
+
+ 
+\begin_inset Formula $R:=\{(1,2),(2,1),(2,3),(3,2),(1,3),(3,1)\}$
+\end_inset
+
+ 
+\begin_inset Formula $R\subseteqq A\times A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{scope}[every node/.style={circle,thick,draw}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) at (0,0) {1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) at (1.5,0) {2};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (C) at (2.8,0) {3};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{scope}[>={Stealth[black]},
+\end_layout
+
+\begin_layout Plain Layout
+
+              every node/.style={fill=white,circle},
+\end_layout
+
+\begin_layout Plain Layout
+
+              every edge/.style={draw=red,very thick}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path [->] (A) edge [bend left] (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [->] (B) edge [bend left] (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [->] (B) edge [bend left] (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [->] (C) edge [bend left] (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [->] (A) edge [bend left] (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [->] (C) edge [bend left] (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{scope}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Transitiv weil 
+\begin_inset Formula $\underset{a,b,c\in A}{\forall}(a,b)\in R\land(b,c)\in R\implies(a,c)\in R$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Verknüpfung von Relationen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R^{2}=R\circ R$
+\end_inset
+
+, 
+\begin_inset Formula $R^{n}:=R\circ R^{n-1}$
+\end_inset
+
+für 
+\begin_inset Formula $n\geq3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(x,y)\in R^{n}$
+\end_inset
+
+ Es gibt einen Weg der Länge 
+\series bold
+n
+\series default
+ von x nach y
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(x,y)\in R^{+}$
+\end_inset
+
+ Es gibt einen Weg von x nach y (Länge 
+\begin_inset Formula $\geq1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Hüllen von Graphen 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+ Umkrehrelation (geschrieben: 
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+), Tuppel umdrehen
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R\cup R^{-1}$
+\end_inset
+
+ symetrische Hülle (
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R^{0}\cup R$
+\end_inset
+
+ reflexive Hülle (
+\begin_inset Formula $\rightarrow^{0}\cup\rightarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R^{+}$
+\end_inset
+
+ transitive Hülle (
+\begin_inset Formula $\rightarrow^{+})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R^{*}$
+\end_inset
+
+ reflexiv-transitive Hülle (
+\begin_inset Formula $\rightarrow^{*})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Hüllen bilden
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $R^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(a,b) in 
+\begin_inset Formula $R$
+\end_inset
+
+, so ist (a,b) in 
+\begin_inset Formula $R^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(a,b) und (b,c) in 
+\begin_inset Formula $R$
+\end_inset
+
+, so ist (a,c) auch in 
+\begin_inset Formula $R^{+}$
+\end_inset
+
+(
+\begin_inset Formula $R\circ R)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $R^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R^{+}\cup\{(a,a)|a\in M\}$
+\end_inset
+
+ (Selbstveweise/Schleifen)
+\end_layout
+
+\begin_layout Section
+Äquivalenzrelationen
+\end_layout
+
+\begin_layout Standard
+Eine Relation 
+\begin_inset Formula $\sim\subseteq M\times M$
+\end_inset
+
+ heißt Aquivalenzrelation auf M (alle 
+\begin_inset Formula $x,y,z\in M$
+\end_inset
+
+) wenn 
+\end_layout
+
+\begin_layout Description
+reflexiv 
+\begin_inset Formula $x\sim x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+symetrisch 
+\begin_inset Formula $x\sim y\implies y\sim x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+transitiv 
+\begin_inset Formula $(x\sim y\land y\sim z)\implies x\sim z$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\sim B:\Leftrightarrow\underset{a\in A}{\sum}a=\underset{b\in B}{\sum}b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+reflexiv 
+\begin_inset Formula $\underset{a\in A}{\sum}a=\underset{a\in A}{\sum}a$
+\end_inset
+
+ Ja, z.B.
+ {1}, 1=1
+\end_layout
+
+\begin_layout Description
+symetrisch 
+\begin_inset Formula $\underset{a\in A}{\sum}a=\underset{b\in B}{\sum}b\implies\underset{b\in B}{\sum}b=\underset{a\in A}{\sum}a$
+\end_inset
+
+ Ja, z.B.
+ {1,2},{0,3}, 
+\begin_inset Formula $3=3\implies3=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+transitiv 
+\begin_inset Formula $(\underset{a\in A}{\sum}a=\underset{b\in B}{\sum}b)\land(\underset{a\in A}{\sum}b=\underset{c\in C}{\sum}c)\implies\underset{a\in A}{\sum}a=\underset{c\in C}{\sum}c$
+\end_inset
+
+ Ja, z.B.
+ {1,1,1},{1,2},{0,3}, 
+\begin_inset Formula $3=3\land3=3\implies3=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Äquivalenzklassen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[x]_{\sim}:=\{y\text{\in}M|y\textasciitilde x\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "25col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es gilt 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{i}\cap M_{j}=\{\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für jedes a und b aus 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ist aRb wahr
+\end_layout
+
+\begin_layout Standard
+Für jedes a aus 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+und b aus 
+\begin_inset Formula $M_{j}$
+\end_inset
+
+ist aRb falsch.
+\end_layout
+
+\begin_layout Subsection
+Partition einer Menge
+\end_layout
+
+\begin_layout Standard
+P ist eine Parition auf M 
+\begin_inset Formula $:\Leftrightarrow\underset{A\in P}{\forall}A\subseteq M\land A\neqØ\land\underset{A,B\in P}{\forall}A\neq B\implies A\cap B=Ø$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ordnungsrelationen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\preceq\subseteq M\times M$
+\end_inset
+
+ ist Ordnungsrelationen g.d.w.
+ für alle 
+\begin_inset Formula $x,y,z\in M$
+\end_inset
+
+ gilt 
+\end_layout
+
+\begin_layout Description
+reflexiv 
+\begin_inset Formula $x\preceq y$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+antisymetrisch 
+\begin_inset Formula $(x\preceq y\land y\preceq x)\implies x=y$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+transitiv 
+\begin_inset Formula $(x\preceq y\land y\preceq z)\implies x\preceq z$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Ordnungsrelationen werden auch partielle Ordnungen genannt.
+ Gilt zusätzlich 
+\begin_inset Formula $(x\preceq y\lor y\preceq x)$
+\end_inset
+
+ (
+\series bold
+Linearität
+\series default
+) so heißt sie totale oder lineare Ordnung.
+\end_layout
+
+\begin_layout Section
+Hasse Diagramm
+\end_layout
+
+\begin_layout Standard
+Zwischen x und y wird eine Linie gezeichnet,.falls 
+\begin_inset Formula $x\preceq y\land\lnot\underset{z}{\exists}z\neq x\land z\neq y\land x\preceq z\preceq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Beispiel
+\series default
+: Teilt-Relation 
+\begin_inset Formula $\{a,b\in\mathbb{N}_{12}|a*n=b\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=.7]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (twelve) at (1,2) {$12$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (eight) at (3,2) {$8$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (ten) at (-1,1) {$10$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (nine) at (0,1) {$9$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (six) at (1,1) {$6$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (four) at (3,1) {$4$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (eleven) at (-4,0) {$11$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (seven) at (-2.5,0) {$7$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (five) at (-1,0) {$5$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (three) at (1,0) {$3$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (two) at (3,0) {$2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node (one) at (0,-1.5) {$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (one) -- (two);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (one) -- (three);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (one) -- (five);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (one) -- (seven);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (one) -- (eleven);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (two) -- (four);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (two) -- (ten);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (four) -- (eight);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (four) -- (twelve);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (three) -- (six);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (three) -- (nine);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (six) -- (twelve);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (five) -- (ten);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu lesen zum Besipiel rechter Ast, 4 teilt 8, 2 teilt 4, daher teilt auch
+ 2 die 8.
+\end_layout
+
+\begin_layout Section
+Induktionsbeweis
+\end_layout
+
+\begin_layout Enumerate
+Induktionsanfang, 
+\begin_inset Formula $A_{n}[1]$
+\end_inset
+
+ ausrechnen.
+ n auf kleinsten Wert setzen (0 oder 1)
+\end_layout
+
+\begin_layout Enumerate
+Induktionsanahme, 
+\begin_inset Formula $\overline{n}$
+\end_inset
+
+ bliebig aber fix wählen.
+ Nochmal hinschreiben!
+\end_layout
+
+\begin_layout Enumerate
+Induktionsabschluss.
+ (n+1).
+ Entweder in linke ODER rechte Seite von Anahme mit n+1.Umformen, so dass
+ die Anahme wieder auftaucht und mit anderem Teil der Anahme ersetzen.
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel:
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $\underset{i=1}{\overset{n}{\sum}i=}\frac{n*(n+1)}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Anfang, 
+\begin_inset Formula $n=1\rightsquigarrow1=1$
+\end_inset
+
+ wahr
+\end_layout
+
+\begin_layout Enumerate
+Anahme, 
+\begin_inset Formula $\underset{i=1}{\overset{n}{\sum}i=}\frac{n*(n+1)}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Induktionsabschluss 
+\begin_inset Formula $\underset{i=1}{\overset{\boldsymbol{n+1}}{\sum}i}=\underset{i=1}{\overset{\boldsymbol{n}}{\sum}i}+(n+1)$
+\end_inset
+
+, jetzt 
+\begin_inset Formula $\underset{i=1}{\overset{\boldsymbol{n}}{\sum}i}$
+\end_inset
+
+ gleich mit Anahme oben, ersetzen mit rechter Seite von Anahme.
+ 
+\begin_inset Formula $=\frac{n*(n+1)}{2}+(n+1)=\boldsymbol{\frac{(n+1)*(n+2)}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

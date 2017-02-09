@@ -1,0 +1,2128 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{amsthm}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{environ}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usetikzlibrary{calc}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.4in,left=.2in,right=.2in,bottom=.4in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {-1ex plus -.5ex minus -0.2ex}%
+                                 {1ex plus .2ex}%
+                                {\normalfont\small}}
+
+
+
+\makeatother
+
+
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.7ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  labelindent=0.5pt,
+  style=multiline,
+  leftmargin=2.2cm,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+\end_preamble
+\options landscape
+\use_default_options false
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding iso8859-15
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+4
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{titlec}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\series bold
+EIB v1.1
+\series default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ EIB, MIT, https://github.com/eisenwinter/fh-hgb-stuff 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bash Commands
+\end_layout
+
+\begin_layout Description
+date Datum und Uhrzeit
+\end_layout
+
+\begin_layout Description
+uptime Uptime
+\end_layout
+
+\begin_layout Description
+whoami User
+\end_layout
+
+\begin_layout Description
+man
+\begin_inset space ~
+\end_inset
+
+command Manual für command
+\end_layout
+
+\begin_layout Description
+!! letzten Befehl wiederholen
+\end_layout
+
+\begin_layout Section
+IO Redirection
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+<
+\begin_inset space ~
+\end_inset
+
+file Eingabe für cmd von file
+\end_layout
+
+\begin_layout Description
+cmd1
+\begin_inset space ~
+\end_inset
+
+<
+\begin_inset space ~
+\end_inset
+
+(cmd2) Ausgabe von cmd2 als Eingabe für cmd1
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+>
+\begin_inset space ~
+\end_inset
+
+file Ausgabe von cmd in file
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+>
+\begin_inset space ~
+\end_inset
+
+/dev/null Ausgabe (stdout) verwerfen
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+>>
+\begin_inset space ~
+\end_inset
+
+file Ausgabe von cmd in file anhängen
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+2>
+\begin_inset space ~
+\end_inset
+
+file stderr (Errorouput) von cmd in file
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+1>&2 stdtout und stderr in gleiche Ausgabe
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+2>&1 stderr und stdtout in gleiche Ausgabe
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+&>
+\begin_inset space ~
+\end_inset
+
+file ganze Ausgabe von cmd in file
+\end_layout
+
+\begin_layout Standard
+cmd ist ein beliebiger Command
+\end_layout
+
+\begin_layout Section
+Pipes
+\end_layout
+
+\begin_layout Description
+cmd1
+\begin_inset space ~
+\end_inset
+
+|
+\begin_inset space ~
+\end_inset
+
+cmd2 stdout von cmd1 in cmd2
+\end_layout
+
+\begin_layout Description
+cmd1
+\begin_inset space ~
+\end_inset
+
+|&
+\begin_inset space ~
+\end_inset
+
+cmd2 stderr von cmd1 in cmd2
+\end_layout
+
+\begin_layout Section
+Zusammenhängen
+\end_layout
+
+\begin_layout Description
+cmd1
+\begin_inset space ~
+\end_inset
+
+;
+\begin_inset space ~
+\end_inset
+
+cmd2 Zuerst cmd1 dann cmd2 
+\end_layout
+
+\begin_layout Description
+cmd1
+\begin_inset space ~
+\end_inset
+
+&&
+\begin_inset space ~
+\end_inset
+
+cmd2 cmd2 wenn cmd1 erfolgreich 
+\end_layout
+
+\begin_layout Description
+cmd1
+\begin_inset space ~
+\end_inset
+
+||
+\begin_inset space ~
+\end_inset
+
+cmd2 cmd2 wenn cmd1 nicht erfolgreich
+\end_layout
+
+\begin_layout Description
+cmd
+\begin_inset space ~
+\end_inset
+
+& cmd in einer Untershell
+\end_layout
+
+\begin_layout Section
+Verzeichnisse
+\end_layout
+
+\begin_layout Description
+pwd derzeitiges Verzeichnis
+\end_layout
+
+\begin_layout Description
+mkdir
+\begin_inset space ~
+\end_inset
+
+dir Verzeichnis 
+\series bold
+dir 
+\series default
+anlegen
+\end_layout
+
+\begin_layout Description
+cd
+\begin_inset space ~
+\end_inset
+
+dir in Verzeichnis 
+\series bold
+dir
+\series default
+ wechseln
+\end_layout
+
+\begin_layout Description
+cd
+\begin_inset space ~
+\end_inset
+
+..
+ ein Verzeichnis höher
+\end_layout
+
+\begin_layout Description
+ls Verzeichnisinhalt anzeigen
+\end_layout
+
+\begin_layout Section
+LS Argumente im Detail
+\end_layout
+
+\begin_layout Description
+-a Show all (including hidden) 
+\end_layout
+
+\begin_layout Description
+-R Recursive list 
+\end_layout
+
+\begin_layout Description
+-r Reverse order 
+\end_layout
+
+\begin_layout Description
+-t Sort by last modified 
+\end_layout
+
+\begin_layout Description
+-S Sort by file size 
+\end_layout
+
+\begin_layout Description
+-l Long listing format 
+\end_layout
+
+\begin_layout Description
+-1 One file per line 
+\end_layout
+
+\begin_layout Description
+-m Comma-separated output 
+\end_layout
+
+\begin_layout Description
+-Q Quoted output
+\end_layout
+
+\begin_layout Section
+Dateioperationen
+\end_layout
+
+\begin_layout Description
+touch
+\begin_inset space ~
+\end_inset
+
+file1 file1 anlegen
+\end_layout
+
+\begin_layout Description
+cat
+\begin_inset space ~
+\end_inset
+
+file1
+\begin_inset space ~
+\end_inset
+
+file2 Ausgabe zusammenhängen 
+\end_layout
+
+\begin_layout Description
+less
+\begin_inset space ~
+\end_inset
+
+file1 Anzeigen mit Scrollfunktion
+\end_layout
+
+\begin_layout Description
+file
+\begin_inset space ~
+\end_inset
+
+file1 Typ von file1 anzeigen
+\end_layout
+
+\begin_layout Description
+cp
+\begin_inset space ~
+\end_inset
+
+file1
+\begin_inset space ~
+\end_inset
+
+file2 Kopiert file1 nach file2 
+\end_layout
+
+\begin_layout Description
+mv
+\begin_inset space ~
+\end_inset
+
+file1
+\begin_inset space ~
+\end_inset
+
+file2 Verschiebt file1 nach file2 (auch umbenennen)
+\end_layout
+
+\begin_layout Description
+rm
+\begin_inset space ~
+\end_inset
+
+file1 löscht file1 
+\end_layout
+
+\begin_layout Description
+rm
+\begin_inset space ~
+\end_inset
+
+-r
+\begin_inset space ~
+\end_inset
+
+/dir löscht Verzeichnis dir und alle Dateien / Unterordner darin
+\end_layout
+
+\begin_layout Description
+head
+\begin_inset space ~
+\end_inset
+
+file1 Die ersten 10 Zeilen aus file1 
+\end_layout
+
+\begin_layout Description
+tail
+\begin_inset space ~
+\end_inset
+
+file1 Die letzten 10 Zeilen aus file1 
+\end_layout
+
+\begin_layout Section
+Berechtigungen
+\end_layout
+
+\begin_layout Subsection
+Setzen
+\end_layout
+
+\begin_layout Description
+chmod
+\begin_inset space ~
+\end_inset
+
+775
+\begin_inset space ~
+\end_inset
+
+file Berechtigung von file auf 775 ändern
+\end_layout
+
+\begin_layout Description
+chmod
+\begin_inset space ~
+\end_inset
+
+-R
+\begin_inset space ~
+\end_inset
+
+600
+\series medium
+
+\begin_inset space ~
+\end_inset
+
+
+\series default
+folder Rekursiv Berechtigung für Order folder auf 600 setzen
+\end_layout
+
+\begin_layout Description
+chown
+\begin_inset space ~
+\end_inset
+
+user:group
+\begin_inset space ~
+\end_inset
+
+file Besitzer und Gruppe ändern
+\end_layout
+
+\begin_layout Description
+chmod
+\begin_inset space ~
+\end_inset
+
+g-r Gruppe Leserechte einziehen
+\end_layout
+
+\begin_layout Description
+chmod
+\begin_inset space ~
+\end_inset
+
+u+x User Ausführrechte geben
+\end_layout
+
+\begin_layout Description
+umask
+\begin_inset space ~
+\end_inset
+
+007 Entzieht Berechtigung für alle nächsten anlegte Dateien und Verzeichnisse.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel umask
+\end_layout
+
+\begin_layout Standard
+777 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 730
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+umask 003
+\end_layout
+
+\begin_layout Plain Layout
+
+touch file
+\end_layout
+
+\begin_layout Plain Layout
+
+mkdir
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Nummern
+\end_layout
+
+\begin_layout Standard
+Erste Zahl ist Besitzer Berechtigung, Zweite ist Gruppenberechtigung und
+ dritter ist Jeder.
+\end_layout
+
+\begin_layout Paragraph
+Berechnet wird die Zahl in dem man die unten stehenden Zahlen addiert.
+ (subtrahieren bei umask)
+\end_layout
+
+\begin_layout Description
+4 read (r) 
+\end_layout
+
+\begin_layout Description
+2 write (w) 
+\end_layout
+
+\begin_layout Description
+1 execute (x)
+\end_layout
+
+\begin_layout Section
+Textfiles verarbeiten
+\end_layout
+
+\begin_layout Subsection
+tr
+\end_layout
+
+\begin_layout Standard
+tr –s " " 
+\end_layout
+
+\begin_layout Standard
+Bereinigt übeflüssige Leerzeichen
+\end_layout
+
+\begin_layout Subsection
+cut
+\end_layout
+
+\begin_layout Standard
+cut schneidet Spalten oder Felder aus Textfiles aus.
+ Die Spalten oder Felder sind ab 1 nummeriert, es können spezifische Trennzeiche
+n verwendet werden.
+ Standard Trennzeichen ist <TAB>
+\end_layout
+
+\begin_layout Standard
+Beispiel
+\end_layout
+
+\begin_layout Standard
+cut -f4 -d " " 
+\end_layout
+
+\begin_layout Standard
+Schneidet die 4te Spalte aus, geht von Leerzeichen getrennten Spalten aus.
+\end_layout
+
+\begin_layout Subsection
+sort
+\end_layout
+
+\begin_layout Standard
+Sortiert die Ausgabe von Text.
+\end_layout
+
+\begin_layout Description
+sort
+\begin_inset space ~
+\end_inset
+
+-k9
+\begin_inset space ~
+\end_inset
+
+lsl.txt Sortiert list nach der 9ten Spalte.
+ Nicht numerisch.
+\end_layout
+
+\begin_layout Description
+sort
+\begin_inset space ~
+\end_inset
+
+-t
+\begin_inset space ~
+\end_inset
+
+","
+\begin_inset space ~
+\end_inset
+
+-nk2,5
+\begin_inset space ~
+\end_inset
+
+-k9 Sortiert nach Spalte 2 gretrennt mit 
+\series bold
+, 
+\series default
+numerisch, danach nach Spalte 9 nicht numerisch.
+\end_layout
+
+\begin_layout Description
+sort
+\begin_inset space ~
+\end_inset
+
+-r Sortiert nicht numerisch, absteigend.
+\end_layout
+
+\begin_layout Description
+sort
+\begin_inset space ~
+\end_inset
+
+-b Leerzeichen am Anfang ignorieren
+\end_layout
+
+\begin_layout Description
+sort
+\begin_inset space ~
+\end_inset
+
+-f Behandelt kleine Buchstaben wie große Buchstaben
+\end_layout
+
+\begin_layout Subsection
+uniq
+\end_layout
+
+\begin_layout Standard
+Mehrfach vorkommende gleiche Zeilen auf eine zu reduzieren.
+ Funktioniert 
+\series bold
+nur
+\series default
+ auf bereits sortierte Files, sonst werden Textzeilen mit gleichem Inhalt
+ nicht gefunden.
+\end_layout
+
+\begin_layout Subsection
+tail
+\end_layout
+
+\begin_layout Standard
+Die letzten 10 Zeilen einer Datei / Ausgabe.
+\end_layout
+
+\begin_layout Standard
+Mit Argument -nl werden statt 10 die letzten n Zeilen ausgegeben
+\end_layout
+
+\begin_layout Subsection
+head
+\end_layout
+
+\begin_layout Standard
+Wie tail nur die ersten 10 Zeilen.
+\end_layout
+
+\begin_layout Subsection
+wc
+\end_layout
+
+\begin_layout Standard
+wordcount, dient zum Zählen von Wörtern, Zeichen und Bytes in Textdateien.
+\end_layout
+
+\begin_layout Standard
+Folgende Optionen sind möglich
+\end_layout
+
+\begin_layout Description
+-l zählt die Zeilen in der Datei
+\end_layout
+
+\begin_layout Description
+-c zählt die Bytes in der Datei
+\end_layout
+
+\begin_layout Description
+-L gibt die Länge der längsten Zeile aus
+\end_layout
+
+\begin_layout Description
+-w zählt die Worte in der Datei 
+\end_layout
+
+\begin_layout Section
+Benutzerverwaltung
+\end_layout
+
+\begin_layout Paragraph
+Informationen über den aktuellen Benutzer:
+\end_layout
+
+\begin_layout Description
+id
+\end_layout
+
+\begin_layout Description
+whoami
+\end_layout
+
+\begin_layout Paragraph
+Benutzer hinzufügen:
+\end_layout
+
+\begin_layout Standard
+sudo adduser <benutzername>
+\end_layout
+
+\begin_layout Standard
+Mit diesem Kommando wird automatisch eine neue Gruppe mit dem Namen
+\end_layout
+
+\begin_layout Standard
+<benutzername> als primäre Gruppe für den neuen Benutzer angelegt und der
+ neue
+\end_layout
+
+\begin_layout Standard
+Benutzer als einziges Mitglied eingetragen.
+ Weiters wird sein Home Verzeichnis angelegt und der
+\end_layout
+
+\begin_layout Standard
+Inhalt von /etc/skel in dieses Home-Verzeichnis kopiert.
+\end_layout
+
+\begin_layout Paragraph
+Benutzer löschen ohne Homeverzeichnis mitzulöschen
+\end_layout
+
+\begin_layout Standard
+sudo deluser <benutzername>
+\end_layout
+
+\begin_layout Paragraph
+Benutzer inkl.
+ Homeverzeichnis löschen
+\end_layout
+
+\begin_layout Standard
+sudo deluser --remove-home <benutzername>
+\end_layout
+
+\begin_layout Paragraph*
+Neuen Benutzer hinzufügen und seine primäre Gruppe bestimmen:
+\end_layout
+
+\begin_layout Standard
+sudo adduser <benutzername> --ingroup <gruppenname>
+\end_layout
+
+\begin_layout Paragraph*
+Bestehenden Benutzer einer weiteren Gruppe hinzufügen:
+\end_layout
+
+\begin_layout Standard
+sudo usermod -aG <gruppenname> <benutzername>
+\end_layout
+
+\begin_layout Paragraph*
+Primäre Gruppe eines Benutzers ändern:
+\end_layout
+
+\begin_layout Standard
+sudo usermod -g <gruppenname> <benutzername>
+\end_layout
+
+\begin_layout Paragraph*
+Benutzer aus einer Gruppe entfernen:
+\end_layout
+
+\begin_layout Standard
+sudo deluser <benutzername> <gruppenname>
+\end_layout
+
+\begin_layout Paragraph
+Eine neue Gruppe erstellen:
+\end_layout
+
+\begin_layout Standard
+sudo addgroup <gruppenname>
+\end_layout
+
+\begin_layout Paragraph
+Eine bestehende Gruppe löschen:
+\end_layout
+
+\begin_layout Standard
+sudo delgroup <gruppenname>
+\end_layout
+
+\begin_layout Paragraph
+Benutzernamen ändern:
+\end_layout
+
+\begin_layout Standard
+usermod -l <neuerName> <alterName>
+\end_layout
+
+\begin_layout Standard
+Allerdings nur möglich, wenn der zu ändernde Benutzername gerade nicht am
+ System
+\end_layout
+
+\begin_layout Standard
+angemeldet ist.
+\end_layout
+
+\begin_layout Paragraph
+Passwort ändern:
+\end_layout
+
+\begin_layout Standard
+Eigenes Passwort ändern:
+\end_layout
+
+\begin_layout Standard
+passwd
+\end_layout
+
+\begin_layout Standard
+Passwort eines anderen Benutzers ändern:
+\end_layout
+
+\begin_layout Standard
+sudo passwd <benutzername>
+\end_layout
+
+\begin_layout Paragraph
+root Account aktivieren/deaktivieren:
+\end_layout
+
+\begin_layout Standard
+Durch Vergabe eines Passwortes:
+\end_layout
+
+\begin_layout Standard
+sudo passwd root
+\end_layout
+
+\begin_layout Standard
+root Account sperren (lock):
+\end_layout
+
+\begin_layout Standard
+sudo passwd –l root
+\end_layout
+
+\begin_layout Standard
+root Account entsperren (unlock):
+\end_layout
+
+\begin_layout Standard
+sudo passwd –u root
+\end_layout
+
+\begin_layout Paragraph
+Einen Benutzer zum „sudoer” machen, ohne Änderung der Defaultdatei /etc/sudoers.
+\end_layout
+
+\begin_layout Enumerate
+Schritt 1: Anlegen des neuen Benutzers 
+\begin_inset Newline newline
+\end_inset
+
+sudo adduser <benutzername>
+\end_layout
+
+\begin_layout Enumerate
+Schritt 2: Einfügen des Benutzers in die Gruppe sudo:
+\begin_inset Newline newline
+\end_inset
+
+sudo usermod -aG sudo <benutzername>
+\end_layout
+
+\begin_layout Enumerate
+Schritt 3: Testen, ob’s funktioniert (zB.
+ mit):
+\begin_inset Newline newline
+\end_inset
+
+su <benutzername> # switch user, öffnet neue Shell
+\begin_inset Newline newline
+\end_inset
+
+cat /etc/shadow (sollte File anzeigen)
+\begin_inset Newline newline
+\end_inset
+
+exit # zur alten Shell zurückkehren
+\end_layout
+
+\begin_layout Enumerate
+Schritt 4: Löschen eines Benutzers aus der Gruppe sudo:
+\begin_inset Newline newline
+\end_inset
+
+sudo deluser <benutzername> sudo
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+4
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+par
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bashschripting
+\end_layout
+
+\begin_layout Subsection
+Shebangline
+\end_layout
+
+\begin_layout Subsubsection
+Allgemein
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Implizit bash
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Executable chmod
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+chmod u+x shellscript.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pattern Matching
+\end_layout
+
+\begin_layout Description
+* Entspricht beliebiger Eingabe
+\end_layout
+
+\begin_layout Description
+? Entspricht einem Buchstaben
+\end_layout
+
+\begin_layout Description
+[AaBbCc] Entspricht einem der Buchstaben
+\end_layout
+
+\begin_layout Description
+[^RGB] Entspricht 
+\series bold
+NICHT 
+\series default
+einem der Buchstaben
+\end_layout
+
+\begin_layout Description
+[a-g] Entspricht einem Buchstaben zwischen a und g
+\end_layout
+
+\begin_layout Subsection
+Escaping
+\end_layout
+
+\begin_layout Description
+
+\backslash
+c Gibt c aus.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+`
+\end_layout
+
+\end_inset
+
+cmd
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+`
+\end_layout
+
+\end_inset
+
+ Gibt den Rückgabewert von Befehl cmd aus.
+ (Backquotes) 
+\end_layout
+
+\begin_layout Description
+"whatever" Whatever sofern es nicht $whatever und `whatever` gibt.
+\end_layout
+
+\begin_layout Description
+'whatever' Gibt ausschließlich whatever aus
+\end_layout
+
+\begin_layout Subsection
+Standard Shellvariablen
+\end_layout
+
+\begin_layout Description
+$0 Name des Shell Scripts
+\end_layout
+
+\begin_layout Description
+$1 Erster übergebener Parameter (analog $2,$3...)
+\end_layout
+
+\begin_layout Description
+$# Die Anzahl der übergebenen Parameter
+\end_layout
+
+\begin_layout Description
+$* Alle Parameter die Übergeben wurden
+\end_layout
+
+\begin_layout Description
+$- Optionen mit der die Shell aufgefunden wurde
+\end_layout
+
+\begin_layout Description
+$? Exit Code des letzten Commands
+\end_layout
+
+\begin_layout Description
+$$ Prozess ID der Shell
+\end_layout
+
+\begin_layout Description
+$RANDOM Zufallsnummer
+\end_layout
+
+\begin_layout Subsection
+Berechnungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+z = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+z =$(($z+3))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+If / test
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if [ "$x" -lt "$y" ]; 
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+	#irgendwas
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+	#iwas sonst
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Bediengungen
+\end_layout
+
+\begin_layout Subsubsection
+Numerisch
+\end_layout
+
+\begin_layout Description
+lt weniger als
+\end_layout
+
+\begin_layout Description
+gt größer als
+\end_layout
+
+\begin_layout Description
+eq gleich
+\end_layout
+
+\begin_layout Description
+ne nicht gleich
+\end_layout
+
+\begin_layout Description
+ge größer gleich
+\end_layout
+
+\begin_layout Description
+le kleiner gleich
+\end_layout
+
+\begin_layout Subsubsection
+Datei
+\end_layout
+
+\begin_layout Description
+nt neuer als
+\end_layout
+
+\begin_layout Description
+d ist Verzeichnis
+\end_layout
+
+\begin_layout Description
+f ist Datei
+\end_layout
+
+\begin_layout Description
+x ist ausführbar
+\end_layout
+
+\begin_layout Description
+r ist lesbar
+\end_layout
+
+\begin_layout Description
+w ist schreib-bar
+\end_layout
+
+\begin_layout Subsubsection
+String
+\end_layout
+
+\begin_layout Description
+= gleich
+\end_layout
+
+\begin_layout Description
+z hat Länge 0
+\end_layout
+
+\begin_layout Description
+n hat Länge > 0
+\end_layout
+
+\begin_layout Subsubsection
+Logik
+\end_layout
+
+\begin_layout Description
+&& logisches Und
+\end_layout
+
+\begin_layout Description
+|| logisches Oder
+\end_layout
+
+\begin_layout Description
+! logisches Nicht
+\end_layout
+
+\begin_layout Subsubsection
+Beispiele
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if [ $# -eq 0 ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "No arguments defined"
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "Number of arguments is: $#"
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if test $# -eq 0
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "No arguments defined"
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "Number of arguments is: $#"
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#prüfen ob folder existiert
+\end_layout
+
+\begin_layout Plain Layout
+
+#sonst anlegen
+\end_layout
+
+\begin_layout Plain Layout
+
+DIR = ./folder
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ ! -d $DIR ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+	mkdir $DIR
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo "Already exists"
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Schleifen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for arg in [list]
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+    echo $arg
+\end_layout
+
+\begin_layout Plain Layout
+
+done
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#wörter einzeln aus file in $1
+\end_layout
+
+\begin_layout Plain Layout
+
+for x in `cat $1`
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+    echo $x
+\end_layout
+
+\begin_layout Plain Layout
+
+done
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+X=""
+\end_layout
+
+\begin_layout Plain Layout
+
+while [ "$X" != "end" ]
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+echo -n " Eingabe: "
+\end_layout
+
+\begin_layout Plain Layout
+
+read X
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo "Ausgabe: $X"
+\end_layout
+
+\begin_layout Plain Layout
+
+done
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#textfile zeilenweise auslesen mit while
+\end_layout
+
+\begin_layout Plain Layout
+
+while read line
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo $line
+\end_layout
+
+\begin_layout Plain Layout
+
+done < txt.txt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# Schleife bricht ab, wenn N > 10
+\end_layout
+
+\begin_layout Plain Layout
+
+N=1
+\end_layout
+
+\begin_layout Plain Layout
+
+while [ $N -le 10 ]
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "N hat jetzt den Wert $N"
+\end_layout
+
+\begin_layout Plain Layout
+
+ N=`expr $N + 1`
+\end_layout
+
+\begin_layout Plain Layout
+
+done
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Eingabe
+\end_layout
+
+\begin_layout Standard
+read <Variable>
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/sh
+\end_layout
+
+\begin_layout Plain Layout
+
+echo "Whats your name? "
+\end_layout
+
+\begin_layout Plain Layout
+
+read MY_NAME
+\end_layout
+
+\begin_layout Plain Layout
+
+echo "Hello $MY_NAME"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

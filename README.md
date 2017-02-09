@@ -5,8 +5,10 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 # S1, Semster 1
 ## ADE
 - Vorlage für Abgaben (Syntax Highlighting, Ablaufdiagramm, Layering)
+
 ## EIR
 - Cheatsheet für Klausur
 - Konvertierungszettel mit Lookup-Tables zum kontrollieren
+
 ## SPT
 - Zusammenfassung / Glossar für die Klausur
