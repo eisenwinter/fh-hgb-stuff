@@ -1,0 +1,5631 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usetikzlibrary{positioning}
+\usetikzlibrary{trees}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{arrows.meta}
+\usepackage{tikz-qtree}
+
+% Improves spacing
+\usepackage{circuitikz}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.5in,left=.2in,right=.2in,bottom=.5in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+
+
+\makeatother
+
+
+\setlength{\premulticols}{0.5pt}
+\setlength{\postmulticols}{0.5pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,skins}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+
+\let\Oldpart\part
+\newcommand{\parttitle}{}
+\renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[C]{\scriptsize ADE }
+\fancyhead[R]{\scriptsize \rightmark}
+\fancyhead[L]{\scriptsize \parttitle   }
+\fancyfoot[C]{\scriptsize \thepage}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\end_preamble
+\options landscape
+\use_default_options false
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\listings_params "language={[XSC]Pascal},captionpos=b,tabsize=3,frame=lines,keywordstyle={\color{headlinec}},commentstyle={\color{dkgreen}\textit},stringstyle={\color{red}},numbers=left,numberstyle={\tiny},numbersep=1pt,stepnumber=1,breaklines=true,showstringspaces=false,basicstyle={\scriptsize},emph={label},columns=fullflexible,showstringspaces=false,frame=tb,xleftmargin=6pt"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{titlec}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\series bold
+ADE/PRG v1.1
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ ADE/PRG 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+Die Snippets wurden alle einmal kompiliert, ausgeführt und auf Korrektheit
+ geprüft.
+ Trotzdem kanns natürlich sein, dass irgendwas nicht ganz passt =P.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+par
+\end_layout
+
+\end_inset
+
+ Die vom Georg gestohlenen hab ich nicht extra kompiliert und ausgeführt,
+ ich geh mal davon aus er hat das gemacht.
+ MIT, https://github.com/eisenwinter/fh-hgb-stuff 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Allgemein
+\end_layout
+
+\begin_layout Section
+Datentypen
+\end_layout
+
+\begin_layout Subsection
+elementare Typen
+\end_layout
+
+\begin_layout Standard
+Primitiva: INTEGER, REAL, CHAR, WORD, BOOLEAN, Enum etc.
+ etc.
+\end_layout
+
+\begin_layout Subsubsection
+benutzerdefinierte Typen
+\end_layout
+
+\begin_layout Paragraph
+Bereichstypen (Ranges)
+\end_layout
+
+\begin_layout Standard
+Beispiele [0..100], [Sa..So]
+\end_layout
+
+\begin_layout Paragraph
+Aufzählungstypen (Enumerationen)
+\end_layout
+
+\begin_layout Standard
+Beispiele Ampel = (rot,gelb,gruen); Tag = (Mo,Di,Mi,Do,Fr,Sa,So);
+\end_layout
+
+\begin_layout Subsection
+Strukturierte Datentypen
+\end_layout
+
+\begin_layout Itemize
+sind auf anderen, einfacheren Datentypen aufgebaut.
+ 
+\end_layout
+
+\begin_layout Itemize
+ermöglichen Aggregation von Einzelelementen
+\end_layout
+
+\begin_layout Description
+Beispiele: Set, Compound, Record, Array
+\end_layout
+
+\begin_layout Standard
+Strutkurierte Datentypen gliedern sich in:
+\end_layout
+
+\begin_layout Subsubsection
+Statische Datenstrukturen
+\end_layout
+
+\begin_layout Description
+Beispiele Array, Verbund
+\end_layout
+
+\begin_layout Subsubsection
+Dynamische Datenstrukturen
+\end_layout
+
+\begin_layout Standard
+Zur Definition von Datenstrukturen, bei denen zur Laufzeit nicht nur die
+ zugeordneten Werte, sondern auch der Aufbau und die Größe variabel sein
+ sollen, braucht man dynamische Strukturen
+\end_layout
+
+\begin_layout Description
+Beispiele: Listen, Bäume oder Graphen
+\end_layout
+
+\begin_layout Section
+Rekursion
+\end_layout
+
+\begin_layout Standard
+Zu beachten ist einerseits das bei einem linear rekursiven Algorithmus schnell
+ eine hohe Stacktiefe erreicht wird, was die Gefahr eines Stackoverflows
+ birgt.
+ Sollte er nicht linear rekursiv sein, so wird der Algorithmus langsam sein,
+ allerdings dadurch nur sehr schwer eine hohe Stacktiefe erreichen.
+ 
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+rekursiv ein Algorithmus ist linear rekursiv, wenn pro rekursiven Zweig
+ nur ein rekursiver Aufruf ist.
+ 
+\end_layout
+
+\begin_layout Description
+endrekursiv ein Algorithmus ist endrekursiv wenn nach dem rekursiven Aufruf
+ keine Logik mehr kommt
+\end_layout
+
+\begin_layout Subsection
+Entrekursivieren
+\end_layout
+
+\begin_layout Standard
+Ein Algorithmus lässt sich nur dann leicht in eine Iterative Lösung transformier
+en, wenn er endrekursiv und linear rekursiv ist.
+ Ansonsten wird ein Hilfsstack benötigt.
+\end_layout
+
+\begin_layout Part
+Algorithmen entwerfen
+\end_layout
+
+\begin_layout Section
+Vorgehensmodell 
+\end_layout
+
+\begin_layout Enumerate
+Klarheit über Aufgabenstellung verschaffen - Was ist gegeben, was ist gesucht?,
+ Neben-, Ausnahme-, Umgebungsbedingungen, Beispiel-Szenarien)
+\end_layout
+
+\begin_layout Enumerate
+Über Entwurfsstrategie entscheiden - z.B.
+ schrittweise Verfeinerung
+\end_layout
+
+\begin_layout Enumerate
+Lösungsidee entwickeln und dokumentieren - z.B.
+ in stilisierter Prosa
+\end_layout
+
+\begin_layout Enumerate
+Transformation der Lösungsidee in Algorithmus - (z.B.
+ in Algorithmenbeschreibungssprache/Pseudocode)
+\end_layout
+
+\begin_layout Enumerate
+Korrektheits- und Qualitätscheck der algorithmischen Lösung -(Korrespondenz
+ zur Lösungsidee, Schnittstelle, Datenobjekte, Ablaufstruktur; Strukturqualität,
+ Eleganz und Verständlichkeit)
+\end_layout
+
+\begin_layout Enumerate
+Optimierung - (Ratschlag: Tu´s nicht – Erst wenn tatsächlich erforderlich
+ Ggf.
+ Re-Design überlegen Eleganz der Lösung)
+\end_layout
+
+\begin_layout Enumerate
+Sicherstellung, dass alle Entwurfsentscheidungen dokumentiert sind
+\end_layout
+
+\begin_layout Enumerate
+Transformation in ein ausführbares Programm(system) - (Beachtung programmierspra
+chenspezifischer Abweichungen vom Entwurf)
+\end_layout
+
+\begin_layout Enumerate
+Systematischer Test - (statischer und dynamischer Test, Use Cases)
+\end_layout
+
+\begin_layout Subsection
+stepwise refinement
+\end_layout
+
+\begin_layout Standard
+Zerlege eine Aufgabe in Teilaufgaben.
+ Betrachte jede Teilaufgabe möglichst losgelöst von den anderen Teilaufgaben;
+ zerlege sie weiter in Teilaufgaben, bis diese so einfach geworden sind,
+ dass man dafür einen Algorithmus angeben kann.
+\end_layout
+
+\begin_layout Section
+Komplexität
+\end_layout
+
+\begin_layout Subsection
+Begriff und Abgrenzung
+\end_layout
+
+\begin_layout Itemize
+Den Begriff Komplexität können wir also mit „Aufwand“ in Bezug setzen
+\end_layout
+
+\begin_layout Itemize
+Laufzeitkomplexität (Zeitaufwand)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wie lange braucht ein Algorithmus, um ein Ergebnis zu liefern?
+\end_layout
+
+\begin_layout Itemize
+Von welchen Parametern hängt die Laufzeit ab?
+\end_layout
+
+\begin_layout Itemize
+Wie ändert sich die Laufzeit wenn sich die „Problemgröße“ ändert?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Speicherkomplexität (Speicheraufwand)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wie viel Speicher braucht ein Algorithmus?
+\end_layout
+
+\begin_layout Itemize
+Von welchen Parametern hängt der Speicherbedarf ab?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Strukturkomplexität (Test-/Verständnisaufwand)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wie viele Verzweigungen sind in einem Algorithmus enthalten?
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Laufzeitkomplexität 
+\end_layout
+
+\begin_layout Standard
+Die Laufzeitkomplexität ist eine Funktion einer Problemgröße n die den „Zeitaufw
+and“ zur Lösung der Aufgabe beschreibt 
+\end_layout
+
+\begin_layout Paragraph
+Typische Problemgrößen:
+\end_layout
+
+\begin_layout Itemize
+Länge eines Texts oder Felds
+\end_layout
+
+\begin_layout Itemize
+Anzahl der Knoten einer Liste oder eines Baums
+\end_layout
+
+\begin_layout Itemize
+Größe einer Matrix
+\end_layout
+
+\begin_layout Itemize
+Grad eines Polynoms
+\end_layout
+
+\begin_layout Subsection
+Grobanalyse (Laufzeitabschätzung) 
+\end_layout
+
+\begin_layout Itemize
+Ermittlung der Anzahl erforderlicher Schleifendurchläufe oder Prozeduraufrufen
+\end_layout
+
+\begin_layout Itemize
+Details wie einzelne Anweisungen oder Ausdrucksauswertungen (sofern nicht
+ essentiell) bleiben unberücksichtigt
+\end_layout
+
+\begin_layout Itemize
+Analyse unabhängig vom verwendeten Prozessortyp und der verwendeten Programmiers
+prache
+\end_layout
+
+\begin_layout Subsubsection
+Vorgehensweise
+\end_layout
+
+\begin_layout Itemize
+Bestimmen der für das Laufzeitverhalten wesentlichen Problemgröße
+\end_layout
+
+\begin_layout Itemize
+Bestimmen der minimalen, maximalen und durchschnittlichen Anzahl der wesentliche
+n algorithmischen Schritte (z.
+ B.
+ Suchschritte, Schleifendurchläufe) in Abhängigkeit der Problemgröße 
+\end_layout
+
+\begin_layout Subsection
+Feinanalyse (Laufzeitberechnung) 
+\end_layout
+
+\begin_layout Itemize
+Analyse jeder einzelnen Anweisung und jeder Ausdrucksauswertung
+\end_layout
+
+\begin_layout Itemize
+Berechnung der Laufzeit bezogen auf einen bestimmten Prozessortyp und ggf.
+ der eingesetzten Programmiersprache (Compiler)
+\end_layout
+
+\begin_layout Subsubsection
+Vorgehensweise
+\end_layout
+
+\begin_layout Itemize
+Alle Anweisungen und Ausdrucksauswertungen werden berücksichtigt
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wie oft werden diese ausgeführt?
+\end_layout
+
+\begin_layout Itemize
+Wie lange dauert die Ausführung?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Wir rechnen dabei nicht mit echten Ausführungszeiten, denn die sind prozessorabh
+ängig, sondern mit Zeiteinheiten bezogen auf eine Referenzoperation (z.
+ B.
+ die Wertzuweisung = 1.0) 
+\end_layout
+
+\begin_layout Description
+Ermitteln, wie oft jede Anweisung/jeder Ausdruck ausgeführt wird
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x := 1 i := 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+while i ≤ n do
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x := x * i
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+i := i + 1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+end -- while
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Ausführungszeiten für jede Anweisung/jeden Ausdruck ermitteln
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x := 1 i := 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zwei Zuweisungen 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+while i ≤ n do
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vergleich
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x := x * i
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zuweisung, Multiplikation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+i := i + 1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zuweisung, Addition
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+end -- while
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Gesamtausführungszeit ermitteln
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $2.0*1+1.6(u+1)+3.3u+1.8u=3.6+6.7u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Laufzeitmessung 
+\end_layout
+
+\begin_layout Standard
+Tatsächliches messen von Ausführungszeit, entweder über Tools oder selbst
+ progammiert.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Sortieren
+\end_layout
+
+\begin_layout Standard
+Die Prozedur Swap steht für den Standard-Dreiecks-Tausch.
+\end_layout
+
+\begin_layout Section
+Bubble Sort
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(n^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine Familie besonders einfacher Sortierverfahren beruht auf der Lösungsidee,
+ dass solange systematisch benachbarte Elemente miteinander verglichen und
+ bei Bedarf vertauscht werden, bis der Datenbestand (in unserem Fall als
+ Feld organisiert) sortiert ist.
+ Da das Vertauschen benachbarter Elemente die zentrale Operation dieses
+ Verfahren ist, nennt man es Austauschsortieren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE BubbleSort(VAR arr : ARRAY OF INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+	i, j : Integer;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	FOR i := High(arr) DOWNTO Low(arr) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+	BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+		FOR j := Low(arr) TO i DO
+\end_layout
+
+\begin_layout Plain Layout
+
+		BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+			If (arr[j-1] > arr[j]) Then
+\end_layout
+
+\begin_layout Plain Layout
+
+			BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+				Swap(arr[j],arr[j-1]);
+\end_layout
+
+\begin_layout Plain Layout
+
+			END;
+\end_layout
+
+\begin_layout Plain Layout
+
+		END;
+\end_layout
+
+\begin_layout Plain Layout
+
+	END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Selection sort
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(n^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu Beginn wird das „kleinste“ Element aus dem zu sortierenden Feld ermittelt
+ und mit dem ersten Element vertauscht (Swap).
+ Danach wird mit dem Rest des Feldes wiederum so verfahren.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE SelectionSort(var arr : ARRAY OF INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  i,j, minPos, minValue : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i := Low(arr) TO High(arr)-1 DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    minPos := i;
+\end_layout
+
+\begin_layout Plain Layout
+
+    minValue := arr[minPos];
+\end_layout
+
+\begin_layout Plain Layout
+
+    FOR j := i + 1 TO High(arr) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+      IF arr[j] < minValue THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+      BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+        minPos := j;
+\end_layout
+
+\begin_layout Plain Layout
+
+        minValue := arr[minPos];
+\end_layout
+
+\begin_layout Plain Layout
+
+      END;
+\end_layout
+
+\begin_layout Plain Layout
+
+      Swap(arr[i],arr[minPos]);
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Combsort
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(n^{1.3})$
+\end_inset
+
+ Verbesserter Bubble Sort
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE CombSort(VAR arr : ARRAY OF INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  noSwaps : BOOLEAN;
+\end_layout
+
+\begin_layout Plain Layout
+
+  i,gap : LONGINT;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  gap := High(arr) - Low(arr) + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  REPEAT
+\end_layout
+
+\begin_layout Plain Layout
+
+    gap := (gap * 10) DIV 13;
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF gap = 0 THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+      gap := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    noSwaps := TRUE;
+\end_layout
+
+\begin_layout Plain Layout
+
+    FOR i := Low(arr) TO High(arr) - gap DO
+\end_layout
+
+\begin_layout Plain Layout
+
+      IF arr[i + gap] < arr[i] THEN BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+        Swap(arr[i],arr[i+gap]);
+\end_layout
+
+\begin_layout Plain Layout
+
+        noSwaps := FALSE;
+\end_layout
+
+\begin_layout Plain Layout
+
+      END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  UNTIL noSwaps AND (gap = 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Insertion sort
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(n^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu Beginn betrachtet man das erste Element des Felds als sortierten Bereich
+ und man sortiert das zweite Element, je nach seinem Schlüsselwert, vor
+ oder hinter dem ersten ein.
+ Der sortierte Bereich wird damit um ein Element vergrößert.
+ Mit dem nächsten Element verfährt man ebenso: man fügt es im sortierten
+ Bereich an der richtigen Stelle ein.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE InsertionSort(var arr : ARRAY OF INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  i, j, h : LONGINT;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i:= Low(arr) TO High(arr) - 1 DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    h := arr[i+1];
+\end_layout
+
+\begin_layout Plain Layout
+
+    j := i;
+\end_layout
+
+\begin_layout Plain Layout
+
+    WHILE (j >= Low(arr)) AND (h < arr[j]) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      arr[j+1] := arr[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+      j := j - 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+    arr[j+1]:= h;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Shellsort
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(n^{\frac{6}{5}})$
+\end_inset
+
+ Verbesserter Insertion Sort.
+\end_layout
+
+\begin_layout Standard
+Analysen haben gezeigt, dass auch für „fast sortierte“ Felder das Einfügesortier
+en eine annähernd lineare Laufzeitkomplexität aufweist (also günstig bleibt).
+ Auf Basis ähnlicher Überlegungen hat Shell seinen Algorithmus so konstruiert,
+ dass dieser in mehreren Schritten eine so gute „Vorsortierung“ des Felds
+ herstellt, dass eine abschließende „Endsortierung“ mittels Einfügesortieren
+ mit nur linear ansteigendem Aufwand möglich ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE ShellSort(VAR arr : ARRAY OF INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n,m,i,j,h: LONGINT;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := High(arr) - Low(arr) + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m := n DIV 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE m > 0 DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    FOR i := Low(arr) TO High(arr) - m DO
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      h := arr[i+m];
+\end_layout
+
+\begin_layout Plain Layout
+
+      j := i;
+\end_layout
+
+\begin_layout Plain Layout
+
+      WHILE (j >= Low(arr)) AND (h < arr[j]) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+      BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+        arr[j+m] := arr[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+        j := j - m;
+\end_layout
+
+\begin_layout Plain Layout
+
+      END;
+\end_layout
+
+\begin_layout Plain Layout
+
+      arr[j+m]:= h;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+    m := m DIV 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Mergesort (Top-Down)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(n*log(n))$
+\end_inset
+
+ Adaptiert von Java Implementierung von Sedgewick.
+ Achtung! Bei offenem Array startet Index bei 0!
+\end_layout
+
+\begin_layout Standard
+Es wird zunächst eine Teilungsposition ermittelt und dann wird mit rekursiven
+ Aufrufen, jeweils eine Hälfte des Felds sortiert.
+ Die eigentliche Sortierarbeit erfolgt dann folgendermaßen: die beiden sortierte
+n Hälften des Felds werden (unter Zuhilfenahme des Hilfsalgorithmus Merge)
+ zu einem sortierten Gesamtfeld zusammengemischt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROGRAM MergeSort;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE Merge(VAR a : ARRAY OF INTEGER; aux : Array OF INTEGER; lo,mid,hi
+ : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+	i,j,k : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	(* Merge a[lo..mid] with a[mid+1..hi].
+ *)
+\end_layout
+
+\begin_layout Plain Layout
+
+	i := lo;
+\end_layout
+
+\begin_layout Plain Layout
+
+	j := mid + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+	FOR k := lo TO hi DO (* Copy a[lo..hi] to aux[lo..hi] *)
+\end_layout
+
+\begin_layout Plain Layout
+
+		aux[k] := a[k];
+\end_layout
+
+\begin_layout Plain Layout
+
+	FOR k := lo TO hi DO (* Merge back to a[lo..hi]*)
+\end_layout
+
+\begin_layout Plain Layout
+
+	BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+		IF i > mid THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+		BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+			a[k] := aux[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+			Inc(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+		END
+\end_layout
+
+\begin_layout Plain Layout
+
+		ELSE IF j > hi THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+		BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+			a[k] := aux[i];
+\end_layout
+
+\begin_layout Plain Layout
+
+			Inc(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+		END
+\end_layout
+
+\begin_layout Plain Layout
+
+		ELSE IF aux[j] < aux[i] THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+		BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+			a[k] := aux[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+			Inc(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+		END
+\end_layout
+
+\begin_layout Plain Layout
+
+		ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+		BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+			a[k] := aux[i];
+\end_layout
+
+\begin_layout Plain Layout
+
+			Inc(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+		END;
+\end_layout
+
+\begin_layout Plain Layout
+
+	END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE MergeSort(VAR a :  Array OF INTEGER; lo, hi : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+	mid : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	IF lo < hi THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+	BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+		mid := lo + (hi - lo) DIV 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+		MergeSort(a,lo,mid); (* sort left half *)
+\end_layout
+
+\begin_layout Plain Layout
+
+		MergeSort(a,mid+1,hi); (* sort right half *)
+\end_layout
+
+\begin_layout Plain Layout
+
+		Merge(a,a,lo,mid,hi); (* merge results *)
+\end_layout
+
+\begin_layout Plain Layout
+
+	END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quicksort
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}(n*log(n))$
+\end_inset
+
+ Ist zwar rekursiv hat aber eine bessere Laufzeit als alle anderen angeführten.
+ Beginnt mit dem Wert genau in der Mitte und sortiert nach Links und Rechts
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Haufen
+\begin_inset Quotes grd
+\end_inset
+
+ bzw 
+\begin_inset Quotes gld
+\end_inset
+
+Stacks
+\begin_inset Quotes grd
+\end_inset
+
+, diese werden dann wieder in der Mitte geteilt und nach links und rechts
+ sortiert.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+divide et impera
+\begin_inset Quotes grd
+\end_inset
+
+ bzw.
+ teile und herrsche Prinzip.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE QuickSort(VAR arr : ARRAY OF INTEGER; lo, hi : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  i,j : LONGINT;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m : LONGINT;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  i := lo;
+\end_layout
+
+\begin_layout Plain Layout
+
+  j := hi;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m := arr[(i+j) DIV 2];
+\end_layout
+
+\begin_layout Plain Layout
+
+  REPEAT
+\end_layout
+
+\begin_layout Plain Layout
+
+    WHILE arr[i] < m DO Inc(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+    WHILE m < arr[j] DO Dec(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF i <= j THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      IF i <> J THEN (* optionales if (optimierung)*)
+\end_layout
+
+\begin_layout Plain Layout
+
+        Swap(arr[i],arr[j]);
+\end_layout
+
+\begin_layout Plain Layout
+
+      Inc(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+      Dec(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  UNTIL i > j;
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF lo < j THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    QuickSort(arr,lo,j);
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF i < hi THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    QuickSort(arr,i,hi);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Weitere Sortierverfahren
+\end_layout
+
+\begin_layout Subsection
+IndirectSort
+\end_layout
+
+\begin_layout Standard
+Wir haben bei der Komplexitätsanalyse der Sortierverfahren darauf hingewiesen,
+ dass neben der Anzahl der Schlüsselvergleiche auch die Anzahl der Zuweisung
+ von Datenobjekten in der Regel eine nicht zu vernachlässigende Auswirkung
+ auf das Laufzeitverhalten hat.
+ Sind die zu sortierenden Datenobjekte sehr groß, ist es zweckmäßig, den
+ Aufwand für das Verschieben der Datenobjekte zu minimieren.
+ Das kann man durch indirektes Sortieren erreichen.
+ Dabei wird nicht der Datenbestand selbst sortiert, sondern ein Feld von
+ Zeigern, die auf die entsprechenden Datenobjekte verweisen.
+\end_layout
+
+\begin_layout Subsection
+BucketSort
+\end_layout
+
+\begin_layout Standard
+Der BucketSort (das sogenannte Fächersortieren) Unter gewissen Voraussetzungen
+ (Einschränkungen) ist das Sortieren sogar in linearer Zeit, also mit einer
+ asymptotischen Laufzeitkomplexität O(n) möglich.
+ Wenn z.
+ B.
+ die Schlüsselwerte aus einem relativ kleinen numerischen Bereich 1:max
+ stammen, kann man ein Hilfsfeld h mit max Elementen verwenden, in dem verkettet
+e Listen aus Datenobjekten so verankert werden, dass jedes Datenobjekt unter
+ Heranziehung seines Schlüsselwerts x als Index im Feld h in die entsprechende
+ Liste h[x] eingefügt wird.
+ Ein abschließender Durchlauf durch das Feld h und durch die darin verankerten
+ Listen ermöglicht es, die Datenobjekte in eine sortierte Reihenfolge zu
+ bringen.
+ Das Feld h kann als „Schrank mit Fächern“ aufgefasst werden, in welche
+ die entsprechenden Datenobjekte einsortiert werden.
+ Deshalb wird dieses Verfahren auch als Fächersortieren (BucketSort) bezeichnet.
+\end_layout
+
+\begin_layout Section
+Stabilität von Sortierverfahren 
+\end_layout
+
+\begin_layout Standard
+Ein Sortierverfahren wird als stabil (stable) bezeichnet, wenn die relative
+ Reihenfolge von Datenobjekten mit gleichem Schlüsselwert durch den Sortiervorga
+ng unverändert bleibt.
+ Stabilität ist eine Eigenschaft, die nur wenige Sortierverfahren aufweisen,
+ die aber für bestimmte Anwendungen essentiell ist.
+\end_layout
+
+\begin_layout Description
+Beispiele
+\begin_inset space ~
+\end_inset
+
+für
+\begin_inset space ~
+\end_inset
+
+instabile
+\begin_inset space ~
+\end_inset
+
+Sortierverfahren Selectionsort, Shell-Sortieren, Combsort, Quicksort
+\end_layout
+
+\begin_layout Description
+Beispiele
+\begin_inset space ~
+\end_inset
+
+für
+\begin_inset space ~
+\end_inset
+
+stabile
+\begin_inset space ~
+\end_inset
+
+Sortierverfahren Insertionsort, Bubblesort, Mergesort
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Zufallszahlen
+\end_layout
+
+\begin_layout Section
+Anwendungsgebiete 
+\end_layout
+
+\begin_layout Itemize
+Simulation natürlicher Vorgänge: um Phänomene mit zufälligem Verhalten
+\end_layout
+
+\begin_layout Itemize
+darzustellen (z.
+ B.
+ kernphysikalische Prozesse, Verkehrsprobleme)
+\end_layout
+
+\begin_layout Itemize
+Stichproben
+\end_layout
+
+\begin_layout Itemize
+Monte-Carlo-Methoden
+\end_layout
+
+\begin_layout Itemize
+Test von Algorithmen mit zufälligen Daten
+\end_layout
+
+\begin_layout Itemize
+Programmierung von Spielen und Fragen der künstl.
+ Intelligenz
+\end_layout
+
+\begin_layout Itemize
+Kryptographie
+\end_layout
+
+\begin_layout Itemize
+Animation
+\end_layout
+
+\begin_layout Section
+Lineare-Kongruenz-Methode (LKM) 
+\end_layout
+
+\begin_layout Standard
+Standardverfahren nach Derrick H.
+ Lehmer (1949)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{n+1}=(a*x_{n}+c)modm$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+m ...
+ Modul 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+möglichst groß (Periodenlänge)
+\end_layout
+
+\begin_layout Description
+a ...
+ Multiplikator 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+2 ≤ a < m
+\end_layout
+
+\begin_layout Description
+c ...
+ Inkrement 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 0 ≤ c < m
+\end_layout
+
+\begin_layout Description
+x0 ...
+ vorherige Zufallszahl 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 0 ≤ x0 < m
+\end_layout
+
+\begin_layout Description
+xn+1 ...
+ nächste Zufallszahl 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 0 ≤ xn < m
+\end_layout
+
+\begin_layout Standard
+Güte des Generators hängt von Wahl der Faktoren a, c, und m ab
+\end_layout
+
+\begin_layout Paragraph
+Regeln zur Wahl von m, a, c (nach Knuth und Sedgewick) 
+\end_layout
+
+\begin_layout Enumerate
+m: möglichst groß, typisch 2k oder 2k-1 damit x mod m einfach berechnet
+ werden kann
+\end_layout
+
+\begin_layout Enumerate
+a: um rund eine Zehnerpotenz kleiner als m, also und von der Form a = …g21
+ mit gerader Ziffer g (unregelmäßiges Bitmuster (z.B.
+ 110101011101)
+\end_layout
+
+\begin_layout Enumerate
+c: c = 1, Startwert beliebig zwischen 0 und m-1
+\end_layout
+
+\begin_layout Standard
+Gutes Beispiel: 
+\begin_inset Formula $a$
+\end_inset
+
+ = 3421, 
+\begin_inset Formula $m$
+\end_inset
+
+ = 216 und 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ = 0
+\end_layout
+
+\begin_layout Subsection
+Methoden zur Verlängerung der Periodenlänge 
+\end_layout
+
+\begin_layout Subsubsection
+Schieberegistermethode nach Tausworthe 
+\end_layout
+
+\begin_layout Itemize
+fülle ein Feld t[1:r] mit Zufallszahlen (z.
+ B.
+ mit IntRand)
+\end_layout
+
+\begin_layout Itemize
+verknüpfe zwei Elemente (t[p] und t[q]) bitweise mit exklusivem Oder
+\end_layout
+
+\begin_layout Itemize
+verschiebe den Feldinhalt um eine Stelle nach rechts
+\end_layout
+
+\begin_layout Itemize
+verwende das Verknüpfungsergebnis als Zufallszahl und fülle t[1] damit
+\end_layout
+
+\begin_layout Standard
+Gute Ergebnisse mit p = 31, q = r = 55 (nach Knuth)
+\end_layout
+
+\begin_layout Subsubsection
+Tabellenmethode nach MacLaren und Marsaglia
+\end_layout
+
+\begin_layout Description
+Initialisierung
+\end_layout
+
+\begin_layout Itemize
+fülle Tabelle t[0:r-1] mit Zufallszahlen erzeugt mit Generator 1
+\end_layout
+
+\begin_layout Description
+Generierung
+\begin_inset space ~
+\end_inset
+
+einer
+\begin_inset space ~
+\end_inset
+
+Zufallszahl
+\end_layout
+
+\begin_layout Itemize
+erzeuge mit Generator 2 eine Zufallszahl x aus dem Intervall 0:r-1
+\end_layout
+
+\begin_layout Itemize
+verwende t[x] als gesuchte Zufallszahl
+\end_layout
+
+\begin_layout Itemize
+überschreibe t[x] mit Zufallszahl erzeugt durch Generator 1
+\end_layout
+
+\begin_layout Subsection
+Implementierung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  x : LONGINT;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+CONST
+\end_layout
+
+\begin_layout Plain Layout
+
+  M = 32768;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+FUNCTION IntRand : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+CONST
+\end_layout
+
+\begin_layout Plain Layout
+
+  A = 3421;
+\end_layout
+
+\begin_layout Plain Layout
+
+  K = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  x := (A * x + K) MOD M;
+\end_layout
+
+\begin_layout Plain Layout
+
+  IntRand := x;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+FUNCTION RangeRand(n : INTEGER) : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  k, ir : LONGINT;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  k := (m DIV n) * n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  REPEAT
+\end_layout
+
+\begin_layout Plain Layout
+
+    ir := IntRand;
+\end_layout
+
+\begin_layout Plain Layout
+
+  UNTIL ir < k;
+\end_layout
+
+\begin_layout Plain Layout
+
+  BetterRangeRand := ir MOD n;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+FUNCTION RealRand : REAL;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  RealRand := IntRand / M;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Prüfung der Güte von Zufallszahlengeneratoren
+\end_layout
+
+\begin_layout Paragraph
+Häufigkeitstest:
+\end_layout
+
+\begin_layout Standard
+Dieser Test dient dazu, die Auftrittshäufigkeiten der von einem Generator
+ gelieferten Zufallszahlen zu ermitteln.
+\end_layout
+
+\begin_layout Paragraph
+Serientest:
+\end_layout
+
+\begin_layout Standard
+Dieser Test dient – im Unterschied zum Häufigkeitstest – dazu, die Auftrittshäuf
+igkeit von Zahlenpaaren zu ermitteln.
+\end_layout
+
+\begin_layout Paragraph*
+Lückentest:
+\end_layout
+
+\begin_layout Standard
+Der Lückentest untersucht, in welchen Abständen sich eine bestimmte Zufallszahl
+ in der Folge wiederholt (für die lineare Kongruenzmethode ist das für alle
+ Zahlen die Periodenlänge).
+\end_layout
+
+\begin_layout Paragraph
+Läufetest:
+\end_layout
+
+\begin_layout Standard
+Ein Lauf (run) ist ein Teilfolge von auf- oder absteigenden Elementen in
+ einer größeren Folge.
+ Der Läufetest untersucht, wie viele solcher auf oder absteigende Teilfolgen
+ (also Läufe) einer bestimmten Länge in der Zahlenfolge enthalten sind.
+\end_layout
+
+\begin_layout Paragraph
+Chi2-Test und Himmelstest:
+\end_layout
+
+\begin_layout Standard
+Zwei weitere, für den praktischen Einsatz wichtige Tests von Zufallszahlenfolg
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Strukturen
+\end_layout
+
+\begin_layout Section
+Array
+\end_layout
+
+\begin_layout Subsection
+Struktur
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+TYPE
+\end_layout
+
+\begin_layout Plain Layout
+
+  IntArray = ARRAY[0..10] OF INTEGER;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Binäre Suche 
+\end_layout
+
+\begin_layout Standard
+Gibt Index zurück, -1 bei nicht gefunden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION BinarySearch(arr: IntArray; v : INTEGER) : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+	x,l,r : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	l := Low(arr);
+\end_layout
+
+\begin_layout Plain Layout
+
+	r := High(arr);
+\end_layout
+
+\begin_layout Plain Layout
+
+	REPEAT 
+\end_layout
+
+\begin_layout Plain Layout
+
+		x := (l+r) DIV 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+		IF v < arr[x] THEN 
+\end_layout
+
+\begin_layout Plain Layout
+
+			r:= x - 1
+\end_layout
+
+\begin_layout Plain Layout
+
+		ELSE 
+\end_layout
+
+\begin_layout Plain Layout
+
+			l := x + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	UNTIL (v = arr[x]) OR (l > r);
+\end_layout
+
+\begin_layout Plain Layout
+
+	IF v = arr[x] THEN 
+\end_layout
+
+\begin_layout Plain Layout
+
+		BinarySearch := x
+\end_layout
+
+\begin_layout Plain Layout
+
+	ELSE 
+\end_layout
+
+\begin_layout Plain Layout
+
+		BinarySearch:= -1;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sequienteller Lauf (c) Georg Schinnerl
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION CountSeq(a: IntArray; n: INTEGER) : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  i,len,max: INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  max := -1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  len := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i := 1 TO n - 1 DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF a[i] < a[i+1] THEN BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      INC(len);
+\end_layout
+
+\begin_layout Plain Layout
+
+      IF (len > max) THEN 
+\end_layout
+
+\begin_layout Plain Layout
+
+          max := len;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+      len := 1; 
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  len := max; 
+\end_layout
+
+\begin_layout Plain Layout
+
+  CountSeq := len;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Shift (c) Georg Schinnerl
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE ShiftArray(VAR a: IntArray; s: INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  i, j: INTEGER; 
+\end_layout
+
+\begin_layout Plain Layout
+
+  tmp: INTEGER; 
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF (s > 0) AND (s < n) AND (n > 1) THEN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    FOR j := 1 TO s DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      tmp := a[n];
+\end_layout
+
+\begin_layout Plain Layout
+
+      FOR i := n DOWNTO 2 DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+        a[i] := a[i-1];
+\end_layout
+
+\begin_layout Plain Layout
+
+      END;
+\end_layout
+
+\begin_layout Plain Layout
+
+      a[1] := tmp; 
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Single Linked Linea List (SLL)
+\end_layout
+
+\begin_layout Standard
+Dieses Beispiel geht von einem einfachen Integer-Wert als Value.
+\end_layout
+
+\begin_layout Subsection
+Struktur
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+TYPE
+\end_layout
+
+\begin_layout Plain Layout
+
+  Node = ^NodeRec; (* Pointer Node *)
+\end_layout
+
+\begin_layout Plain Layout
+
+  NodeRec = RECORD
+\end_layout
+
+\begin_layout Plain Layout
+
+    value : INTEGER; (* Value *)
+\end_layout
+
+\begin_layout Plain Layout
+
+    next: Node; (* next node *)
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  List = Node;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Überlaufspattern
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE DoSomethingWithList(l : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  (* as long as there is a next node *)
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE n <> NIL DO BEGIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+    (* do something *)
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+initialisieren der Liste
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE InitList(VAR l: List);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  l := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+neuer Knoten
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION NewNode(value : INTEGER) : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  New(n);
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.value := value;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.next := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+  NewNode := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Contains
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION Contains(l : List; value : INTEGER) : BOOLEAN;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  (* as long as there is a node and we havent found the value *)
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE (n <> NIL) AND (n^.value <> value) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  Contains := n <> NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Count
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION Count(l : List; value : INTEGER) : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  c : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  c := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE (n <> NIL) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	IF value = n^.value THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+		c := c + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  Count := c;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Append
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE Append(VAR l: List; value : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF l = NIL THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    l := NewNode(value)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+    WHILE n^.next <> NIL DO
+\end_layout
+
+\begin_layout Plain Layout
+
+      n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+    n^.next := NewNode(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Prepend
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE Prepend(VAR l : List; value : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := NewNode(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.next := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  l := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Insert After First
+\end_layout
+
+\begin_layout Standard
+Anmerkung: der Wert wird hinten angehängt wenn er nicht gefunden wird, sollte
+ er nur bei gefundenen Wert anhängen einfach den Block weglassen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE InsertAfterFirst(VAR l : List; search : INTEGER; value : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n,nxt,cr : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  nxt := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE (n <> NIL) AND (n^.value <> search) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	nxt := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF n <> NIL THEN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	nxt := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+	cr := NewNode(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+	n^.next := cr;
+\end_layout
+
+\begin_layout Plain Layout
+
+	cr^.next := nxt;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END
+\end_layout
+
+\begin_layout Plain Layout
+
+ (* comment for insertion only on exist *)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE IF nxt <> NIL THEN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	cr := NewNode(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+	nxt^.next := cr;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE  (* is empty list *)
+\end_layout
+
+\begin_layout Plain Layout
+
+	l := NewNode(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+  (* end ins.
+ without found *)
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Insert After Last
+\end_layout
+
+\begin_layout Standard
+Reverse -> InsertAfterFirst -> Reverse
+\end_layout
+
+\begin_layout Subsection
+Merge
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE Merge(VAR lo : List; hi : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR 
+\end_layout
+
+\begin_layout Plain Layout
+
+	n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	IF (lo <> NIL) AND (hi <> NIL) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+	BEGIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+		n := lo;
+\end_layout
+
+\begin_layout Plain Layout
+
+		WHILE n^.next <> NIL DO 
+\end_layout
+
+\begin_layout Plain Layout
+
+			n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+		n^.next := hi;
+\end_layout
+
+\begin_layout Plain Layout
+
+	END
+\end_layout
+
+\begin_layout Plain Layout
+
+	ELSE IF (hi <> NIL) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+		lo := hi;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Delete
+\end_layout
+
+\begin_layout Standard
+Löscht ersten gefundenen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE Delete(VAR l : List; value : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+	n,prev : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE (n <> NIL) AND (n^.value <> value) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	  prev := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF (n <> NIL) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	prev^.next := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+	Dispose(n);
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Distinct
+\end_layout
+
+\begin_layout Standard
+Neue Liste ohne Duplikate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION Distinct(l : List) : List;
+\end_layout
+
+\begin_layout Plain Layout
+
+var
+\end_layout
+
+\begin_layout Plain Layout
+
+	distinctList : List;
+\end_layout
+
+\begin_layout Plain Layout
+
+	n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  distinctList := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE n <> NIL DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF NOT Contains(distinctList,n^.value) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+		Prepend(distinctList,n^.value);
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  Reverse(distinctList);
+\end_layout
+
+\begin_layout Plain Layout
+
+  Distinct := distinctList;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reverse
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE Reverse(VAR l : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  invList : List;
+\end_layout
+
+\begin_layout Plain Layout
+
+  next : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF (l <> NIL) AND (l^.next <> NIL) THEN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    invList := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+    l := l^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+    invList^.next := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+    WHILE l <> NIL DO 
+\end_layout
+
+\begin_layout Plain Layout
+
+	BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      next := l^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+      l^.next := invList;
+\end_layout
+
+\begin_layout Plain Layout
+
+      invList := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+      l := next;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+    l := invList;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Clear
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE ClearList(VAR l : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n, next : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE n <> NIL DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    next := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Dispose(n);
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  l := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dispose
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE DisposeList(l : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  ClearList(l);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Selection Sort (c) Georg Schinnerl
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE SelectionSort(VAR l: List);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n, m, nMin: Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+  min: INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+  tmp: INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF l <> NIL THEN BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := l; 
+\end_layout
+
+\begin_layout Plain Layout
+
+    WHILE (n^.next <> NIL) DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      nMin := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+      min := nMin^.data;
+\end_layout
+
+\begin_layout Plain Layout
+
+      m := n^.next;   
+\end_layout
+
+\begin_layout Plain Layout
+
+      WHILE (m <> NIL) DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+        IF m^.data < min THEN BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+          nMin := m; 
+\end_layout
+
+\begin_layout Plain Layout
+
+          min := nMin^.data;
+\end_layout
+
+\begin_layout Plain Layout
+
+        END;
+\end_layout
+
+\begin_layout Plain Layout
+
+        m := m^.next; 
+\end_layout
+
+\begin_layout Plain Layout
+
+      END;
+\end_layout
+
+\begin_layout Plain Layout
+
+      (* swap *)
+\end_layout
+
+\begin_layout Plain Layout
+
+      tmp := nMin^.data; 
+\end_layout
+
+\begin_layout Plain Layout
+
+      nMin^.data := n^.data; 
+\end_layout
+
+\begin_layout Plain Layout
+
+      n^.data := tmp;
+\end_layout
+
+\begin_layout Plain Layout
+
+      n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END; 
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Double Linked Cylcic Anchor List (DLCA)
+\end_layout
+
+\begin_layout Standard
+Dieses Beispiel geht von einem einfachen Integer-Wert als Value.
+\end_layout
+
+\begin_layout Subsection
+Struktur
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+TYPE
+\end_layout
+
+\begin_layout Plain Layout
+
+  Node = ^NodeRec;
+\end_layout
+
+\begin_layout Plain Layout
+
+  NodeRec = RECORD
+\end_layout
+
+\begin_layout Plain Layout
+
+    value : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+    prev, next: Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  List = Node;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Überlaufspattern
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE DoSomethingWithList(l : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE n <> l DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    (* do something with n^.value *)
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+initialisieren der Liste
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE InitList(VAR l: List);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  l := NewNode(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+neuer Knoten
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION NewNode(value : INTEGER) : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  New(n);
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.value := value;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.next := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.prev := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  NewNode := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Contains
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION Contains(l : List; value : INTEGER) : BOOLEAN;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE (n <> l) AND (n^.value <> value) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  Contains := n <> l;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Append
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE Append(l: List; value : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+   n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := NewNode(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.next := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.prev := l^.prev;
+\end_layout
+
+\begin_layout Plain Layout
+
+  l^.prev^.next := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  l^.prev := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Prepend
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE Prepend(l : List; value : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := NewNode(value);
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.prev := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.next := l^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  l^.next^.prev := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  l^.next := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Clear
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE ClearList(l : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n, next : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  n := l^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE n <> l DO BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    next := n^.next;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Dispose(n);
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := next;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  l^.next := l;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dispose
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE DisposeList(l : List);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  ClearList(l);
+\end_layout
+
+\begin_layout Plain Layout
+
+  Dispose(l);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Binary Search Tree (BST)
+\end_layout
+
+\begin_layout Standard
+Dieses Beispiel geht von einem einfachen Integer-Wert als Value.
+\end_layout
+
+\begin_layout Subsection
+Struktur
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+TYPE
+\end_layout
+
+\begin_layout Plain Layout
+
+  Node = ^NodeRec;
+\end_layout
+
+\begin_layout Plain Layout
+
+  NodeRec = RECORD
+\end_layout
+
+\begin_layout Plain Layout
+
+    value : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+    left, right : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  Tree = Node;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Überlaufspattern - In Order (aufsteigend sortiert)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE DoSomethingWithTree(t : Tree);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF t <> NIL THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    DoSomethingWithTree(t^.left);
+\end_layout
+
+\begin_layout Plain Layout
+
+    (* do something with t^.value *)
+\end_layout
+
+\begin_layout Plain Layout
+
+    DoSomethingWithTree(t^.right);
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Überlaufspattern - In Order Reverse (absteigend sortiert)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE DoSomethingWithTree(t : Tree);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF t <> NIL THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    DoSomethingWithTree(t^.right);
+\end_layout
+
+\begin_layout Plain Layout
+
+    (* do something with t^.value *)
+\end_layout
+
+\begin_layout Plain Layout
+
+	DoSomethingWithTree(t^.left);
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+initialisieren des Baums
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE InitTree(VAR t: TREE);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  t := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+neuer Knoten
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION NewNode(value : INTEGER) : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  New(n);
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.value := value;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.next := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  n^.prev := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  NewNode := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Contains
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION ContainsValue(t : Tree; value : INTEGER) : BOOLEAN;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE (t <> NIL) AND (value <> t^.value) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF value < t^.value THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+      t := t^.left
+\end_layout
+
+\begin_layout Plain Layout
+
+    ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+      t := t^.right;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  ContainsValue := t <> NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Add
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE AddValue(var t: Tree; value : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  newNode,prev,n : Node;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  New(newNode);
+\end_layout
+
+\begin_layout Plain Layout
+
+  newNode^.value := value;
+\end_layout
+
+\begin_layout Plain Layout
+
+  newNode^.left := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+  newNode^.right := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF t = NIL THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    t := newNode
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    n := t;
+\end_layout
+
+\begin_layout Plain Layout
+
+    WHILE n <> NIL DO
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      prev := n;
+\end_layout
+
+\begin_layout Plain Layout
+
+      IF value < t^.value THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+        n := n^.left
+\end_layout
+
+\begin_layout Plain Layout
+
+     ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+       n := n^.right;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF value < prev^.value THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+      prev^.left := newNode
+\end_layout
+
+\begin_layout Plain Layout
+
+    ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+      prev^.right := newNode;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Clear
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE ClearTree(VAR t : Tree);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF t <> NIL THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	ClearTree(t^.left);
+\end_layout
+
+\begin_layout Plain Layout
+
+    ClearTree(t^.right);
+\end_layout
+
+\begin_layout Plain Layout
+
+    Dispose(t);
+\end_layout
+
+\begin_layout Plain Layout
+
+    t := NIL;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dispose
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE DisposeTree(t : Tree);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  ClearTree(t);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+String from Tree (c) Georg Schinnerl
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION StringFromTree(t: Tree; key: INTEGER): STRING;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF t = NIL THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    StringFromTree := ''
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE IF key = t^.key THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    (* effizienteste methode, wenn hier nur mehr der rechte Baum berücksichtigt
+ wird *)
+\end_layout
+
+\begin_layout Plain Layout
+
+    StringFromTree := t^.c + StringFromTree(t^.right, key)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE IF key < t^.key THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    StringFromTree := StringFromTree(t^.left, key)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE StringFromTree := StringFromTree(t^.right, key);  
+\end_layout
+
+\begin_layout Plain Layout
+
+END; 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
