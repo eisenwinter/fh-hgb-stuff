@@ -5,6 +5,7 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 # S1, Semster 1
 ## ADE
 - Vorlage für Abgaben (Syntax Highlighting, Ablaufdiagramm, Layering)
+- Klausurhilfe
 
 ## EIR
 - Cheatsheet für Klausur
@@ -12,3 +13,6 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 
 ## SPT
 - Zusammenfassung / Glossar für die Klausur
+
+## EIB 
+- Cheatsheet
