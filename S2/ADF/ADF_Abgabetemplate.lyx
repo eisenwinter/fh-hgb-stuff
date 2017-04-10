@@ -1,0 +1,615 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\begin_preamble
+\usepackage{listings}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\renewcommand{\thesection}{\arabic{section}} 
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,shadows,arrows,chains}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.8}
+\usepackage{pgfplotstable}
+\lstdefinestyle{DOS}
+{
+    backgroundcolor=\color{white},
+    basicstyle=\scriptsize\color{black}\ttfamily,
+    numbers=none,
+    columns=fixed,
+    keywordstyle=\color{black},
+    frame=lrtb
+}
+\usepackage{multicol}
+\newcommand{\listingcaption}[1]%
+{%
+\refstepcounter{lstlisting}\hfill%
+Listing \thelstlisting -- #1\hfill%\hfill%
+}%
+
+
+\usepackage{caption}
+
+\DeclareCaptionFormat{listing}{\par\vskip1pt#1#2#3}
+\captionsetup[lstlisting]{format=listing,singlelinecheck=false, margin=0pt, font=scriptsize,labelsep=space,labelfont=bf}
+\AtBeginDocument{\renewcommand{\lstlistingname}{Source}}
+\end_preamble
+\use_default_options true
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language={Pascal},aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\ttfamily},numbers=left,numbersep=8pt,stepnumber=1,numberstyle={\tiny\color{gray}},keywordstyle={\color{blue}},commentstyle={\color{dkgreen}},stringstyle={\color{mauve}},breaklines=true,breakatwhitespace=true,tabsize=3,basicstyle={\scriptsize\color{black}\ttfamily},morekeywords={INTERFACE,UNIT,OBJECT,IMPLEMENTATION,CONSTRUCTOR,FINALIZATION,USES,Randomize,PUBLIC,PRIVATE,Assert,Dispose,STRING,STATIC,VIRTUAL,ABSTRACT,NIL,LONGWORD,LONGINT,TDateTime},deletekeywords={COMP,page},keepspaces=true,prebreak={\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}}},captionpos=t"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+PRO2x & ADF2x SS XX, Übung X 
+\end_layout
+
+\begin_layout Author
+Name
+\end_layout
+
+\begin_layout Date
+05.04.2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+let
+\backslash
+clearpage
+\backslash
+relax
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand lstlistoflistings
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Aufgabe X
+\end_layout
+
+\begin_layout Subsection
+Lösungsidee
+\end_layout
+
+\begin_layout Standard
+mimimimi
+\end_layout
+
+\begin_layout Subsection
+Implementierung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "caption={/einspaltig.pas}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROGRAM Caesar;
+\end_layout
+
+\begin_layout Plain Layout
+
+USES sysutils, Crt;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  WriteLn('-');
+\end_layout
+
+\begin_layout Plain Layout
+
+END.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Testdurchlauf
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "style=DOS"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-
+\end_layout
+
+\begin_layout Plain Layout
+
+Konsoleoutput
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Aufgabe Y
+\end_layout
+
+\begin_layout Subsection
+Schnittstelle 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{bottomcol}{RGB}{222,222,222}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle{class}=[
+\end_layout
+
+\begin_layout Plain Layout
+
+    rectangle,
+\end_layout
+
+\begin_layout Plain Layout
+
+    draw=black,
+\end_layout
+
+\begin_layout Plain Layout
+
+    text centered,
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=north,
+\end_layout
+
+\begin_layout Plain Layout
+
+    text=black,
+\end_layout
+
+\begin_layout Plain Layout
+
+    text width=10cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+    shading=axis,
+\end_layout
+
+\begin_layout Plain Layout
+
+    bottom color=bottomcol,top color=white,shading angle=45]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance=2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Item) [class, rectangle split, rectangle split parts=7]
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+textbf{Glossary}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+nodepart{second}AddWord(word : STRING; page : INTEGER) : BOOLEAN
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+nodepart{third}FindWord(word : STRING) : VOID
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+nodepart{fourth}Total : INTEGER
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+nodepart{five}Delete(word : STRING) : BOOLEAN
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+nodepart{six}IsFull : BOOLEAN
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+nodepart{seven}DisposeGlossary : VOID
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    };      
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Implementierung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "multicols=2,caption={/zweispaltig.pas}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+INTERFACE
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+      Capacity of table
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  CONST
+\end_layout
+
+\begin_layout Plain Layout
+
+    Capacity = 3500;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+      creates and intiliazes the table
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  PROCEDURE CreateTable;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+      disposes the table
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  PROCEDURE DisposeTable;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+      print the table to the console, for debugging and internal use
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  PROCEDURE PrintToConsole;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    adds a a key value-pair
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  PROCEDURE Add(key : STRING);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    checks if the key exists
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  FUNCTION ContainsKey(data : STRING) : BOOLEAN;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    deletes the key if found
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  PROCEDURE DeleteKey(key : STRING);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
