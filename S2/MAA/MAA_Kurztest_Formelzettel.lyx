@@ -1,0 +1,2447 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usetikzlibrary{positioning}
+\usetikzlibrary{trees}
+\usetikzlibrary{arrows}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{arrows.meta}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.4in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+
+\makeatother
+
+
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{titlec}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Formelsammlung 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ MAA 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Algebraische Struktur
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Man nennt 
+\begin_inset Formula $[(T_{1},\dots,T_{m:}),f_{1},\dots,f_{n}]$
+\end_inset
+
+ eine algebraische Struktur (mit den Trägermengen 
+\begin_inset Formula $T_{1},...,T_{m}$
+\end_inset
+
+ und Operationen 
+\begin_inset Formula $f_{1},\dots,f_{n}$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Beispiele 
+\end_layout
+
+\begin_layout Standard
+Sehr oft haben wir es mit Strukturen mit einer Trägermenge und einer oder
+ mehreren binären Operationen zu tun.
+ z.B.
+ 
+\begin_inset Formula $[Z,+][N,·][N,+,·][R,+,·][Pot(M),∪,∩]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Relationale Struktur
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Man nennt 
+\begin_inset Formula $[(T_{1},...,T_{m}),r_{1},...,r_{n}]$
+\end_inset
+
+ eine relationale Struktur (mit den Trägermengen 
+\begin_inset Formula $T_{1},...,T_{m}$
+\end_inset
+
+ und Relationen 
+\begin_inset Formula $r_{1},...,r_{n}$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Beispiele
+\end_layout
+
+\begin_layout Standard
+e: 
+\begin_inset Formula $[N,≤]$
+\end_inset
+
+, 
+\begin_inset Formula $[N_{0},|]$
+\end_inset
+
+, Graph 
+\begin_inset Formula $[G,E]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Halbgruppe
+\end_layout
+
+\begin_layout Standard
+Eine binäre Operation 
+\begin_inset Formula $\circ$
+\end_inset
+
+ heißt assoziativ auf T, falls für alle 
+\begin_inset Formula $x,y,z∈T$
+\end_inset
+
+ gilt: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(x\circ y)\circ z=x\circ(y\circ z)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist 
+\begin_inset Formula $\circ$
+\end_inset
+
+ assoziativ auf 
+\begin_inset Formula $T$
+\end_inset
+
+, so nennt man 
+\begin_inset Formula $[T,\circ]$
+\end_inset
+
+ eine 
+\series bold
+Halbgruppe
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Beispiele 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[N,+][R,·][Pot(M),∪]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Monoid
+\end_layout
+
+\begin_layout Standard
+Ein Element 
+\begin_inset Formula $a∈T$
+\end_inset
+
+ heißt invertierbar bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+, falls es ein 
+\begin_inset Formula $b∈T$
+\end_inset
+
+ gibt mit
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a\text{\circ}b=b\circ a=ε.$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Man nennt 
+\begin_inset Formula $b$
+\end_inset
+
+ dann das zu 
+\begin_inset Formula $a$
+\end_inset
+
+ 
+\series bold
+inverse Element
+\series default
+ bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Falls jedes 
+\begin_inset Formula $a∈T$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+ invertierbar ist, so nennt man ein 
+\bar under
+Monoid
+\bar default
+ 
+\begin_inset Formula $[T,\circ]$
+\end_inset
+
+ auch 
+\series bold
+Gruppe.
+\end_layout
+
+\begin_layout Paragraph
+Beispiele 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[Z,+][R\ {0},\text{·}][{f|f:Abij.\text{→}A},\circ]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gruppe
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ε∈T$
+\end_inset
+
+ heißt neutrales Element bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+, falls für alle
+\begin_inset Formula $x∈T$
+\end_inset
+
+ gilt: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $ε\circ x=x\circε=x$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Besitzt 
+\begin_inset Formula $T$
+\end_inset
+
+ ein neutrales Element bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+, so nennt man eine 
+\bar under
+Halbgruppe
+\bar default
+ 
+\begin_inset Formula $[T,\circ]$
+\end_inset
+
+ auch 
+\series bold
+Monoid
+\series default
+.
+\end_layout
+
+\begin_layout Paragraph
+Beispiele 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[N_{0},+][R,\text{·}][Pot(M),\text{∪}][{f|f:A\text{→}A},\circ]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+kommutative Strukturen (
+\series bold
+abelsch)
+\end_layout
+
+\begin_layout Standard
+Eine binäre Operation 
+\begin_inset Formula $\circ$
+\end_inset
+
+ heißt kommutativ auf 
+\begin_inset Formula $T$
+\end_inset
+
+, falls für alle 
+\begin_inset Formula $x,y∈T$
+\end_inset
+
+ gilt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $x\circ y=y\circ x.$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist die Operation 
+\begin_inset Formula $\circ$
+\end_inset
+
+ kommutativ, spricht man auch von
+\end_layout
+
+\begin_layout Itemize
+einer 
+\series bold
+kommutativen
+\series default
+ Halbgruppe,
+\end_layout
+
+\begin_layout Itemize
+einem 
+\series bold
+kommutativen
+\series default
+ Monoid, 
+\end_layout
+
+\begin_layout Itemize
+einer 
+\series bold
+kommutativen
+\series default
+ Gruppe.
+\end_layout
+
+\begin_layout Standard
+Statt kommutativ sagt man auch 
+\series bold
+abelsch
+\series default
+, z.B.
+ abelsche Gruppe
+\end_layout
+
+\begin_layout Subsection
+Permutationen
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $M\neq\emptyset$
+\end_inset
+
+ eine Menge.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ ist Permutation von 
+\begin_inset Formula $M$
+\end_inset
+
+ genau dann wenn:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f:M\text{→}M$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+ ist bijektiv
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seien 
+\begin_inset Formula $f$
+\end_inset
+
+ und 
+\begin_inset Formula $g$
+\end_inset
+
+ Permutationen von 
+\begin_inset Formula $M$
+\end_inset
+
+, dann ist 
+\begin_inset Formula $f\circ g:M→M,x\mapsto f(g(x))$
+\end_inset
+
+ eine 
+\series bold
+Permutation
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Hintereinanderausführung
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\circ g$
+\end_inset
+
+ heißt 
+\series bold
+Hintereinanderausführung
+\series default
+ (f nach g)
+\end_layout
+
+\begin_layout Itemize
+ist assoziativ.
+\end_layout
+
+\begin_layout Itemize
+Bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+ gibt es ein neutrales Element, die identische Funktion 
+\begin_inset Formula $ε:M→M,x\mapsto x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Zu jeder Permutation f existiert die inverse Permutation
+\begin_inset Formula $f^{−1}$
+\end_inset
+
+ mit:
+\begin_inset Formula $\text{\underset{x\text{∈}M}{∀}}(f\text{\circ}f^{\text{−}1})(x)=f(f^{\text{−}1}(x))=x$
+\end_inset
+
+ und
+\begin_inset Formula $\text{\underset{x\text{∈}M}{∀}}(f^{-1}\text{\circ}f)(x)=f^{-1}(f(x))=x$
+\end_inset
+
+ d.h.
+\series bold
+
+\begin_inset Formula $f\circ f^{−1}=f^{−1}\circ f=ε$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Symmetrische Gruppe 
+\end_layout
+
+\begin_layout Standard
+Die Permutationen einer Menge M bilden mit der Hintereinanderausführung
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+ eine Gruppe, genannt, die 
+\series bold
+symmetrische
+\series default
+ Gruppe von M, in Zeichen 
+\begin_inset Formula $S_{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Wir schreiben 
+\begin_inset Formula $S_{n}:=S_{{1,2,...,n}}$
+\end_inset
+
+ für 
+\begin_inset Formula $n∈N$
+\end_inset
+
+.
+ Das sind die Permutationen der ersten n natürlichen Zahlen.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ hat 
+\begin_inset Formula $n!$
+\end_inset
+
+ Elemente.
+ 
+\end_layout
+
+\begin_layout Subsection
+Null und Eins
+\end_layout
+
+\begin_layout Itemize
+Das neutrale Element einer Gruppe wird auch 
+\series bold
+Einselement
+\series default
+ genannt.
+\end_layout
+
+\begin_layout Itemize
+In 
+\series bold
+additiver Schreibweise
+\series default
+ bezeichnet man das Operationssymbol in einer Struktur manchmal mit +.
+ Das neutrale Element nennt man dann das 
+\series bold
+Nullelement
+\series default
+.
+ Es gilt: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $0+a=a+0=a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In einer Gruppe 
+\begin_inset Formula $[T,\circ]$
+\end_inset
+
+ bezeichnet man das inverse Element von 
+\series bold
+a
+\series default
+ mit 
+\begin_inset Formula $a^{−1}$
+\end_inset
+
+ , in additiver Schreibweise mit 
+\begin_inset Formula $−a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Ring 
+\end_layout
+
+\begin_layout Standard
+Eine Algebra 
+\begin_inset Formula $[T,+,\circ]$
+\end_inset
+
+ heißt 
+\series bold
+Ring
+\series default
+, wenn 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[T,+]$
+\end_inset
+
+ eine 
+\series bold
+abelsche
+\series default
+ Gruppe und
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[T,\circ]$
+\end_inset
+
+ eine Halbgruppe ist, und
+\end_layout
+
+\begin_layout Enumerate
+wenn für alle 
+\begin_inset Formula $a,b,c∈T$
+\end_inset
+
+ gilt:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $a\circ(b+c)=a\text{\circ}b+a\circ c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(b+c)\circ a=b\circ a+c\circ a.$
+\end_inset
+
+ („Distributivgesetz“) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Ist 
+\begin_inset Formula $[T,+,\circ]$
+\end_inset
+
+ ein Ring und 
+\begin_inset Formula $\circ$
+\end_inset
+
+ kommutativ, so ist 
+\begin_inset Formula $[T,+,\circ]$
+\end_inset
+
+ ein
+\series bold
+ kommutativer Ring
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Gibt es ein Einselement bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+, dann ist es ein 
+\series bold
+Ring mit Einselement.
+\end_layout
+
+\begin_layout Paragraph
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[Z,+,\text{·}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Polynomringe
+\end_layout
+
+\begin_layout Standard
+Polynome mit Addition und Multiplikation (aus der Schule bekannt) bilden
+ einen 
+\series bold
+kommutativen Ring mit Einselement
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Körper
+\end_layout
+
+\begin_layout Standard
+Ein kommutativer Ring 
+\begin_inset Formula $[T,+,\circ]$
+\end_inset
+
+ heißt 
+\series bold
+Körper
+\series default
+, falls 
+\begin_inset Formula $[T\ {0},\circ]$
+\end_inset
+
+ eine Gruppe ist.
+ 
+\end_layout
+
+\begin_layout Subsection
+Unterstruktur 
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $[T,f_{1},...,f_{n}]$
+\end_inset
+
+ algebraische Struktur einer gewissen Klasse und 
+\begin_inset Formula $U⊆T,U\neq\emptyset$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $[U,f_{1},...,f_{n}]$
+\end_inset
+
+ eine Struktur derselben Klasse, so nennt man 
+\begin_inset Formula $[U,f_{1},...,f_{n}]$
+\end_inset
+
+ eine 
+\series bold
+Unterstruktur
+\series default
+ von 
+\begin_inset Formula $[T,f_{1},...,f_{n}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Wichtig: 
+\end_layout
+
+\begin_layout Standard
+Die Operationen 
+\begin_inset Formula $f_{j}$
+\end_inset
+
+ müssen 
+\series bold
+abgeschlossen
+\series default
+ auf 
+\begin_inset Formula $U$
+\end_inset
+
+ sein, d.h.
+ falls 
+\begin_inset Formula $f_{j}$
+\end_inset
+
+ eine k-stellige Funktion ist, dann muss für alle 
+\begin_inset Formula $x_{1},...,x_{k}∈U$
+\end_inset
+
+ gelten: 
+\begin_inset Formula $f(x_{1},...,x_{k})\boldsymbol{∈U}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Beispiele
+\end_layout
+
+\begin_layout Itemize
+[Z, +] Untergruppe von [R, +]
+\end_layout
+
+\begin_layout Itemize
+[Z, +, ·] Unterring von [R, +, ·] (Kein Unterkörper!)
+\end_layout
+
+\begin_layout Itemize
+[Q, +, ·] Unterkörper von [R, +, ·]
+\end_layout
+
+\begin_layout Itemize
+[G, +, ·] Unterring von [Z, +, ·], wobei G = {.
+ .
+ .
+ , −4, −2, 0, 2, 4, 6, .
+ .
+ .} = 2Z
+\end_layout
+
+\begin_layout Section
+Isomorphismus
+\end_layout
+
+\begin_layout Standard
+Isomorph bedeutet: 
+\end_layout
+
+\begin_layout Itemize
+gleich „bis auf die Bezeichnung der Objekte“
+\end_layout
+
+\begin_layout Itemize
+nicht unterscheidbar aus der Sicht der Algebra
+\end_layout
+
+\begin_layout Itemize
+alle „algebraischen Eigenschaften“ bleiben erhalten (z.B.
+ Ordnung eines Elements)
+\end_layout
+
+\begin_layout Itemize
+Verknüpfungstabellen sind identisch (bis auf Umbenennung und Umstellung
+ der Objekte)
+\end_layout
+
+\begin_layout Subsection
+Graphisomorphismus 
+\end_layout
+
+\begin_layout Standard
+Um zu beweisen, dass zwei Graphen isomorph sind, ist es notwendig, dass
+ folgende Bedingungen erfüllt sind:
+\end_layout
+
+\begin_layout Itemize
+Beide Graphen haben dieselbe Anzahl Knoten und Kanten.
+\end_layout
+
+\begin_layout Itemize
+Knoten mit denselben Eingangs- und Ausgangsgraden lassen sich einander zuordnen.
+\end_layout
+
+\begin_layout Standard
+Diese Bedinungen sind nicht hinreichend.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Tabelle mit Knoten aufstellen
+\end_layout
+
+\begin_layout Enumerate
+OutDeg und InDeg für Knoten von ersten Graph aufstellen
+\end_layout
+
+\begin_layout Enumerate
+Knoten von zweiten Graphen zuordnen anhand von erster Tabelle (gleiche In
+ und Out Degrees)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "94col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+Sei G = [V, →] ein Graph.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $InDeg(v):=|\{w∈V|w→v\}|$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+ (Eingangsgrad)
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $OutDeg(v):=|{w\text{∈}V|v\text{→}w}|$
+\end_inset
+
+ (Ausgangsgrad) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+pq Formel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1,2}=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rechnen mit Restklassen 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sim_{n}$
+\end_inset
+
+ ist „verträglich“ mit + und · und damit eine 
+\series bold
+Kongruenzrelation
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+[x]_{n}+[y]_{n}:=[x+y]_{n}\\{}
+[x]_{n}*[y]_{n}:=[x\text{·}y]_{nS}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Eigenschaften der Restklassenoperationen 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $[Z_{n},+,·]$
+\end_inset
+
+ ist kommutativer Ring mit Einselement
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\in Z_{n}$
+\end_inset
+
+ ist invertierbar 
+\begin_inset Formula $⇐⇒ggT(a,n)=1$
+\end_inset
+
+ (a und n teilerfremd)
+\end_layout
+
+\begin_layout Itemize
+Falls p Primzahl, dann 
+\begin_inset Formula $[Z_{p},+,·]$
+\end_inset
+
+ ist (endlicher) Körper.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Erweiterter Euklidischer Algorithmus 
+\end_layout
+
+\begin_layout Standard
+Findet den größten gemeinsamen Teiler (GCD) von zwei positiven ganzen Zahlen.
+ (Benötigt für Inverse, 
+\begin_inset Formula $a^{-1}$
+\end_inset
+
+ mit 
+\begin_inset Formula $a*a^{-1}=1mod\,n$
+\end_inset
+
+ für 
+\begin_inset Formula $a^{-1}$
+\end_inset
+
+ existiert nur wenn ggT(a,n)=1)
+\end_layout
+
+\begin_layout Description
+ggT(a,b) 
+\begin_inset Formula $d=s*a+t*b$
+\end_inset
+
+, wobei d der GGT ist.
+ 
+\end_layout
+
+\begin_layout Standard
+Folglich wenn a und b teilerfremd sind 
+\begin_inset Formula $1=s*a+t*b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Setze 
+\begin_inset Formula 
+\begin{gather*}
+m=a\\
+n=b\\
+s=1\\
+t=0\\
+u=0\\
+v=1
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Berechne q und r mit 
+\begin_inset Formula $m=q*n+r$
+\end_inset
+
+ (Division mit Rest)
+\end_layout
+
+\begin_layout Enumerate
+Setze 
+\begin_inset Formula 
+\begin{gather*}
+m=n\\
+n=r\\
+u_{neu}=s-q*u\\
+v_{neu}=t-q*v
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Setze 
+\begin_inset Formula 
+\begin{gather*}
+s=u\\
+t=v\\
+u=u_{neu}\\
+v=v_{neu}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $n>0$
+\end_inset
+
+ gehe zu Schritt 2
+\end_layout
+
+\begin_layout Standard
+Für a = 37 und b = 16
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\hline 37 & = & 1*37+0\\
+16 & = & 0*37+1*16\,\,\,\,\,\,\,(q=2)\\
+5 & = & 1*37-2*16\,\,\,\,\,\,\,\,(q=3)\\
+1 & = & (-3)*37+7*16\,(q=5)\\
+0 & = & 16*37-37*16
+\\\hline 
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ggT(37,16)=1=(-3)*37+7*16$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Komplexe Zahlen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[\mathbb{C},+,·]$
+\end_inset
+
+ ist ein Körper.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $i^{2}=\text{−}1\,,\,i^{3}=\text{−}i\,|\,i^{4}=1,i^{5}=i\,;\,i^{\text{−1}}=\frac{1}{i}=\text{−}i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Kartesische Koordinaten / Polarkoordinaten
+\end_layout
+
+\begin_layout Itemize
+Kartesische Koordinaten: (x, y) 
+\begin_inset Formula $x=r\,cos(\phi)\,,y=r\,sin(\phi)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Polarkoordinaten [
+\begin_inset Formula $r;\phi$
+\end_inset
+
+] 
+\begin_inset Formula $r=\sqrt{x^{2}+y^{2}}=|z|,\phi=arctan(\frac{y}{x})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x+yi=r(cos(\phi)+i\,\sin(\phi))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rechenoperationen
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $z_{1}=a+bi$
+\end_inset
+
+ 
+\begin_inset Formula $z_{2}=c+di$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $z_{1}=[r_{1};\phi_{1}]$
+\end_inset
+
+ 
+\begin_inset Formula $z_{2}=[r_{2};\phi_{2}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $z_{1}\pm z_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $z_{1}*z_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{z_{1}}{z_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\pm c+(b\pm d)i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\pm c+(b\pm d)i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bruch erweitern mit 
+\begin_inset Formula $z_{2}^{*}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+karth.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ungünstig
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[r_{1}*r_{2};\phi_{1}+\phi_{2}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[\frac{r_{1}}{r_{2}};\phi_{1}-\phi_{2}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+polar
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+konjugiert Komplex 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z=a+i*b\rightharpoonup z^{*}=a-i*b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Potenzieren
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $z^{n}=[r^{n};n\phi]$
+\end_inset
+
+ d.h.
+ 
+\begin_inset Formula $z^{n}=r^{n}(cos(n\text{\phi})+i\,sin(n\phi))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Betrag
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|z|=\sqrt{x^{2}+y^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Newton-Algorithmus
+\end_layout
+
+\begin_layout Enumerate
+wähle Näherungsgrenze & Startwerte
+\end_layout
+
+\begin_layout Enumerate
+Setze Startwert in Funktion und erste Ableitung ein
+\end_layout
+
+\begin_layout Enumerate
+dividiere Funktionswert durch den Funktionswert der ersten Ableitung 
+\begin_inset Formula $\frac{f(x_{n})}{f'(x_{n)}}=\overline{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+von Startwert das Ergebnis der Division von 3.
+ abziehen (
+\begin_inset Formula $x=x-\overline{x}$
+\end_inset
+
+), wieder Funktionswerte mit neuem Wert dividieren so lange bis Näherung
+ ausreicht.
+\end_layout
+
+\begin_layout Section
+Sonstiges
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\circ b:=(b-1)(a+1)$
+\end_inset
+
+ ist nicht kommutativ auf 
+\begin_inset Formula $R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Hintereinanderausführung von totalen Funktionen ist assoziativ.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $[\mathbb{N},*]$
+\end_inset
+
+ ist keine abelsche Gruppe.
+\end_layout
+
+\begin_layout Itemize
+In 
+\begin_inset Formula $[\mathbb{Z}_{9},*]$
+\end_inset
+
+ gilt 
+\begin_inset Formula $3*7=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In jeder Gruppe 
+\begin_inset Formula $[G,\circ]$
+\end_inset
+
+ gilt 
+\series bold
+nicht
+\series default
+: 
+\begin_inset Formula $(a\circ b)^{-1}=a^{-1}\circ b^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In einem Monoid mit neutralen Element 
+\begin_inset Formula $e$
+\end_inset
+
+ gibt es ein 
+\begin_inset Formula $a$
+\end_inset
+
+ mit 
+\begin_inset Formula $a\circ a=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Falls 
+\begin_inset Formula $e$
+\end_inset
+
+ das neutrale Element in einer Gruppe ist, dann ist 
+\begin_inset Formula $e^{-1}=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Jede Algebra ist zu sich selbst isomorph
+\end_layout
+
+\begin_layout Itemize
+Die Gleichung 
+\begin_inset Formula $|z^{2}|=1$
+\end_inset
+
+ hat nicht genau 2 komplexe Lösungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
