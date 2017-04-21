@@ -78,7 +78,7 @@
 \options fontsize=24pt
 \use_default_options false
 \maintain_unincluded_children false
-\language english
+\language naustrian
 \language_package default
 \inputencoding utf8
 \fontencoding global
@@ -129,7 +129,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -197,7 +197,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size scriptsize
 
 \backslash
 linebreak
@@ -209,8 +208,6 @@ linebreak
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
@@ -225,7 +222,6 @@ linebreak
 
 \series bold
 \size scriptsize
-\lang naustrian
 Aufwendungen
 \end_layout
 
@@ -258,7 +254,6 @@ Aufwendungen
 
 \series bold
 \size scriptsize
-\lang naustrian
 neutrale Aufwendungen
 \end_layout
 
@@ -271,7 +266,6 @@ neutrale Aufwendungen
 
 \series bold
 \size scriptsize
-\lang naustrian
 Zweckaufwendungen
 \end_layout
 
@@ -283,7 +277,6 @@ Zweckaufwendungen
 \begin_layout Plain Layout
 
 \size scriptsize
-\lang naustrian
 Zusatzkosten, Anderskosten
 \end_layout
 
@@ -297,7 +290,6 @@ Zusatzkosten, Anderskosten
 \begin_layout Plain Layout
 
 \size scriptsize
-\lang naustrian
 betriebsfremd, periodenfremd,außergewöhnlich
 \end_layout
 
@@ -309,7 +301,6 @@ betriebsfremd, periodenfremd,außergewöhnlich
 \begin_layout Plain Layout
 
 \size scriptsize
-\lang naustrian
 Grundkosten
 \end_layout
 
@@ -321,7 +312,6 @@ Grundkosten
 \begin_layout Plain Layout
 
 \size scriptsize
-\lang naustrian
 kalk.
  Kosten
 \end_layout
@@ -334,8 +324,6 @@ kalk.
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang naustrian
 = 0
 \end_layout
 
@@ -347,7 +335,6 @@ kalk.
 \begin_layout Plain Layout
 
 \series bold
-\lang naustrian
 KOSTEN
 \end_layout
 
@@ -371,59 +358,41 @@ KOSTEN
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang naustrian
 Neutrale Aufwendungen:
 \end_layout
 
 \begin_layout Subparagraph
-
-\lang naustrian
 Betriebsfremde Aufwendungen:  
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 z.B.
  Reparatur für Gebäude, nicht betrieblich genutzt.
 \end_layout
 
 \begin_layout Subparagraph
-
-\lang naustrian
-Periodenfremde Aufwendungen
+Perioden-fremde Aufwendungen
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 z.B.
  Steuervorauszahlungen
 \end_layout
 
 \begin_layout Subparagraph
-
-\lang naustrian
 Außergewöhnliche betriebliche Aufwendungen:  
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 z.B.
  Schadensfälle durch Brand, Forderungsausfälle
 \end_layout
 
 \begin_layout Subparagraph
-
-\lang naustrian
 Sonstige neutrale Aufwendungen:  
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 z.B.
  Abschreibungen
 \end_layout
@@ -445,47 +414,31 @@ clearpage
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Aufgaben der Kostenrechnung
-\lang english
-s
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Ermittlung der Herstellungskosten von unfertigen und fertigen Erzeugnissen
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-Kalkulation des Produktpreies bzw.
+Kalkulation des Produktpreis bzw.
  Selbstkostenermittlung
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Controlling des betrieblichen (operativen) Erfolgs
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-bereitstelung entscheidungsrelevanter Informationen
+Bereitstellung entscheidungsrelevanter Informationen
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Planung
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Kostenkontrolle
 \end_layout
 
@@ -496,12 +449,11 @@ Systeme
 \begin_layout Itemize
 
 \series bold
-\lang naustrian
 Istkosten
 \series default
 ‐Rechnung, 
 \series bold
-Vergangenheitswerte
+Vergangenheitsbezogen
 \series default
 ; für die Preisermittlung wenig geeignet
 \end_layout
@@ -509,20 +461,18 @@ Vergangenheitswerte
 \begin_layout Itemize
 
 \series bold
-\lang naustrian
 Normalkosten
 \series default
 ‐Rechnung, 
 \series bold
-Verganenheitswerte
+Vergangenheitsbezogen
 \series default
-; Ist-Kosten noramlisiert durch Durchschnitt;
+; Ist-Kosten normalisiert durch Durchschnitt;
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
-\lang naustrian
 Plankosten
 \series default
 ‐Rechnung, 
@@ -555,28 +505,22 @@ Teilbereiche
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Kostenartenrechnung - 
 \series bold
 Welche
 \series default
- Kosten sind in welche Höhe enstanden?
+ Kosten sind in welche Höhe entstanden?
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Kostenstellenrechnung - 
 \series bold
 Wo
 \series default
- sind die Kosten in welcher Höhe enstanden?
+ sind die Kosten in welcher Höhe entstanden?
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Kostenträgerrechnung - 
 \series bold
 Wofür 
@@ -593,8 +537,6 @@ kalkulatorische Kosten
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Zusatzkosten.
  Beispiel: Kalk.
  Unternehmerlohn, Kalk.
@@ -602,8 +544,6 @@ Zusatzkosten.
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Anderskosten.
  Beispiel: Kalk.
  Abschreibungen, Kalk.
@@ -612,14 +552,10 @@ Anderskosten.
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Ablauf
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 1
 \begin_inset space ~
 \end_inset
@@ -632,8 +568,6 @@ Kostenartenrechnung
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 2
 \begin_inset space ~
 \end_inset
@@ -644,8 +578,6 @@ Kostenstellenrechnung
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 3
 \begin_inset space ~
 \end_inset
@@ -672,15 +604,11 @@ clearpage
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Kostenartenrechnung
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
-ämtliche Kosten, die bei der Leistungserstellung entstehen 
+Sämtliche Kosten, die bei der Leistungserstellung entstehen 
 \series bold
 lückenlos zu erfassen
 \series default
@@ -692,26 +620,18 @@ zu gliedern.
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 vollständige und überschneidungsfreie Erfassung der Kosten
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Erfassung der kalkulatorischen Kosten
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Gliederung der Kosten
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 eindeutige Zuordnung der Kosten
 \end_layout
 
@@ -720,158 +640,109 @@ BÜB
 \end_layout
 
 \begin_layout Paragraph
-
-\lang naustrian
 Mit - Spalte (0 durch)
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Gesetzl.
  Lohnabgaben
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Gesetzl.
  Gehaltsabgaben
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 UB und WR Arbeiter 
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Nichtleistungslöhne 
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Zinsenaufw.
  für Bankkredite 
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Schadensfälle 
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Abschr.
  von Sachanlagen 
 \end_layout
 
 \begin_layout Paragraph
-
-\lang naustrian
 Mit + Spalte dazu
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Kalk.
  Zinsen, Abschreibungen, Unternehmerlohn, Wagnisse
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-Lohnnebenko der FL, HL & Gehaltsnebenkosten
+Lohnnebenko.
+ der FL, HL & Gehaltsnebenkosten
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Achtung auf Periode 
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Kostenstellenrechnung
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Bildung der Kostenstellen
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Verteilung der Kosten auf die Kostenstellen
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-Ermittlung der Gemeinkostenzuschläge
+Ermittlung der Geneinkostenzuschläge
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 BAB
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang naustrian
 Lohnnebenkosten
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Nebekosten / Anteil * Lohn
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang naustrian
 Sozialkosten
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
-Sozialkosten / (Fertiungslöhne + Gehälter) * (Anteil-Gehalt + Anteil-FL)
+Sozialkosten / (Fertigungslöhne + Gehälter) * (Anteil-Gehalt + Anteil-FL)
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang naustrian
 Umlage Hilfskostenstelle
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
-- Betrag von der Kostenstelle, Schlüßel aufsummieren, Betrag Kostenstelle
- / Schlüßelsumme * Schlüßel
+- Betrag von der Kostenstelle, Schlüssel aufsummieren, Betrag Kostenstelle
+ / Schlüsselsumme * Schlüssel
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Kostenträgerrechnung
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Kostenträger sind Erzeugnisse oder Dienstleistungen eines Unternehmens,
  denen die Kosten zugerechnet werden.
 \end_layout
@@ -893,177 +764,126 @@ clearpage
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Kostenträgerstückrechnung = Kalkulation 
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-Divisionskalkulation (stupide Durchdividieren, WasserKW > Strom) 
+Divisionskalkulation (stupide Durch-dividieren, WasserKW > Strom) 
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Äquivalenzziffernkalkulation (Flasche Bier 1l > Flasche Bier 0.5l)
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-Kuppelproduktkalkulation (Sägewerk > Sägespähne)
+Kuppelproduktkalkulation (Sägewerk > Sägespäne)
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
 Zuschlagskalkulation
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Kostenträgerzeitrechnung
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Ermittlung des Betriebsergebnisses in einer bestimmten Periode 
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Herstellkosten
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
-Materialkosten + Fertiungskosten + Sonderkosten der Fertigung
+Materialkosten + Fertigungskosten + Sonderkosten der Fertigung
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Gewinnschwellenanalyse
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Deckungsbetrag = Fixkosten, Break-Even-Point
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Teilkostenrechnung
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Besagt dass fixe Kosten in keinem funktionalen Zusammenhang zur Outputmenge
  steht.
+ Gemeinkosten können nicht einfach korrekt proportional aufgerechnet werden.
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Kostenstellenrechnung: Variator (VX)
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Gibt Anteil der Variablen kosten an (V7 = 70 %), (V10 = 100 %), (V0 = 0%)
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Kosten
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang naustrian
 Fixe
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
-Absolut fixe und intervallfixe Kosten
+Absolut fixe und Intervall-fixe Kosten
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang naustrian
 Variable
 \end_layout
 
 \begin_layout Description
-propotional steigt gleich wie Beschäftigungsgrad
+proportionale steigt gleich wie Beschäftigungsgrad
 \end_layout
 
 \begin_layout Description
-degressiv steigt im geringeren Außmas als der Beschäftigungsgrad (z.B.
+depressive steigt im geringeren Außmas als der Beschäftigungsgrad (z.B.
  Mengenrabatt)
 \end_layout
 
 \begin_layout Description
-progressiv steigt im stärkeren Außmas als der Beschäftigungsgrad (z.B.
+progressive steigt im stärkeren Außmas als der Beschäftigungsgrad (z.B.
  Überstunden)
 \end_layout
 
 \begin_layout Description
-regressiv sinkt mit zunehmender Beschäftigung absolut.
+regressive sinkt mit zunehmender Beschäftigung absolut.
 \end_layout
 
 \begin_layout Section
-
-\lang naustrian
 Berechnung
 \end_layout
 
 \begin_layout Paragraph
-
-\lang naustrian
 Herstellungskosten
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 Fertigungsmaterial +
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 Materialgemeinkosten +
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 Fertigungslöhne +
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
-Fertiungsgemeinkosten +
+Fertigungsgemeinkosten +
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 =
 \begin_inset space ~
 \end_inset
@@ -1072,26 +892,18 @@ Herstellkosten
 \end_layout
 
 \begin_layout Paragraph
-
-\lang naustrian
 Selbstkosten
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 Herstellungskosten +
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
-VerwaltungVertriebGemeinkosten +
+Verwaltungsvertriebgemeinkosten +
 \end_layout
 
 \begin_layout Description
-
-\lang naustrian
 =
 \begin_inset space ~
 \end_inset
@@ -1100,75 +912,52 @@ Selbstkosten
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 DB
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-DB = NettoVK - Selbstkosten
+DB = Netto VK - Selbstkosten
 \end_layout
 
 \begin_layout Itemize
-
-\lang naustrian
-DB = Erlöse - VarKosten
+DB = Erlöse - Var.
+ Kosten
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Zuschlagssätze
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Var.
  Gemeinkosten / Bezugsgröße
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Betriebsergebnis
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Summe(Deckungsbeträge) - fixe Kosten = Betriebsergebnis
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Umsatz
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
 Stück * Verkauft
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Break Even
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
-Fix / DB (Mengenmäßig) (* Stückpreis (Wertmäßig))
+(Fix / DB [Mengenmäßig]) * Stückpreis [Wertmäßig]
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Kurzfristige Preisuntergrenze
 \end_layout
 
@@ -1177,15 +966,12 @@ variable Selbstkosten
 \end_layout
 
 \begin_layout Subsection
-
-\lang naustrian
 Langfristige Preisuntergrenze
 \end_layout
 
 \begin_layout Standard
-
-\lang naustrian
-(Fixkosten / Stück) + (Var SK / Stück)
+(Fixkosten / Stück) + (Var.
+ Selbstkosten / Stück)
 \end_layout
 
 \end_body
