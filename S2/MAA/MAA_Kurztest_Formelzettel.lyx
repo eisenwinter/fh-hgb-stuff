@@ -654,6 +654,120 @@ Monoid
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $ε∈T$
+\end_inset
+
+ heißt neutrales Element bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+, falls für alle
+\begin_inset Formula $x∈T$
+\end_inset
+
+ gilt: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "4pt"
+shadowsize "4pt"
+framecolor "lightgray"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $ε\circ x=x\circε=x$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Besitzt 
+\begin_inset Formula $T$
+\end_inset
+
+ ein neutrales Element bzgl.
+ 
+\begin_inset Formula $\circ$
+\end_inset
+
+, so nennt man eine 
+\bar under
+Halbgruppe
+\bar default
+ 
+\begin_inset Formula $[T,\circ]$
+\end_inset
+
+ auch 
+\series bold
+Monoid
+\series default
+.
+\end_layout
+
+\begin_layout Paragraph
+Beispiele 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[N_{0},+][R,\text{·}][Pot(M),\text{∪}][{f|f:A\text{→}A},\circ]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gruppe
+\end_layout
+
+\begin_layout Standard
 Ein Element 
 \begin_inset Formula $a∈T$
 \end_inset
@@ -778,120 +892,6 @@ Beispiele
 
 \begin_layout Standard
 \begin_inset Formula $[Z,+][R\ {0},\text{·}][{f|f:Abij.\text{→}A},\circ]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Gruppe
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ε∈T$
-\end_inset
-
- heißt neutrales Element bzgl.
- 
-\begin_inset Formula $\circ$
-\end_inset
-
-, falls für alle
-\begin_inset Formula $x∈T$
-\end_inset
-
- gilt: 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 1
-use_makebox 0
-width "50col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "4pt"
-shadowsize "4pt"
-framecolor "lightgray"
-backgroundcolor "white"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $ε\circ x=x\circε=x$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Besitzt 
-\begin_inset Formula $T$
-\end_inset
-
- ein neutrales Element bzgl.
- 
-\begin_inset Formula $\circ$
-\end_inset
-
-, so nennt man eine 
-\bar under
-Halbgruppe
-\bar default
- 
-\begin_inset Formula $[T,\circ]$
-\end_inset
-
- auch 
-\series bold
-Monoid
-\series default
-.
-\end_layout
-
-\begin_layout Paragraph
-Beispiele 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $[N_{0},+][R,\text{·}][Pot(M),\text{∪}][{f|f:A\text{→}A},\circ]$
 \end_inset
 
 
@@ -1785,6 +1785,14 @@ Falls p Primzahl, dann
  ist (endlicher) Körper.
 \end_layout
 
+\begin_layout Subsection
+Dividieren mit Restklassen
+\end_layout
+
+\begin_layout Standard
+Multiplikation mit Inverse.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -1904,8 +1912,8 @@ Für a = 37 und b = 16
 16 & = & 0*37+1*16\,\,\,\,\,\,\,(q=2)\\
 5 & = & 1*37-2*16\,\,\,\,\,\,\,\,(q=3)\\
 1 & = & (-3)*37+7*16\,(q=5)\\
-0 & = & 16*37-37*16
-\\\hline 
+0 & = & 16*37-37*16\\
+\hline 
 \end{eqnarray*}
 
 \end_inset
