@@ -1,0 +1,1192 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrartcl
+\begin_preamble
+
+\usepackage[margin=0.75in,a4paper,includefoot,bottom=0.3in,footskip=2em]{geometry} 
+\usepackage[showmarks]{pocketmod}
+\usepackage{enumitem}
+\setlist{leftmargin=\parindent,labelindent=*}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\title{KORE Pocket Guide}
+\author{Jan Caspar}
+\date{\texttt{jan@subkonstrukt.at}}
+
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\color{headlinec}\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\color{subheadlinec}\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small\color{headlinec}}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\end_preamble
+\options fontsize=24pt
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{0}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+KORE
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+https://github.com/eisenwinter/fh-hgb-stuff, MIT
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+
+\backslash
+linebreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="4cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+\lang naustrian
+Aufwendungen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+\lang naustrian
+neutrale Aufwendungen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+\lang naustrian
+Zweckaufwendungen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang naustrian
+Zusatzkosten, Anderskosten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang naustrian
+betriebsfremd, periodenfremd,außergewöhnlich
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang naustrian
+Grundkosten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang naustrian
+kalk.
+ Kosten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang naustrian
+= 0
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang naustrian
+KOSTEN
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang naustrian
+Neutrale Aufwendungen:
+\end_layout
+
+\begin_layout Subparagraph
+
+\lang naustrian
+Betriebsfremde Aufwendungen:  
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+z.B.
+ Reparatur für Gebäude, nicht betrieblich genutzt.
+\end_layout
+
+\begin_layout Subparagraph
+
+\lang naustrian
+Periodenfremde Aufwendungen
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+z.B.
+ Steuervorauszahlungen
+\end_layout
+
+\begin_layout Subparagraph
+
+\lang naustrian
+Außergewöhnliche betriebliche Aufwendungen:  
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+z.B.
+ Schadensfälle durch Brand, Forderungsausfälle
+\end_layout
+
+\begin_layout Subparagraph
+
+\lang naustrian
+Sonstige neutrale Aufwendungen:  
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+z.B.
+ Abschreibungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Aufgaben der Kostenrechnung
+\lang english
+s
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Ermittlung der Herstellungskosten von unfertigen und fertigen Erzeugnissen
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Kalkulation des Produktpreies bzw.
+ Selbstkostenermittlung
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Controlling des betrieblichen (operativen) Erfolgs
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+bereitstelung entscheidungsrelevanter Informationen
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Planung
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Kostenkontrolle
+\end_layout
+
+\begin_layout Section
+Systeme
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\lang naustrian
+Istkosten
+\series default
+‐Rechnung, 
+\series bold
+Vergangenheitswerte
+\series default
+; für die Preisermittlung wenig geeignet
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\lang naustrian
+Normalkosten
+\series default
+‐Rechnung, 
+\series bold
+Verganenheitswerte
+\series default
+; Ist-Kosten noramlisiert durch Durchschnitt;
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\lang naustrian
+Plankosten
+\series default
+‐Rechnung, 
+\series bold
+zukunftsorientiert
+\series default
+.
+ Sie bildet im Zusammenwirken mit der Istkostenrechnung ein wirkungsvolles
+ Planungs‐, Steuerungs‐ und Kontrollinstrument.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teilbereiche
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Kostenartenrechnung - 
+\series bold
+Welche
+\series default
+ Kosten sind in welche Höhe enstanden?
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Kostenstellenrechnung - 
+\series bold
+Wo
+\series default
+ sind die Kosten in welcher Höhe enstanden?
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Kostenträgerrechnung - 
+\series bold
+Wofür 
+\series default
+sind die Kosten angefallen
+\series bold
+?
+\series default
+ Stückkosten / Betriebsergebnis?
+\end_layout
+
+\begin_layout Section
+kalkulatorische Kosten
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Zusatzkosten.
+ Beispiel: Kalk.
+ Unternehmerlohn, Kalk.
+ Miete
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Anderskosten.
+ Beispiel: Kalk.
+ Abschreibungen, Kalk.
+ Zinsen, Kalk.
+ Wagnisse
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Ablauf
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+1
+\begin_inset space ~
+\end_inset
+
+Kostenerfassung Welche Kosten sind angefallen? 
+\series bold
+Kostenartenrechnung
+\series default
+ 
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+2
+\begin_inset space ~
+\end_inset
+
+Kostenverteilung Wo sind die Kosten angefallen? 
+\series bold
+Kostenstellenrechnung
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+3
+\begin_inset space ~
+\end_inset
+
+Kostenzurechnung Wofür sind die Kosten angefallen? 
+\series bold
+Kostenträgerrechnung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Kostenartenrechnung
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+ämtliche Kosten, die bei der Leistungserstellung entstehen 
+\series bold
+lückenlos zu erfassen
+\series default
+ und sie
+\series bold
+ nach ihrer Herkunft 
+\series default
+zu gliedern.
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+vollständige und überschneidungsfreie Erfassung der Kosten
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Erfassung der kalkulatorischen Kosten
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Gliederung der Kosten
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+eindeutige Zuordnung der Kosten
+\end_layout
+
+\begin_layout Subsection
+BÜB
+\end_layout
+
+\begin_layout Paragraph
+
+\lang naustrian
+Mit - Spalte (0 durch)
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Gesetzl.
+ Lohnabgaben
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Gesetzl.
+ Gehaltsabgaben
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+UB und WR Arbeiter 
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Nichtleistungslöhne 
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Zinsenaufw.
+ für Bankkredite 
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Schadensfälle 
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Abschr.
+ von Sachanlagen 
+\end_layout
+
+\begin_layout Paragraph
+
+\lang naustrian
+Mit + Spalte dazu
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Kalk.
+ Zinsen, Abschreibungen, Unternehmerlohn, Wagnisse
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Lohnnebenko der FL, HL & Gehaltsnebenkosten
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Achtung auf Periode 
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Kostenstellenrechnung
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Bildung der Kostenstellen
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Verteilung der Kosten auf die Kostenstellen
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Ermittlung der Gemeinkostenzuschläge
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+BAB
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang naustrian
+Lohnnebenkosten
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Nebekosten / Anteil * Lohn
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang naustrian
+Sozialkosten
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Sozialkosten / (Fertiungslöhne + Gehälter) * (Anteil-Gehalt + Anteil-FL)
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang naustrian
+Umlage Hilfskostenstelle
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+- Betrag von der Kostenstelle, Schlüßel aufsummieren, Betrag Kostenstelle
+ / Schlüßelsumme * Schlüßel
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Kostenträgerrechnung
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Kostenträger sind Erzeugnisse oder Dienstleistungen eines Unternehmens,
+ denen die Kosten zugerechnet werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Kostenträgerstückrechnung = Kalkulation 
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Divisionskalkulation (stupide Durchdividieren, WasserKW > Strom) 
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Äquivalenzziffernkalkulation (Flasche Bier 1l > Flasche Bier 0.5l)
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Kuppelproduktkalkulation (Sägewerk > Sägespähne)
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+Zuschlagskalkulation
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Kostenträgerzeitrechnung
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Ermittlung des Betriebsergebnisses in einer bestimmten Periode 
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Herstellkosten
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Materialkosten + Fertiungskosten + Sonderkosten der Fertigung
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Gewinnschwellenanalyse
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Deckungsbetrag = Fixkosten, Break-Even-Point
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Teilkostenrechnung
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Besagt dass fixe Kosten in keinem funktionalen Zusammenhang zur Outputmenge
+ steht.
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Kostenstellenrechnung: Variator (VX)
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Gibt Anteil der Variablen kosten an (V7 = 70 %), (V10 = 100 %), (V0 = 0%)
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Kosten
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang naustrian
+Fixe
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Absolut fixe und intervallfixe Kosten
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang naustrian
+Variable
+\end_layout
+
+\begin_layout Description
+propotional steigt gleich wie Beschäftigungsgrad
+\end_layout
+
+\begin_layout Description
+degressiv steigt im geringeren Außmas als der Beschäftigungsgrad (z.B.
+ Mengenrabatt)
+\end_layout
+
+\begin_layout Description
+progressiv steigt im stärkeren Außmas als der Beschäftigungsgrad (z.B.
+ Überstunden)
+\end_layout
+
+\begin_layout Description
+regressiv sinkt mit zunehmender Beschäftigung absolut.
+\end_layout
+
+\begin_layout Section
+
+\lang naustrian
+Berechnung
+\end_layout
+
+\begin_layout Paragraph
+
+\lang naustrian
+Herstellungskosten
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+Fertigungsmaterial +
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+Materialgemeinkosten +
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+Fertigungslöhne +
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+Fertiungsgemeinkosten +
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+=
+\begin_inset space ~
+\end_inset
+
+Herstellkosten
+\end_layout
+
+\begin_layout Paragraph
+
+\lang naustrian
+Selbstkosten
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+Herstellungskosten +
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+VerwaltungVertriebGemeinkosten +
+\end_layout
+
+\begin_layout Description
+
+\lang naustrian
+=
+\begin_inset space ~
+\end_inset
+
+Selbstkosten
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+DB
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+DB = NettoVK - Selbstkosten
+\end_layout
+
+\begin_layout Itemize
+
+\lang naustrian
+DB = Erlöse - VarKosten
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Zuschlagssätze
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Var.
+ Gemeinkosten / Bezugsgröße
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Betriebsergebnis
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Summe(Deckungsbeträge) - fixe Kosten = Betriebsergebnis
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Umsatz
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Stück * Verkauft
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Break Even
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+Fix / DB (Mengenmäßig) (* Stückpreis (Wertmäßig))
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Kurzfristige Preisuntergrenze
+\end_layout
+
+\begin_layout Standard
+variable Selbstkosten
+\end_layout
+
+\begin_layout Subsection
+
+\lang naustrian
+Langfristige Preisuntergrenze
+\end_layout
+
+\begin_layout Standard
+
+\lang naustrian
+(Fixkosten / Stück) + (Var SK / Stück)
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1164 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage{lscape}
+\usepackage{array}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.4in,left=.2in,right=.2in,bottom=.4in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+
+
+\makeatother
+
+
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{titlec}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+RWE 2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ RWE 2 / KORE 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+, MIT https://github.com/eisenwinter/fh-hgb-stuff 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ermittlung der Kosten
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="2.2cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Aufwendungen
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+neutrale Aufwendungen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Zweckaufwendungen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zusatzkosten, Anderskosten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+betriebsfremd, periodenfremd,außergewöhnlich
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grundkosten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kalk.
+ Kosten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+= 0
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+KOSTEN
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Neutrale Aufwendungen:
+\end_layout
+
+\begin_layout Paragraph
+Betriebsfremde Aufwendungen:  
+\end_layout
+
+\begin_layout Standard
+stehen in keiner Beziehung zum eigentlichen Betriebszweck, d.h.
+ zur betrieblichen Leistungserstellung (Produktion) und Leistungsverwertung
+ (Absatz); z.B.
+ Reparaturaufwendungen für Gebäude, die nicht betrieblich genutzt werden.
+\end_layout
+
+\begin_layout Paragraph
+Periodenfremde Aufwendungen:
+\end_layout
+
+\begin_layout Standard
+sind zwar zweckbezogen, gehören jedoch nicht in die Abrechnungsperiode;
+ z.B.
+ Steuervorauszahlungen
+\end_layout
+
+\begin_layout Paragraph*
+Außergewöhnliche betriebliche Aufwendungen:  
+\end_layout
+
+\begin_layout Standard
+sind zwar zweckbezogen, sind aber nach Art und Höhe so außergewöhnlich,
+ dass sie nicht als ordentliche betriebliche Aufwendungen in die Kostenrechnung
+ eingehen; z.B.
+ Schadensfälle durch Brand, Forderungsausfälle
+\end_layout
+
+\begin_layout Paragraph
+Sonstige neutrale Aufwendungen:  
+\end_layout
+
+\begin_layout Standard
+sind ebenfalls betriebszweckbezogen, jedoch entsprechen sie nicht dem konkreten
+ Zweck, der im speziellen Fall von der jeweiligen Kostenrechnung verfolgt
+ wird; z.B.
+ Abschreibungen
+\end_layout
+
+\begin_layout Subsection
+BÜB 
+\end_layout
+
+\begin_layout Paragraph
+Mit 0 durch (-Spalte)
+\end_layout
+
+\begin_layout Itemize
+Gesetzl.
+ Lohnabgaben
+\end_layout
+
+\begin_layout Itemize
+Gesetzl.
+ Gehaltsabgaben
+\end_layout
+
+\begin_layout Itemize
+UB und WR Arbeiter 
+\end_layout
+
+\begin_layout Itemize
+Nichtleistungslöhne 
+\end_layout
+
+\begin_layout Itemize
+Zinsenaufw.
+ für Bankkredite 
+\end_layout
+
+\begin_layout Itemize
+Schadensfälle 
+\end_layout
+
+\begin_layout Itemize
+Abschr.
+ von Sachanlagen 
+\end_layout
+
+\begin_layout Paragraph
+Mit + Spalte dazu
+\end_layout
+
+\begin_layout Itemize
+Kalk.
+ Zinsen 
+\end_layout
+
+\begin_layout Itemize
+Kalk.
+ Abschreibungen
+\end_layout
+
+\begin_layout Itemize
+Kalk.
+ Unternehmerlohn
+\end_layout
+
+\begin_layout Itemize
+Kalk.
+ Wagnisse
+\end_layout
+
+\begin_layout Itemize
+Lohnnebenko der FL
+\end_layout
+
+\begin_layout Itemize
+Lohnnebenko der HL
+\end_layout
+
+\begin_layout Itemize
+Gehaltsnebenkosten
+\end_layout
+
+\begin_layout Standard
+Achtung auf Periode 
+\end_layout
+
+\begin_layout Subsection
+BAB
+\end_layout
+
+\begin_layout Paragraph
+Lohnnebenkosten
+\end_layout
+
+\begin_layout Standard
+Nebekosten / Anteil * Lohn
+\end_layout
+
+\begin_layout Paragraph
+Sozialkosten
+\end_layout
+
+\begin_layout Standard
+Sozialkosten / (Fertiungslöhne + Gehälter) * (Anteil-Gehalt + Anteil-FL)
+\end_layout
+
+\begin_layout Subsection
+Rechnen
+\end_layout
+
+\begin_layout Paragraph
+Herstellungskosten
+\end_layout
+
+\begin_layout Description
+Fertigungsmaterial +
+\end_layout
+
+\begin_layout Description
+Materialgemeinkosten +
+\end_layout
+
+\begin_layout Description
+Fertigungslöhne +
+\end_layout
+
+\begin_layout Description
+Fertiungsgemeinkosten +
+\end_layout
+
+\begin_layout Description
+=
+\begin_inset space ~
+\end_inset
+
+Herstellkosten
+\end_layout
+
+\begin_layout Paragraph
+Selbstkosten
+\end_layout
+
+\begin_layout Description
+Herstellungskosten +
+\end_layout
+
+\begin_layout Description
+Verwaltung-Vertrieb-Gemeinkosten
+\end_layout
+
+\begin_layout Description
+=
+\begin_inset space ~
+\end_inset
+
+Sebstkosten
+\end_layout
+
+\begin_layout Paragraph
+DB
+\end_layout
+
+\begin_layout Standard
+Selbstkosten - NettoVK = DB
+\end_layout
+
+\begin_layout Paragraph
+Zuschlagssätze 
+\end_layout
+
+\begin_layout Standard
+Var.
+ Gemeinkosten / Bezugsgröße
+\end_layout
+
+\begin_layout Subsection
+Teilkostenrechnung
+\end_layout
+
+\begin_layout Standard
+Erlöse- variable Kosten = DB
+\end_layout
+
+\begin_layout Standard
+Summe(Deckungsbeträge) - fixe Kosten = Betriebsergebnis
+\end_layout
+
+\begin_layout Subsection
+Kostenträgerrechnung
+\end_layout
+
+\begin_layout Paragraph
+Kostenträgerstückrechnung = Kalkulation 
+\end_layout
+
+\begin_layout Itemize
+Divisionskalkulation
+\end_layout
+
+\begin_layout Itemize
+Äquivalenzziffernkalkulation 
+\end_layout
+
+\begin_layout Itemize
+Kuppelproduktkalkulation
+\end_layout
+
+\begin_layout Itemize
+Zuschlagskalkulation
+\end_layout
+
+\begin_layout Paragraph
+Kostenträgerzeitrechnung
+\end_layout
+
+\begin_layout Standard
+Ermittlung des Betriebsergebnisses in einer bestimmten Periode 
+\end_layout
+
+\begin_layout Subsection
+Fragen
+\end_layout
+
+\begin_layout Subsubsection
+1.
+ Nennen Sie die Aufgaben der Kostenrechnung.
+\end_layout
+
+\begin_layout Itemize
+Ermittlung der Herstellungskosten von unfertigen und fertigen Erzeugnissen
+\end_layout
+
+\begin_layout Itemize
+Kalkulation des Produktpreies bzw.
+ Selbstkostenermittlung
+\end_layout
+
+\begin_layout Itemize
+Controlling des betrieblichen (operativen) Erfolgs
+\end_layout
+
+\begin_layout Itemize
+bereitstelung entscheidungsrelevanter Informationen
+\end_layout
+
+\begin_layout Itemize
+Planung
+\end_layout
+
+\begin_layout Itemize
+Kostenkontrolle
+\end_layout
+
+\begin_layout Subsubsection
+2.
+ Welche Kostenrechnungssysteme kennen Sie und wodurch unterscheiden sie
+ sich?
+\end_layout
+
+\begin_layout Paragraph
+Nach dem Wesen 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Istkosten
+\series default
+‐Rechnung, unter Istkosten versteht man Kosten, die während einer bestimmten
+ Abrechnungsperiode effektiv angefallen sind.
+ (Vergangenheitswerte; für die Preisermittlung wenig geeignet)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Normalkosten
+\series default
+‐Rechnung, Normalkosten werden als Durchschnittswerte aus Kosten der Vergangenhe
+it gebildet.
+ Zufällige Schwankungen beeinflussen nicht die Ergebnisse, ein Vergleich
+ der Istkosten von den Normkosten kann zur Kostenkontrolle herangezogen
+ werden.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Plankosten
+\series default
+‐Rechnung, die Plankostenrechnung ist 
+\series bold
+zukunftsorientiert
+\series default
+.
+ Sie bildet im Zusammenwirken mit der Istkostenrechnung ein wirkungsvolles
+ Planungs‐, Steuerungs‐ und Kontrollinstrument.
+\end_layout
+
+\begin_layout Paragraph
+Nach dem Umfang
+\end_layout
+
+\begin_layout Itemize
+Vollkostenrechnung, berücksichtigt variable und fixe Kosten
+\end_layout
+
+\begin_layout Itemize
+Teilkostenrechnung, beruht hauptsächlich auf variablen Kosten (weil verursachung
+sgerechte Zurechnung der Fixkosten nicht möglich)
+\end_layout
+
+\begin_layout Subsubsection
+3.
+ Aus welchen Teilbereichen besteht die Kostenrechnung?
+\end_layout
+
+\begin_layout Itemize
+Kostenartenrechnung - Welche Kosten sind in welche Höhe enstanden?
+\end_layout
+
+\begin_layout Itemize
+Kostenstellenrechnung - Wo sind die Kosten in welcher Höhe enstanden?
+\end_layout
+
+\begin_layout Itemize
+Kostenträgerrechnung - 
+\series bold
+Wofür sind die Kosten angefallen?
+\series default
+ Wie hoch sind die Stückkosten und wie hoch ist das Betriebsergebnis?
+\end_layout
+
+\begin_layout Subsubsection
+4.
+ Welche Aufgaben hat die Kostenartenrechnung?
+\end_layout
+
+\begin_layout Standard
+Sämtliche Kosten, die bei der Leistungserstellung entstehen 
+\series bold
+lückenlos zu erfassen
+\series default
+ und sie
+\series bold
+ nach ihrer Herkunft 
+\series default
+zu gliedern.
+\end_layout
+
+\begin_layout Itemize
+vollständige und überschneidungsfreie Erfassung der Kosten
+\end_layout
+
+\begin_layout Itemize
+Erfassung der kalkulatorischen Kosten
+\end_layout
+
+\begin_layout Itemize
+Gliederung der Kosten
+\end_layout
+
+\begin_layout Itemize
+eindeutige Zuordnung der Kosten
+\end_layout
+
+\begin_layout Subsubsection
+5.
+ Was sind kalkulatorische Kosten? Führen Sie je ein Beispiel an.
+\end_layout
+
+\begin_layout Itemize
+Zusatzkosten.
+ Beispiel: Kalk.
+ Unternehmerlohn, Kalk.
+ Miete
+\end_layout
+
+\begin_layout Itemize
+Anderskosten.
+ Beispiel: Kalk.
+ Abschreibungen, Kalk.
+ Zinsen, Kalk.
+ Wagnisse
+\end_layout
+
+\begin_layout Subsubsection
+6.
+ Wie werden die Kosten ermittelt?
+\end_layout
+
+\begin_layout Paragraph
+Generell
+\end_layout
+
+\begin_layout Standard
+Die Kostenrechnung bezieht von der Buchführung einen Großteil des benötigten
+ Zahlenmaterials und liefert der Finanzbuchführung vor allem die Grundlagen
+ für die Bewertung von Halb‐ und Fertigerzeugnissen.
+\end_layout
+
+\begin_layout Paragraph
+Kalk.
+ Kosten
+\end_layout
+
+\begin_layout Standard
+Von den Gesamtaufwendungen werden die sogenannten neutralen Aufwendungen
+ abgezogen und die verbleibenden Aufwendungen (als Zweckaufwand oder Grundkosten
+ bezeichnet) werden um Kalkulatorische Kosten ergänzt.  So erhält man die
+ Gesamtkosten, die in dieser Form in die Kostenrechnung eingehen.
+\end_layout
+
+\begin_layout Subsubsection
+7.
+ Welche Aufgaben hat die Kostenstellenrechnung?
+\end_layout
+
+\begin_layout Itemize
+Bildung der Kostenstellen
+\end_layout
+
+\begin_layout Itemize
+Verteilung der Kosten auf die Kostenstellen
+\end_layout
+
+\begin_layout Itemize
+Ermittlung der Gemeinkostenzuschläge
+\end_layout
+
+\begin_layout Subsubsection
+8.
+ Worin liegt der Unterschied zwischen Hauptkostenstellen und Nebenkostenstellen?
+\end_layout
+
+\begin_layout Itemize
+Hauptkostenstellen sind Kostenstellen welche Leistung direkt an die Leistungspro
+zesse des Produktes abgeben.
+ (Verkauf, Produktion, Verwaltung des Produkts)
+\end_layout
+
+\begin_layout Itemize
+Nebenkostenstellen sind Fertigungsbereiche in denen Nebenprodukte enstehen.
+\end_layout
+
+\begin_layout Subsubsection
+9.
+ Wie setzen sich die Herstellkosten zusammen?
+\end_layout
+
+\begin_layout Standard
+Materialkosten + Fertiungskosten + Sonderkosten der Fertigung
+\end_layout
+
+\begin_layout Subsubsection
+10.
+ Wozu dient die Kostenträgerrechnung?
+\end_layout
+
+\begin_layout Standard
+Wofür sind die Kosten angefallen? Kostenträger sind Erzeugnisse oder Dienstleist
+ungen eines Unternehmens, denen die Kosten zugerechnet wertden.
+\end_layout
+
+\begin_layout Subsubsection
+11.
+ Erklären Sie den Ablauf der Kostenrechnung.
+\end_layout
+
+\begin_layout Description
+1
+\begin_inset space ~
+\end_inset
+
+Kostenerfassung Welche Kosten sind angefallen? 
+\series bold
+Kostenartenrechnung
+\series default
+ 
+\end_layout
+
+\begin_layout Description
+2
+\begin_inset space ~
+\end_inset
+
+Kostenverteilung Wo sind die Kosten angefallen? 
+\series bold
+Kostenstellenrechnung
+\end_layout
+
+\begin_layout Description
+3
+\begin_inset space ~
+\end_inset
+
+Kostenzurechnung Wofür sind die Kosten angefallen? 
+\series bold
+Kostenträgerrechnung
+\end_layout
+
+\begin_layout Subsubsection
+12.
+ Was versteht man unter Teilkostenrechnung?
+\end_layout
+
+\begin_layout Standard
+Das fixe Kosten in keinem funktionalen Zusammenhang zur Outputmenge steht.
+\end_layout
+
+\begin_layout Subsubsection
+13.
+ Welche Vorteile bietet die Teilkostenrechnung gegenüber der Vollkostenrechnung?
+\end_layout
+
+\begin_layout Standard
+Durch den Deckungsbeitrag lässt sich über die Teilkostenrechnung sagen ob
+ es sich lohnt einen Artikel im Sortiment zu belassen.
+ Des Weiteren lassen sich Break-Even-Point oder kurzfristige Preisuntergrenzen
+ bestimen.
+ Gemeinkosten werden nicht einfach auf einzelne Produkte gelegt.
+ Sie ist auch für kurzfristige Entscheidungen geeignet.
+\end_layout
+
+\begin_layout Itemize
+Eine verursachungsgerechte Schlüsselung der Gemeinkosten ist kaum möglich.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+14.
+ Was bedeutet „Gewinnschwellenanalyse“?
+\end_layout
+
+\begin_layout Standard
+Den Break-Even Point finden.
+ Ab wann macht das Produkt Gewinn.
+ Deckungsbeitrag ist ident mit den Fixkosten.
+\end_layout
+
+\begin_layout Subsubsection
+15.
+ Welche Arten der Programmentscheidung kennen Sie? Erklären Sie den Unterschied!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

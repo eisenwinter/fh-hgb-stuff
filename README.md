@@ -20,3 +20,7 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 # S2, Semster 2
 ## ADE
 - Vorlage für Abgaben (adaptierte S1 Version)
+
+## RWE / Kore
+- Pocketguide
+- Vorbereitung
