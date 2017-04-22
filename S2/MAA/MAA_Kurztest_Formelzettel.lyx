@@ -1718,7 +1718,7 @@ centering
 \end_layout
 
 \begin_layout Section
-pq Formel
+abc Formel
 \end_layout
 
 \begin_layout Standard
@@ -2140,10 +2140,12 @@ Rechenoperationen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a\pm c+(b\pm d)i$
+\begin_inset Formula $a*c-b+(a*d+b*c)i$
 \end_inset
 
-
+ 
+\size tiny
+(kreuzrechn.)
 \end_layout
 
 \end_inset
@@ -2339,100 +2341,6 @@ von Startwert das Ergebnis der Division von 3.
 
 ), wieder Funktionswerte mit neuem Wert dividieren so lange bis Näherung
  ausreicht.
-\end_layout
-
-\begin_layout Section
-Sonstiges
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $a\circ b:=(b-1)(a+1)$
-\end_inset
-
- ist nicht kommutativ auf 
-\begin_inset Formula $R$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Hintereinanderausführung von totalen Funktionen ist assoziativ.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $[\mathbb{N},*]$
-\end_inset
-
- ist keine abelsche Gruppe.
-\end_layout
-
-\begin_layout Itemize
-In 
-\begin_inset Formula $[\mathbb{Z}_{9},*]$
-\end_inset
-
- gilt 
-\begin_inset Formula $3*7=3$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-In jeder Gruppe 
-\begin_inset Formula $[G,\circ]$
-\end_inset
-
- gilt 
-\series bold
-nicht
-\series default
-: 
-\begin_inset Formula $(a\circ b)^{-1}=a^{-1}\circ b^{-1}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-In einem Monoid mit neutralen Element 
-\begin_inset Formula $e$
-\end_inset
-
- gibt es ein 
-\begin_inset Formula $a$
-\end_inset
-
- mit 
-\begin_inset Formula $a\circ a=e$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Falls 
-\begin_inset Formula $e$
-\end_inset
-
- das neutrale Element in einer Gruppe ist, dann ist 
-\begin_inset Formula $e^{-1}=e$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Jede Algebra ist zu sich selbst isomorph
-\end_layout
-
-\begin_layout Itemize
-Die Gleichung 
-\begin_inset Formula $|z^{2}|=1$
-\end_inset
-
- hat nicht genau 2 komplexe Lösungen
 \end_layout
 
 \begin_layout Standard
