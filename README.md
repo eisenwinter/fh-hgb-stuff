@@ -1,4 +1,4 @@
-# Cheatsheets, Infoblätter und Abgabevorlagen
+﻿# Cheatsheets, Infoblätter und Abgabevorlagen
 Eine Sammlung von Cheatsheets und Infoblättern die während des Studiums (SE) enstanden sind.
 Es kann sich jeder was brauchen kann gerne bedienen.
 ### (SE(bb))
@@ -20,7 +20,11 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 # S2, Semster 2
 ## ADE
 - Vorlage für Abgaben (adaptierte S1 Version)
+- ATG Erkärung / Beispiel
 
 ## RWE / Kore
 - Pocketguide
 - Vorbereitung
+
+## DEM
+- Klausurvorbereitung

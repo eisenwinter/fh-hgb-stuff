@@ -1,0 +1,1531 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usetikzlibrary{positioning}
+\usetikzlibrary{trees}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{arrows.meta}
+
+\usepackage{syntax}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\definecolor{oraora}{HTML}{f49b41}
+\definecolor{blublub}{HTML}{1455bc}
+\definecolor{semsem}{HTML}{a8a50f}
+
+\geometry{top=.2in,left=.4in,right=.4in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{4pt}
+\setlength{\postmulticols}{4pt}
+\setlength{\multicolsep}{6pt}
+\setlength{\columnsep}{14pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\newcommand{\nlgra}[1][2]{\\\hspace*{#1em}\quad}
+
+\newcommand{\bluearrow}[1]{\textcolor{blublub}{$_{\boldsymbol{\uparrow #1}}$}}
+\newcommand{\yelsem}[1]{\textcolor{oraora}{$_{\boldsymbol{#1}}$}}
+\newcommand{\semcom}[1]{\textcolor{semsem}{{#1}}}
+
+\newcommand{\bluearrowd}[1]{\textcolor{blublub}{$_{\boldsymbol{\downarrow #1}}$}}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+huge
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ADF / ATG Beispiel 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar, Christan Böhm (org.
+ docx), Robert Großauer, https://github.com/eisenwinter/fh-hgb-stuff / MIT
+ Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+EBNF
+\end_layout
+
+\begin_layout Description
+[] Ein optionales Element kommt maximal 1x vor: Eckige Klammern Ja/Nein
+\end_layout
+
+\begin_layout Description
+{} Mehrfache Wiederholungen: Geschweifte Klammern
+\end_layout
+
+\begin_layout Description
+() Klammern verwendet man für das Leseverständnis 
+\end_layout
+
+\begin_layout Description
+| Alternativen werden mit Pipe-Symbol gekennzeichnet.
+\end_layout
+
+\begin_layout Description
+Nonterminalsymbole
+\begin_inset space ~
+\end_inset
+
+(Grammatikregeln) beginnen mit einem großen Buchstaben.
+\end_layout
+
+\begin_layout Description
+Terminalsymbole beginnen mit einem kleinen Buchstaben.
+\end_layout
+
+\begin_layout Description
+Attribute haben kurze Namen.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow
+\end_layout
+
+\end_inset
+
+ Ausgangsattribut,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrowd
+\end_layout
+
+\end_inset
+
+ Eingangsattribut
+\end_layout
+
+\begin_layout Section
+Beispiel: eine Notenliste
+\end_layout
+
+\begin_layout Subsection
+Die Noteliste
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Clean"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[ADF2]
+\end_layout
+
+\begin_layout Plain Layout
+
+Max Mustermann: NGD, BEF, SGT
+\end_layout
+
+\begin_layout Plain Layout
+
+Susi Super: BEF, GUT, SGT
+\end_layout
+
+\begin_layout Plain Layout
+
+Paul Faul: NGD, NGD
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aufgabe 1
+\end_layout
+
+\begin_layout Standard
+Jede Notenliste hat eine Vorlesung und mehrere Schüler + Noten, jeder Schüler
+ darf eine bis maximal drei Noten haben.
+\end_layout
+
+\begin_layout Subsubsection
+Ermittlung der Terminalsymbole
+\end_layout
+
+\begin_layout Standard
+Space/Leerzeichen und 
+\backslash
+r
+\backslash
+n / Zeilen sind keine Terminalsymbole.
+ Ein Leerzeichen trennt stets Terminalsymbole.
+ (Beispiel 
+\series bold
+137 
+\series default
+ist ein Terminalsymbol aber 
+\series bold
+13
+\series default
+ 
+\series bold
+7 
+\series default
+sind zwei Terminalsymbole)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Terminalsymbole
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+[ leftBr
+\end_layout
+
+\begin_layout Description
+] rightBr
+\end_layout
+
+\begin_layout Description
+: colon
+\end_layout
+
+\begin_layout Description
+, comma
+\end_layout
+
+\begin_layout Description
+SGT sgt
+\end_layout
+
+\begin_layout Description
+GUT gut
+\end_layout
+
+\begin_layout Description
+BEF bef
+\end_layout
+
+\begin_layout Description
+GEN gen
+\end_layout
+
+\begin_layout Description
+NGD ngd
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Terminalklassen
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+name Buchstaben + Zahlen
+\end_layout
+
+\begin_layout Subparagraph
+Achtung
+\end_layout
+
+\begin_layout Standard
+Kleinbuchstaben!
+\end_layout
+
+\begin_layout Subsubsection
+Ermittlung der Non-Terminalsymbole / Grammatik
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{grammar}
+\end_layout
+
+\begin_layout Plain Layout
+
+<
+\backslash
+underline{ResultList}> = LVA Results.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<LVA> = "leftBr" "name" "rightBr".
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Results> = Result "{"Result"}".
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Result> = Student "colon" Grades.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Grades> = Grade [comma Grade [comma Grade]].
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Grade> = "sgt" | "gut" | "bef" | "gen" | "ngd".
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{grammar}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aufgabe 2: Semantik : Average 
+\end_layout
+
+\begin_layout Standard
+Notenschnitt von letzter Note aller Schüler in Liste 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Anmerkung
+\end_layout
+
+\begin_layout Standard
+Nach möglichkeit die Grammatik gleich wie unten anschrieben, dann kann man
+ sofort die Semantik darin machen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ResultList
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{avg:REAL}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+LVA
+\begin_inset Newline newline
+\end_inset
+
+Results
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+yelsem{avg}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\end_layout
+
+\begin_layout Description
+LVA 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+leftBr name 
+\begin_inset Newline newline
+\end_inset
+
+rightBr
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Results
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{avg:REAL}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> VAR grade,sum,count: INTEGER; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> count := 1; sum := 0; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Result
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{grade}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> sum := grade; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+{Result
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{grade}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> sum := sum + grade; count := count + 1; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+}
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{avg}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem>avg := sum / count; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Result
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{grade:INTEGER}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+Student
+\begin_inset Newline newline
+\end_inset
+
+colon Grades
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{grade}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Student 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ =
+\begin_inset Newline newline
+\end_inset
+
+name
+\begin_inset Newline newline
+\end_inset
+
+name
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Grades
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{last:INTEGER}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{last}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+[comma Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{last}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+[comma Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{last}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+]
+\begin_inset Newline newline
+\end_inset
+
+]
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{v:INTEGER}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+sgt 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 1 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| gut 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 2 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| bef 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 3 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| gnd 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 4 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| ngd 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 5 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+mögliche Anforderungen
+\end_layout
+
+\begin_layout Itemize
+Notendurchschnitt (letzte Note zählt)
+\series bold
+ (siehe oben)
+\end_layout
+
+\begin_layout Itemize
+Antritte je Student (Name -> Versuche)
+\end_layout
+
+\begin_layout Itemize
+Anzahl der gesamten Versuche in der Prüfung.
+\end_layout
+
+\begin_layout Itemize
+Anzahl der Teilnehmer
+\end_layout
+
+\begin_layout Itemize
+Anzahl der bestandenen Teilnehmer
+\end_layout
+
+\begin_layout Itemize
+Anzahl der komm.
+ Prüfung
+\end_layout
+
+\begin_layout Itemize
+Anzahl der Teilnehmer, die noch eine Prüfung brauchen
+\end_layout
+
+\begin_layout Section
+Tipps
+\end_layout
+
+\begin_layout Itemize
+Terminalsymbole sind Sinneinheiten
+\end_layout
+
+\begin_layout Itemize
+Ein Buchstabe ist kein Terminalsymbol! Da es keine sinntragende Einheit
+ ist (Ausnahme z.B.
+ "a" im Englisch)
+\end_layout
+
+\begin_layout Itemize
+In unseren Angaben stehen IMMER nur Terminalsymbole!
+\end_layout
+
+\begin_layout Itemize
+Kann man in 2 Einheiten gliedern:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Name, Lehrveranstaltungen, Noten sind Terminalklassen, da es unendliche
+ viele Ausprägungen gibt! -> Eigennamen
+\end_layout
+
+\begin_layout Itemize
+Terminalklassen brauchen eine Bildungsregel!
+\end_layout
+
+\begin_layout Itemize
+Terminalsymbole ([],:,...)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Frage, ob eine Liste 0, 1 oder mehrere Einträge haben kann: Immer 1 oder
+ mehrere nehmen, weil 0 viel schwerer zu handeln ist.
+\end_layout
+
+\begin_layout Itemize
+Bei der Semantik: für jedes Symbol eine eigene Zeile! außer bei einem Terminalsy
+mbol kann man das nächste Symbol gleich dranschreiben, da ein Terminalsymbol
+ für sich eh keine Bedeutung hat.
+\end_layout
+
+\begin_layout Paragraph
+"Terminaklasse Name besteht aus lauter Buchstaben",
+\end_layout
+
+\begin_layout Standard
+Man kann "[", "Vorlesungsname", "]" nehmen, oder "[Vorlesungsname]" als
+ ganzes festlegen! Da hat man Spielraum.
+ Aber auch nur, wenn KEIN Leerzeichen dazwischen steht.
+ Sonst sinds sowieso eigene Terminalsymbole
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

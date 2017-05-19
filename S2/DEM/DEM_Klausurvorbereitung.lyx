@@ -1,0 +1,2323 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{listings}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}   
+%\usepackage[utf8]{inputenc}
+\newtheorem{Def}{Definition}
+\usepackage[svgnames]{xcolor}
+\usepackage{booktabs}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{wrapfig}
+
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+%\geometry{top=.4in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+
+\makeatother
+
+
+\setlength{\premulticols}{2pt}
+\setlength{\postmulticols}{2pt}
+\setlength{\multicolsep}{2pt}
+\setlength{\columnsep}{4pt}
+
+
+\columnsep=25pt
+\columnseprule=0.5pt 
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+\end_preamble
+\use_default_options true
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1cm
+\headheight 12pt
+\footskip 5pt
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language={SQL},aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\ttfamily},numbers=left,numbersep=8pt,stepnumber=1,numberstyle={\color{gray}},keywordstyle={\color{blue}},commentstyle={\color{dkgreen}},stringstyle={\color{mauve}},breaklines=true,breakatwhitespace=true,tabsize=3,basicstyle={\color{black}\ttfamily},keepspaces=true,prebreak={\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}}},captionpos=t,xleftmargin={0.3cm},frame=lr,moredelim={[is][\color{red}\bfseries]{@@}{@@}},morekeywords={REFERENCES,SEQUENCE,START,WITH,INCREMENT,NOCYCLE,NOMAXVALUE,MODIFY}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{titlec}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+relationale Datenbanken 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ ...
+ ois was vermutlich zur Klausur kommt.
+ https://github.com/eisenwinter/fh-hgb-stuff / MIT 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Grundlagen
+\end_layout
+
+\begin_layout Standard
+Eine Datenbank hat die Aufgabe Daten effizient zu verwalten.
+ Das DBS - Datenbanksystem - hat das Ziel gängige Probleme bei der Nutzung
+ von Daten vorzubeugen.
+ Diese Aspekete sind
+\end_layout
+
+\begin_layout Description
+Integrität Mehrfachspeicherung (Redundanz), Widersprüchlichen (Konsistenz),
+ Aufbau
+\end_layout
+
+\begin_layout Description
+Vertraulichkeit Schutz vor unberechtigtem Zugriff (unberechtigte Personen
+ können nicht zugreifen; bestimmte Personen dürfen nur einen Ausschnitt
+ der Daten sehen)
+\end_layout
+
+\begin_layout Description
+Verfügbarkeit Handling von Fehlerfällen (Stromausfall, Systemcrash)
+\end_layout
+
+\begin_layout Standard
+Dies stellt das DBMS - Datenbankmanagmentsystem - der Datenbank sicher.
+ Das DBMS verwaltet die strukturierte Datenbasis (Datenbank) des DBS und
+ ist ein fixer Bestandteil jeder Datenbank.
+ Aus den drei Problemen ergeben sich die drei Kernaufgaben rund um Die Daten:
+\series bold
+ Integrität, Vertraulichkeit, Verfügbarkeit
+\series default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Integrität
+\end_layout
+
+\begin_layout Subsubsection
+statische Integrität
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Integritätsbedingungen
+\series default
+ (Domänen‐,Entitäts‐, referentielle, Benutzerdef.) sichergestellt durch 
+\series bold
+Schema
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Widerspruchsfreiheit/Redundanzfreiheit
+\series default
+ sichergestellt durch 
+\series bold
+Normalisierung
+\end_layout
+
+\begin_layout Subsubsection
+dynamische Integrität
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ablaufintegrität
+\series default
+ sichergestellt durch Transaktionskonzepte (Atomarität, Isolation)
+\end_layout
+
+\begin_layout Subsection
+Verfügbarkeit
+\end_layout
+
+\begin_layout Subsubsection
+Anwedung- und DB-System unabhängig
+\end_layout
+
+\begin_layout Itemize
+Standardisierte Sprache : 
+\series bold
+SQL
+\end_layout
+
+\begin_layout Itemize
+Standardisiertes Datenmodell: 
+\series bold
+Relationenmodell
+\end_layout
+
+\begin_layout Subsubsection
+Änderungsresistent
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Logische
+\series default
+ (Sichten) und 
+\series bold
+physische
+\series default
+ Datenunabhängigkeit.
+\end_layout
+
+\begin_layout Subsubsection
+Clientunabhängig
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+APIs
+\series default
+ (z.B.
+ ODBC, JDBC)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+UIs
+\series default
+ (text-basiert, graphisch)
+\end_layout
+
+\begin_layout Subsubsection
+Performanz
+\end_layout
+
+\begin_layout Itemize
+Abfragen: 
+\series bold
+Indizierung
+\series default
+, 
+\series bold
+Anfrageoptimierung
+\series default
+, 
+\series bold
+Denormalisierung
+\end_layout
+
+\begin_layout Itemize
+Einfügen: genau Seitenverkehrt
+\end_layout
+
+\begin_layout Subsubsection
+Ausfallsicher
+\end_layout
+
+\begin_layout Itemize
+Recovery
+\end_layout
+
+\begin_layout Itemize
+Replikation
+\end_layout
+
+\begin_layout Itemize
+Durability
+\end_layout
+
+\begin_layout Subsubsection
+Skalierbar
+\end_layout
+
+\begin_layout Itemize
+Datenmenge (
+\series bold
+Big Data
+\series default
+), 
+\series bold
+Verteilung
+\series default
+ (horizontal / vertikal)
+\end_layout
+
+\begin_layout Itemize
+Benutzermenge (
+\series bold
+Big Users
+\series default
+), 
+\series bold
+Replikation
+\end_layout
+
+\begin_layout Subsection
+Vertraulichkeit
+\end_layout
+
+\begin_layout Subsubsection
+Daten
+\end_layout
+
+\begin_layout Itemize
+Sichten
+\end_layout
+
+\begin_layout Itemize
+DB-Verschlüsselung
+\end_layout
+
+\begin_layout Subsubsection
+Personen
+\end_layout
+
+\begin_layout Itemize
+Authentifizierung
+\end_layout
+
+\begin_layout Itemize
+Authorisierung
+\end_layout
+
+\begin_layout Standard
+Weiterführend wird nur relationale Datenbanken behandelt.
+ Dieses Konzept von E.F.
+ Codd bereits 1970 entwickelt und stellt alle Daten in Tabellen da.
+ Diese Tabellen bilden das Schema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Datenbankentwurf
+\end_layout
+
+\begin_layout Subsection
+Entwurfsschritte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Phase
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modell
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ergebnis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beispiel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 Anforderungsanalyse
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Requirements Engineering
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pflichtenheft (Use-Cases, ...)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+ANF 5.4: Eine Vorlesung wird durch eine eindeutige Vorlesungsnummer identifiziert.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 Konzeptueller Entwurf
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entity Relationship (UML, ...)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Konzeptuelles DB-Schema
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Das ER Diagramm.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 Logischer Entwurf
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Datenbankmodell
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logisches DB-Schema
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Vorlesung{VorlNr, Titel, ...} Student{MatrNr, Name, ...}
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4 Physischer Entwurf
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data Definition Language
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Physisches DB-Schema
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+CREATE TABLE Vorlesung( VorlNr NUMBER(10) PRIMARY KEY, Titel VARCHAR(20),
+ ...
+ );
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+ER
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Begriff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beduetung
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Entity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zu repräsentierende Informationseinheit.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Entitätstyp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gruppierung von Entities mit gleichen Eigenschaften (= Entitätsmengen)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Beziehungstyp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gruppierung von Beziehungen zwischen Entities
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Attribut
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Datenwertige Eigenschaft eines Entity oder einer Beziehung
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Schlüssel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Identifizierende Eigenschaft von Entities, sind eine minimale Menge von
+ Attributen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Kardinalitäten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Einschränkung von Beziehungstypen bezüglich der mehrfachen Teilnahme von
+ Entities an der Beziehung
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Grad/Stelligkeit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Anzahl der an einem Beziehungstyp beteiligten Entitätstypen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Funktionale Beziehung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beziehungstyp mit Funktionseigenschaft
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is-a-Beziehung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spezialisierung von Entitätstypen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Rollen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beschreibung wie die an einer Beziehung beteiligten Entities sich verhalten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Schwache Entities
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entities, deren Existenz von einer anderen, übergeordneten Entity abhängen
+ und
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ die durch eine Kombination mit dem Schlüssel der übergeordneten Entity
+ identifizierbar sind
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Relationenmodell > logischer EntwurfW
+\end_layout
+
+\begin_layout Standard
+Übertragen des ER in die Tuppelform (Professor: {[PersNr:integer, Name:string,
+ Rang:string]}).
+ Primärschlüssel unterstreichen, Fremdschlüssel gestrichelt unterstreichen.
+\end_layout
+
+\begin_layout Subsection
+Normalisierung 
+\end_layout
+
+\begin_layout Description
+Zweck: Vermeidung/Verringerung von 
+\series bold
+Redundanz
+\series default
+ (Mehrfachspeicherung), um potentielle Anomalien/Inkonsistenzen zu verhindern
+ 
+\end_layout
+
+\begin_layout Description
+Zu
+\begin_inset space ~
+\end_inset
+
+Grunde
+\begin_inset space ~
+\end_inset
+
+liegendes
+\begin_inset space ~
+\end_inset
+
+Prinzip: 
+\series bold
+Funktionale Abhängigkeiten
+\series default
+ in den Daten werden analysiert
+\end_layout
+
+\begin_layout Description
+Vorgehen:
+\end_layout
+
+\begin_layout Itemize
+Aufteilung der Attribute (Tabellenspalten) in mehrere Relationen (Tabellen)
+ gemäß den Normalisierungsregeln (auf Basis der enthaltenen funktionalen
+ Abhängigkeiten), so dass eine Form entsteht, die keine vermeidbaren Redundanzen
+ mehr enthält
+\end_layout
+
+\begin_layout Itemize
+U
+\series bold
+nterschiedliche "Güteklassen"
+\series default
+ (je nach Grad an erlaubter/enthaltener "Restredundanz"): 
+\series bold
+1.-3.
+ Normalform (Boyce Codd Normalform)
+\end_layout
+
+\begin_layout Itemize
+Zerlegungsalgorithmen müssen zwei Kriterien erfüllen:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Abhängigkeitstreue
+\series default
+: alle funktionalen Abhängigkeiten die auf der ursprünglichen Relation gelten,
+ müssen auch auf der Zerlegung noch gelten
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Verbundtreue
+\series default
+: ursprüngliche Relation muss rekonstruierbar sein
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+1.
+ Normalform
+\end_layout
+
+\begin_layout Standard
+Erste Normalform liegt vor, wenn jedes Attribut der Relation einen atomaren
+ Wertebereich hat, d.h., weder mehrere Attributswerte eines Tupels zusammenfasst
+ (Spaltenübergreifend) noch Attributswerte mehrerer Tupel zusammenfasst
+ (Zeilenübergreifend).
+ (
+\series bold
+Einfach
+\series default
+: nur primitive Werte!)
+\end_layout
+
+\begin_layout Subsubsection
+2.
+ Normalform
+\end_layout
+
+\begin_layout Standard
+Eine Relation ist in der zweiten Normalform, wenn die erste Normalform vorliegt
+ und kein Nichtschlüsselattribut funktional abhängig von einer echten Teilmenge
+ eines Schlüsselkandidaten ist.
+ (
+\series bold
+Einfach
+\series default
+: kein zusammengestzter Schlüssel!)
+\end_layout
+
+\begin_layout Subsubsection
+3.
+ Normalform
+\end_layout
+
+\begin_layout Standard
+Die dritte Normalform ist erreicht, wenn sich das Relationenschema in 2NF
+ befindet, und kein Nichtschlüsselattribut von einem anderen Nichtschlüsselattri
+but funktional abhängig ist (
+\series bold
+Einfach
+\series default
+: nichts doppelt Eintragen, Schlüssel!)
+\end_layout
+
+\begin_layout Section
+SQL
+\end_layout
+
+\begin_layout Standard
+SQL besteht aus
+\end_layout
+
+\begin_layout Description
+Datendefinitionssprache
+\begin_inset space ~
+\end_inset
+
+(DDL) Erstellen, Ändern und Löschen von Datenbankobjekten (Tabellen, etc.)
+\end_layout
+
+\begin_layout Description
+Datenmanipulationssprache
+\begin_inset space ~
+\end_inset
+
+(DML) Einfügen, Ändern und Löschen von Daten
+\end_layout
+
+\begin_layout Description
+Anfrage
+\begin_inset space ~
+\end_inset
+
+(Query)-Sprache
+\begin_inset space ~
+\end_inset
+
+(DRL) Abfragen von Daten (dies ist der komplexeste Teil von SQL)
+\end_layout
+
+\begin_layout Description
+Kontrollsprache
+\begin_inset space ~
+\end_inset
+
+(DCL) Verwalten von Zugriffsrechte auf Datenbankobjekte, Transaktionskontrolle,
+ etc.
+\end_layout
+
+\begin_layout Subsection
+DDL Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CREATE TABLE Student (
+\end_layout
+
+\begin_layout Plain Layout
+
+	MatrNr INTEGER PRIMARY KEY,
+\end_layout
+
+\begin_layout Plain Layout
+
+	Name VARCHAR (30) NOT NULL,
+\end_layout
+
+\begin_layout Plain Layout
+
+	Semester INTEGER
+\end_layout
+
+\begin_layout Plain Layout
+
+	CONSTRAINT Check_Semester CHECK (Semester BETWEEN 1 AND 13)
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+-- SCHEMA EVOLUTION
+\end_layout
+
+\begin_layout Plain Layout
+
+--neue Spalten hinzugefügt
+\end_layout
+
+\begin_layout Plain Layout
+
+ALTER TABLE Professor ADD (Titel VARCHAR(30));
+\end_layout
+
+\begin_layout Plain Layout
+
+--vorhandene Spalten geändert
+\end_layout
+
+\begin_layout Plain Layout
+
+ALTER TABLE Professoren MODIFY(Titel VARCHAR(40));
+\end_layout
+
+\begin_layout Plain Layout
+
+--Spalte löschen
+\end_layout
+
+\begin_layout Plain Layout
+
+ALTER TABLE Professor DROP COLUMN Titel;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+DML Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+--INSERT 
+\end_layout
+
+\begin_layout Plain Layout
+
+INSERT INTO Professor (PersNr, Name, Rang) VALUES (2140, 'Altmann', 'C4');
+\end_layout
+
+\begin_layout Plain Layout
+
+--DELETE
+\end_layout
+
+\begin_layout Plain Layout
+
+DELETE FROM Student WHERE MatrNr = 24002;
+\end_layout
+
+\begin_layout Plain Layout
+
+--UPDATE
+\end_layout
+
+\begin_layout Plain Layout
+
+UPDATE Student SET Semester = Semester + 1 WHERE MatrNr = 24002;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+DRL Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+--SELECT STATEMENTS
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT  * FROM departments;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+DCL Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CREATE USER xx IDENTIFIED BY 'test'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Relationale Algebra
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Jan/Pictures/rel_algebra.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\beta$
+\end_inset
+
+ Erlaubt die Umbenennung von Spalten einer Tabelle
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\pi$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(Projektion) Erlaubt die Modifikation (Spalten entfernen, Spalten umkodieren)
+ von Tupeln einer Tabelle
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(Selektion) Erlaubt die Reduktion von Tupeln einer Tabelle 
+\end_layout
+
+\begin_layout Description
+Mengenoperationen
+\begin_inset space ~
+\end_inset
+
+(Union,
+\begin_inset space ~
+\end_inset
+
+Differenz,
+\begin_inset space ~
+\end_inset
+
+Durchschnitt) Erlauben die Berechnung einer neuen Tupelmenge auf Basis von
+ zwei Tabellen
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\times$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Karthesisches
+\begin_inset space ~
+\end_inset
+
+Produkt,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\bowtie$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Natural
+\begin_inset space ~
+\end_inset
+
+Join Erlauben die Modifikation von Tupeln auf Basis von zwei Tabellen (Tupel
+ von verschiedenen Tabellen werden verknüpft)
+\end_layout
+
+\begin_layout Description
+Aggregation Erlaubt das Zusammenführen von mehreren Tupeln zu neuen Tupeln
+ (Anmerkung: Aggregation gibt es in Relationenalgebra nicht!) 
+\end_layout
+
+\begin_layout Section
+Abfrageabarbeitung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Jan/Pictures/abfrageabarbeitung.PNG
+	height 25pheight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Definitionen
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Datenbanksystem (DBS)
+\end_layout
+
+\begin_layout Plain Layout
+Ein Datenbanksystem (DBS) besteht aus einer oder mehreren Datenbanken (DB),
+ einem Data Dictionary (DD) und einem Datenbankmanagementsystem (DBMS).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Datenbankverwaltungssystem (DBMS)
+\end_layout
+
+\begin_layout Plain Layout
+Ein Datenbankverwaltungssystem (Database Management System) bezeichnet die
+ Gesamtheit der Programme zum Zugriff auf die im Datenbanksystem (DBS) gespeiche
+rten Daten, zur Konsistenzkontrolle und zur Datendefinition.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Datenbank (DB)
+\end_layout
+
+\begin_layout Plain Layout
+Die in einem Datenbanksystem gespeicherten Daten werden als Datenbank bezeichnet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Data Dictionary (DD)
+\end_layout
+
+\begin_layout Plain Layout
+Ein Data Dictionary (DD) enthält die Daten, die den Datenbestand beschreiben
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Datenmodell 
+\end_layout
+
+\begin_layout Plain Layout
+Ein Datenbanksystem (DBS) basiert auf einem Datenmodell.
+ Das Datenmodell stellt die
+\end_layout
+
+\begin_layout Plain Layout
+Konzepte zur Modellierung der realen Welt zur Verfügung und besteht aus:
+\end_layout
+
+\begin_layout Itemize
+Datendefinitionssprache (DDL)
+\end_layout
+
+\begin_layout Itemize
+Datenmanipulationssprache (DML)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Abfragesprache (Query Language)
+\end_layout
+
+\begin_layout Itemize
+Befehle zum Einfügen, Löschen und Verändern der Daten
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Datenbankschema (Intension)
+\end_layout
+
+\begin_layout Plain Layout
+Ein Datenbankschema legt die Struktur der Daten fest.
+ (Metadaten: Daten über Datenbank)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Datenbankausprägung (Extension)
+\end_layout
+
+\begin_layout Plain Layout
+Die Datenbankausprägung stellt den momentan gültigen Zustand der Datenbank
+ dar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Redundanz 
+\end_layout
+
+\begin_layout Plain Layout
+Redundanz ist das mehrfache Vorhandensein ein und derselben Informationen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Konsistenz 
+\end_layout
+
+\begin_layout Plain Layout
+Konsistenz bezeichnet in der Informatik allgemein die Widerspruchsfreiheit
+ von Daten.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Datenintegrität 
+\end_layout
+
+\begin_layout Plain Layout
+Unter Datenintegrität versteht man die logische Korrektheit, Gültigkeit
+ und Genauigkeit von Daten in einer Datenbank.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Funktionale Abhängigkeit
+\end_layout
+
+\begin_layout Plain Layout
+Innerhalb einer Relation bestimmt eine Attributmenge den Wert einer anderen
+ Attributmenge.
+\end_layout
+
+\begin_layout Itemize
+Eine funktionale Abhängigkeit zwischen zwei Attributen A und B (bzw.
+ Attributsmengen) liegt vor, falls
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+immer dann wenn Attribut A (z.B.
+ SV.-Nr.) den Wert a aufweist, das Attribut B (z.B.
+ Name oder Wohnort) den Wert b aufweist, d.h., man bei Kenntnis des Wertes
+ des Attributes A, EINDEUTIG auf den Wert des Attributes B schließen kann,
+ d.h., dieser damit festgelegt ist
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Daraus lässt sich schließen, dass wenn Attribut A den Wert a mehrmalig in
+ einer Relation annehmen kann, automatisch Redundanz entsteht, da jedes
+ Mal derselbe Wert b für das Attribut B resultiert
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Partielle Abhängigkeit
+\end_layout
+
+\begin_layout Plain Layout
+Attributmenge ist funktional schon von einem Teil des Schlüssels abhängig.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Transitive Abhängigkeit
+\end_layout
+
+\begin_layout Plain Layout
+Vom Schlüssel abhängige Attributmenge bestimmt andere Attributmenge funktional
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Anomalien
+\end_layout
+
+\begin_layout Plain Layout
+Anomalien bezeichnen in relationalen Datenbanken Fehlverhalten der Datenbank.
+ Anomalien entstehen durch einen fehlerhaften oder inkorrekten Datenbankentwurf.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Löschanomalie 
+\end_layout
+
+\begin_layout Plain Layout
+Bei der Löschanomalie kann es passieren, dass man durch das bewusste Löschen
+ eines Datensatzes, unbewusst Informationen verliert, die man später wieder
+ gebraucht hätte.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Einfügeanomalie 
+\end_layout
+
+\begin_layout Plain Layout
+Liegt ein fehlerhaftes Datenbankdesign vor, kann es bei der Einfügeanomalie
+ passieren das Daten gar nicht gespeichert/angenommen werden, wenn beispielsweis
+e für den Primärschlüssel kein Wert eingegeben wird, oder es führt bei einer
+ nicht vollständigen Eingabe von Daten zu Inkonsistenz.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.2pt"
+separation "2pt"
+shadowsize "1pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Subsection*
+Änderungsanomalie 
+\end_layout
+
+\begin_layout Plain Layout
+Bei der Änderungsanomalie werden gleiche Attribute eines Datensatzes nicht
+ automatisch geändert.
+ So entsteht eine Inkonsistenz der Daten.
+ Man muss per Hand alle Einträge aktualisieren, es darf kein Fehler unterlaufen
+ ansonsten führt es zur Inkonsistenz.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
