@@ -28,3 +28,6 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 
 ## DEM
 - Klausurvorbereitung
+
+## SPS
+- Klausurvorbereitung OpenBook Klausur

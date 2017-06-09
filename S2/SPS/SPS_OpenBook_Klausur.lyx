@@ -1,0 +1,4511 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usetikzlibrary{positioning}
+\usetikzlibrary{trees}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{arrows.meta}
+
+\usepackage[most]{tcolorbox}
+
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.2in,left=.4in,right=.4in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{4pt}
+\setlength{\postmulticols}{4pt}
+\setlength{\multicolsep}{6pt}
+\setlength{\columnsep}{14pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0ex plus 2.1ex minus 0.5ex,
+  partopsep=0.5ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0.5ex,
+  itemsep=0.2ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+huge
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+SPS 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+ MIT, https://github.com/eisenwinter/fh-hgb-stuff
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[enhanced,title=Kapitel 10,colframe=red!75!black, sharpish
+ corners,breakable,pad at break=2mm, height fixed for=all,  break at=18.4cm
+ ] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Analyse
+\end_layout
+
+\begin_layout Subsection
+Anforderungsanalyse
+\end_layout
+
+\begin_layout Subsubsection
+Ziel
+\end_layout
+
+\begin_layout Paragraph
+Grundlage
+\end_layout
+
+\begin_layout Standard
+Prinzip der hierarchischen Strukturierung (Rene Descartes, 1637) : „Man
+ soll jede schwierige Frage in so viele Teilfragen wie möglich zerlegen,
+ damit man jede einzelne lösen kann.“
+\end_layout
+
+\begin_layout Paragraph
+Ziel
+\end_layout
+
+\begin_layout Standard
+Problemzerlegung (
+\series bold
+Analyse
+\series default
+); unterscheide:
+\end_layout
+
+\begin_layout Itemize
+funktionale Anforderungen 
+\end_layout
+
+\begin_layout Itemize
+nichtfunktionale Anforderungen
+\end_layout
+
+\begin_layout Description
+WAS/WIE-Trennung ist entscheidend!
+\end_layout
+
+\begin_layout Subsubsection
+Aufgaben 
+\end_layout
+
+\begin_layout Enumerate
+lösungsorientierte Erhebung von Ist- und Sollzustand
+\end_layout
+
+\begin_layout Enumerate
+Skizzierung der Systemarchitektur
+\end_layout
+
+\begin_layout Enumerate
+Feststellung der Machbarkeit
+\end_layout
+
+\begin_layout Enumerate
+grobe Abschätzung des Umfanges
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Validierung
+\series default
+ und 
+\series bold
+Verifikation
+\series default
+ der Anforderungen ist wichtig!
+\end_layout
+
+\begin_layout Subsubsection
+Eigenschaften einer guten Anforderungsanalyse
+\end_layout
+
+\begin_layout Itemize
+Abgrenzen des Projektumfanges
+\end_layout
+
+\begin_layout Itemize
+Achten auf Modularität
+\end_layout
+
+\begin_layout Itemize
+Achten auf Änderbarkeit
+\end_layout
+
+\begin_layout Itemize
+Festlegen der Schnittstellen
+\end_layout
+
+\begin_layout Itemize
+Festlegen von Rahmenbedingungen („constraints“)
+\end_layout
+
+\begin_layout Itemize
+Prüfen der Realisierbarkeit
+\end_layout
+
+\begin_layout Subsubsection
+Schwierigkeiten
+\end_layout
+
+\begin_layout Itemize
+erständnis für das Anwendungsgebiet
+\end_layout
+
+\begin_layout Itemize
+zwischenmenschliche Kommunikation
+\end_layout
+
+\begin_layout Itemize
+sich ständig ändernde Anforderungen
+\end_layout
+
+\begin_layout Itemize
+Wiederverwendbarkeit der Ergebnisse („Eine neu erarbeitete Lösung rechnet
+ sich erst nach drei Projekten!“)
+\end_layout
+
+\begin_layout Subsection
+Techniken
+\end_layout
+
+\begin_layout Paragraph
+Das Beherrschen der Komplexität
+\end_layout
+
+\begin_layout Itemize
+Abstraktion (prozedurale Abstraktion,Datenabstraktion)
+\end_layout
+
+\begin_layout Itemize
+Kapselung (Information Hiding)
+\end_layout
+
+\begin_layout Itemize
+Vererbung (Aufbau von Taxonomien)
+\end_layout
+
+\begin_layout Itemize
+Assoziation
+\end_layout
+
+\begin_layout Itemize
+Nachrichtenkommunikation
+\end_layout
+
+\begin_layout Itemize
+Organisationsmethoden
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Objekt / Eigenschaften
+\end_layout
+
+\begin_layout Itemize
+Objekt / Bestandteile
+\end_layout
+
+\begin_layout Itemize
+Klassifikation von Objekten
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Verhaltenskategorien
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+unmittelbare Verursachung
+\end_layout
+
+\begin_layout Itemize
+ähnliche Evolution
+\end_layout
+
+\begin_layout Itemize
+ähnliche Funktionalität
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Gedächtnisstützen
+\end_layout
+
+\begin_layout Description
+Zielerforschung: Was ist das Ziel?
+\end_layout
+
+\begin_layout Description
+Analyse: Was ist zu erstellen?
+\end_layout
+
+\begin_layout Description
+Design: Wie soll das Ergebnis aussehen?
+\end_layout
+
+\begin_layout Description
+Implementierung: Wie wird das Ergebnis realisiert
+\end_layout
+
+\begin_layout Subsection
+Werkzeuge
+\end_layout
+
+\begin_layout Description
+Papier CRC-Karten, Haftnotizen-Objekte, Scripting, (textuelle Beschreibung
+ durch Szenarien)
+\end_layout
+
+\begin_layout Description
+Computer UML
+\end_layout
+
+\begin_layout Subsection
+Ergebnisse
+\end_layout
+
+\begin_layout Subsubsection
+Analysebericht
+\end_layout
+
+\begin_layout Subsubsection
+Lastenheft
+\end_layout
+
+\begin_layout Standard
+Es wird also definiert, WAS WOFÜR zu lösen ist.
+\begin_inset Newline newline
+\end_inset
+
+Das Lastenheft ist 
+\series bold
+vom Auftraggeber vollständig und widerspruchsfrei 
+\series default
+zu erstellen.
+ In der Praxis wird jedoch vielfach der Auftragnehmer mit der Erstellung
+ beauftragt.
+ Der 
+\series bold
+Auftraggeber
+\series default
+ prüft das Lastenheft nur und gibt es frei.
+\end_layout
+
+\begin_layout Paragraph
+Gliederungsvorschlag (gemäß VDI):
+\end_layout
+
+\begin_layout Enumerate
+Einführung in das Projekt, Projektziele
+\end_layout
+
+\begin_layout Enumerate
+Beschreibung des Istzustandes
+\end_layout
+
+\begin_layout Enumerate
+Beschreibung des Sollzustandes
+\end_layout
+
+\begin_layout Enumerate
+Schnittstellen
+\end_layout
+
+\begin_layout Enumerate
+Systemanforderungen
+\end_layout
+
+\begin_layout Enumerate
+Anforderungen für Inbetriebnahme und Einsatz
+\end_layout
+
+\begin_layout Enumerate
+Qualitätsanforderungen
+\end_layout
+
+\begin_layout Enumerate
+Anforderungen an die Projektentwicklung
+\end_layout
+
+\begin_layout Enumerate
+Anhang
+\end_layout
+
+\begin_layout Paragraph
+Vorprüfung durch den Auftragnehmer 
+\end_layout
+
+\begin_layout Standard
+Machbarkeit, Vollständigkeit, Minimalität, Konsistenz, Eindeutigkeit, Plausibili
+tät, Überprüfbarkeit, Modifizierbarkeit
+\end_layout
+
+\begin_layout Subsubsection
+Machbarkeitsstudie
+\end_layout
+
+\begin_layout Standard
+Teilmenge des Lastenhefts, wird bei unsicherer Machbarkeit vorab erstellt,
+ konzentriert sich auf technische und wirtschaftliche Durchführbarkeit des
+ Projekts oder definiert ein machbares Teilprojekt.
+\end_layout
+
+\begin_layout Section
+Planung
+\end_layout
+
+\begin_layout Subsection
+Ziel
+\end_layout
+
+\begin_layout Standard
+Vorgaben festlegen für: Projektorganisation, Aufgaben, Aufwände, Termine,
+ Ressourcen, Kosten, Finanzierung, begleitende Maßnahmen, vorsorgende Maßnahmen.
+\end_layout
+
+\begin_layout Paragraph
+Planung bzw.
+ Pläne müssen mit Projektfort- schritt t kontinuierlich verfeinert und aktualisi
+ert werden.
+\end_layout
+
+\begin_layout Subsection
+Aufgaben
+\end_layout
+
+\begin_layout Itemize
+Organisationsplanung
+\end_layout
+
+\begin_layout Itemize
+Ziel- und Aufgabenplanung (Teilaufgaben)
+\end_layout
+
+\begin_layout Itemize
+Zeitplanung
+\end_layout
+
+\begin_layout Itemize
+Ablauf- und Terminplanung
+\end_layout
+
+\begin_layout Itemize
+Ressourcenplanung (Sachmittel, Personal)
+\end_layout
+
+\begin_layout Itemize
+Kosten- und Finanzplanung
+\end_layout
+
+\begin_layout Itemize
+begleitende und vorsorgende Planung
+\end_layout
+
+\begin_layout Subsubsection
+Ziel- und Aufgabenplanung
+\end_layout
+
+\begin_layout Description
+Zielplanung: Festlegung der Zielwerte inkl.
+ Ausmaß und Termin der geplanten Zielerreichung
+\end_layout
+
+\begin_layout Description
+Aufgabenplanung: Gliederung und Schätzung von Teilaufgaben, Festlegen der
+ Aufgabenübergänge 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Aufgabenplan
+\end_layout
+
+\begin_layout Subsubsection
+Zeitplanung
+\end_layout
+
+\begin_layout Standard
+Ermittlung des Zeitbedarfs für die Aufgaben (bzgl.
+ Schwierigkeit, Sachmittel, Personal) mittels 
+\series bold
+Aufwandsschätzungen
+\series default
+ auch 
+\series bold
+Aufwandsplanung
+\series default
+ genannt; basiert auf 
+\series bold
+Aufgabenplan
+\series default
+!
+\end_layout
+
+\begin_layout Subsubsection
+Ablauf- und Terminplanung
+\end_layout
+
+\begin_layout Standard
+auch 
+\series bold
+Meilensteinplanung
+\series default
+ genannt; basiert auf Aufgaben- und Zeitplan!
+\end_layout
+
+\begin_layout Description
+Ablaufplanung: Erstellen eines Ablaufgraphen durch Verknüpfung der Aufgaben
+\end_layout
+
+\begin_layout Description
+Terminplanung: Festlegung von Anfangs- und Endterminen für jede Aufgabe
+\end_layout
+
+\begin_layout Subsubsection
+Ressourcenplanung
+\end_layout
+
+\begin_layout Standard
+auch 
+\series bold
+Kapazitätsplanung
+\series default
+ genannt.
+\end_layout
+
+\begin_layout Subsubsection
+Kosten- und Finanzierungsplanung
+\end_layout
+
+\begin_layout Description
+Kostenplanung Ermittlung und terminliche Zuordnung von Kosten (aus verplanten
+ Ressourcen)
+\end_layout
+
+\begin_layout Description
+Finanzierungsplanung Budgetierung, Steuerung der Finanzmittelbereitstellung
+ (aus Kostenplan)
+\end_layout
+
+\begin_layout Subsection
+Techniken
+\end_layout
+
+\begin_layout Subsubsection
+Aufwandsschätzung
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Verfahren sehr n umstritten bzgl.
+ Genauigkeit und Sinnhaftigkeit 
+\series default
+(Beispiele: Software Lifecycle Management (SLIM), Consolidated Cost Model
+ v.
+ 2 (COCOMO II), Function Points (FP), Object Points (OP), Proxy-based Engineerin
+g (ProBE
+\series bold
+).
+
+\series default
+ Aufwandsschätzung nach Faustregeln („g Planning Poker“, „ Magic Estimation“
+ etc.) ist zumindest gleich gut!
+\end_layout
+
+\begin_layout Subsubsection
+Netzplantechnik
+\end_layout
+
+\begin_layout Standard
+Eigenschaften
+\end_layout
+
+\begin_layout Itemize
+Einteilung in Vorgänge und Ereignisse (Meilensteine)
+\end_layout
+
+\begin_layout Itemize
+Zuordnung von Zeit und Ressourcen
+\end_layout
+
+\begin_layout Itemize
+Erstellung eines Vorgänger-/Nachfolgergraphen; spezielle Abhängigkeiten:
+ Ende-Anfang (EA), AA, EE, [AE]
+\end_layout
+
+\begin_layout Standard
+Bekannte Beschreibungsmethoden: 
+\series bold
+Metra-Potenzial-Methode
+\series default
+ (MPM) (nach Fa.
+ Metra, heute Atos),
+\series bold
+ Critical Path Method
+\series default
+ (CPM), 
+\series bold
+Program Evaluation and Review Technique
+\series default
+ (PERT)
+\end_layout
+
+\begin_layout Subsubsection
+Balkenplantechnik
+\end_layout
+
+\begin_layout Standard
+tabellarische, grafische Darstellung von Aufwänden durch:
+\end_layout
+
+\begin_layout Itemize
+Balkendiagramme
+\end_layout
+
+\begin_layout Itemize
+Histogramme
+\end_layout
+
+\begin_layout Itemize
+Gantt-Charts (nach H.
+ L.
+ Gantt)
+\end_layout
+
+\begin_layout Standard
+Eigenschaften: gut für Ressourcenplanung, schlecht für komplexe Zusammenhänge
+\end_layout
+
+\begin_layout Subsection
+Werkzeuge
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Projektplanungssysteme
+\series default
+ (auch: 
+\series bold
+Projektmanagementsysteme
+\series default
+) gut zur Dokumentation und zur Planadaptierung.
+\end_layout
+
+\begin_layout Paragraph
+Allgemeine Vorgehensweise :
+\end_layout
+
+\begin_layout Enumerate
+neues Projekt anlegen (Name, Beginn, Kalender, ...)
+\end_layout
+
+\begin_layout Enumerate
+Vorgänge eingeben und gruppieren (Aufgabenplanung)
+\end_layout
+
+\begin_layout Enumerate
+Dauer zuordnen (Zeitplanung)
+\end_layout
+
+\begin_layout Enumerate
+Vorgänge verknüpfen (Ablaufplanung)
+\end_layout
+
+\begin_layout Enumerate
+Meilensteine festlegen (Terminplanung)
+\end_layout
+
+\begin_layout Enumerate
+Ressourcen zuordnen (Ressourcenplanung)
+\end_layout
+
+\begin_layout Enumerate
+Ressourcen- und Terminkonflikte auflösen (Kapazitätsabgleich)
+\end_layout
+
+\begin_layout Enumerate
+Kosten eingeben (Kostenplanung)
+\end_layout
+
+\begin_layout Enumerate
+Kostenüberschreitungen und Finanzierungslücken beseitigen (Finanzierungsplanung)
+\end_layout
+
+\begin_layout Subsection
+Ergebnisse
+\end_layout
+
+\begin_layout Description
+interne
+\begin_inset space ~
+\end_inset
+
+Ergebnisse: Aufgabenplan, Terminplan, Ressourcenplan, Kosten- und Finanzplan
+\end_layout
+
+\begin_layout Description
+externe
+\begin_inset space ~
+\end_inset
+
+Ergebnisse: Meilensteinliste
+\end_layout
+
+\begin_layout Section
+Risiko
+\end_layout
+
+\begin_layout Subsection
+Ziel
+\end_layout
+
+\begin_layout Itemize
+Vorab 
+\series bold
+Überlegen
+\series default
+ der 
+\series bold
+Reaktionen auf potenzielle
+\series default
+ Probleme inkl.
+ Treffen dervorbereitenden Maßnahmen
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Abwägen von Risiken und Chancen
+\series default
+; Eingehen der Risiken mit bestem Chancenpotenzial
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+quantitative Bewertung der Risiken;
+\series default
+ zur Auswahl der für die Behandlung sinnvollsten
+\end_layout
+
+\begin_layout Subsection
+Risikobegriff / Definition
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Risiko.
+
+\series default
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Auswirkungen von Unsicherheiten auf die Ziele eines Systems
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Risiko = Möglichkeit eines zukünftigen Verlusts oder Schadens (ein potenzielles
+ Problem)
+\end_layout
+
+\begin_layout Description
+Problem = eingetretenes Risiko
+\end_layout
+
+\begin_layout Description
+vorhersehbares
+\begin_inset space ~
+\end_inset
+
+Problem = unausweichliche negative zukünftige Konsequenz
+\end_layout
+
+\begin_layout Description
+Chance = Möglichkeit, Erwartungen (an das System) zu übertreffen
+\end_layout
+
+\begin_layout Description
+Risikoprofil = Summe der Einzelrisiken eines Projektes
+\end_layout
+
+\begin_layout Standard
+Ein erfolgreiches Projekt behandelt – die richtigen! – Risiken erfolgreich.
+\end_layout
+
+\begin_layout Subsection
+Risikoeigenschaften
+\end_layout
+
+\begin_layout Itemize
+Wahrscheinlichkeit („Erwartungswert“)
+\end_layout
+
+\begin_layout Itemize
+Auswirkung („Schadenskoeffizient“)
+\end_layout
+
+\begin_layout Itemize
+Zeitrahmen
+\end_layout
+
+\begin_layout Itemize
+Behandlungsmöglichkeit
+\end_layout
+
+\begin_layout Itemize
+Kopplung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{Risikofaktor}=Erwartungswert*Schadenskoeffizient$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Risikobehandlung
+\end_layout
+
+\begin_layout Description
+Risikobehandlung = proaktive Berücksichtigung wahrscheinlicher Probleme
+\end_layout
+
+\begin_layout Standard
+"Softwareentwicklung ohne Überraschungen" 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ reife Projektorganisation
+\end_layout
+
+\begin_layout Paragraph
+Situierung der Risikobehandlung in der Projektentwicklung
+\end_layout
+
+\begin_layout Itemize
+Risikobehandlung ist proaktiv.
+\end_layout
+
+\begin_layout Itemize
+Auch viele Techniken der Projektentwicklung reduzieren das Projektrisiko,
+ aber reaktiv.
+\end_layout
+
+\begin_layout Paragraph
+Unterscheide
+\end_layout
+
+\begin_layout Itemize
+allgemeine Risiken
+\end_layout
+
+\begin_layout Itemize
+projektspezifische Risiken
+\end_layout
+
+\begin_layout Standard
+Risikobehandlung nur für projektspezifische Risiken
+\end_layout
+
+\begin_layout Subsubsection
+Aufgaben
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Risiko-Bewertung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Risiko-Identifikation 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Quellen
+\series default
+: Dokumente wie bspw.
+ Analysebericht, Lastenheft, Projektplan,"lessons learned" aus ähnlichen
+ Projekten
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Vorgehen
+\series default
+: 
+\series bold
+Bottom Up: 
+\series default
+Risikonennung durch (alle) Mitarbeiter; führt zu langen Listen, hoher Konsolidie
+rungsaufwand!
+\series bold
+ Top-Down:
+\series default
+ Risikoermittlung aus der Bilanz und den Unternehmenskennzahlen; dabei wird
+ leicht Wichtiges übersehen!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Risiko-Analyse
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ermittlung der Schadenswahrscheinlichkeit und des potenziellen Schadensausmaßes
+ (+ Kopplungen)
+\end_layout
+
+\begin_layout Enumerate
+durch mehrere Mitglieder in einem Treffen
+\end_layout
+
+\begin_layout Enumerate
+am besten quantitativ
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Risiko-Evaluierung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Reihung der Risikoelemente entsprechend ihres
+\end_layout
+
+\begin_layout Enumerate
+Projekteinflusses (Risikofaktor!, Hausverstand anwenden)
+\end_layout
+
+\begin_layout Enumerate
+Entscheidend ist das Vertrauen in die Zahlen!
+\end_layout
+
+\begin_layout Enumerate
+Ergebnis: „watch list“ (Top-n-Liste)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Risiko-Beherrschung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Risiko-Vorsorgeplanung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Festlegung eines Aktivitätenplans
+\end_layout
+
+\begin_layout Enumerate
+für jedes behandelnswerte Risiko
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Risiko-Überwachung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Überprüfen der Risiken und Vorsorgepläne auf notwendige Aktivitäten und
+ Planadaptierungen (beginnend spätestens ab Analysephase)
+\end_layout
+
+\begin_layout Enumerate
+periodisch und bei Anlass
+\end_layout
+
+\begin_layout Enumerate
+Oft wird nicht rechtzeitig eingestanden, dass ein Risiko zu einem Problem
+ wird oder keines mehr ist!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Risiko-Überwindung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Anwenden der im Vorsorgeplan festgelegten Technik der Risikobehandlung
+\end_layout
+
+\begin_layout Enumerate
+Auftraggeber mit einbeziehen
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[title=Kapitel 11,colframe=red!75!black, sharpish corners,breaka
+ble,enhanced,height fixed for=all] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Design
+\end_layout
+
+\begin_layout Subsection
+Ziel
+\end_layout
+
+\begin_layout Standard
+Design legt fest, 
+\series bold
+WIE
+\series default
+ die Anforderungen für die Implementierung aufbereitet werden (Grundlage
+ für Codierung).
+\begin_inset Newline newline
+\end_inset
+
+Codieren soll möglichst klar strukturiert und in einfachen Schritten möglich
+ sein!
+\end_layout
+
+\begin_layout Subsection
+Aufgaben
+\end_layout
+
+\begin_layout Standard
+Erstellung des 
+\series bold
+Designmodells
+\series default
+, das die 
+\series bold
+physische Sicht 
+\series default
+(Aufbau) und 
+\series bold
+logische Sicht 
+\series default
+(Verhalten) des zu entwickelnden Systems beschreibt
+\end_layout
+
+\begin_layout Paragraph
+Das Designmodell umfasst:
+\end_layout
+
+\begin_layout Itemize
+Systemmodell (Systemarchitektur aus Entwicklersicht)
+\end_layout
+
+\begin_layout Itemize
+Komponentenmodell (Komponentenmodell und deren Schnittstellen)#
+\end_layout
+
+\begin_layout Paragraph
+Dementsprechende Aufgaben:
+\end_layout
+
+\begin_layout Itemize
+Erstellen des Systemdesigns
+\end_layout
+
+\begin_layout Itemize
+Erstellen des Komponentendesigns
+\end_layout
+
+\begin_layout Standard
+Vorgehen nach schrittweiser Verfeinerung (Wirth)
+\end_layout
+
+\begin_layout Subsection
+Gliederung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcbitemize}[raster columns=2,raster equal height,colframe=red!75!black,col
+back=white,fonttitle=
+\backslash
+bfseries]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbitem[squeezed title*={Systemdesign}]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Architektur
+\end_layout
+
+\begin_layout Standard
+Schnittstellen
+\end_layout
+
+\begin_layout Standard
+Datenhaltung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbitem[squeezed title*={Komponentendesign}]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Komp.struktur
+\end_layout
+
+\begin_layout Standard
+Komp.verhalten
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcbitemize}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Prioritäten festlegen, Kompromisse schließen!
+\end_layout
+
+\begin_layout Subsection
+Systemdesign - Modellierung der Architektur
+\end_layout
+
+\begin_layout Standard
+auch 
+\series bold
+Architekturdesign
+\series default
+; vielfach durch evolutionäre Prototypen
+\end_layout
+
+\begin_layout Paragraph
+Erweiterung des Strukturmodells
+\end_layout
+
+\begin_layout Itemize
+Entwickeln der Systemarchitektur aus dem Strukturmodell der Analyse (Analysebesc
+hränkungen und Implementierungsvorgaben beachten)
+\end_layout
+
+\begin_layout Itemize
+wieder zu verwendende Komponenten/Untersysteme einplanen
+\end_layout
+
+\begin_layout Paragraph
+Erweiterung des Verhaltensmodells
+\end_layout
+
+\begin_layout Itemize
+Zerlegung in Untersysteme inkl.
+ deren zeitlichem Zusammenspiel (logische Systemgliederung in physische
+ Untersysteme umsetzen 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ verteilte Systeme)
+\end_layout
+
+\begin_layout Itemize
+danach Abbildung auf Prozesse (Echtzeitverhalten beachten!)
+\end_layout
+
+\begin_layout Subsection
+Modellierung der Schnittstellen
+\end_layout
+
+\begin_layout Standard
+siehe Folien K11 S 11
+\end_layout
+
+\begin_layout Subsection
+Modellierung der Datenhaltung
+\end_layout
+
+\begin_layout Standard
+Organisation des Ressourcenmanagements v.
+ a.
+ saubere Modellierung der Datenhaltung und -ablage wichtig:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Datenstrukturen
+\series default
+ im Hauptspeicher
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Dateien
+\series default
+ im Dateisystem / Netzwerk / Cloud
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Datenbanken
+\series default
+ inkl.
+ Anbindung (zentral / verteilt)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Export und Import
+\series default
+ von Daten
+\end_layout
+
+\begin_layout Subsection
+Komponentendesign - Modellierung der Struktur
+\end_layout
+
+\begin_layout Standard
+Festlegung der 
+\series bold
+Komponentenstruktur
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+zuerst Abhängigkeiten und Schnittstellen zwischen den Komponenten festlegen
+ und Kontrollfluss spezifizieren
+\end_layout
+
+\begin_layout Itemize
+wieder zu verwendende Komponenten auswählen
+\end_layout
+
+\begin_layout Itemize
+Komponentendefinition aus Analyse vervollständigen (wenn notwendig Strukturen
+ ergänzen)
+\end_layout
+
+\begin_layout Itemize
+iterativ Strukturmodell adaptieren (abstrakte Komponenten einführen)
+\end_layout
+
+\begin_layout Subsection
+Komponentendesign - Modellierung des Verhalten
+\end_layout
+
+\begin_layout Standard
+Festlegung des 
+\series bold
+Komponentenverhaltens
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+Beschreibung der Abläufe (Methoden)
+\end_layout
+
+\begin_layout Itemize
+normalerweise im Design nur deklarativ, z.
+ B.:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+uses: Eingabeparameter
+\end_layout
+
+\begin_layout Itemize
+changes: Ausgabe-/Übergabeparameter
+\end_layout
+
+\begin_layout Itemize
+informs: erzeugte Nachrichten
+\end_layout
+
+\begin_layout Itemize
+invariant: Invarianten
+\end_layout
+
+\begin_layout Itemize
+requires: Vorbedingungen
+\end_layout
+
+\begin_layout Itemize
+ensures: Nachbedingungen
+\end_layout
+
+\begin_layout Itemize
+produces: Rückgabewerte
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+nur bei schwierigen Algorithmen oder Performanzproblemen (Speicher, Zeit)
+ funktionale Beschreibung
+\end_layout
+
+\begin_layout Itemize
+zusätzlich Schnittstellenbeschreibung (in UML Schnittstellenklassen - „Interface
+s“ - und Lollipop-Notation)
+\end_layout
+
+\begin_layout Subsection
+Techniken
+\end_layout
+
+\begin_layout Subsubsection
+Erstellen von Prototypen
+\end_layout
+
+\begin_layout Standard
+vor allem 
+\series bold
+experimentelles Prototyping und evolutionäres Prototyping
+\series default
+ für
+\end_layout
+
+\begin_layout Itemize
+Architekturdesign und
+\end_layout
+
+\begin_layout Itemize
+Benutzerschnittstellendesign
+\end_layout
+
+\begin_layout Standard
+Prototyping ist Grundlage aller iterativ- inkrementellen Vorgehensmethoden!
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Modellgesteuertes Entwickeln
+\end_layout
+
+\begin_layout Standard
+„Model-Driven Development“ (MDD): reales System wird durch reine Transformatione
+n aus einem Modell erzeugt
+\end_layout
+
+\begin_layout Description
+Basis: Model-Driven Architecture (MDA); diese ist Teil des UML2-Standards.
+ 
+\end_layout
+
+\begin_layout Description
+Bedenke: UML2 ist eine vollständige Programmiersprache!
+\end_layout
+
+\begin_layout Paragraph
+Vorteile
+\end_layout
+
+\begin_layout Itemize
+plattformunabhängige Entwicklung (Trennung von Modell und Implementierungsdetail
+s in untersch.
+ Plattformen nutzbar)
+\end_layout
+
+\begin_layout Itemize
+Simulation auf Modellbasis möglich
+\end_layout
+
+\begin_layout Itemize
+Plattform-Deployment automatisierbar
+\end_layout
+
+\begin_layout Paragraph
+Vorgehensweise
+\end_layout
+
+\begin_layout Enumerate
+Erfasse Anforderungen, Modelle und Prozesse in einem plattformunabhängigen
+ Modell (Platform-Independent Model – PIM).
+\end_layout
+
+\begin_layout Enumerate
+Lege Rahmenbedingungen als Metadaten fest (Meta Object Facility – MOF).
+\end_layout
+
+\begin_layout Enumerate
+Erzeuge daraus ein plattformspezifisches Modell (Platform-Specific Model
+ – PSM).
+\end_layout
+
+\begin_layout Enumerate
+Generiere ausführbaren Code vollautomatisch.
+\end_layout
+
+\begin_layout Subsubsection
+Endbenutzer-Entwicklung / End User Development
+\end_layout
+
+\begin_layout Standard
+vor allem durch Maßschneidern und Befüllen von Systemrahmen (Application
+ Frameworks)
+\begin_inset Newline newline
+\end_inset
+
+ührt vielfach zu schlechten Ergebnissen (Unerfahrenheit der Benutzer bzgl.
+ gutem Designs, speziell bei Architektur, aber auch bei Richtlinien zur
+ Benutzerinteraktion)
+\end_layout
+
+\begin_layout Subsubsection
+Wiederverwendung
+\end_layout
+
+\begin_layout Standard
+Development by Investment - 
+\series bold
+Wiederverwendbarkeit
+\series default
+ (Reuse) muss gegeben sein!
+\end_layout
+
+\begin_layout Paragraph
+Vorgehen
+\end_layout
+
+\begin_layout Itemize
+Wiederverwenden von Bausteinen
+\end_layout
+
+\begin_layout Itemize
+Abwandeln von Mustern
+\end_layout
+
+\begin_layout Itemize
+Verwenden von Schablonen
+\end_layout
+
+\begin_layout Itemize
+Konkretisieren von Systemrahmen
+\end_layout
+
+\begin_layout Standard
+Wiederverwenden von Bausteinen (Toolkits - Modulbibliotheken - Klassenbibliothek
+en) oder Abwandeln von Mustern (Designmuster - Analysemuster - Prozessmuster)
+\end_layout
+
+\begin_layout Subsection
+Werkzeuge
+\end_layout
+
+\begin_layout Standard
+UML - sonst K11 S 33
+\end_layout
+
+\begin_layout Subsection
+Ergebnisse
+\end_layout
+
+\begin_layout Standard
+Designbericht
+\end_layout
+
+\begin_layout Itemize
+Erweiterung des Analyseberichts um die Designmodelle und um die Prototypen
+\end_layout
+
+\begin_layout Itemize
+normalerweise intern, Auszüge für Auftraggeber zur besserenVerdeutlichung
+ möglich.
+\end_layout
+
+\begin_layout Subsubsection
+Pflichtenheft
+\end_layout
+
+\begin_layout Standard
+Pflichtenheft (bei IEEE: „System/Software Design Specification“ – SDS)
+\end_layout
+
+\begin_layout Itemize
+ist „die Beschreibung der Realisierung aller Anforderungen des Lastenhefts“
+ (VDI) und „beinhaltet“ es somit.
+\end_layout
+
+\begin_layout Itemize
+Es wird also definiert,
+\series bold
+WIE
+\series default
+ und 
+\series bold
+WOMIT
+\series default
+ die Anforderungen zu realsieren sind
+\end_layout
+
+\begin_layout Standard
+Das Pflichtenheft wird vom 
+\series bold
+Auftraggeber abgenommen
+\series default
+; - bei agilem Vorgehen ggf.
+ Alternativen überlegen (Abnahme von Zwischenprodukten, Protokollen etc.).
+\end_layout
+
+\begin_layout Subsubsection
+Benutzerdokumentation
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[title=Kapitel 12,colframe=red!75!black, sharpish corners,breaka
+ble,enhanced,height fixed for=all] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementierung
+\end_layout
+
+\begin_layout Subsection
+Codieren
+\end_layout
+
+\begin_layout Subsubsection
+Ziel
+\end_layout
+
+\begin_layout Enumerate
+Umsetzen der Designergebnisse in Programmcode (Quellcode)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Codieren des Designs soll möglichst klar strukturiert und in einfachen Schritten
+ möglich sein!
+\end_layout
+
+\begin_layout Enumerate
+Übersetzen (lassen) des Quellcodes ingeeigneten Code für das Zielsystem
+\end_layout
+
+\begin_layout Subsubsection
+Aufgaben
+\end_layout
+
+\begin_layout Standard
+Schrittweises, korrektes Umsetzen des Designs:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Umsetzen
+\series default
+ des 
+\series bold
+Systemdesigns
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Umsetzen
+\series default
+ des 
+\series bold
+Komponentendesigns
+\end_layout
+
+\begin_layout Itemize
+(komponentenweises) 
+\series bold
+Übersetzen
+\series default
+ des Quellcodes in Zielcode
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Einzeltest
+\series default
+ jeder Komponente
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Zusammenbau
+\series default
+ zum Gesamtsystem
+\end_layout
+
+\begin_layout Subsubsection
+Techniken
+\end_layout
+
+\begin_layout Paragraph
+Transformieren des Designs
+\end_layout
+
+\begin_layout Standard
+klassische Kernaufgabe der Programmierung
+\end_layout
+
+\begin_layout Paragraph
+Einfügen logischer Bedingungen
+\end_layout
+
+\begin_layout Standard
+Assertionen sind logische Aussagen, die Bedingungen im Programm entsprechen
+\end_layout
+
+\begin_layout Itemize
+Vorbedingungen
+\end_layout
+
+\begin_layout Itemize
+Nachbedingungen
+\end_layout
+
+\begin_layout Itemize
+Invarianten
+\end_layout
+
+\begin_layout Paragraph
+Instrumentieren des Codes
+\end_layout
+
+\begin_layout Standard
+Versehen des Codes mit zusätzlichen Codeteilen zum
+\end_layout
+
+\begin_layout Itemize
+Feststellen der Codelokalität zur Laufzeit
+\end_layout
+
+\begin_layout Itemize
+Prüfen der Pfadabdeckung
+\end_layout
+
+\begin_layout Itemize
+dynamischen Analysieren (Profiling)
+\end_layout
+
+\begin_layout Itemize
+Prüfen der Testqualität (Bebuggen, Mutieren)
+\end_layout
+
+\begin_layout Paragraph
+Hauptprobleme:
+\end_layout
+
+\begin_layout Itemize
+neue Codeteile können zusätzliche Fehler enthalten
+\end_layout
+
+\begin_layout Itemize
+neue Codeteile verändern manchmal das Programmverhalten
+\end_layout
+
+\begin_layout Paragraph
+Code-Restrukturierung („Refactoring“) 
+\end_layout
+
+\begin_layout Description
+Code-Restrukturierung = „disziplinierte Änderung eines existierenden Codes
+ zur Designverbesserung ohne Verhaltensänderung“ [Fowler]
+\end_layout
+
+\begin_layout Itemize
+stammt aus Smalltalk (~1980); ab ~2000 eng mit eXtreme Programming (und
+ später anderen agilen Vorgehensmethoden) verknüpft
+\end_layout
+
+\begin_layout Itemize
+Erkennen restrukturierungsbedürftigen Codes durch Muster ( bad smells)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+positiv
+\series default
+: einleuchtende Muster mit detaillierten Vorschlägen zur Restrukturierung
+ (teilweise sogar automatisierbar, vgl.
+ z.B.
+ Eclipse)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+negativ
+\series default
+: Kommentare werden auch als Zeichen eines schlechten Codes gewertet! (eher
+ missverstandener Zweck der Kommentierung)
+\end_layout
+
+\begin_layout Standard
+Restrukturierung darf Lauffähigkeit nicht verändern!
+\end_layout
+
+\begin_layout Itemize
+nur lauffähige Programme restrukturieren
+\end_layout
+
+\begin_layout Itemize
+automatisierte Tests verwenden (Test-driven Development)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Weiteres Problem:
+\series default
+ Bei unerfahrenen Programmierern steigt Restrukturierungsaufwand überproportiona
+l! [Boehm]
+\end_layout
+
+\begin_layout Paragraph
+Restrukturierung kann Architekturprobleme nicht lösen!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ sinnvollste Anwendung zur Verbesserung des Komponentendesigns
+\end_layout
+
+\begin_layout Paragraph
+Erstellen von Testrahmen
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Zweck
+\series default
+: Erstellen temporärer Programm(teil)e und Daten zu Testzwecken
+\end_layout
+
+\begin_layout Itemize
+Programmierumfang kann umfangreich sein (bis zu gleich viel wie der zu testende
+ Code)
+\end_layout
+
+\begin_layout Itemize
+Code von Testrahmen nicht löschen, sondern nur ausblenden
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Komponenten von Testrahmen:
+\end_layout
+
+\begin_layout Itemize
+Stumpf („
+\series bold
+stub
+\series default
+“): Testcode für gerufene Routine
+\end_layout
+
+\begin_layout Itemize
+Treiber („
+\series bold
+driver
+\series default
+“): Testcode für rufende Routine
+\end_layout
+
+\begin_layout Itemize
+Attrappe („mock-up“, „
+\series bold
+mock
+\series default
+ object“): Testcode für Komponenten („mock-up“ wird oft für nichtausführbare
+ Benutzerschnittstellen-Prototypen verwendet)
+\end_layout
+
+\begin_layout Itemize
+Dummydatei („
+\series bold
+dummy file
+\series default
+“): Datei mit Testdaten
+\end_layout
+
+\begin_layout Paragraph
+Kontinuierliche Integration
+\end_layout
+
+\begin_layout Standard
+engl.
+ „continuous integration“: Jeder Entwickler pflegt kleine Codeänderungen
+ laufend ein (früher „daily build“, jetzt „continuous build“).
+\end_layout
+
+\begin_layout Paragraph
+Voraussetzungen
+\end_layout
+
+\begin_layout Itemize
+eine gemeinsame Codebasis
+\end_layout
+
+\begin_layout Itemize
+Übersetzen und Binden auf Knopfdruck (automatisiert)
+\end_layout
+
+\begin_layout Itemize
+funktionale Tests hoch automatisiert
+\end_layout
+
+\begin_layout Itemize
+neueste Programmversion laufend zugänglich
+\end_layout
+
+\begin_layout Standard
+In der Praxis nur Werkzeug-gestützt sinnvoll möglich (z.B.
+ Apache Ant, CruiseControl, Jenkins)!
+\end_layout
+
+\begin_layout Subsubsection
+Testgesteuerte Entwicklung
+\end_layout
+
+\begin_layout Standard
+dee (engl.
+ Test-driven Development – TDD): Testfälle werden vor dem entsprechenden
+ Programm(teil) erstellt (eigentlich programmiert)!
+\end_layout
+
+\begin_layout Paragraph
+Zweistufiges Vorgehen:
+\end_layout
+
+\begin_layout Itemize
+Erstellen von Systemtests für Anwendungsfälle (idealerweise durch AG)
+\end_layout
+
+\begin_layout Itemize
+Erstellen von daraus abgeleiteten Komponententests (durch AN)
+\end_layout
+
+\begin_layout Standard
+In der iterativ-inkrementellen Entwicklung oft 
+\series bold
+Ersatz für genaue Produktspezifikation
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+Produkt erfüllt immer genau die spezifizierten Testfälle.
+\end_layout
+
+\begin_layout Itemize
+Jeder neue Testfall führt zu einer (möglichst kleinen) Produkterweiterung
+ (ggf.
+ Code-Restrukturierung).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Testgesteuerte Entwicklung beeinflusst Art des Designs und der Implementierung
+ und ist daher keine Technik des Testens!
+\end_layout
+
+\begin_layout Paragraph
+Vorteile
+\end_layout
+
+\begin_layout Itemize
+Tests sind
+\series bold
+ automatisch ausführbar
+\series default
+ und daher leicht wiederholbar.
+\end_layout
+
+\begin_layout Itemize
+Tests werden vor der Realisierung erstellt 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Erzeugung
+\series bold
+ testbaren Codes.
+\end_layout
+
+\begin_layout Itemize
+Tests dienen als 
+\series bold
+Spezifikation und Dokumentation
+\series default
+ („besser als nichts“).
+\end_layout
+
+\begin_layout Itemize
+Die Implementierung wird in jedem Inkrement getestet (
+\series bold
+einfaches Regressionstesten
+\series default
+).
+\end_layout
+
+\begin_layout Itemize
+Code-Änderungen sind (auch lokal) rasch überprüfbar.
+\end_layout
+
+\begin_layout Itemize
+Fehler sind rasch lokalisierbar; Folgefehler rasch erkennbar.
+\end_layout
+
+\begin_layout Itemize
+Fehler bei der Code-Restrukturierung werden normalerweise rasch erkannt.
+\end_layout
+
+\begin_layout Itemize
+Man verliert 
+\series bold
+weniger Zeit mit Debuggen.
+\end_layout
+
+\begin_layout Itemize
+Zeit für die Testfallentwicklung wird zu Beginn investiert.
+ Damit fällt eine Belastung zu Iterationsende weg.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Herausforderungen
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Testfallerstellung
+\series default
+ und -auswahl werden
+\series bold
+ nicht unterstützt
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Testfallqualität ist schwer beurteilbar.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Testfälle hängen 
+\series default
+teils voneinander und auch von (geänderten) Anforderungen ab.
+\end_layout
+
+\begin_layout Itemize
+Notwendige Änderungen an Testfällen sind schwer erkennbar.
+\end_layout
+
+\begin_layout Itemize
+Eine große Anzahl von Einzeltests 
+\series bold
+ersetzen nicht
+\series default
+ Integrations- und 
+\series bold
+Systemtests
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Techniken der systematischen Testfallerstellung werden oft vernachlässigt.
+\end_layout
+
+\begin_layout Itemize
+„Einige“ korrekt verlaufene Testfälle „sichern“ die Programm-Korrektheit!
+\end_layout
+
+\begin_layout Paragraph
+Weitere Erkenntnisse
+\end_layout
+
+\begin_layout Itemize
+optimistisch
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+estklassen sind gleichzeitig Testimplementierung und -dokumentation der
+ zu implementierenden Klassen.
+\end_layout
+
+\begin_layout Itemize
+Testklassen können als Ersatz für eine nicht vorhandene Spezifikation dienen.
+\end_layout
+
+\begin_layout Itemize
+Tester und Entwickler arbeiten enger zusammen.
+\end_layout
+
+\begin_layout Itemize
+Es gibt keinen Code ohne Test.
+\end_layout
+
+\begin_layout Itemize
+Testklassen liefern Sicherheit bei der Code-Restrukturierung.
+\end_layout
+
+\begin_layout Itemize
+Man entwickelt nicht zu viel und nicht zu wenig Code auf einmal.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+pessimistisch
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Die Implementierung wird eher nach hinten verschoben.
+\end_layout
+
+\begin_layout Itemize
+Man versucht, durch viele, einfache Tests die unangenehmen, komplizierten
+ Tests zu ersetzen.
+\end_layout
+
+\begin_layout Itemize
+Man glaubt, dass ein Testfall, der einmal passt, auch immer passt.
+\end_layout
+
+\begin_layout Itemize
+Eine große Anzahl von Einzeltests ersetzt nicht Integrations- und Systemtests.
+\end_layout
+
+\begin_layout Itemize
+Testgesteuerte Entwicklung verleitet zu Einstellungen wie
+\end_layout
+
+\begin_layout Itemize
+„Warum denn weitertesten, wenn es eh schon läuft?“.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Größtes Problem: Wer testet die Tests?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=green!5] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center{
+\end_layout
+
+\end_inset
+
+Testfallqualität 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Testqualität 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Softwarequalität!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Werkzeuge
+\end_layout
+
+\begin_layout Standard
+Entwicklungsumgebungen, auch Programmierumgebungen genannt
+\begin_inset Newline newline
+\end_inset
+
+für Codieren benötigt
+\end_layout
+
+\begin_layout Itemize
+Editor
+\end_layout
+
+\begin_layout Itemize
+Compiler / Linker
+\end_layout
+
+\begin_layout Itemize
+Versions- und Konfigurationsverwaltungssystem
+\end_layout
+
+\begin_layout Subsubsection
+Ergebnisse
+\end_layout
+
+\begin_layout Paragraph
+Quellcode
+\end_layout
+
+\begin_layout Itemize
+Gestaltung muss bestimmten Regeln unterworfen werden
+\end_layout
+
+\begin_layout Itemize
+Kommentierung muss Design widerspiegeln
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Tipp
+\series default
+: Möglichst früh entscheiden, ob Quellcode dem Auftraggeber übergeben wird!
+\end_layout
+
+\begin_layout Paragraph
+Systemdokumentation
+\end_layout
+
+\begin_layout Standard
+Systemdokumentation („Software/System Reference Manual“)
+\end_layout
+
+\begin_layout Paragraph
+Zweck:
+\end_layout
+
+\begin_layout Itemize
+Erklärung der Implementierung
+\end_layout
+
+\begin_layout Itemize
+Dokumentation des Know-hows
+\end_layout
+
+\begin_layout Itemize
+Grundlage für Wartung
+\end_layout
+
+\begin_layout Itemize
+Unterstützung der Kommunikation im Entwicklerteam (zusätzlich Entwicklerkollegen
+ als Kontrollleser)
+\end_layout
+
+\begin_layout Paragraph
+Komponenten:
+\end_layout
+
+\begin_layout Itemize
+Beschreibung der Systemstruktur
+\end_layout
+
+\begin_layout Itemize
+Beschreibung des dynamischen Verhaltens
+\end_layout
+
+\begin_layout Itemize
+Beschreibung der Komponenten
+\end_layout
+
+\begin_layout Itemize
+Beschreibung der verwendeten externen Datenhaltung
+\end_layout
+
+\begin_layout Itemize
+Beschreibung der zentralen Begriffe
+\end_layout
+
+\begin_layout Itemize
+Beschreibung der Installation (Detaillierung des Installationshandbuchs)
+\end_layout
+
+\begin_layout Standard
+Die Systemdokumentation darf 
+\series bold
+nicht nur Ergebnisse
+\series default
+, sondern muss 
+\series bold
+auch die Gründe
+\series default
+ dafür (
+\series bold
+WARUM
+\series default
+) dokumentieren.
+\end_layout
+
+\begin_layout Subsection
+Debuggen
+\end_layout
+
+\begin_layout Subsubsection
+Ziel
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Finden
+\series default
+ der Ursachen 
+\series bold
+von Fehlern
+\series default
+ und Mängeln 
+\series bold
+inkl.
+ deren Behebung, 
+\series default
+meist vom Codeersteller selbst durchgeführt
+\end_layout
+
+\begin_layout Subsubsection
+Aufgaben
+\end_layout
+
+\begin_layout Standard
+Sechs Schritte für effizientes Debuggen:
+\end_layout
+
+\begin_layout Enumerate
+Fehler stabilisieren
+\end_layout
+
+\begin_layout Enumerate
+Fehler lokalisieren
+\end_layout
+
+\begin_layout Enumerate
+Korrektur ausarbeiten
+\end_layout
+
+\begin_layout Enumerate
+Korrektur durchführen u.
+ dokumentieren
+\end_layout
+
+\begin_layout Enumerate
+Korrektur testen
+\end_layout
+
+\begin_layout Enumerate
+auf ähnliche Fehler prüfen
+\end_layout
+
+\begin_layout Standard
+Unterschiede beim (Blackbox-)Testen:
+\end_layout
+
+\begin_layout Itemize
+andere Person testet
+\end_layout
+
+\begin_layout Itemize
+Fehler nicht (genau) lokalisiert
+\end_layout
+
+\begin_layout Itemize
+Fehler nicht behoben 
+\end_layout
+
+\begin_layout Standard
+Fehler als Chance zur Leistungssteigerung!
+\end_layout
+
+\begin_layout Subsubsection
+Techniken
+\end_layout
+
+\begin_layout Itemize
+Statische Programmanalyse (ohne Programmausfürhung)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Desk Checking
+\end_layout
+
+\begin_layout Itemize
+Technisches Review
+\end_layout
+
+\begin_layout Itemize
+Komplexitätsanalyse
+\end_layout
+
+\begin_layout Itemize
+Strukturanalyse
+\end_layout
+
+\begin_layout Itemize
+Datenflussanalyse
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Dynamische Programmanalyse (mit Programmausfürhung)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Postmortem-Analyse
+\end_layout
+
+\begin_layout Itemize
+Singlestepping
+\end_layout
+
+\begin_layout Itemize
+Topdown-/Bottomup-Test
+\end_layout
+
+\begin_layout Itemize
+Whitebox-Test
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Statische Programmanalyse
+\end_layout
+
+\begin_layout Description
+Desk
+\begin_inset space ~
+\end_inset
+
+Checking
+\series bold
+ („Schreibtischtest“
+\series default
+) manuelles Durchgehen „am Schreibtisch“, oft anhand konkreter Beispiele
+ (durch Implementierer oder andere Person)
+\begin_inset Newline newline
+\end_inset
+
+Aber: 
+\series bold
+Fachverständnis
+\series default
+ (Domänenwissen) ist 
+\series bold
+wichtig
+\series default
+!
+\end_layout
+
+\begin_layout Description
+Technisches
+\begin_inset space ~
+\end_inset
+
+Review Präsentation von Code in einer Gruppe („First do reviews, then compile!”)
+\end_layout
+
+\begin_layout Itemize
+Walkthrough: Implementierer präsentiert Programm Schritt für Schritt (Alternativ
+e: anderes Gruppenmitglied präsentiert)
+\end_layout
+
+\begin_layout Itemize
+Codeinspektion: Gruppe prüft Code gegen (verschiedene) Checklisten
+\end_layout
+
+\begin_layout Itemize
+Codereview: Gruppe prüft Code vorab und diskutiert ihn mit Implementierer
+\end_layout
+
+\begin_layout Standard
+Zeitlimit ist wichtig!
+\end_layout
+
+\begin_layout Description
+Komplexitätsanalyse Bewertung mittels Komplexitätszahlen (Lines of Code
+ (LOC), Software Sciences (Halstead), Cyclomatic Complexity (McCabe))
+\end_layout
+
+\begin_layout Standard
+Viele Maße beruhen auf keinem realistischen Modell.
+ Es wird eher das gemessen, was leicht zu messen ist! Aber: Eine schlechte
+ Messung ist (meist) besser als gar keine!
+\end_layout
+
+\begin_layout Description
+Strukturanalyse Finden von Strukturanomalien (z.B.
+ unerreichbarem, „totem“ Code, Endlosschleifen)
+\end_layout
+
+\begin_layout Description
+Datenflussanalyse Finden von Datenflussanomalien (z.B.
+ verwendeten Variablen ohne Wert, Variable ohne Nutzung)
+\end_layout
+
+\begin_layout Paragraph
+Statische Programmanalyse
+\end_layout
+
+\begin_layout Description
+Postmortem-Analyse („Leichenbeschau“) Auswerten der Ausgaben eines instrumentier
+ten Codes (auch nach Absturz)
+\end_layout
+
+\begin_layout Subsubsection
+Werkzeuge
+\end_layout
+
+\begin_layout Paragraph
+Statische Analysatoren
+\end_layout
+
+\begin_layout Standard
+erstellen z.
+ B.
+ Objektbäume, Aufrufgraphen etc.
+ zur Komplexitätsanalyse
+\end_layout
+
+\begin_layout Paragraph
+Listengeneratoren
+\end_layout
+
+\begin_layout Standard
+erstellen z.
+ B.
+ Listen von Komponenten, Aufrufen, Kreuzreferenzen, Programmstrukturpläne
+\end_layout
+
+\begin_layout Paragraph
+Speicherprüfer
+\end_layout
+
+\begin_layout Standard
+ermitteln verdächtige Speicherzugriffe und -verwendung
+\end_layout
+
+\begin_layout Paragraph
+Testrahmensysteme
+\end_layout
+
+\begin_layout Standard
+Bibliotheken zur Testautomatisierung, die das Schreiben von Testtreibern
+ vereinfachen und vereinheitlichen
+\end_layout
+
+\begin_layout Paragraph
+Debugger
+\end_layout
+
+\begin_layout Standard
+erlaubt Ablaufverfolgung während des Programmablaufs (meist spezielle Übersetzun
+g notwendig)
+\begin_inset Newline newline
+\end_inset
+
+Funktionalität
+\end_layout
+
+\begin_layout Itemize
+Postmortem-Analyse
+\end_layout
+
+\begin_layout Itemize
+Quellcode-Anzeige
+\end_layout
+
+\begin_layout Itemize
+Zugriff auf Laufzeitwerte
+\end_layout
+
+\begin_layout Itemize
+Darstellung von Aufrufketten
+\end_layout
+
+\begin_layout Itemize
+Singlestepping, Setzen von Break Points und Watch Points
+\end_layout
+
+\begin_layout Itemize
+Analyse dynamischer Objektstrukturen
+\end_layout
+
+\begin_layout Itemize
+interaktives Ändern von Werten
+\end_layout
+
+\begin_layout Subsubsection
+Ergebnisse
+\end_layout
+
+\begin_layout Description
+Lauffähiges
+\begin_inset space ~
+\end_inset
+
+Programm übersetzter Quellcode, der zum Testen (durch andere) freigegeben
+ wird
+\end_layout
+
+\begin_layout Description
+Singlestepping schrittweises Durchgehen eines Programms, z.B.
+ mit Debugger
+\end_layout
+
+\begin_layout Description
+Topdown-/Bottomup-Test Verwendung (von Teilen) des Testrahmens
+\end_layout
+
+\begin_layout Description
+Whitebox-Test Programmlauf mit verfügbarem Quellcode (vielfach mittels Debugger)
+\end_layout
+
+\begin_layout Paragraph
+Fehlerliste
+\end_layout
+
+\begin_layout Standard
+strukturierte Sammlung begangener oder möglicher Fehler es gibt Standardlisten,
+ jeder Softwareentwickler soll jedoch seine individuelle Fehlerliste anfertigen
+ (gereiht nach Häufigkeit – Pareto-Prinzip)
+\begin_inset Newline newline
+\end_inset
+
+Anwendung:
+\end_layout
+
+\begin_layout Itemize
+zur strukturierten Fehlersuche
+\end_layout
+
+\begin_layout Itemize
+zur Generierung von Lösungsideen
+\end_layout
+
+\begin_layout Itemize
+zur Erstellung projektspezifischer Checklisten
+\end_layout
+
+\begin_layout Itemize
+zur Schwerpunktsetzung bei knapper Testzeit
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[title=Kapitel 13,colframe=red!75!black, sharpish corners,breaka
+ble,enhanced,height fixed for=all] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Testen
+\end_layout
+
+\begin_layout Description
+Testen = systematisches Aufzeigen von Fehlern in minimaler Zeit und mit
+ minimalem Aufwand unter realen Bedingungen
+\end_layout
+
+\begin_layout Standard
+Man kann nur die Anwesenheit von Fehlern zeigen; Fehlerfreiheit lässt sich
+ niemals zeigen! (Dijkstra)
+\end_layout
+
+\begin_layout Itemize
+Jedes Programm enthält Fehler („mentale Irrtumsrate“, Halstead).
+\end_layout
+
+\begin_layout Itemize
+Forderung nach „100% Fehlerfreiheit“ demotiviert Programmierer!
+\end_layout
+
+\begin_layout Subsection
+Rollenverteilung
+\end_layout
+
+\begin_layout Itemize
+Der Implementierer soll nicht testen!
+\end_layout
+
+\begin_layout Itemize
+Der Tester soll nicht korrigieren!
+\end_layout
+
+\begin_layout Subsection
+Aufgaben
+\end_layout
+
+\begin_layout Paragraph
+Erkennen von Analyse- und Designfehlern 
+\end_layout
+
+\begin_layout Itemize
+Testen „von außen“ bedeutet intensives Arbeiten mitder Benutzerschnittstelle.
+\end_layout
+
+\begin_layout Itemize
+Inkonsistenzen und fehlerhafte Bedienungsabläufe sind oft Analysefehler
+ oder Designfehler!
+\end_layout
+
+\begin_layout Paragraph
+Erkennen von Implementierungsfehlern
+\end_layout
+
+\begin_layout Itemize
+strukturiert suchen (z.B.
+ Versuch alle Fehlermeldungen zu generieren, Testen von Kompatibilität)
+\end_layout
+
+\begin_layout Paragraph
+Bestimmen des Produktstatus
+\end_layout
+
+\begin_layout Itemize
+Alphatesten, Betatesten
+\end_layout
+
+\begin_layout Subsubsection
+Produktstatus
+\end_layout
+
+\begin_layout Paragraph
+Alphatesten
+\end_layout
+
+\begin_layout Standard
+Testen der einzelnen Funktionalitäten bottomup Produkt als Gesamtes noch
+ eher instabil ( Alphaversion), Testen einzelner funktionaler Anforderungen
+ ist jedoch bereits möglich
+\end_layout
+
+\begin_layout Paragraph
+Betatesten
+\end_layout
+
+\begin_layout Standard
+Testen des Produkts als Gesamtes anhand realer Beispielsabläufe ( Betaversion;
+ nicht unbedingt volle Funktionalität)
+\end_layout
+
+\begin_layout Subsubsection
+Produktperformanz
+\end_layout
+
+\begin_layout Standard
+Performanztest – teilweise bereits während des Debuggens, während des Testens
+ aber aus Anwendersicht
+\end_layout
+
+\begin_layout Itemize
+Ermitteln notwendiger Performanzverbesserung als Vorgabe für notwendiges
+ Tunen (Datenprüfung bei Eingabe in Maske vs.
+ Prüfung vor Übernahme in DB)
+\end_layout
+
+\begin_layout Itemize
+Speichertests testen die Speicheranforderungen
+\end_layout
+
+\begin_layout Itemize
+Volumentests testen maximal bewältigbaren Aufgabenumfang
+\end_layout
+
+\begin_layout Itemize
+Belastungstests testen Stabilität bei hoher Systemaktivität
+\end_layout
+
+\begin_layout Itemize
+Benchmarkvergleiche vergleichen Produktversionen
+\end_layout
+
+\begin_layout Subsubsection
+Vorbereiten der Abnahme
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Abnahmevortest
+\series default
+ nimmt die Abnahmesituation beim Auftraggeber vorweg (Test der 
+\series bold
+Abnahmesuite
+\series default
+) 
+\begin_inset Newline newline
+\end_inset
+
+Abnahmesuite wird
+\series bold
+ idealerweise vom Auftraggeber erstellt;
+\series default
+ in der Praxis oft gemeinsam mit dem Auftragnehmer
+\end_layout
+
+\begin_layout Subsection
+Techniken
+\end_layout
+
+\begin_layout Subsubsection
+Testfalldesign
+\end_layout
+
+\begin_layout Standard
+Ein guter Testfall
+\end_layout
+
+\begin_layout Itemize
+macht Programmfehler offensichtlich,
+\end_layout
+
+\begin_layout Itemize
+findet wahrscheinlich einen Fehler,
+\end_layout
+
+\begin_layout Itemize
+ist weder zu einfach noch zu komplex.
+\end_layout
+
+\begin_layout Standard
+Testprozess soll möglichst systematisch sein!
+\end_layout
+
+\begin_layout Paragraph
+Gängigste Techniken
+\end_layout
+
+\begin_layout Itemize
+Äquivalenzklassen bilden
+\end_layout
+
+\begin_layout Itemize
+Grenzwerte analysieren
+\end_layout
+
+\begin_layout Itemize
+Ursache-Wirkungs-Zusammenhänge analysieren
+\end_layout
+
+\begin_layout Subsubsection
+Testsuitedesign
+\end_layout
+
+\begin_layout Standard
+Erstellen eines Verzeichnisses geeigneter Testfälle (“
+\series bold
+Testfallsammlung
+\series default
+“) Man kann nie alle Anwendungsmöglichkeiten eines Systems testen (zeitliche
+ und ressourcentechnische Einschränkungen).
+\end_layout
+
+\begin_layout Paragraph
+Gliederung in
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Konformanztests
+\series default
+ (müssen korrektes Ergebnis liefern),
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Nonkonformanztests
+\series default
+ (müssen Fehler liefern) und
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Qualitätstests
+\series default
+ (nichtfunktionale Anforderungen).
+\end_layout
+
+\begin_layout Subsubsection
+Erstellen von Testfällen
+\end_layout
+
+\begin_layout Standard
+Vorgehensweisen
+\end_layout
+
+\begin_layout Itemize
+aus Pflichtenheft und Dokumentation extrahieren und Grenzwerte für die Eingabewe
+rte festlegen
+\end_layout
+
+\begin_layout Itemize
+mit Referenzprogramm korrekte Testergebnisse erstellen
+\end_layout
+
+\begin_layout Itemize
+interaktiv mit System arbeiten
+\end_layout
+
+\begin_layout Itemize
+Konkurrenzprodukte zu Vergleichszwecken heranziehen
+\end_layout
+
+\begin_layout Itemize
+korrekte Ergebnisse für spätere Vergleiche aufheben
+\end_layout
+
+\begin_layout Itemize
+alle Ergebnisse immer elektronisch aufheben
+\end_layout
+
+\begin_layout Subsubsection
+Testablaufplanung
+\end_layout
+
+\begin_layout Paragraph
+Qualifikationstest
+\end_layout
+
+\begin_layout Standard
+prüfen, ob eine Programmversion stabil genug fürs Testen ist 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Erstellen einer Qualifikationstestsuite, Testen im Qualifikationstest
+\end_layout
+
+\begin_layout Paragraph
+Testzyklus
+\end_layout
+
+\begin_layout Standard
+Schritte:
+\end_layout
+
+\begin_layout Enumerate
+„Start with a bang!“ – Implementierer rasch mit Fehlerbehebungsaufträgen
+ „versorgen“
+\end_layout
+
+\begin_layout Enumerate
+Produktstabilität und -zuverlässigkeit abschätzen (Prognose für notwendige
+ Testzyklen)
+\end_layout
+
+\begin_layout Enumerate
+Offensichtliche Fehler aufdecken (Simulation des ersten Arbeitstages beim
+ Anwender, Inkonsistenzen zur Dokumentation)
+\end_layout
+
+\begin_layout Enumerate
+Testsuite(n) durchlaufen
+\end_layout
+
+\begin_layout Enumerate
+Ergebnisse dokumentieren (möglichst elektronisch und geeignet für automatische
+ Wiederholung/Prüfung)
+\end_layout
+
+\begin_layout Enumerate
+Testsuite(n) adaptieren
+\end_layout
+
+\begin_layout Subsubsection
+Verifikation
+\end_layout
+
+\begin_layout Standard
+esten der Funktionalität „Haben wir das Produkt richtig erstellt?“
+\end_layout
+
+\begin_layout Itemize
+Einzeltest („Unit Test“)
+\end_layout
+
+\begin_layout Itemize
+Modultest, Programmtest
+\end_layout
+
+\begin_layout Itemize
+Integrationstest (Testen des Zusammenbaus)
+\end_layout
+
+\begin_layout Subsubsection
+Validierung
+\end_layout
+
+\begin_layout Standard
+esten des Gesamtsystems („Haben wir t das richtige Produkt erstellt?“) 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Überprüfung, ob ein Softwareprodukt den realen Anforderungen genügt („Brauchbar
+keit“; Boehm) daher auch „Systemtest “, “Gesamttest“
+\end_layout
+
+\begin_layout Paragraph
+Techniken
+\end_layout
+
+\begin_layout Itemize
+(Testen weitgehend unabhängiger Subsysteme und deren Schnittstellen)
+\end_layout
+
+\begin_layout Itemize
+Systemtest, Integritätstest (Testen auf Einsetzbarkeit und Brauchbarkeit
+ beim Anwender)
+\end_layout
+
+\begin_layout Itemize
+(Benutzer-)Akzeptanztest (Testen der realen Verwendung)
+\end_layout
+
+\begin_layout Itemize
+Zertifizierung (wenn gewünscht / erforderlich)
+\end_layout
+
+\begin_layout Subsubsection
+Regressionstesten
+\end_layout
+
+\begin_layout Standard
+auch: Retesten
+\end_layout
+
+\begin_layout Paragraph
+Zweck: 
+\end_layout
+
+\begin_layout Itemize
+Überprüfung der Fehlerkorrektur
+\end_layout
+
+\begin_layout Itemize
+Absicherung gegen neu eingeschleppte Fehler
+\end_layout
+
+\begin_layout Subsection
+Ergebnisse
+\end_layout
+
+\begin_layout Subsubsection
+Testplan
+\end_layout
+
+\begin_layout Description
+Testplan = „Beschreibung von Aufgabenumfang, Vorgehensweise, Ressourcen
+ und Ablauf der beabsichtigten Testaktivitäten“ [ANSI/IEEE]
+\end_layout
+
+\begin_layout Standard
+Erstellung benötigt viel Zeit:
+\end_layout
+
+\begin_layout Itemize
+parallel zu Design und Implementierung durchführen
+\end_layout
+
+\begin_layout Itemize
+auf Pflichtenheft aufbauen
+\end_layout
+
+\begin_layout Itemize
+laufend aktualisieren
+\end_layout
+
+\begin_layout Paragraph
+Inhalte
+\end_layout
+
+\begin_layout Itemize
+Beschreibung von Produktziel und Testziel
+\end_layout
+
+\begin_layout Itemize
+Festlegung des Testumfangs (auch was nicht getestet wird!)
+\end_layout
+
+\begin_layout Itemize
+Auflistung der abgedeckten / nicht abgedeckten Risiken
+\end_layout
+
+\begin_layout Itemize
+Beschreibung von Teststrategie, -ansatz und -kriterien
+\end_layout
+
+\begin_layout Itemize
+Beschreibung der Testumgebung
+\end_layout
+
+\begin_layout Itemize
+Planung des Ablaufs inkl.
+ benötigter Ressourcen
+\end_layout
+
+\begin_layout Itemize
+Festlegung der zu liefernden Testdokumentation
+\end_layout
+
+\begin_layout Subsubsection
+Testsuite
+\end_layout
+
+\begin_layout Description
+Testsuite = „nach Testklassen geordnetes Verzeichnis von Testfällen“ [ANSI/IEEE]
+\end_layout
+
+\begin_layout Subsubsection
+Testlisten
+\end_layout
+
+\begin_layout Standard
+angefertigt für persönlichen oder entwicklerinternen Gebrauch, erstellt
+ aus dem Pflichtenheft sowie aus Benutzer- / Systemdokumentation
+\end_layout
+
+\begin_layout Subsubsection
+Fehlerbericht
+\end_layout
+
+\begin_layout Description
+Fehlerbericht = standardisierte Beschreibung eines entdeckten Fehlers mit
+ Angaben zur Fehlerbehebung
+\end_layout
+
+\begin_layout Standard
+Fehler muss reproduzierbar sein!
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Fehlerbericht immer sofort beim Auftreten eines Fehlers schreiben (Fehlerverhalt
+en „noch auf dem Bildschirm sichtbar“)!
+\end_layout
+
+\begin_layout Subsubsection
+Fehlerlogbuch
+\end_layout
+
+\begin_layout Description
+Fehlerlogbuch = zeitlich geordnete Auflistung aller gefundenen Fehler inklusive
+ ihrer Behebung (auch: Testlogbuch)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[title=Kapitel 14,colframe=red!75!black, sharpish corners,breaka
+ble,enhanced,height fixed for=all] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Produkteinführung
+\end_layout
+
+\begin_layout Subsection
+Ziel
+\end_layout
+
+\begin_layout Description
+Produkteinführung = Abschluss eines Projekts durch die erfolgreiche Aufnahme
+ des Betriebs eines Softwareprodukts beim Auftraggeber/Kunden
+\end_layout
+
+\begin_layout Standard
+für Auftragnehmer: Know-how-Erweiterung durch Nachanalyse
+\end_layout
+
+\begin_layout Description
+In
+\begin_inset space ~
+\end_inset
+
+Betrieb befindliche Software benötigt Wartung und Pflege!
+\end_layout
+
+\begin_layout Subsection
+Aufgaben
+\end_layout
+
+\begin_layout Enumerate
+Lieferung
+\end_layout
+
+\begin_layout Enumerate
+Installation und Inbetriebnahme
+\end_layout
+
+\begin_layout Enumerate
+Schulung
+\end_layout
+
+\begin_layout Enumerate
+Abnahme und Abschluss
+\end_layout
+
+\begin_layout Enumerate
+Wartung (und Pflege)
+\end_layout
+
+\begin_layout Enumerate
+Evaluierung
+\end_layout
+
+\begin_layout Enumerate
+Archivierung
+\end_layout
+
+\begin_layout Subsubsection
+Lieferung
+\end_layout
+
+\begin_layout Standard
+umfasst 
+\series bold
+Übergabe
+\series default
+ und 
+\series bold
+Übernahme
+\series default
+ von Produkt inklusive Dokumentation
+\begin_inset Newline newline
+\end_inset
+
+Der AG erwartet bei der Lieferung ein 
+\series bold
+brauchbares Produkt.
+
+\series default
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Erster Eindruck beeinflusst (positive) Einstellung
+\end_layout
+
+\begin_layout Paragraph
+Oft muss Zuverlässigkeit abgeschätzt werden (vom Projektleiter):
+\end_layout
+
+\begin_layout Enumerate
+hohe Zuverlässigkeit
+\end_layout
+
+\begin_layout Enumerate
+mittlere Zuverlässigkeit
+\end_layout
+
+\begin_layout Enumerate
+niedrige Zuverlässigkeit
+\end_layout
+
+\begin_layout Enumerate
+unbekannte Zuverlässigkeit (am schlechtesten!)
+\end_layout
+
+\begin_layout Standard
+Zumindest 
+\series bold
+minimale Zuverlässigkeit
+\series default
+ schriftlich festlegen Basis für die Abnahme.
+\begin_inset Newline newline
+\end_inset
+
+Projektleiter muss Unternehmensleitung über Risiken klar informieren!
+\end_layout
+
+\begin_layout Subsubsection
+Installation und Inbetriebnahme
+\end_layout
+
+\begin_layout Description
+Installation = Einrichtung eines Produkts in der (simulierten bzw.
+ echten) Zielumgebung (noch ohne es auszuführen)
+\end_layout
+
+\begin_layout Paragraph
+Aufgaben
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Überprüfung
+\series default
+ der Zielhardware (Vollständigkeit, Funktionsfähigkeit)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Konfiguration
+\series default
+ von Hardware und Software
+\end_layout
+
+\begin_layout Itemize
+kundenspezifische 
+\series bold
+Installation
+\series default
+ (Treiber, Konfigurationen)
+\end_layout
+
+\begin_layout Itemize
+Prüfung auf Funktionsfähigkeit des Geräts (
+\series bold
+ohne
+\series default
+ neue 
+\series bold
+Software
+\series default
+)
+\end_layout
+
+\begin_layout Subsubsection
+Installation und Inbetriebnahme
+\end_layout
+
+\begin_layout Description
+Inbetriebnahme = Vorbereitung für den Regelbetrieb (erste Ausführung des
+ Produkts)
+\end_layout
+
+\begin_layout Paragraph
+Aufgaben
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Starten
+\series default
+ und 
+\series bold
+Testen
+\series default
+ der Komponenten
+\end_layout
+
+\begin_layout Itemize
+Erstellen von 
+\series bold
+Testausdrucken
+\end_layout
+
+\begin_layout Itemize
+Prüfung auf Funktionsfähigkeit des Geräts (
+\series bold
+mit
+\series default
+ neuer Software)
+\end_layout
+
+\begin_layout Standard
+Vor und nach der Installation ein 
+\series bold
+Backup
+\series default
+ anfertigen! Auch 
+\series bold
+Wiederinbetriebnahmetest
+\series default
+ durchführen.
+\end_layout
+
+\begin_layout Subsubsection
+Schulung
+\end_layout
+
+\begin_layout Description
+Schulung = Einweisung in geeignete Verwendung
+\end_layout
+
+\begin_layout Standard
+Bediener haben verschiedene Rollen (vgl.
+ s Personas aus dem Design!):
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Benutzer
+\series default
+ (user) braucht Anwendungsfunktionalität
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Betreuer
+\series default
+ (administrator) braucht Systemfunktionalität, aber auch als Benutzer schulen!
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Schulung
+\series default
+ möglichst 
+\series bold
+vor der Abnahme
+\series default
+ durchführen! 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Sie kann verrechnet werden (Angebot!) und erleichtert die Abnahme.
+\end_layout
+
+\begin_layout Subsubsection
+Abnahme und Abschluss
+\end_layout
+
+\begin_layout Description
+Abnahme = rechtskräftige Annahme eines Produkts durch den AG; – führt automatisc
+h zum Abschluss!
+\end_layout
+
+\begin_layout Standard
+Abnahme dauert max.
+ 1 Tag – immer ein Kompromiss zwischen optimalem und akzeptablem Produkt
+ (schriftliche Dokumentation – Protokoll! – wichtig)
+\begin_inset Newline newline
+\end_inset
+
+In der Praxis 
+\series bold
+erst
+\series default
+ sinnvoll
+\series bold
+ nach Inbetriebnahme 
+\series default
+(und Schulung) beim Auftraggeber.
+\end_layout
+
+\begin_layout Subsubsection
+Wartung
+\end_layout
+
+\begin_layout Description
+Wartung (+ Pflege) = Produktverbesserung nach dem Abschluss
+\end_layout
+
+\begin_layout Standard
+Jede Software erfordert Wartung (jedoch anderer Wartungsbegriff als bei
+ materiellen Produkten, da keine Abnützung).
+\end_layout
+
+\begin_layout Paragraph*
+Wartung im weiteren Sinn =
+\end_layout
+
+\begin_layout Itemize
+Wartung im engeren Sinn (korrigierende Tätigkeiten) +
+\end_layout
+
+\begin_layout Itemize
+Pflege (erweiternde Tätigkeiten)
+\end_layout
+
+\begin_layout Paragraph
+Aktivitäten der Wartung (im engeren Sinn):
+\end_layout
+
+\begin_layout Itemize
+Stabilisierung (Beseitigung enthaltener und neu eingebrachter Fehler, ereignisge
+steuert)
+\end_layout
+
+\begin_layout Itemize
+Optimierung (wenn zur bestimmungsgemäßen Verwendung nötig)
+\end_layout
+
+\begin_layout Paragraph
+Aktivitäten der Pflege:
+\end_layout
+
+\begin_layout Itemize
+Anpassung (bei Bedarf; enthält auch „Optimierung“ über die Anforderungen
+ hinaus)
+\end_layout
+
+\begin_layout Itemize
+Erweiterung (längerfristig planbar) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Pflegeaktivitäten
+\series default
+ umfassen 60 - 80% der Gesamttätigkeit!
+\end_layout
+
+\begin_layout Paragraph
+Kosten für Wartung und Pflege:
+\end_layout
+
+\begin_layout Standard
+Wartung/Pflege macht 
+\series bold
+mehr als 50% der Gesamtkosten
+\series default
+ eines Produkts (über die gesamte Entwicklungs- und Lebenszeit) aus.
+\end_layout
+
+\begin_layout Itemize
+Seriöse Kostenschätzung nur bedingt möglich
+\end_layout
+
+\begin_layout Itemize
+In der Praxis werden vielfach 7-15% der Entwicklungskosten pro Jahr kalkuliert
+\end_layout
+
+\begin_layout Itemize
+Wartungsfreundlichkeit ist wichtig
+\end_layout
+
+\begin_layout Standard
+Wartungs- und Pflegeaktivitäten sollten voneinander getrennt werden (unterschied
+liche Charakteristika) – in der Praxis jedoch schwierig:
+\end_layout
+
+\begin_layout Itemize
+Wartung nach Aufwand (Stunden) verrechnen
+\end_layout
+
+\begin_layout Itemize
+Pflege als Folgeprojekt kalkulieren (Fixpreis)
+\end_layout
+
+\begin_layout Paragraph
+Wartungsdauer („End-of-Life“-Problematik):
+\end_layout
+
+\begin_layout Standard
+Bei „alten“ Produkten ist zu entscheiden:
+\end_layout
+
+\begin_layout Itemize
+Wartung („Instandhaltung“)
+\end_layout
+
+\begin_layout Itemize
+Sanierung („Instandsetzung“, 
+\begin_inset Quotes gld
+\end_inset
+
+Reengineering“)
+\end_layout
+
+\begin_layout Itemize
+Evolution („Weiterentwicklung“, „Pflege im Großen“)
+\end_layout
+
+\begin_layout Itemize
+Migration („Übertragung“)
+\end_layout
+
+\begin_layout Itemize
+Einstellung (durch neues Produkt ersetzen)
+\end_layout
+
+\begin_layout Subsubsection
+Evaluierung
+\end_layout
+
+\begin_layout Description
+Evaluierung = auftragnehmerinterne Nachanalyse und Nachkalkulation (Soll-/Ist-Ve
+rgleich des Projektaufwands)
+\end_layout
+
+\begin_layout Itemize
+daraufhin Adaptierung der Planungsparameter
+\end_layout
+
+\begin_layout Standard
+Projekt wird kostenmäßig abgerechnet, die Zeitplanung normalisiert.
+\end_layout
+
+\begin_layout Subsubsection
+Archivierung
+\end_layout
+
+\begin_layout Standard
+wichtig für Wartung und Wiederauffinden von Know-how
+\end_layout
+
+\begin_layout Itemize
+intern elektronische und Papierablagen „zusammenräumen“
+\end_layout
+
+\begin_layout Itemize
+gesamtes Know-how dokumentieren (Wissen aus den Köpfen der MitarbeiterInnen)
+\end_layout
+
+\begin_layout Itemize
+auftraggeberspezifische Informationen löschen
+\end_layout
+
+\begin_layout Subsection
+Techniken
+\end_layout
+
+\begin_layout Subsubsection
+Umstellung
+\end_layout
+
+\begin_layout Standard
+Übertragung von Datenbeständen in die neue Umgebung
+\end_layout
+
+\begin_layout Paragraph
+Strategien
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Direkte Umstellung
+\series default
+: Wechsel vom alten aufs neue System zu einem bestimmten Zeitpunkt (vor
+ allem bei nicht duplizierbaren Ressourcen)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Parallele Umstellung
+\series default
+: gleichzeitiger Betrieb des alten und des neuen Systems über einen gewissen
+ Zeitraums, dabei laufende Synchronisierung des Datenbestands (bei sicherheitskr
+itischen Systemen)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Testweise Umstellung
+\series default
+: gleichzeitiger Betrieb des alten und des neuen Systems über einen gewissen
+ Zeitraums mit ein-/mehrmaliger Duplizierung der Daten, ohne regelmäßige
+ Synchronisation
+\end_layout
+
+\begin_layout Subsubsection
+Probebetrieb
+\end_layout
+
+\begin_layout Standard
+Evaluierung des Produkts durch den Auftraggeber
+\end_layout
+
+\begin_layout Paragraph
+Arten:
+\end_layout
+
+\begin_layout Itemize
+Installationstest
+\end_layout
+
+\begin_layout Itemize
+Leistungstest (Benchmarktest)
+\end_layout
+
+\begin_layout Itemize
+Pilottest
+\end_layout
+
+\begin_layout Standard
+Auftraggeber darf kein fehlerfreies, sondern lediglich ein brauchbares System
+ erwarten!
+\end_layout
+
+\begin_layout Subsubsection
+Kontinuierliche Freigabe
+\end_layout
+
+\begin_layout Standard
+Englisch: Continuous Release, Continuous Delivery.
+ Bei vielen neuen Softwaresystemen (z.B.
+ Web, Mobile Apps):
+\end_layout
+
+\begin_layout Paragraph
+Eigenschaften:
+\end_layout
+
+\begin_layout Itemize
+aktueller Inhalt („content“) untrennbar mit Anwendung verknüpft
+\end_layout
+
+\begin_layout Itemize
+Übergang von Entwicklung zur Wartung kaum terminisierbar
+\end_layout
+
+\begin_layout Itemize
+Produkt wird regelmäßig aktualisiert („kontinuierlich freigegeben“)
+\end_layout
+
+\begin_layout Standard
+Hilfreich:
+\end_layout
+
+\begin_layout Itemize
+inkrementelles Prozessmodell (agiles Vorgehen)
+\end_layout
+
+\begin_layout Itemize
+kurze Freigabezyklen (wenige Tage)
+\end_layout
+
+\begin_layout Standard
+Herausforderungen bei Kontinuierlicher Freigabe:
+\end_layout
+
+\begin_layout Itemize
+oft muss Anwendung durchgehend verfügbar sein („24x7 operation“)
+\end_layout
+
+\begin_layout Itemize
+Wartung und Pflege im laufenden Betrieb schwierig
+\end_layout
+
+\begin_layout Standard
+Empfehlungen:
+\end_layout
+
+\begin_layout Itemize
+Konfigurations-/Versionsverwaltungssysteme verwenden (Änderungshistorie!)
+\end_layout
+
+\begin_layout Itemize
+Entscheidungen schriftlich festhalten
+\end_layout
+
+\begin_layout Subsubsection
+Development & Operations („ DevOps) 
+\end_layout
+
+\begin_layout Standard
+Verschränkung von Entwicklung („Development“) und Betrieb („ Operations“)
+\end_layout
+
+\begin_layout Itemize
+Anforderungen („Requirements“) und Änderungswünsche („Change Requests“)
+ werden zunehmend gleich betrachtet und behandelt!
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Übertragung der Betriebsfähigkeit und -qualität auf den Auftragnehmer
+\end_layout
+
+\begin_layout Itemize
+Ausweitung des Agilen Vorgehens auch auf den Betrieb („Agile System Administrati
+on”, „Agile Operations”; Application Lifecycle Management)
+\end_layout
+
+\begin_layout Subsubsection
+Abnahmetest
+\end_layout
+
+\begin_layout Standard
+Gesamttest unter realen Einsatzbedingungen - prüft (
+\series bold
+ideal
+\series default
+) Produkt gegen 
+\series bold
+Lastenheft
+\series default
+, 
+\series bold
+real
+\series default
+ Produkt gegen aktuelle 
+\series bold
+Kundenwünsche
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Abnahme(test) 
+\series default
+ist kein punktuelles Ereignis – genügend Zeit einplanen; Auftraggeber jedenfalls
+ einbeziehen
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Abnahmesuite
+\series default
+: Menge vorher festgelegter Testfälle – muss vom Auftraggeber dem Auftragnehmer
+ rechtzeitig (VOR der Abnahme!) übermittelt werden
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Abnahme-Schlussbesprechung
+\series default
+: Abnahme erfolgt, wenn entdeckte Fehler tolerierbar oder nachbesserbar
+ sind.
+ Vollständiges Testen ist niemals möglich!
+\end_layout
+
+\begin_layout Subsubsection
+Nachkalkulation
+\end_layout
+
+\begin_layout Standard
+Soll-/Ist-Vergleich der Planwerte, um die Ursachen der Abweichung zu ermitteln.
+ Verglichen werden: Anforderungen (Aufgaben), Aufwände, Termine, Ressourcen,
+ Kosten, Finanzen
+\end_layout
+
+\begin_layout Subsection
+Werkzeuge
+\end_layout
+
+\begin_layout Standard
+Spezielle Werkzeuge existieren nur beschränkt (z.
+ B.
+ 
+\series bold
+Erweiterungen
+\series default
+ von 
+\series bold
+Continuous
+\series default
+-
+\series bold
+Integration-Tools
+\series default
+ wie Jenkins oder AntHill bzw.
+ DevOps-Tools (z.B.
+ Docker).
+\end_layout
+
+\begin_layout Paragraph
+Eingesetzt werden beispielsweise:
+\end_layout
+
+\begin_layout Standard
+Versionsverwaltungswerkzeuge, Installationsprogramme, Simulatoren, Monitorprogra
+mme, Schnittstellenprüfer, Logfile-Ersteller, Protokolliersysteme
+\end_layout
+
+\begin_layout Subsection
+Ergebnisse
+\end_layout
+
+\begin_layout Subsubsection
+Betriebsversion
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+erste abgenommene Version
+\series default
+ inklusive Dokumentation (
+\series bold
+keine „Vollversion“ “!
+\series default
+)
+\end_layout
+
+\begin_layout Paragraph
+Wichtig
+\end_layout
+
+\begin_layout Itemize
+korrekte Version der Dokumentation liefern
+\end_layout
+
+\begin_layout Itemize
+Systemdokumentation (notwendig bei Lieferung des Quellcodes)
+\end_layout
+
+\begin_layout Itemize
+Testdokumentation beilegen
+\end_layout
+
+\begin_layout Itemize
+Readme-Dateien nur im Notfall beilegen
+\end_layout
+
+\begin_layout Itemize
+Benutzer über Fehler informieren
+\end_layout
+
+\begin_layout Subsubsection
+Installations- - und Inbetriebnahmeprotokoll
+\end_layout
+
+\begin_layout Standard
+dokumentiert chronologisch Installation und Inbetriebnahme (durch Auftragnehmer)
+\end_layout
+
+\begin_layout Paragraph
+Auftraggeber führt Bedienerprotokoll
+\end_layout
+
+\begin_layout Itemize
+Weiterführen in den ersten Betriebstagen
+\end_layout
+
+\begin_layout Itemize
+Dient als Basis für Fehlerkorrekturen bzw.
+ Änderung in Schulungsunterlagen bzw.
+ notwendigen Nachschulungen
+\end_layout
+
+\begin_layout Subsubsection
+Abnahmeprotokoll
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Dokumentiert
+\series default
+ detailliert die 
+\series bold
+Abnahme
+\series default
+.
+ Wird 
+\series bold
+unabhängig vom Erfolg der Abnahme
+\series default
+ erstellt (Teilabnahmen sind möglich)
+\begin_inset Newline newline
+\end_inset
+
+Ist ein gemeinsames Protokoll nicht möglich (zu unterschiedliche Ansichten),
+ so werden 
+\series bold
+Sachverhaltsdarstellungen
+\series default
+ erstellt.
+\end_layout
+
+\begin_layout Subsubsection
+Abschlussbericht
+\end_layout
+
+\begin_layout Standard
+interner Bericht des Auftragnehmers, von allen Mitarbeitern erstellt (manchmal
+ auch als Protokoll einer Abschlussbesprechung), schließt Informationen
+ der 
+\series bold
+Nachkalkulation
+\series default
+ und der 
+\series bold
+Qualitätssicherung
+\series default
+ ein
+\end_layout
+
+\begin_layout Subsubsection
+Projektarchiv
+\end_layout
+
+\begin_layout Standard
+dient als Basis für Wartung und Dokumentation des erarbeiteten Know-hows
+\end_layout
+
+\begin_layout Paragraph
+Wichtig:
+\end_layout
+
+\begin_layout Itemize
+alle notwendigen Werkzeuge in den richtigen Versionen mit archivieren
+\end_layout
+
+\begin_layout Itemize
+rechtliche Klärung der Speicherung auftraggeberspezifischer Daten ist notwendig
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
