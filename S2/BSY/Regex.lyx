@@ -1,0 +1,2484 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[breakable]{tcolorbox}
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{3pt}
+\setlength{\postmulticols}{3pt}
+\setlength{\multicolsep}{3pt}
+\setlength{\columnsep}{12pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.6ex,
+  leftmargin=!, labelsep=0mm,labelwidth=12mm,
+  align=left,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,enforce breakable,height fixed for=all}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,sidebyside}
+
+\newtcolorbox{regexhint}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1}
+\raggedcolumns
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Regular Expressions (+ GREP&SED)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+, v 1.0.0 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faAnchor
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Anker
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+^ Zeilenbeginn
+\end_layout
+
+\begin_layout Description
+
+\backslash
+A Stringbeginn
+\end_layout
+
+\begin_layout Description
+$ Zeilenende
+\end_layout
+
+\begin_layout Description
+
+\backslash
+b Wortgrenze 
+\begin_inset Quotes gld
+\end_inset
+
+nur ganze Wörter
+\begin_inset Quotes grd
+\end_inset
+
+ z.B.
+ 
+\backslash
+bword
+\backslash
+b
+\end_layout
+
+\begin_layout Description
+
+\backslash
+< Beginn eines Wortes
+\end_layout
+
+\begin_layout Description
+
+\backslash
+> Ende eines Wortes
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faExpand
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Quantifizierer
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+* 0 oder mehr
+\end_layout
+
+\begin_layout Description
++ 1 oder mehr
+\end_layout
+
+\begin_layout Description
+? 0 oder 1
+\end_layout
+
+\begin_layout Description
+{3} genau 3
+\end_layout
+
+\begin_layout Description
+{3,} 3 oder mehr
+\end_layout
+
+\begin_layout Description
+{3,5} 3,4 oder 5
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faAlignCenter 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Strings
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+$` vor dem gesuchten String
+\end_layout
+
+\begin_layout Description
+$' nach dem gesuchten String
+\end_layout
+
+\begin_layout Description
+$+ das letzte Vorkommen des gesuchten String
+\end_layout
+
+\begin_layout Description
+$& der gesamte gefundene String
+\end_layout
+
+\begin_layout Description
+$n nte Gruppe z.B.
+\end_layout
+
+\begin_layout Description
+$2 
+\begin_inset Quotes gld
+\end_inset
+
+-xyz-
+\begin_inset Quotes grd
+\end_inset
+
+ in /^(abc-(xy-z))$/
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTextHeight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Buchstaben
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Zeichen-Gruppen
+\end_layout
+
+\begin_layout Description
+
+\backslash
+c Steuerzeichen
+\end_layout
+
+\begin_layout Description
+
+\backslash
+s Leerzeichen
+\end_layout
+
+\begin_layout Description
+
+\backslash
+S kein Leerzeichen [^
+\backslash
+s]
+\end_layout
+
+\begin_layout Description
+
+\backslash
+d Zahl [0-9]
+\end_layout
+
+\begin_layout Description
+
+\backslash
+D keine Zahl [^0-9]
+\end_layout
+
+\begin_layout Description
+
+\backslash
+w Wort
+\end_layout
+
+\begin_layout Description
+
+\backslash
+W kein Wort [^
+\backslash
+w]
+\end_layout
+
+\begin_layout Description
+
+\backslash
+x hexadezimal Zahl
+\end_layout
+
+\begin_layout Description
+
+\backslash
+O oktal Zahl
+\end_layout
+
+\begin_layout Paragraph
+Spezielle
+\end_layout
+
+\begin_layout Description
+
+\backslash
+n neue Zeile
+\end_layout
+
+\begin_layout Description
+
+\backslash
+r Carriage Return
+\end_layout
+
+\begin_layout Description
+
+\backslash
+t Tabulator
+\end_layout
+
+\begin_layout Description
+
+\backslash
+v vertiakler Tabulator
+\end_layout
+
+\begin_layout Description
+
+\backslash
+f Form Feed
+\end_layout
+
+\begin_layout Description
+
+\backslash
+xxx Octal Zahl xxx
+\end_layout
+
+\begin_layout Description
+
+\backslash
+xhh Hex Zahl hh
+\end_layout
+
+\begin_layout Description
+
+\backslash
+ Escapen von Steuerzeichen
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faGroup 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Gruppen & Bereiche
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+.
+ beliebiges Zeichen außer NewLine
+\end_layout
+
+\begin_layout Description
+(a|b) a oder b
+\end_layout
+
+\begin_layout Description
+(
+\begin_inset Formula $\dots$
+\end_inset
+
+) Gruppe
+\end_layout
+
+\begin_layout Description
+[abc] Bereich (a oder b oder c)
+\end_layout
+
+\begin_layout Description
+[^abc] Nicht a oder b oder c
+\end_layout
+
+\begin_layout Description
+[a-q] Bereich von a - q
+\end_layout
+
+\begin_layout Description
+[A-Q] Bereich von A - Q
+\end_layout
+
+\begin_layout Description
+[0-7] Zahl von 0 bis 7
+\end_layout
+
+\begin_layout Description
+[a-zA-Z0-9] Groß- und Kleinbuchstaben und Ziffern von 0-9
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTachometer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Modifizierer
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+g Global
+\end_layout
+
+\begin_layout Description
+i case insensitive
+\end_layout
+
+\begin_layout Description
+m Multiline
+\end_layout
+
+\begin_layout Description
+s Singleline
+\end_layout
+
+\begin_layout Description
+e evaluate Replacement
+\end_layout
+
+\begin_layout Description
+U Ungreedy
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTerminal 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Posix
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+[:upper:] Großbuchstaben
+\end_layout
+
+\begin_layout Description
+[:lower:] Kleinbuchstaben
+\end_layout
+
+\begin_layout Description
+[:alpha:] Alle Buchstaben
+\end_layout
+
+\begin_layout Description
+[:alnum:] alphanumerisch
+\end_layout
+
+\begin_layout Description
+[:digit:] Ziffern
+\end_layout
+
+\begin_layout Description
+[:xdigit:] Hexadezimal Ziffern
+\end_layout
+
+\begin_layout Description
+[:punct:] Satzzeichen
+\end_layout
+
+\begin_layout Description
+[:blank:] Leerzeichen oder Tab
+\end_layout
+
+\begin_layout Description
+[:space:] Leerzeichen zwischen Zeichen
+\end_layout
+
+\begin_layout Description
+[:cntrl:] Steuerzeichen
+\end_layout
+
+\begin_layout Description
+[:graph:] darstellbare Zeichen
+\end_layout
+
+\begin_layout Description
+[:print:] dargestellte Zeichen und Leerzeichen
+\end_layout
+
+\begin_layout Description
+[:word:] Ziffern, Buchstaben und Underscore
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faSupport
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Häufig benötigt
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Email (Simpel),baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[A-Z0-9._%+-]+@[A-Z0-9.-]+
+\backslash
+.[A-Z]{2,4}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Datum (TT.MM.JJJJ),baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+d{1,2})
+\backslash
+.(
+\backslash
+d{1,2})
+\backslash
+.(
+\backslash
+d{4})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Web-Addresse (ganzer Pfad),baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(www
+\backslash
+.|http
+\backslash
+:
+\backslash
+/
+\backslash
+/|https
+\backslash
+:
+\backslash
+/
+\backslash
+/)
+\end_layout
+
+\begin_layout Plain Layout
+
+[a-zA-Z0-9.
+\backslash
+/
+\backslash
+?
+\backslash
+=
+\backslash
+&]*
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Hex Farbe (3 oder 6),baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Leerzeichen vorne und hinten,baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(^[
+\backslash
+s]+|[
+\backslash
+s]+$)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Alle Linebreaks,baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+r?
+\backslash
+n|
+\backslash
+r)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Mehr als 2 Spaces,baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+([ ]{2,})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Uhrzeit,baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+^(?:
+\backslash
+d|[01]
+\backslash
+d|2[0-3]):[0-5]
+\backslash
+d
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Verbatim}[fontsize=
+\backslash
+scriptsize,frame=lines,rulecolor=
+\backslash
+color{titlec},label=Telefonnummer (Simpel),baselinestretch=0.1] 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+([01][- .])?(
+\backslash
+(
+\backslash
+d{3}
+\backslash
+)|
+\backslash
+d{3})[- .]?
+\backslash
+d{3}
+\end_layout
+
+\begin_layout Plain Layout
+
+[- .]
+\backslash
+d{4}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{1
+\backslash
+linewidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faLinux
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Regex mit GREP
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+GREP unterstützt die Standard PERL Implmentierung von Regex als auch die
+ Extended Implementierung (ERE inkl.
+ POSIX, Metazeichen werden ohne 
+\backslash
+ akzeptiert.
+ Einfache Anführungszeichen nicht vergessen!
+\end_layout
+
+\begin_layout Standard
+Wird der Ausdruck nicht gefunden, erfolgt keine Ausgabe.
+ Der 
+\series bold
+Returncode
+\series default
+ $? des GREP Kommandos ist dann 
+\series bold
+1
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheck 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Syntax
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+grep [ -Optionen] regex [ dateien] 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCogs
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Optionen
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+-c (count) gibt nur die Anzahl passender Zeilen aus
+\end_layout
+
+\begin_layout Description
+-h (hide) unterdrückt die Ausgabe der Dateinamen
+\end_layout
+
+\begin_layout Description
+-i (ignore) keine Unterscheidung zwischen Groß - und Kleinschreibung
+\end_layout
+
+\begin_layout Description
+-l (list) gibt nur die Namen der Dateien aus, die passende Zeilen enthalten
+\end_layout
+
+\begin_layout Description
+-n (number) stellt jeder Ausgabezeile die Zeilennummer aus der entsprechenden
+ Eingabedatei voraus.
+\end_layout
+
+\begin_layout Description
+-o (only) gibt jeden Match in einer eigenen Zeile aus
+\end_layout
+
+\begin_layout Description
+-s (supress) unterdrückt Fehlermeldungen über nicht existierende Dateien
+\end_layout
+
+\begin_layout Description
+-v (vice versa) gibt alle Zeilen aus, die nicht zu regex passen
+\end_layout
+
+\begin_layout Description
+(-E|-P) extended regular expressions / perl regex
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTh
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Regex mit SED
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Suchbereich von SED wird anhand von Adressen und (Regex)Pattern angegeben
+ und erfolgt immer für eine bestimmte Aktion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheck 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Syntax
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed [Argumente] Pattern/Flags Eingabedatei [>> Out]
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCogs
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Argumente
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+-r Extended Regular Expressions
+\end_layout
+
+\begin_layout Description
+-e Eigentlich ist die Angabe der Option '-e' nicht zwingend notwendig.
+ Wenn diese Option weggelassen wird, dann wird das erste Argument als Script
+ und alle folgenden Argumente als Dateinamen interpretiert.
+ 
+\end_layout
+
+\begin_layout Description
+-n (implizite Filterung) (oder --quiet oder --silent) Ausgegeben wird dann
+ nur noch, was mit dem ausdrücklichen Print-Kommando (p) angegeben wird.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faFlag
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+Flags
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+g (global) Ersetze alle gefunden Textpassagen, die zu REGEX passen, mit
+ REPLACEMENT (ohne g wird immer nur die erste in einer Zeile ersetzt)
+\end_layout
+
+\begin_layout Description
+n Kann beliebige Zahl sein, ersetzt n-tes Vorkommen von REGEX mit REPLACEMENT.
+\end_layout
+
+\begin_layout Description
+p Falls eine Ersetzung durchgeführt wurde, wird die geänderte Zeile ausgegeben
+\end_layout
+
+\begin_layout Description
+i Case Insensitive
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+end{minipage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Adressen
+\end_layout
+
+\begin_layout Standard
+Den meisten Kommandos kann man eine Adresse voranstellen.
+ Eine solche Adresse bestimmt, welche Zeilen mit dem betreffenden Kommando
+ zu bearbeiten sind
+\end_layout
+
+\begin_layout Subsubsection
+sed
+\begin_inset space ~
+\end_inset
+
+-e
+\begin_inset space ~
+\end_inset
+
+'1d'
+\begin_inset space ~
+\end_inset
+
+datei.txt
+\end_layout
+
+\begin_layout Standard
+Gibt die erste Zeile von datei.txt 
+\series bold
+nicht
+\series default
+ mit aus.
+\end_layout
+
+\begin_layout Subsubsection
+sed
+\begin_inset space ~
+\end_inset
+
+-e
+\begin_inset space ~
+\end_inset
+
+'1,10d'
+\begin_inset space ~
+\end_inset
+
+datei.txt 
+\end_layout
+
+\begin_layout Standard
+Gibt die ersten 10 Zeilen von datei.txt 
+\series bold
+nicht
+\series default
+ aus.
+\end_layout
+
+\begin_layout Subsubsection
+sed
+\begin_inset space ~
+\end_inset
+
+-e
+\begin_inset space ~
+\end_inset
+
+'10~2d'
+\begin_inset space ~
+\end_inset
+
+datei.txt 
+\end_layout
+
+\begin_layout Standard
+jede zweite Zeile, ausgehend von der 10 Zeile wird 
+\series bold
+nicht
+\series default
+ ausgegeben.
+\end_layout
+
+\begin_layout Subsubsection
+sed -e '/^#.*/d' irgendwas.config
+\end_layout
+
+\begin_layout Standard
+Zeigt nur nicht auskommentierte (nicht mit # beginnende) Zeilen
+\end_layout
+
+\begin_layout Subsection*
+Beispiele
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+Zeilen löschen
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Entferne alle Leerzeilen aus einem Dokument
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed -r '/^$/d' mydocument
+\end_layout
+
+\begin_layout Paragraph
+Entferne die erste Zeile eines Dokuments bzw.
+ lösche den Zeilenbereich 7 bis 9.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed –r '1d' mydocument
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed –r '7,9d' filename.txt 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+
+\series bold
+Suchen und Ersetzen
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Entferne alle HTML-Tags aus einem HTML File
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed –r 's/<[^>]*>//g' myhtml | sed -r'/^$//d' 
+\end_layout
+
+\begin_layout Standard
+1.
+ Löschen alle HTML Tags 2.
+ Lösche alle entstandenen Leerzeilen
+\end_layout
+
+\begin_layout Paragraph
+Suche alle Zeilen, die einen Bindestrich enthalten und entferne alle Zeichen
+ nach dem Bindestrich bis zum Zeilenende
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed –r '/-/s/-.*//g' mydata
+\end_layout
+
+\begin_layout Paragraph
+Suche im Zeilenbereich 1-4 nach Linux und ersetze Linux durch LINUX
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed -r '1,4 s/Linux/LINUX/g' mydata
+\end_layout
+
+\begin_layout Paragraph
+Ersetze das 2.Vorkommen des Wortes Linux in Linux-Unix
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed –r 's/Linux/Linux-Unix/2' mydata 
+\end_layout
+
+\begin_layout Paragraph
+Ersetze alle Vorkommen des Wortes Linux in Linux-Unix
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+sed –r 's/Linux/Linux-Unix/g' mydata 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

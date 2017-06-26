@@ -34,3 +34,6 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 
 ## MAA
 - Formelzettel für Kurztest 1 und 2, adaptiert auf richtige Beispiele
+
+## BSY
+- Regex CheatSheet (+GREP / SED)
