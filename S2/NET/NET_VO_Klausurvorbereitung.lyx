@@ -1,0 +1,4823 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[breakable]{tcolorbox}
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usepackage{tikz-timing}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+\usepackage{bytefield}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+\usetikztiminglibrary{clockarrows}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{chains}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{3pt}
+\setlength{\postmulticols}{3pt}
+\setlength{\multicolsep}{3pt}
+\setlength{\columnsep}{12pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.6ex,
+  leftmargin=!, labelsep=0mm,labelwidth=12mm,
+  align=left,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,enforce breakable,height fixed for=all}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,sidebyside}
+
+\newtcolorbox{regexhint}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1}
+\raggedcolumns
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+\definecolor{olivegreen}{rgb}{0,0.6,0}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+NET VO / Klausurvorbereitung 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+, v 1.0.3 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+OSI Referenzmodell vs TCP/IP Stack
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[
+\end_layout
+
+\begin_layout Plain Layout
+
+	scale=0.75,
+\end_layout
+
+\begin_layout Plain Layout
+
+	start chain=1 going below, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	start chain=2 going right,
+\end_layout
+
+\begin_layout Plain Layout
+
+	node distance=0.5mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+	desc/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		scale=0.75,
+\end_layout
+
+\begin_layout Plain Layout
+
+		on chain=2,
+\end_layout
+
+\begin_layout Plain Layout
+
+		rectangle,
+\end_layout
+
+\begin_layout Plain Layout
+
+		rounded corners,
+\end_layout
+
+\begin_layout Plain Layout
+
+		draw=black, 
+\end_layout
+
+\begin_layout Plain Layout
+
+		very thick,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text centered,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text width=3cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		minimum height=8mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		fill=subheadlinec!30
+\end_layout
+
+\begin_layout Plain Layout
+
+		},
+\end_layout
+
+\begin_layout Plain Layout
+
+	slay/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		fill=subheadlinec!10
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	stcp/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		fill=subheadlinec!50
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	wtcp/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		fill=subheadlinec!90,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text=white
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	tcp/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		xshift=6.15cm
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	spanThree/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		minimum height=27.8mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	spanTwo/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		minimum height=17mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	level/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+		scale=0.75,
+\end_layout
+
+\begin_layout Plain Layout
+
+		on chain=1,
+\end_layout
+
+\begin_layout Plain Layout
+
+		minimum height=8.3mm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text width=1.5cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		text centered
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	every node/.style={font=
+\backslash
+sffamily}
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Levels
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 7) {Schicht 7};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 6) {Schicht 6};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 5) {Schicht 5};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 4) {Schicht 4};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 3) {Schicht 3};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 2) {Schicht 2};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [level] (Level 1) {Schicht 1};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Descriptions
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+chainin (Level 7); 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Abstract levels
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc, slay] (Application) {Anwendungsschicht};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc, slay, continue chain=going below] (Presentation) {Darstellungsschich
+t};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc, slay] (Session) {Sitzungsschicht};
+\end_layout
+
+\begin_layout Plain Layout
+
+% Concrete levels
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc] (Transport) {Transportschicht};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc] (Network) {Vermittelungsschicht};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc] (DataLink) {Sicherungsschicht};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc] (Physical) {Bitübertragungsschicht};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+chainin (Level 7); 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc,yshift=9.5mm, tcp, stcp, spanThree] (ApplicationTCPIP) {Application};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc, wtcp, continue chain=going below] (TransportTCPIP) {Transport};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc, wtcp] (InternetTCPIP) {Internet};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [desc, wtcp, spanTwo] (NetworkTCPIP) {Network Interface};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Vorteile des Schichtenmodels
+\end_layout
+
+\begin_layout Standard
+Durch Abstraktion kann jede Schicht gesondert überlegt werden
+\end_layout
+
+\begin_layout Subsubsection
+Nachteile des Schichtenmodels
+\end_layout
+
+\begin_layout Standard
+Es ensteht ein Overhead dadurch das jede Schicht einen Header anhängt
+\end_layout
+
+\begin_layout Subsubsection
+OSI Schicht 2 im Detail
+\end_layout
+
+\begin_layout Standard
+Ihre Aufgabe ist es, die Verbindungen zu verwalten.
+ Dazu gehört auch das Anfordern und Freigeben.
+ Sie fasst Folgen von Informationen zu Datenpaketen zusammen bzw.
+ löst (größere) logische Einheiten, die von einer oberen Ebene kommen, zu
+ (kleineren) Datenpaketen auf.
+ Fehler werden im Zusammenhang mit ganzen Datenpaketen betrachtet.
+ Zudem werden hier Fehler, die auf der Bitübertragungsschicht nicht feststellbar
+ sind, erkannt und zum Teil korrigiert.
+\end_layout
+
+\begin_layout Description
+Funktionen: Aufbau/Abbau von Vermittlungsabschnitten, Folgekontrolle, Fehlererke
+nnung und Behebung, Flusskontrolle, Überwachung von Schicht 1
+\end_layout
+
+\begin_layout Paragraph
+Im LAN durch IEEE spez.
+\end_layout
+
+\begin_layout Standard
+Logical Link Control (LLC) Media Access Control (MAC)
+\end_layout
+
+\begin_layout Description
+TL;DR; Prüfen - immer ganze Pakete; kleine Daten von unten (S1) zusammenhängen;
+ Große von oben (S3) zerteilen
+\end_layout
+
+\begin_layout Subsection
+TCP/IP Protokolle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+TCP/IP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+OSI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Data
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Protokolle
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Application
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Anwendungs.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Daten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+ DHCP, FTP, HTTP(S), SMTP, SSH
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Darstellungs.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Daten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+JPEG, MPEG, PICT, TIFF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Sitzungs.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Daten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+NetBIOS, NFS, PAP, SCP, SQL
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Transport
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Transport.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Segments
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+TCP, UDP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Internet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Vermittelungs.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Packets
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+IPv(4/6),ICMP, IGMP, IPSec, RIP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+NetworkI.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Sicherungss.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Frames
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+ARP, ATM, CPD, PPP, STP, Token Ring
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Bitüber.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Bits
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Ehternet, BlueTooth, 802.11 WIFI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+TCP Sendet bei Fehler erneut
+\end_layout
+
+\begin_layout Description
+UPD Ignoriert Fehler (z.b.
+ Streaming)
+\end_layout
+
+\begin_layout Section
+Übertragungstechnik 
+\end_layout
+
+\begin_layout Description
+Bitrate bits per second (bits/s or bps) Anzahl der pro Sekunde übertragenen
+ Bits.
+\end_layout
+
+\begin_layout Description
+Baudrate (Schrittweite) Anzahle der pro Sekunde übertragenen Zeichen/Symbole.
+ Wie viele Bit/s ein Baud dabei ist hängt von der Kodierung ab
+\end_layout
+
+\begin_layout Description
+Bandbreite kommt aus Audio- und Hochfrequenztechnik, in der Regel die Übertragun
+gsrate oder Datenrate gemeint ist.
+ Es gibt allerdings einen Zusammenhang zwischen der Bandbreite und der Übertragu
+ngsrate, da bei der Datenübertragung die erreichbare Übertragungsgeschwindigkeit
+ von der Bandbreite und der Codierung abhängen.
+ Wird pro Hertz ein Bit codiert, dann entspricht die Übertragungsrate in
+ Bit pro Sekunden (bit/s) dem Bandbreitenwert.
+ Bei 100 MHz wären dies 100 Mbit/s, werden zwei Bits pro Hertz codiert ergibt
+ sich ein Wert von 200 Mbit/s.
+ Dieser doppelte Wert ergibt sich, wenn in jeder Halbwelle des Sinussignals
+ ein Bit übertragen wird.
+\end_layout
+
+\begin_layout Subsection
+Übertragungsmedien 
+\end_layout
+
+\begin_layout Subsubsection
+Zweidrahtleitung 
+\end_layout
+
+\begin_layout Standard
+Sie besteht aus zwei isolierten Kupferleitungen, die in der Regel verdrillt
+ sind (twisted pair).
+ Das Verdrillen mindert Einstreuungen durch benachbarte Leitungen.
+ Oft sind mehrere Paare gemeinsam mit einer – ev.
+ geschirmten – Ummantelung versehen.
+\end_layout
+
+\begin_layout Subsubsection
+Koaxialkabel 
+\end_layout
+
+\begin_layout Standard
+Bei Basisbandübertragung sind Übertragungsraten von 10MBit/s üblich.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Lichtwellenleiter 
+\end_layout
+
+\begin_layout Standard
+Lichtwellenleiter können Daten in Form von Lichtimpulsen übertragen.
+ Ihre Bandbreite ist aufgrund der hohen Frequenz des Lichtes enorm hoch.
+ Das Einspeisen in den Lichtwellenleiter erfolgt durch eine LED (light emitting
+ diode) oder eine Laserdiode.
+ Beide senden Licht aus, wenn sie von elektrischem Strom durchflossen werden.
+ Der Empfänger besitzt für die Rückwandlung eine Photodiode.
+\end_layout
+
+\begin_layout Subsubsection
+Terrestrischer Funk
+\end_layout
+
+\begin_layout Standard
+Eingesetzt wird dies als Richtfunk in unwegsamen, dünn besiedelten Gebieten
+ oder über sehr weite Entfernungen, wenn eine konventionelle Verkabelung
+ technisch nicht rentabel ist.
+ Da zwischen Sender und Empfänger eine Sichtverbindung herrschen muss, sind
+ die Einsatzmöglichkeiten beschränkt.
+ Seit einigen Jahren ist ungerichteter Funk im lokalen Bereich unter dem
+ Begriff Wireless LAN populär, derzeit sind damit bis zu 54 Mbps im Umkreis
+ von ca.
+ 100 m einer Basisstation (Access Point) möglich
+\end_layout
+
+\begin_layout Subsubsection
+Satelliten
+\end_layout
+
+\begin_layout Standard
+Kommunikationssatelliten eignen sich für interkontinentale Verbindungen
+ und für Rundsendesysteme bei denen viele Empfänger die gleiche Nachricht
+ erhalten.
+ Wegen der großen Entfernung unterliegen die Signale z.
+ B.
+ bei geostationären Satelliten einer Verzögerung von ca.
+ 1/5 s.
+ Für das Übertragen von Daten stehen Bandbreiten bis zu ca.
+ 50 Mbit/s zur Verfügung
+\end_layout
+
+\begin_layout Subsection
+Codierung 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{NRZ-Code (non return to zero)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikztimingtable}[scale=2,timing/.cd,
+\end_layout
+
+\begin_layout Plain Layout
+
+        c/dual arrows,c/arrow tip=latex,
+\end_layout
+
+\begin_layout Plain Layout
+
+        c/arrow pos=.7,
+\end_layout
+
+\begin_layout Plain Layout
+
+        metachar={v}{[timing/c/no arrows]c[timing/c/dual arrows]},
+\end_layout
+
+\begin_layout Plain Layout
+
+        slope=0]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+shortstack[l]{NRZ-Codierung:} 
+\end_layout
+
+\begin_layout Plain Layout
+
+      &H L H H L L H L
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+extracode
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+begin{pgfonlayer}{background}
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\backslash
+vertlines[help lines,brown]{}
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\backslash
+foreach [count=
+\backslash
+x] 
+\backslash
+b in {1,0,1,1,0,0,1,0} {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node [below,font=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+tiny,inner ysep=2pt] at (
+\backslash
+x-.5,0) {
+\backslash
+b};
+\end_layout
+
+\begin_layout Plain Layout
+
+       }
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+end{pgfonlayer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikztimingtable}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Eigenscahften}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ hoher Gleichspannungsanteil
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ keine Taktrückgewinnung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+NRZ-Mark-Codierung bewirkt eine 1 einen Wechsel des Pegels am Beginn der
+ Bitzeit, bei 0 erfolgt keine Pegeländerung.
+ Sie hat die gleichen Nachteile wie die beiden vorhergehenden Codes, zudem
+ muss hier zwischen Sender und Empfänger eine Absprache über den Anfangszustand
+ existieren
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{RZ-Code (return to zero)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikztimingtable}[scale=2,timing/.cd,
+\end_layout
+
+\begin_layout Plain Layout
+
+        c/no arrows,c/arrow tip=latex,
+\end_layout
+
+\begin_layout Plain Layout
+
+        c/arrow pos=.7,
+\end_layout
+
+\begin_layout Plain Layout
+
+        metachar={v}{[timing/c/no arrows]c[timing/c/no arrows]},
+\end_layout
+
+\begin_layout Plain Layout
+
+        slope=0]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+shortstack[l]{RZ-Codierung:} 
+\end_layout
+
+\begin_layout Plain Layout
+
+      &h c L c c c c L L c c L
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+extracode
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+begin{pgfonlayer}{background}
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\backslash
+vertlines[help lines,brown]{}
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\backslash
+foreach [count=
+\backslash
+x] 
+\backslash
+b in {1,0,1,1,0,0,1,0} {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node [below,font=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+tiny,inner ysep=2pt] at (
+\backslash
+x-.5,0) {
+\backslash
+b};
+\end_layout
+
+\begin_layout Plain Layout
+
+       }
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+end{pgfonlayer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikztimingtable}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Eigenscahften}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ hoher Gleichspannungsanteil
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ keine Taktrückgewinnung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{Manchester}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikztimingtable}[scale=2,timing/.cd,
+\end_layout
+
+\begin_layout Plain Layout
+
+        c/dual arrows,c/arrow tip=latex,
+\end_layout
+
+\begin_layout Plain Layout
+
+        c/arrow pos=.7,
+\end_layout
+
+\begin_layout Plain Layout
+
+        metachar={v}{[timing/c/no arrows]c[timing/c/dual arrows]},
+\end_layout
+
+\begin_layout Plain Layout
+
+        slope=0]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+shortstack[l]{Manchester-Codierung:
+\backslash
+
+\backslash
+(bi-phase)} 
+\end_layout
+
+\begin_layout Plain Layout
+
+      &h 0c0h0l 0c CCcvCcvCCc 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+extracode
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+begin{pgfonlayer}{background}
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\backslash
+vertlines[help lines,brown]{}
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\backslash
+foreach [count=
+\backslash
+x] 
+\backslash
+b in {1,0,1,1,0,0,1,0} {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node [below,font=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+tiny,inner ysep=2pt] at (
+\backslash
+x-.5,0) {
+\backslash
+b};
+\end_layout
+
+\begin_layout Plain Layout
+
+       }
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+end{pgfonlayer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikztimingtable}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Eigenscahften}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ quasi kein Gleichspannungsanteil
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Taktrückgewinnung (Flanke immer zur Bitmitte)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Einsatzgebiete
+\end_layout
+
+\begin_layout Description
+Manchester Ethernet
+\end_layout
+
+\begin_layout Description
+NRZI 
+\series bold
+(non return to zero inverted)
+\series default
+ Glasfaser, im Endeffekt verdrehtes NRZ
+\end_layout
+
+\begin_layout Subsubsection
+4B/5B Code
+\end_layout
+
+\begin_layout Standard
+Die 4B/5B-Codierung wird in Hochgeschwindigkeitsnetzen benutzt.
+ Bei dieser Leitungscodierung werden alle Daten in 4-Bit-Einheiten, einem
+ Nibble oder Quadbit, unterteilt und nach einer Tabelle in 5-Bit-Einheiten
+ (Symbole) umcodiert.
+ Daher auch die Bezeichnung 
+\begin_inset Quotes gld
+\end_inset
+
+4 Bit Nibble to 5 Bit Symbol
+\begin_inset Quotes grd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Diese Codiertabelle ist so aufgebaut, dass unabhängig von den Eingangsdaten
+ nie Symbole mit mehr als drei Nullen in Folge auftreten.
+ Der Vorteil dieser Codierung liegt darin, dass man Non Return to Zero Inverted
+ (NRZ-I) nutzen kann, ohne dass bei langen Null-Sequenzen die Synchronisation
+ verloren geht.
+ Nachteilig ist der 25%ige Overhead, der durch die Umsetzung von 4-Bit-
+ auf 5-Bit-Einheiten entsteht.
+ Von den 32 verschiedenen Zeichen, die mit dem 4B/5B-Code erzeugt werden,
+ werden 16 zur Nutzdatenübertragung benötigt, die restlichen 16 für Steuerzwecke.
+\begin_inset Newline newline
+\end_inset
+
+Manchester-Codierung kann aus wirtschaftlichen Gründen in Hochgeschwindigkeits-L
+ANs nicht verwendet werden, da sie bei jedem übertragenen Bit zweimal den
+ Status wechselt und damit die doppelte Bandbreite belegt.
+\end_layout
+
+\begin_layout Description
+TL;DR; 4 Bits in in Quadbit mit einem Bit mehr kodiert, keine 3 Nullen hinteinan
+der möglich.
+ NRZ-I möglich ohne Synchro.
+ zu verlieren.
+\end_layout
+
+\begin_layout Subsubsection
+Bitstuffing
+\end_layout
+
+\begin_layout Standard
+Bit-Stuffing oder Bitstopfen nennt man das Einfügen von informationslosen
+ Binärelementen in bitorientierten Protokollen zur Unterbrechung langer
+ Null- oder Einser-Bitfolgen.
+\begin_inset Newline newline
+\end_inset
+
+Durch das Einfügen von informationslosen Binärzeichen, den Füll-Bits, werden
+ Fehlinterpretationen von langen gleichbleibenden Bitfolgen vermieden.
+ Das Bitstopfen erfolgt auf der Sicherungsschicht; die eingefügten Bits
+ werden senderseitig berücksichtigt und empfangsseitig erkannt oder entfernt.
+ Das Bit-Stuffing dient der Vermeidung von Signalmustern, die im Datenfeld
+ eines Frames als Steuerzeichen interpretiert werden können.
+\end_layout
+
+\begin_layout Subsection
+Modulation 
+\end_layout
+
+\begin_layout Description
+TL;DR; Notwendig um über größere Distanz zu übertragen
+\end_layout
+
+\begin_layout Standard
+Bei der Übertragung per (analoger) Telefonleitung oder per Funk werden die
+ Binärwerte einem höherfrequenten Signal (Sinusträger) aufmoduliert.
+ Dazu ist ein 
+\series bold
+Modem
+\series default
+ (
+\series bold
+Modulator-Demodulator
+\series default
+) notwendig.
+ Im einfachsten Fall verwandelt ein Modem den seriellen Bitstrom beispielsweise
+ in Töne unterschiedlicher Höhe, für die "0" einen tieferen Ton und für
+ die "1" einen höheren Ton.
+ Wenn eine Station nur in jeweils einer Richtung sendet und die Gegenstelle
+ während dieser Zeit in Ruhe verbleibt, kann man die maximale Bitrate verwenden
+ (Halbduplex-Betrieb).
+ Wenn aber beide Stationen gleichzeitig senden und empfangen wollen (Vollduplex-
+Betrieb), sinkt die Datenrate.
+ Damit die Daten über die Leitung kommen, müssen sie auf ein Trägersignal
+ moduliert werde.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+		width=7.9cm, height=3cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xtick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xlabel={
+\backslash
+scriptsize $t$},
+\end_layout
+
+\begin_layout Plain Layout
+
+		ylabel={
+\backslash
+scriptsize $x(t)$},
+\end_layout
+
+\begin_layout Plain Layout
+
+		xmin=0, xmax=11,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ymin=-3, ymax=5,
+\end_layout
+
+\begin_layout Plain Layout
+
+		axis lines = middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+		thick,
+\end_layout
+
+\begin_layout Plain Layout
+
+		trig format = rad
+\end_layout
+
+\begin_layout Plain Layout
+
+	]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addplot [samples=1000, domain=0:10,no markers, smooth, thick] {2*sin(2*pi*0.25*x)
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+		at={(0, -1.5cm)},
+\end_layout
+
+\begin_layout Plain Layout
+
+		width=7.9cm, height=3cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xtick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xlabel={
+\backslash
+scriptsize $t$},
+\end_layout
+
+\begin_layout Plain Layout
+
+		ylabel={
+\backslash
+scriptsize 
+\backslash
+textcolor{blue}{Träger}},
+\end_layout
+
+\begin_layout Plain Layout
+
+		xmin=0, xmax=11,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ymin=-3, ymax=5,
+\end_layout
+
+\begin_layout Plain Layout
+
+		axis lines = middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+		thick,
+\end_layout
+
+\begin_layout Plain Layout
+
+		trig format = rad
+\end_layout
+
+\begin_layout Plain Layout
+
+	]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addplot [samples=1000, domain=0:10,no markers, smooth, blue, very thick]
+ {2*sin(6*pi*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+		at={(0, -3cm)},
+\end_layout
+
+\begin_layout Plain Layout
+
+		width=7.9cm, height=3cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xtick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xlabel={
+\backslash
+scriptsize $t$},
+\end_layout
+
+\begin_layout Plain Layout
+
+		ylabel={
+\backslash
+scriptsize 
+\backslash
+textcolor{titlec}{Frequenz Mod.}},
+\end_layout
+
+\begin_layout Plain Layout
+
+		xmin=0, xmax=11,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ymin=-3, ymax=5,
+\end_layout
+
+\begin_layout Plain Layout
+
+		axis lines = middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+		thick,
+\end_layout
+
+\begin_layout Plain Layout
+
+		trig format = rad
+\end_layout
+
+\begin_layout Plain Layout
+
+	]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addplot expression [samples=1000, domain=0:10,no markers, smooth, titlec,
+ very thick] {2*sin(2*pi*3*x - 8*cos(2*pi*0.25*x))};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+		at={(0, -4.5cm)},
+\end_layout
+
+\begin_layout Plain Layout
+
+		width=7.9cm, height=3cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xtick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+		xlabel={
+\backslash
+scriptsize $t$},
+\end_layout
+
+\begin_layout Plain Layout
+
+		ylabel={
+\backslash
+textcolor{red}{Amplituden Mod.}},
+\end_layout
+
+\begin_layout Plain Layout
+
+		xmin=0, xmax=11*pi,
+\end_layout
+
+\begin_layout Plain Layout
+
+		ymin=-10, ymax=17,
+\end_layout
+
+\begin_layout Plain Layout
+
+		axis lines = middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+		thick,
+\end_layout
+
+\begin_layout Plain Layout
+
+		trig format = rad
+\end_layout
+
+\begin_layout Plain Layout
+
+	]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addplot [domain=0:10*pi,samples=1000,no markers, smooth, red, very thick]
+ {(2.5 + 2*sin(0.5*x)) * 2*sin(6*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Frequenzmodulation
+\end_layout
+
+\begin_layout Standard
+Bei der Frequenzmodulation wird die Frequenz (Tonhöhe) bei einem Signal
+ bei konstanter Amplitude verändert (FSK=Frequency Shift Keying, Frequenzumtastu
+ng).
+ Den Wertigkeiten "1" und "0" werden zwei verschiedene Frequenzen zugeordnet.
+ Zum Duplexbetrieb werden unterschiedliche Träger-Frequenzen für den Hinweg
+ (Originate) und Rückweg (Answer) verwendet.
+ Eine Unterbrechung (Ausfall des Trägers) ist erkennbar.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Amplitudenmodulation
+\end_layout
+
+\begin_layout Standard
+Bei der Amplitudenmodulation (ASK=Amplitude Shift Keying, Amplitudentastung)
+ wird die Amplitude (Signalspannung) des Signals verändert, das eine konstante
+ Frequenz besitzt.
+ Im einfachsten Fall erfolgt dies durch Ein- und Austasten des Trägers.
+ Die Grundfrequenz des Trägers ist wesentlich höher, als die Anzahl der
+ Austastvorgänge.
+ Es ist das einfachste Verfahren, aber Unterbrechung und Nullbits sind voneinand
+er nicht unterscheidbar.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+PSK / QAM
+\end_layout
+
+\begin_layout Subsubsection
+PSK=Phase Shift Keying, Phasenumtastung
+\end_layout
+
+\begin_layout Standard
+Bei der Phasenmodulation (PSK=Phase Shift Keying, Phasenumtastung) hat das
+ Signal eine konstante Frequenz.
+ Es werden hier Phasensprünge in die Sinusschwingung "eingebaut".
+ Stellen Sie sich eine Sinusschwingung vor.
+ Ein Phasensprung führt dann zu einer bestimmten Amplitude, die vom Phasenwinkel
+ abhängt, d.
+ h.
+ die Sinuswelle wird in ihrem Schwingungsanfang um den entsprechenden Phasenwink
+el verändert.
+ Mit PSK sind hohe Übertragungsraten erreichbar, aber es wenden auch hohe
+ Anforderungen an die Hardware gestellt.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Quadratur-Amplituden-Modulation
+\end_layout
+
+\begin_layout Standard
+QAM = PSK + Amplitudenmodulation
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxys}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.25}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (-4,0) -- (4,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (0,-4) -- (0,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+foreach 
+\backslash
+x in {-3,-2,...,3}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (
+\backslash
+x,-0.20) -- (
+\backslash
+x,0.20);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+foreach 
+\backslash
+y in {-3,-2,...,3}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (-0.20,
+\backslash
+y) -- (0.20,
+\backslash
+y);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+foreach 
+\backslash
+x in {-3,-1,1,3}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+foreach 
+\backslash
+y in {-3,-1,1,3}
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+filldraw (
+\backslash
+x,
+\backslash
+y) circle (2pt);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}(HSLAN)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof{figure}{16-QAM}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcblower
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.25}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (-4,0) -- (4,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (0,-4) -- (0,4);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+foreach 
+\backslash
+x in {-3,3}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (
+\backslash
+x,-0.20) -- (
+\backslash
+x,0.20);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+foreach 
+\backslash
+y in {-3,3}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (-0.20,
+\backslash
+y) -- (0.20,
+\backslash
+y);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+foreach 
+\backslash
+x/
+\backslash
+y in {3/0,2.12/2.12,0/3,-2.12/2.12,-3/0,-2.12/-2.12,0/-3,2.12/-2.12}
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+filldraw (
+\backslash
+x,
+\backslash
+y) circle (2pt);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof{figure}{8-PSK}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxys}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Betriebsarten
+\end_layout
+
+\begin_layout Subsubsection
+Richtung der Übertragung
+\end_layout
+
+\begin_layout Description
+Simplex eine Richtung, z.B.
+ Radio Fersehen.
+\end_layout
+
+\begin_layout Description
+Halbduplex beide Richtungen, Sender immer laut Protokoll.
+\end_layout
+
+\begin_layout Description
+Vollduplex Beide können gleichzeitig senden.
+ Auf Schicht 1 gertrennte Adern für beide Richtungen notwendig.
+\end_layout
+
+\begin_layout Subsubsection
+Parallele vs.
+ Serielle
+\end_layout
+
+\begin_layout Description
+parallel mehrere Bits (meistens ein Byte) werden gleichzeitig auf verschiedenen
+ Adern übertragen
+\end_layout
+
+\begin_layout Description
+seriell einzelne Bits eines Bytes werden hinteinander übertragen, meits
+ niedrigste zu höchster Wertigkeit
+\end_layout
+
+\begin_layout Subsubsection
+Synchronisation
+\end_layout
+
+\begin_layout Standard
+Anpassen dees Taktes des Senders auf den des Empfängers.
+ 
+\end_layout
+
+\begin_layout Description
+asnychrone
+\begin_inset space ~
+\end_inset
+
+Übertragung 
+\end_layout
+
+\begin_layout Standard
+Bei der asynchronen Übertragung erfolgt das Abstimmen des Empfangstaktes
+ zum Beginn jedes einzelnen Bytes.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Der Name asynchrone Übertragung ist etwas irreführend, er bezieht sich auf
+ die beliebig lange Pause zwischen einzelnen Bytes.
+ Dieses Verfahren stellt zwar keine allzu großen Anforderungen an die Schaltungs
+technik, hat aber den Nachteil, dass die Synchronisation sehr häufig erfolgen
+ muss.
+ Der Aufwand in Form von zusätzlichen Start- und Stopp-Bits macht diese
+ Übertragung ineffizient.
+\end_layout
+
+\begin_layout Description
+synchrone
+\begin_inset space ~
+\end_inset
+
+Übertragung 
+\end_layout
+
+\begin_layout Standard
+gewährleistet die Synchronität zwischen Sender und Empfänger über einen
+ längeren Zeitraum.
+ Dies wird durch einen Code, der sich zur Taktrückgewinnung eignet, erreicht.
+ Mehrere Bytes werden zu einem Übertragungsblock zusammengefasst und ohne
+ Pause übertragen.
+ Zur besseren Synchronisation des Empfängers stellt der Sender dem Übertragungsb
+lock meist noch einen Vorspann genau definierter Länge mit einem speziellen
+ Bitmuster voran.
+ Der Empfänger verwendet diesen Vorspann zur Feinabstimmung seines Taktgenerator
+s.
+ 
+\end_layout
+
+\begin_layout Subsection
+Übertragung und Vermittlung 
+\end_layout
+
+\begin_layout Subsubsection
+Frequenz- und Zeitmultiplexverfahren
+\end_layout
+
+\begin_layout Description
+Frequenzmultiplexverfahren (frequency division multiplexing, FDM) teilt
+ das Frequenzsprektrum der Leitung unter den einzelnen logischen Kanälen
+ auf.
+ Damit erhält jeder Benutzer exklusiv ein eigenes Frequenzband.
+\end_layout
+
+\begin_layout Description
+Zeitmultiplexverfahren (time division multiplexing, TDM) es wechseln sich
+ die Benutzer der Reihe nach ab.
+ Jeder erhält für eine kurze Zeitdauer die ganze Bandbreite der Leitung.
+\end_layout
+
+\begin_layout Standard
+Der Datenverkehr zwischen Rechnern stellt jedoch andere Anforderungen: Hier
+ muss das Netzwerk kurzfristig eine hohe Datenmenge übertragen, andererseits
+ treten aber auch Phasen ohne Datenverkehr, also längere Pausen, auf.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Leitungsvermittlung
+\end_layout
+
+\begin_layout Standard
+End-to-End exklusiv.
+ Die Leitungsvermittlung entspricht weitgehend der Sprachübertragung im
+ Telefonnetz.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Paketvermittlung
+\end_layout
+
+\begin_layout Standard
+Bei der Paket- od.
+ Speichervermittlung wird keine direkte Verbindung zwischen den Endteilnehmern
+ aufgebaut.
+ Der Sender übermittelt die Nachricht in Form von Paketen – bei Paketvermittlung
+ hat das Paket eine feste Länge – an den ersten Vermittlungsknoten.
+ Dieser speichert das Paket und reicht es über weitere Vermittlungsrechner
+ in Richtung Empfänger weiter.
+ Die den Endteilnehmern zur Verfügung gestellte Bandbreite kann so dynamisch
+ aufgeteilt werden.
+ Allerdings kann bei der Paketvermittlung eine Überlastung der Vermittlungsrechn
+er entstehen.
+ Die Abrechnung orientiert sich in der Regel an der übertragenen Datenmenge,
+ während die Gebühren bei der Leitungsvermittlung von der Zeit abhängen.
+\end_layout
+
+\begin_layout Section
+Pakete, Frames und Prüfsummen
+\end_layout
+
+\begin_layout Description
+Frame definiert Paket für bestimmtes Netzwerk (minimale, maximale Länge,
+ Format)
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel
+\begin_inset space ~
+\end_inset
+
+Ethernetframe 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{bytefield}[boxformatting={
+\backslash
+centering
+\backslash
+itshape},
+\end_layout
+
+\begin_layout Plain Layout
+
+bitwidth=0.251em,
+\end_layout
+
+\begin_layout Plain Layout
+
+endianness=little]{128}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bitbox{56}{
+\backslash
+tiny Preamble} & 
+\backslash
+bitbox{8}{
+\backslash
+tiny SFD} & 
+\backslash
+bitbox{6}{
+\backslash
+tiny MAC Dest.}
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+bitbox{6}{
+\backslash
+tiny MAC Src.} &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bitbox{2}{
+\backslash
+tiny F L} &  
+\backslash
+bitbox{46}{
+\backslash
+tiny Payload}
+\end_layout
+
+\begin_layout Plain Layout
+
+&  
+\backslash
+bitbox{4}{
+\backslash
+tiny CRC}
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{bytefield}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+*SFD: Sync.
+ Frame Delimiter, F L: Frame Length
+\end_layout
+
+\begin_layout Subsection
+Packet Switching 
+\end_layout
+
+\begin_layout Itemize
+Für Fairness 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Daten in kleine Einheiten unterteilen (Packets)
+\end_layout
+
+\begin_layout Itemize
+Weitergabe des Senderechts nach jedem Paket möglich
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Art des Zeitmultiple
+\end_layout
+
+\begin_layout Subsection
+Fehlererkennung 
+\end_layout
+
+\begin_layout Description
+Parity
+\begin_inset space ~
+\end_inset
+
+Bit: Ein Byte wird mit einem zusätzlichen Parity Bit versehen.
+ Es kann sich dabei um gerade (Quersumme ist 0) oder ungerade (Quersumme
+ ist 1) Parität handeln.
+ Dieses Verfahren ist unsicher, es kann lediglich einen Fehler eines einzigen
+ Bit erkennen, zusätzlich hat es auch einen hohen Overhead.
+ Es wird z.
+ B.
+ bei RS-232 verwendet
+\end_layout
+
+\begin_layout Description
+Prüfsumme: Über ein ganzes Paket wird eine Prüfsumme über die einzelnen
+ Bytes oder Worte gebildet und im Trailer platziert.
+ Die Prüfsumme entsteht z.
+ B.
+ durch die aritmetische Summe oder durch XOR-Verknüpfung.
+ Der Overhead ist wesentlich besser als bei einem Parity Bit, besonders
+ bei großen Paketlängen.
+ Allerdings ist die Sicherheit nicht besonders gut.
+\end_layout
+
+\begin_layout Description
+CRC: Cyclic Redundancy Check, Hier wird wieder aus dem ganzen Paket eine
+ Art Prüfsumme erzeugt und im Trailer verschickt.
+ Allerdings ist der Algorithmus komplizierter, er basiert auf der Division
+ von Polynomen.
+ Dabei werden die einzelnen Bit des Datenblocks als Koeffizienten eines
+ Polynoms aufgefasst und die CRC so gebildet, dass das durch Konkatenation
+ von Datenblock und Prüfsumme entstehende Polynom durch ein vorab spezifiziertes
+ Polynom G teilbar ist.
+ In der Praxis erfolgt diese Berechnung sehr effizient in Hardware mittels
+ Schieberegister und XOR-Gatter.
+ Bei geeigneter Wahl von G ist dieses Verfahren sehr sicher
+\end_layout
+
+\begin_layout Section
+Lokale Netze
+\end_layout
+
+\begin_layout Subsection
+Klassifizierung nach Ausdehnung der Netze 
+\end_layout
+
+\begin_layout Description
+LAN - Local Area Network
+\end_layout
+
+\begin_layout Itemize
+ein einziger Eigentümer
+\end_layout
+
+\begin_layout Itemize
+einfache, nicht redundante Topologie
+\end_layout
+
+\begin_layout Itemize
+homogene Ausstattung
+\end_layout
+
+\begin_layout Description
+MAN - Metropoletan Area Network
+\end_layout
+
+\begin_layout Description
+WAN - Wide Area Network
+\end_layout
+
+\begin_layout Itemize
+weltumspannendes Netz – das Internet
+\end_layout
+
+\begin_layout Itemize
+mehrere Eigentümer
+\end_layout
+
+\begin_layout Itemize
+redundante (und sich ändernde) Topologie
+\end_layout
+
+\begin_layout Itemize
+heterogene Ausstattung
+\end_layout
+
+\begin_layout Subsection
+Identifizierung von Stationen = Adressierung
+\end_layout
+
+\begin_layout Standard
+Adressen notwendig, da alle Stationen (am Shared Medium) Frame hören
+\end_layout
+
+\begin_layout Subsection
+Adressen in Ethernet
+\end_layout
+
+\begin_layout Standard
+MAC Adressen, standardiesiert, 6 Bytes.
+\end_layout
+
+\begin_layout Subsection
+Arten von (Ziel-)Adressen
+\end_layout
+
+\begin_layout Description
+unicast eine bestimmte Station
+\end_layout
+
+\begin_layout Description
+broadcast alle Stationen im Netzwerk
+\end_layout
+
+\begin_layout Description
+multicast Teilmenge der Stationen im Netzwerk
+\end_layout
+
+\begin_layout Standard
+Empfänger akzeptiert immer Frames an Unicast und Broadcast.
+\end_layout
+
+\begin_layout Subsection
+Topologien 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+ab{.4}   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzset{
+\end_layout
+
+\begin_layout Plain Layout
+
+    net node/.style = {circle, minimum width=1*
+\backslash
+ab cm, inner sep=0pt, outer sep=0pt,fill=subheadlinec},
+\end_layout
+
+\begin_layout Plain Layout
+
+      net connect/.style = {line width=1pt, draw=black},
+\end_layout
+
+\begin_layout Plain Layout
+
+    net thick connect/.style = {net connect, line width=2pt},
+\end_layout
+
+\begin_layout Plain Layout
+
+	net root node/.style = {net node, minimum width=1*
+\backslash
+ab cm, minimum height=1*
+\backslash
+ab cm,rectangle},
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Bus
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance=0.5mm]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [net thick connect]
+\end_layout
+
+\begin_layout Plain Layout
+
+          (0,0) -- (6,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+foreach 
+\backslash
+i/
+\backslash
+j in {2/-0.5,4/-0.5,1/0.5,3/0.5,5/0.5}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+path [net connect] (
+\backslash
+i,0) -- (
+\backslash
+i,
+\backslash
+j) node [net node] {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof{figure}{Bus-Topologie}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{Bus}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Leitung von allen Hosts benutzt, Broadcasts einfach zu realisieren Enden
+ vom Bus müssen terminiert werden um Reflexionen zu vermeiden,
+\series bold
+ ursprüngliche Topologie von Ethernet 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Verkablungsaufwand}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ geringer Verkabelungsaufwand 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Ausfallsicherheit}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleDown
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ mittlere Ausfallssicherheit
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Ausbreitung von Signalen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+nur maximal ein Teilnehmer sendet gleichzeitig
+\end_layout
+
+\begin_layout Itemize
+Signal breitet sich über ganzes Kabel aus
+\end_layout
+
+\begin_layout Itemize
+alle Teilnehmer hören Nachricht
+\end_layout
+
+\begin_layout Itemize
+Zugriffsverfahren bei Ethernet: 
+\series bold
+CSMA/CD
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Stern
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (root) [net root node] {};
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+foreach 
+\backslash
+i in {0,...,4}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+path [net connect] (root) -- (-90+
+\backslash
+i*72:1) node [net node] {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof{figure}{Stern-Topologie}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{Stern}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+explizit genutzte Verbindungen vom Hub zu jedem Host (nur Individual-Traffic)
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+gängige Topologie in LANs
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Verkablungsaufwand}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ hoher Verkabelungsaufwand
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Ausfallsicherheit}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ gute Ausfallssicherheit (außer Hub)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ring
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+foreach 
+\backslash
+i in {0,...,4}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+path (-90+
+\backslash
+i*72:1) node (n
+\backslash
+i) [net node] {};
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+path [net connect] (n0) -- (n1) -- (n2) -- (n3) -- (n4) -- (n0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof{figure}{Ring-Topologie}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{Ring}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sender eines Host mit Empfänger des nächsten Host verbunden (Stille Post)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Verkablungsaufwand}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleDown
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ mittlerer Verkabelungsaufwand
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Ausfallsicherheit}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ geringe Ausfallssicherheit 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Eigenschaften}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Frames wandern in eine Richtung, nicht adressierte Stationen leiten Frames
+ unverändert weiter, mehrere Technologien
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Token Ring - Token Passing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Token: spezieller Frame, Symbol für das Recht zum Senden sehr kurz, nur
+ wenige Bits
+\end_layout
+
+\begin_layout Paragraph
+Ablauf
+\end_layout
+
+\begin_layout Itemize
+wartet auf Erhalt des Token 
+\end_layout
+
+\begin_layout Itemize
+überträgt dann einen Daten-Frame im Ring, Frame geht um den ganzen Ring,
+ Empfänger kann einfach bestätigen, Sender liest seinen eigenen Frame (inkl.
+ Bestätigung)
+\end_layout
+
+\begin_layout Itemize
+gibt anschließend Token an nächste Station weiter
+\end_layout
+
+\begin_layout Standard
+falls keine Station senden will zirkuliert der Token einfach.
+ Durch 
+\series bold
+Verteiler
+\series default
+ morphed die Topologie zu einem 
+\series bold
+starshaped Ring
+\series default
+!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Vermascht
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+foreach 
+\backslash
+i in {0,...,4}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+path (-90+
+\backslash
+i*72:1) node (n
+\backslash
+i) [net node] {};
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+foreach 
+\backslash
+i in {0,...,4}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+foreach 
+\backslash
+j in {0,...,4}
+\end_layout
+
+\begin_layout Plain Layout
+
+          
+\backslash
+path [net connect]
+\end_layout
+
+\begin_layout Plain Layout
+
+            (n
+\backslash
+i) -- (n
+\backslash
+j);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof{figure}{(Voll)-Vermascht-Topologie}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{Vollvermascht}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+nur hypotetisch, jeder ist mit jedem verbunden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Verkablungsaufwand}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\begin_inset Formula $\frac{n(n-1)}{2}$
+\end_inset
+
+ Verbindungen bei n Knoten!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Ausfallsicherheit}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series bold
+sehr
+\series default
+ hohe Ausfallssicherheit
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+foreach 
+\backslash
+i in {0,...,4}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+path (-90+
+\backslash
+i*72:1) node (n
+\backslash
+i) [net node] {};
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+path [net connect] (n0) -- (n1) -- (n2) -- (n3) -- (n4) -- (n0) -- (n3)
+ -- (n1);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path [net connect] (n0) -- (n2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof{figure}{(Teil)-Vermascht-Topologie}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{Teilvermascht}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+redundante Pfade zu einigen Hosts, typisch fur Wide Area Networks, 
+\series bold
+Topologie des Internet
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Verkablungsaufwand}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleDown
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Hoch
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{Ausfallsicherheit}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ hohe Ausfallssicherheit
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Kopplung von Netzen
+\end_layout
+
+\begin_layout Standard
+Werden mehrere Netzwerksegmente miteinander verbunden, so erfolgt die Kopplung
+ meist durch aktive Komponenten.
+ In der OSI-Terminologie heißt ein Gerät, welches nicht direkt verbundene
+ Systeme verbindet, ein Relais (relay).
+ Ein wesentliches Unterscheidungsmerkmal ist dabei die Schicht im Referenzmodell
+, in der die Kopplung realisiert ist:
+\end_layout
+
+\begin_layout Description
+Repeater verbindet zwei LAN-Segmente, leitet Signale verstärkt weiter, überträgt
+ auch Rauschen und Kollisionen
+\end_layout
+
+\begin_layout Description
+Bridge: verbindet (ähnlich Repeater) zwei LAN-Segmente, kennt Struktur der
+ Frames, benutzt Adressen, blockt Rauschen und Kollisionen ab, Parallelisierbar
+\end_layout
+
+\begin_layout Description
+Switch Zentrale bei physikalischer Stern-Topologie, quasi Bündel von Bridges
+\end_layout
+
+\begin_layout Description
+Router werden eingesetzt um LANs untereinander bzw.
+ auch an ein WAN zu koppeln.
+ Sie arbeiten auf der Schicht 3.
+ Ihnen muss die Topologie des Netzwerkes bekannt sein.
+ Zu ihren Aufgaben zählen das Bestimmen geeigneter Wege, die Flusskontrolle,
+ das Vermeiden von Zyklen, etc.
+ 
+\end_layout
+
+\begin_layout Description
+Gateway: Gateways verbinden Netze, deren Protokolle sich bereits in den
+ Anwendungsschichten unterscheiden.
+ Hier muss die Kopplung über das Anwendungsprogramm erfolgen.
+ 
+\end_layout
+
+\begin_layout Subsection
+Zugriffsverfahren 
+\end_layout
+
+\begin_layout Standard
+Aus Sicht des OSI-Modells ist die Zugriffskontrolle (Media Access Control,
+ MAC) der Schicht 2 (Data Link) zuzuordnen.
+ Sie bildet den unteren Teil dieser Schicht und regelt den Zugriff auf das
+ Übertragungsmedium.
+ Über der MAC-Teilschicht befindet sich die logische Verbindungskontrolle
+ (Logical Link Control, LLC), welche für die korrekte Übertragung zwischen
+ zwei Stationen zuständig ist und – weitestgehend unabhängig vom Zugriffsverfahr
+en – das Frame-Format festlegt
+\end_layout
+
+\begin_layout Description
+Zuteilungsstrategien 
+\begin_inset space ~
+\end_inset
+
+vergeben das Recht zum Senden in einer festgelegten Reihenfolge.
+ Diese geordnete Vergabe ist mitunter nur durch einen hohen Aufwand zu realisier
+en.
+ Sie vermeidet Kollisionen.
+ Beispiele für Zuteilungsstrategien sind der Token Ring und der Token Bus.
+ 
+\end_layout
+
+\begin_layout Description
+Zufallsstrategien 
+\begin_inset space ~
+\end_inset
+
+gestatten den sendewilligen Stationen den Zugriff in zufälliger Reihenfolge.
+ Solche Strategien lassen Kollisionen zu.
+ Bei einer Kollision überlagern sich die Signale der Sender – die Übertragung
+ muss wiederholt werden.
+\end_layout
+
+\begin_layout Subsection
+Zufallsstrategien 
+\end_layout
+
+\begin_layout Subsubsection
+ALOHA
+\end_layout
+
+\begin_layout Standard
+Der Ahn moderner Zufallsstrategien wird als ALOHA bezeichnet.
+ Eine sendewillige Station legt ihre Nachricht spontan auf dem Bus an.
+ Der Sender überwacht weder vor dem Beginn des Sendens noch während dem
+ eigentlichen Senden das Medium.
+ Damit werden Kollisionen zugelassen, die das Signal für den Empfänger unbrauchb
+ar machen.
+ Die Kollisionen werden indirekt durch das Ausbleiben der Empfangsbestätigung
+ erkannt.
+ Dann wiederholt der Sender die Übertragung.
+ Da die Kollisionen sowohl beim Übertragen der eigentlichen Nachricht, als
+ auch beim Übertragen der Quittierung auftreten können, ist dieses Verfahren
+ sehr ineffizient und für den praktischen Einsatz meist unbrauchbar
+\end_layout
+
+\begin_layout Subsubsection
+CSMA
+\end_layout
+
+\begin_layout Standard
+Carrier Sense (CS): Nachricht wird erst gesendet, wenn die Leitung frei
+ ist.
+ Multiple Access (MA) : Mehrfachzugriffe sind trotzdem erlaubt.
+ Trotz des Wartens auf das Freiwerden der Leitung sind Kollisionen immer
+ noch möglich, wenn mehrere Station (fast) gleichzeitig mit dem Senden beginnen.
+ Ein Unterscheidungsmerkmal zur weiteren Verfeinerung ist das Verhalten
+ bei belegter Leitung, d.
+ h.
+ wenn eine sendewillige Station eine belegte Leitung vorfindet:
+\end_layout
+
+\begin_layout Description
+non-persist: Das Senden bzw.
+ das vor dem Senden zu erfolgende erneute Abhören der Leitung erfolgt erst
+ nach einer zufällig verteilten Zeit.
+ Problematisch ist hier, dass während dieser Wartezeit die Leitung nicht
+ genutzt wird.
+ Dies schränkt die verfügbare Netto-Transferrate ein.
+ Zudem besteht durch das Warten die Gefahr einer Staubildung: Während der
+ Wartezeit können sich die Übertragungsaufträge häufen, was wiederum zu
+ vermehrten Kollisionen führen kann.
+\end_layout
+
+\begin_layout Description
+persist: Ein erneuter Sendeversuch wird unmittelbar nach dem Freiwerden
+ der Leitung gestartet.
+ Dieses Verfahren versucht die Totzeit zu vermeiden.
+ Warten jedoch mehrere Stationen auf das Freiwerden, dann beginnen alle
+ gleichzeitig mit dem Senden, was sofort zu Kollisionen führt.
+\end_layout
+
+\begin_layout Description
+p-persist: Diese Variante versucht einen Kompromiss zwischen den beiden
+ anderen Verfahren zu finden.
+ Eine sendewillige Station macht unmittelbar nach dem Freiwerden der Leitung
+ mit der Wahrscheinlichkeit p einen Sendeversuch.
+ Daraus folgt, dass sie umgekehrt mit der Wahrscheinlichkeit 1 − p erst
+ nach einer zufällig gewählten Zeitspanne die Leitung prüft.
+ Konkrete Werte von p sind an die Parameter der Übertragung wie Geschwindigkeit,
+ Übertragungshäufigkeit und Nachrichtenlänge angepasst.
+\end_layout
+
+\begin_layout Standard
+Das Verfahren CSMA versucht die Anzahl der Kollisionen durch Abhören der
+ Leitung zu verringern.
+ Dabei werden Kollisionen lediglich indirekt, also durch das Ausbleiben
+ der Bestätigungen erkannt.
+ Ein Teil der Leistungsfähigkeit geht dabei verloren: Ein Sender überträgt
+ trotz Kollision den Rest seiner Nachricht, obwohl diese für den Empfänger
+ bereits unbrauchbar ist.
+\end_layout
+
+\begin_layout Subsubsection
+CSMA/CD
+\end_layout
+
+\begin_layout Standard
+CSMA/CD erweitert CSMA um die Kollisionserkennung (Collision Detection (CD)).
+ Zumindest während der Startphase der Übertragung liest ein Sender gleichzeitig
+ von der Leitung.
+ Damit kann er kontrollieren, ob am Bus auch tatsächlich das von ihm angelegte
+ Signal erscheint.
+ Tritt eine Kollision auf, so kann der Sender dies erkennen – er bricht
+ den Sendevorgang ab.
+ Damit wird die Leitung effizienter genutzt.
+ Da jede Station vor dem Senden die Leitung abhört, kann eine Kollision
+ nur am Beginn des Sendevorganges auftreten.
+ Die Zeitspanne, innerhalb der eine Kollision möglich ist, ergibt sich aus
+ der max.
+ Ausbreitungszeit der Signale auf der Leitung.
+ Wesentliche Faktoren sind hierbei die elektrischen Eigenschaften und die
+ Länge des Kabels.
+ Auch hier gibt es non-persist, persist und p-persist.
+ Das persist Verfahren liefert die besten Ergebnisse.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -37,3 +37,6 @@ Es kann sich jeder was brauchen kann gerne bedienen.
 
 ## BSY
 - Regex CheatSheet (+GREP / SED)
+
+## NET
+- VO Klausurvorbereitung
