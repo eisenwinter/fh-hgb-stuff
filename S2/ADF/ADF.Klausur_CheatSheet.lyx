@@ -1,0 +1,6452 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[breakable]{tcolorbox}
+\usepackage{amsthm}
+\usepackage{lscape}
+
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usepackage{tikz-timing}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+\usepackage{bytefield}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usepackage{syntax}
+\usepackage[simplified]{pgf-umlcd}
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+\usetikztiminglibrary{clockarrows}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{chains}
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+\definecolor{oraora}{HTML}{f49b41}
+\definecolor{blublub}{HTML}{1455bc}
+\definecolor{semsem}{HTML}{a8a50f}
+
+\geometry{top=.6in,left=.2in,right=.2in,bottom=.7in}
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{3pt}
+\setlength{\postmulticols}{3pt}
+\setlength{\multicolsep}{3pt}
+\setlength{\columnsep}{12pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.6ex,
+  leftmargin=!, labelsep=0mm,labelwidth=12mm,
+  align=left,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,enforce breakable,height fixed for=all}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,sidebyside}
+
+\newtcolorbox{regexhint}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1}
+\raggedcolumns
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+
+\let\Oldpart\part
+\newcommand{\parttitle}{}
+\renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[C]{\scriptsize ADE }
+\fancyhead[R]{\scriptsize \rightmark}
+\fancyhead[L]{\scriptsize \leftmark   }
+\fancyfoot[C]{\scriptsize \thepage}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+
+\newcommand{\nlgra}[1][2]{\\\hspace*{#1em}\quad}
+
+\newcommand{\bluearrow}[1]{\textcolor{blublub}{$_{\boldsymbol{\uparrow #1}}$}}
+\newcommand{\yelsem}[1]{\textcolor{oraora}{$_{\boldsymbol{#1}}$}}
+\newcommand{\semcom}[1]{\textcolor{semsem}{{#1}}}
+
+\newcommand{\bluearrowd}[1]{\textcolor{blublub}{$_{\boldsymbol{\downarrow #1}}$}}
+
+\titleclass{\part}{top}
+\titleformat{\part}[display]
+  {\normalfont\Large\bfseries}{\centering\partname\ \thepart}{3pt}{\Large\centering}
+\titlespacing*{\part}{0pt}{2pt}{2pt}
+\titleclass{\chapter}{straight}
+\titleformat{\chapter}[display]
+  {\normalfont\footnotesize\bfseries}{\chaptertitlename\ \thechapter}{1pt}{\Large}
+\titlespacing*{\chapter} {0pt}{5pt}{5pt}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language={[XSC]Pascal},captionpos=b,tabsize=3,frame=lines,keywordstyle={\color{headlinec}},commentstyle={\color{blue}\textit},stringstyle={\color{red}},numbers=left,numberstyle={\tiny},numbersep=1pt,stepnumber=1,breaklines=true,showstringspaces=false,basicstyle={\scriptsize},emph={label},columns=fullflexible,showstringspaces=false,frame=tb,xleftmargin=6pt"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ADF / PRG 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ basierend auf ADE, Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+, v 2.0.2 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Theorie
+\end_layout
+
+\begin_layout Chapter
+Patternmatching
+\end_layout
+
+\begin_layout Section
+Brute Force
+\end_layout
+
+\begin_layout Standard
+Einfachst Lösung, einfach einzeln von links nach rechts oder rechts nach
+ links durch.
+\end_layout
+
+\begin_layout Section
+Knuth-Morris-Pratt
+\end_layout
+
+\begin_layout Standard
+Hat Tabelle um mögliche Überschneidungen gut zu behandeln.
+ Tabelle bauen 
+\begin_inset Formula $\mathcal{O}(n)$
+\end_inset
+
+ + Algorithmus selbst 
+\begin_inset Formula $\mathcal{O}(n+m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rabin-Karp
+\end_layout
+
+\begin_layout Standard
+Hash basierend.
+ Rechnet nur erstes Zeichen raus und neues dazu.
+ 
+\begin_inset Formula $\mathcal{O}(n)$
+\end_inset
+
+ ungünstig (selte) 
+\begin_inset Formula $\mathcal{O}(n*m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Boyer-Moore
+\end_layout
+
+\begin_layout Standard
+Springt Pattern Distanz wenn möglich.
+ Arbeitet am effizientesten wenn Zeichen nicht in Pattern vorkommt.
+ Günstig 
+\begin_inset Formula $\mathcal{O}(n+m)$
+\end_inset
+
+, Ungünstig 
+\begin_inset Formula $\mathcal{O}(n*m)$
+\end_inset
+
+ Avg 
+\begin_inset Formula $\mathcal{O}(n/m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Datenkapsel und Module
+\end_layout
+
+\begin_layout Section
+ADS
+\end_layout
+
+\begin_layout Itemize
+Eine Abstrakte Datenstruktur definiert/realisiert eine Menge von „unsichtbaren“
+ Datenobjekten zusammen mit einer Menge von exportierten Operationen (Zugriffsal
+gorithmen) die zur Manipulation der Datenobjekte herangezogen werden können
+ und ggf eine Menge „unsichtbarer“ Algorithmen, die von den Zugriffsalgorithmen
+ verwendet werden können.
+\end_layout
+
+\begin_layout Itemize
+Eine Datenkapsel repräsentiert eine abstrakte Datenstruktur (wir nennen
+ Datenkapseln auch „aktive Datenobjekte“) 
+\end_layout
+
+\begin_layout Section
+Modul
+\end_layout
+
+\begin_layout Itemize
+Ein Modul ist ein Konstrukt zur Implementierung von Datenkapseln 
+\end_layout
+
+\begin_layout Section
+ADT
+\end_layout
+
+\begin_layout Itemize
+Ein Abstrakter Datentyp ermöglicht es, beliebig viele Exemplare einer abstrakten
+ Datenstruktur (d.h.
+ aktive Datenobjekte, die alle die gleiche Struktur haben) zu erzeugen und
+ zu verwenden
+\end_layout
+
+\begin_layout Chapter
+Systementwurf
+\end_layout
+
+\begin_layout Section
+Grundsätzliche Entwurfsprinzipien
+\end_layout
+
+\begin_layout Standard
+Wichtigstes Prinzip zur Meisterung der Komplexität, ist die Abstraktion
+ 
+\end_layout
+
+\begin_layout Itemize
+Zerlegung von Systemen in Subsysteme und Komponenten (Modellierung von System-
+ und Komponentenschnittstellen)
+\end_layout
+
+\begin_layout Itemize
+Zerlegung von Aufgaben in Teilaufgaben
+\end_layout
+
+\begin_layout Itemize
+Sukzessive Konkretisierung von Subsystemen, Komponenten und erforderlichen
+ Algorithmen und Datenstrukturen
+\end_layout
+
+\begin_layout Itemize
+Vernachlässigung (Abstraktion) von (Implementierungs-/Realisierungs-)details
+\end_layout
+
+\begin_layout Standard
+Betrachtung jeweils nur jener Aspekte eines Systems, die für den nächsten
+ Lösungsschritt von Bedeutung sind
+\end_layout
+
+\begin_layout Section
+Topdown-Entwurf
+\end_layout
+
+\begin_layout Itemize
+vom Abstrakten zum Konkreten
+\end_layout
+
+\begin_layout Itemize
+Zerlegung eines großen Systems (einer Aufgabe) in mehrere kleinere Subsysteme
+ (Teilaufgaben)
+\end_layout
+
+\begin_layout Section
+Bottomup-Entwurf
+\end_layout
+
+\begin_layout Itemize
+vom Konkreten zum Abstrakten
+\end_layout
+
+\begin_layout Itemize
+zusammenfassen mehrerer kleiner Bausteine zu einem größeren System (Subsystem)
+\end_layout
+
+\begin_layout Section
+Programmierparadigmen: Zerlegung
+\end_layout
+
+\begin_layout Subsection
+Aufgabenorientierte Zerlegung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+Aufgaben- und modulorientierte Programmierung
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+geht von Aufgabe aus und zerlegt sie in Teilaufgaben
+\end_layout
+
+\begin_layout Itemize
+(hierarchische) Zerlegung eines Systems in seine funktionalen Bestandteile
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\series bold
+im Mittelpunkt stehen die funktionalen Aspekte
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+TL;DR: Teilung nach Aufgaben, kann dann entweder in Schichten oder Teilbereichen
+ behandelt werden.
+\end_layout
+
+\begin_layout Description
+Werkzeug Stepwise Refinement
+\end_layout
+
+\begin_layout Description
+Lang:
+\end_layout
+
+\begin_layout Standard
+Entwurf der Systemarchitektur durch Anwendung des Prinzips der schrittweisen
+ aufgabengetriebenen Verfeinerung (stepwise refinement)
+\end_layout
+
+\begin_layout Itemize
+Zerlege eine Aufgabe in Teilaufgaben
+\end_layout
+
+\begin_layout Itemize
+Betrachte jede Teilaufgabe für sich und möglichst unabhängig von anderen
+ Teilaufgaben
+\end_layout
+
+\begin_layout Itemize
+Zerlege sie wieder in Teilaufgaben, bis diese so einfach geworden sind,
+ dass ihre Lösung sich auf einfache Weise durch einen Algorithmus beschreiben
+ lässt
+\end_layout
+
+\begin_layout Standard
+Das bedeutet
+\end_layout
+
+\begin_layout Itemize
+zunächst nur Algorithmen-Schnittstellen festzulegen
+\end_layout
+
+\begin_layout Itemize
+unwichtige Einzelheiten zurückzustellen
+\end_layout
+
+\begin_layout Itemize
+zuerst wichtigste Aspekte der Aufgabe zu identifizieren
+\end_layout
+
+\begin_layout Itemize
+die Aufgaben-Komplexität stetig zu vermindern (Teile und herrsche !)
+\end_layout
+
+\begin_layout Standard
+Verfeinerung ist ein 
+\series bold
+iterativer
+\series default
+ Prozess!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+Ziele
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Systematisierung des Entwurfsprozesses
+\end_layout
+
+\begin_layout Itemize
+Finden einer günstigen Zerlegung eines Programmsystems in Prozeduren
+\end_layout
+
+\begin_layout Itemize
+Meisterung der Komplexität durch Abstraktion
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+Vorteile
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+mit etwas Übung fast mechanisch anwendbar
+\end_layout
+
+\begin_layout Itemize
+universell anwendbar (auch für Teilaufgaben, die nicht durch schrittweise
+ Verfeinerung entstanden sind)
+\end_layout
+
+\begin_layout Itemize
+ermöglicht arbeitsteiligen Entwurf
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\end_layout
+
+\end_inset
+
+Nachteile
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+unterstützt die Modularisierung nicht explizit (Syntheseschritt erforderlich)
+\end_layout
+
+\begin_layout Itemize
+unterstützt nicht die Zerlegung der Datenstrukturen
+\end_layout
+
+\begin_layout Itemize
+konsequentes topdown-Vorgehen bei großen Aufgaben oft schwierig
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Datenorientierte Zerlegung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+Aufgaben- und modulorientierte Programmierung
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+geht von Ein/Ausgabe-Daten aus, deren Struktur und Komplexität die Systemstruktu
+r beeinflussen
+\end_layout
+
+\begin_layout Itemize
+Zerlegung eines Systems in Teile, gemäß den zu verarbeitenden Datenstrukturen
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\series bold
+im Mittelpunkt stehen die datenbezogenen Aspekte 
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+TL;DR: Transformationsprozess (wie Compiler) nimmt strukturierte Daten und
+ verarbeitet sie mit Lexer/Scanner und Parser.
+\end_layout
+
+\begin_layout Description
+Werkzeug Attributierte Grammatik
+\end_layout
+
+\begin_layout Description
+Lang:
+\end_layout
+
+\begin_layout Standard
+Das Denkmodell für den datenorientierten Entwurf in der Softwareentwicklung
+ geht davon aus, dass aufbauend auf der Struktur (Syntax) eines Eingabedatenstro
+ms seine Bedeutung (Semantik) und der angestrebte Transformationsprozess
+ definiert und daraus die Systemarchitektur abgeleitet werden kann.
+ Damit kommt der Syntaxanalyse des Eingabedatenstroms eine zentrale Bedeutung
+ im Rahmen des Transformationsprozesses zu.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Die Konstruktion datenorientierter Systemarchitekturen erfordert die Entwicklung
+ von Analysatoren, mit deren Hilfe die syntaktische Korrektheit der zu verarbeit
+enden Eingabedatenströme geprüft werden kann (den so genannten lexikalischen
+ Analysator und den so genannten Syntaxanalysator).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Um einen Eingabedatenstrom verarbeiten zu können, d.
+ h.
+ die gewünschten Ergebnisse aus ihm ermitteln bzw.
+ diesen in eine andere Gestalt transformieren zu können, ist es notwendig,
+ auch die semantischen Aspekte des Eingabedatenstroms zu berücksichtigen
+ (deshalb benötigen wir den so genannten Semantikauswerter
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Zur Beschreibung der syntaktischen Struktur des Eingabedatenstromes können
+ wir das aus dem Gebiet der formalen Sprachen bekannte Konzept der Grammatiken
+ und für die Beschreibung des Transformationsprozesses das der attributierten
+ Grammatiken heranziehen.
+\end_layout
+
+\begin_layout Subsubsection*
+Geeignet für
+\end_layout
+
+\begin_layout Itemize
+die Spezifikation von Softwaresystemen
+\end_layout
+
+\begin_layout Itemize
+den Entwurf von Softwaresystemen
+\end_layout
+
+\begin_layout Itemize
+die Dokumentation von Softwaresystemen
+\end_layout
+
+\begin_layout Subsubsection
+nutzbringend einsetzbar
+\end_layout
+
+\begin_layout Itemize
+wenn im Wesentlichen ein Eingabedatenstrom vorliegt
+\end_layout
+
+\begin_layout Itemize
+wenn der Eingabedatenstrom genügend strukturiert ist
+\end_layout
+
+\begin_layout Itemize
+wenn im Wesentlichen der Eingabedatenstrom in eine andere Form transformiert
+ werden soll
+\end_layout
+
+\begin_layout Subsubsection*
+Vorteile
+\end_layout
+
+\begin_layout Itemize
+Deskriptive Entwurfstechnik
+\end_layout
+
+\begin_layout Itemize
+Modularisierungstechnik
+\end_layout
+
+\begin_layout Itemize
+zwingt zur Trennung von Syntax und Semantik, Syntax ist Routine, der Entwickler
+ kann sich auf Semantik konzentrieren
+\end_layout
+
+\begin_layout Itemize
+knappe und (mit etwas Übung) gut lesbare Darstellung (hervorragendes Dokumentati
+onsmittel)
+\end_layout
+
+\begin_layout Itemize
+Systementwurf läßt sich automatisch in Programme transformieren
+\end_layout
+
+\begin_layout Subsubsection*
+Nachteile
+\end_layout
+
+\begin_layout Itemize
+nicht anwendbar bei mehreren parall zu verarbeitenden Eingabedatenströmen
+\end_layout
+
+\begin_layout Itemize
+Anwendung setzt Grundkenntnisse des Übersetzerbaus voraus
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Objektorientierte Zerlegung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+
+\series bold
+Aufgaben- und modulorientierte Programmierung
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+geht davon aus, dass Datenobjekte und Operationen untrennbare Einheiten
+ bilden
+\end_layout
+
+\begin_layout Itemize
+Zerlegung eines Systems in Objekte/Komponenten (= Datenobjekt und darauf
+ anwendbare Operationen – sogenannte aktive Datenobjekte)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbsubtitle{
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\series bold
+im Mittelpunkt steht die Auffassung, dass Datenobjekte und Operationen eine
+ Einheit bilden
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+TL;DR: Es wird versuche reale Probleme anhand von Objekten sinngemäßt zu
+ beschreiben.
+ Das Softwaresystem ensteht aus Objeketen die miteinander kommunizieren.
+\end_layout
+
+\begin_layout Description
+Werkzeug UML; im weiteren Sinn: Vererbung, dynamische Bindung, Polymorphie
+\end_layout
+
+\begin_layout Description
+siehe OOP
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Architektur- und Komponenten-Design
+\end_layout
+
+\begin_layout Subsection
+Architektur-Design (Grobentwurf)
+\end_layout
+
+\begin_layout Standard
+System-, Subsystementwurf Festlegung der System-, Subsystemstruktur (Wechselwirk
+ungen zwischen den Komponenten), Komponentenschnittstellen 
+\end_layout
+
+\begin_layout Subsection
+Komponenten-Design (Feinentwurf)
+\end_layout
+
+\begin_layout Standard
+Komponentenentwurf.
+ Festlegung der erforderlichen Algorithmen, Datenstrukturen, ….
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Formale Sprachen und Grammatiken
+\end_layout
+
+\begin_layout Standard
+Eine Grammatik G mit dem Satzsymbol S, geschrieben G(S), ist eine endliche,
+ nicht leere Menge von Ersetzungsregeln, die zwei Arten von Symbolen enthalten:
+ Terminalsymbole, die in Sätzen vorkommen, und Nonterminalsymbole, die der
+ Strukturbeschreibung dienen.
+ Das Satzsymbol S ist ein ausgezeichnetes Nonterminalsymbol, das auf mindestens
+ einer linken Seite der Ersetzungsregeln vorkommt.
+\end_layout
+
+\begin_layout Description
+TL;DR Grammatik bildet sich aus Terminalsymbolen und Nonterminalsymbolen.
+ Die Nonterminalsymbole müssen sich zu Terminalsymbolen auflösen.
+\end_layout
+
+\begin_layout Section
+kontextfrei
+\end_layout
+
+\begin_layout Standard
+Die Bezeichnung kontextfrei für eine Grammatik drückt aus, dass in allen
+ Symbolketten, die aus dem Satzsymbol durch Anwendung der Ersetzungsregeln
+ abgeleitet werden können, jedes darin vorkommende Nonterminalsymbol unabhängig
+ von den Symbolen links oder rechts davon, also unabhängig von seiner Umgebung,
+ dem Kontext, durch eine seiner Alternativen ersetzt werden kann.
+\end_layout
+
+\begin_layout Description
+TL;DR kontextfrei = Symbole sind nicht voneinander abhängig.
+\end_layout
+
+\begin_layout Section
+LL(1)- Bedingung
+\end_layout
+
+\begin_layout Standard
+Wenn bei der Analyse in jeder Situation das aktuelle Terminalsymbol (genannt
+ Vorgriffssymbol) ausreicht, um in der aktuellen Ersetzungsregel die richtige
+ Alternative auszuwählen, erfüllt die Grammatik die so genannte LL(1)- Bedingung
+ .
+ Das bedeutet, dass in jeder Ersetzungsregel der Grammatik alle Alternativen
+ mit unterschiedlichen Terminalsymbolen beginnen.
+ Auch bei Optionen und Wiederholungen muss mit einem Vorgriffssymbol die
+ richtige Entscheidung getroffen werden können.
+\end_layout
+
+\begin_layout Description
+TL;DR LL(1) heißt das ein 1 Symbol ausreicht um die nächste Entscheidung
+ zu treffen.
+ LL steht für (
+\series bold
+L
+\series default
+eft to Right, 
+\series bold
+L
+\series default
+eftmost derivation)
+\end_layout
+
+\begin_layout Subsection
+LL(1)- Bedingung prüfen
+\end_layout
+
+\begin_layout Standard
+LL(1) Grammatik darf nicht 
+\series bold
+mehrdeutig
+\series default
+,
+\series bold
+ links rekursiv 
+\series default
+und 
+\series bold
+links faktorisiert
+\series default
+ sein.
+\end_layout
+
+\begin_layout Paragraph
+...aber wir prüf ich das jetzt auf die schnelle bei der Klausur?
+\end_layout
+
+\begin_layout Subsubsection
+Schnelltest
+\end_layout
+
+\begin_layout Standard
+Alle Produktionen (gscheidsprech für die Regeln) die nur eine Ableitung
+ haben sind sowieso LL(1) und können ignoriert werden.
+\begin_inset Newline newline
+\end_inset
+
+Also Sachen wie
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S = B 
+\begin_inset Newline newline
+\end_inset
+
+(S Nonterminal, B ist Terminal oder Nonterminal)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+können wir ignorieren.
+\end_layout
+
+\begin_layout Paragraph
+Spannen werden jetzt folgendes...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S = A | B | C 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A, B, C und sollten jetzt disjunkt sein (ned des selbe).
+ A, B, C solange folgen bis sich zu Terminalsymbolen auflösen.
+ Sollten hier die gleichen Rauskommen haben wir eine LL1 Verletzung.
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S = A | a.
+\end_layout
+
+\begin_layout Standard
+A = a.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Eine Ableitung, einfach ignorieren
+\end_layout
+
+\begin_layout Standard
+S =A | a.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Wabwabwab, wenn wir A folgen kommt a heraus, damit haben wir a | a und damit
+ eine LL1 Verletzung!
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faInfoCircle 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Außerdem würde eine Mehrdeutigkeit für a enstehen
+\end_layout
+
+\begin_layout Standard
+S = a
+\end_layout
+
+\begin_layout Standard
+S = A = a
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Merke Mulitple Optionen prüfen, solange alle Ergebnisse disjunkt dann LL1.
+ Prinzipiell sollte man sich immer Fragen, könnte ich mich nur mit dem aktuellen
+ Symbol entscheiden.
+\end_layout
+
+\begin_layout Section
+Attributierte Grammatiken
+\end_layout
+
+\begin_layout Standard
+Eine attributierte Grammatik ist eine (kontextfreie) Grammatik, die mit
+ semantischen Aktionen und Attributen so angereichert ist, dass damit der
+ Transformations-/Verarbeitungsprozess vollständig beschrieben ist.
+\end_layout
+
+\begin_layout Section
+Vorgehensmodell zur datenorientierten Programmierung
+\end_layout
+
+\begin_layout Enumerate
+Beschreiben der lexikalischen Struktur des Eingabedatenstroms (vorzugsweise
+ mit regulären Grammatiken oder regulären Ausdrücken).
+\end_layout
+
+\begin_layout Enumerate
+Generierung eines lexikalischen Analysators und Bereitstellung eines rudimentäre
+n Koordinationsrahmens, damit der lexikalische Analysator getestet werden
+ kann.
+\end_layout
+
+\begin_layout Enumerate
+Beschreiben der syntaktischen Struktur des Eingabedatenstroms mit einer
+ kontextfreien Grammatik, die die LL(1)-Bedingung erfüllt.
+\end_layout
+
+\begin_layout Enumerate
+Generierung eines Syntaxanalysators und Erweiterung des Koordinationsrahmens,
+ damit der Syntaxanalysator getestet werden kann.
+\end_layout
+
+\begin_layout Enumerate
+Festlegen der lexikalischen und der semantischen Attribute und Erweiterung
+ der kontextfreien Grammatik mit den für den beabsichtigten Transformationsproze
+ss notwendigen semantischen Aktionen (unter Beachtung, dass die Bedingung
+ für eine L-attributierte Grammatik erfüllt wird).
+ Das Ergebnis ist eine attributierte Grammatik.
+\end_layout
+
+\begin_layout Enumerate
+Erweiterung des lexikalischen Analysators, so dass auch die Werte der lexikalisc
+hen Attribute ermittelt werden können und Generierung der vollständigen
+ Parserkomponente (d.h.
+ inklusive Semantikauswerter).
+ Erweiterung des Koordinationsrahmens, so dass damit das gesamte Programmsystem
+ getestet werden kann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+OOP
+\end_layout
+
+\begin_layout Section
+Arten von OOP
+\end_layout
+
+\begin_layout Subsection
+klassenbasiert objekt-orientiert
+\end_layout
+
+\begin_layout Standard
+Beim klassenbasierten OOP wird das Objekt anhand der Klassenschablone generiert.
+\end_layout
+
+\begin_layout Subsection
+objektbasiert objekt-orientiert
+\end_layout
+
+\begin_layout Standard
+Beim objektbasierten OOP wird ein Prototyp des Objektes definiert und dieser
+ anschließend kopiert.
+\end_layout
+
+\begin_layout Section
+Klassen
+\end_layout
+
+\begin_layout Standard
+Klassen sind 
+\begin_inset Quotes gld
+\end_inset
+
+Schablonen
+\begin_inset Quotes grd
+\end_inset
+
+ oder eine 
+\begin_inset Quotes gld
+\end_inset
+
+Rezeptur
+\begin_inset Quotes grd
+\end_inset
+
+ für Objekte.
+ Sie beschreiben das/die aus Ihnen erzeugte(n) Objekt(e).
+ Objekte die aus den Klassen erzeugt werden bestehen aus Methoden / Operationen
+ und Datenkomponenten (Attributen).
+\end_layout
+
+\begin_layout Paragraph
+Beispiel 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{class}[text width=5 cm]{Fahrrad}{0 ,0}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{besitzer : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{marke : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{vorderRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{hinterRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+operation{fahren()}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ein Fahrradobjekt 
+\end_layout
+
+\begin_layout Section
+Vererbung
+\end_layout
+
+\begin_layout Standard
+Durch vereerbung oder auch 
+\begin_inset Quotes gld
+\end_inset
+
+ableiten
+\begin_inset Quotes grd
+\end_inset
+
+ werden für die Kindklasse alle öffentlichen (public) und protected Methoden
+ und Attribute/Properties/Datenkomponenten der Elternklasse frei zugänglich,
+ die private Datenfelder existieren weiterhin sind nur für die Kindklasse
+ unsichtbar gekapselt.
+ Mit Vererbung entsteht ein Superset aus der Kind und Elternklasse.
+ Die Kindklasse kann mindestens alles was die Elternklasse kann.
+\end_layout
+
+\begin_layout Paragraph
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{class}[text width=5 cm]{Fahrrad}{0 ,0}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{besitzer : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{marke : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{vorderRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{hinterRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+operation{fahren()}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{class}[text width=5cm]{Motorrad}{0,-2.2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+inherit{Fahrrad}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{vin : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{motor : BenzinMotor}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ein Fahrrad ist ein Motorrad mit Motor, es würde sich also anbieten das
+ Motorrad von dem Fahrrad abzuleiten.
+\end_layout
+
+\begin_layout Section
+Polymorphie
+\end_layout
+
+\begin_layout Description
+TL;DR Dadruch das eine Kindklasse ein Superset der Elternklasse ist, kann
+ eine Variable des Types der Elternklasse aufnehmen.
+ Dies nennt man Polymorphie.
+ 
+\end_layout
+
+\begin_layout Description
+Lang (Folien)
+\end_layout
+
+\begin_layout Standard
+In der objektorientierten Programmierung bedeutet Polymorphismus, dass mit
+ (Zeiger-)Variablen vom Typ einer (Basis-)Klasse nicht nur Objekte dieser,
+ sondern auch Objekte aller direkt oder indirekt davon abgeleiteten Klassen
+ referenziert werden können.
+\end_layout
+
+\begin_layout Standard
+Damit können solche (Zeiger-)Variablen auf Objekte unterschiedlicher Gestalt
+ verweisen, weshalb wir in dieser Situation von Polymorphismus sprechen.
+ Diese Objekte haben allerdings eine Gemeinsamkeit: ihre Datentypen (Klassen)
+ stammen von derselben Basisklasse ab.
+ 
+\end_layout
+
+\begin_layout Standard
+Der Datentyp einer Variablen kann sich somit zur Laufzeit ändern.
+ Wir sprechen daher vom dynamischen Datentyp.
+ Variable im OO Sinne besitzen also einen 
+\series bold
+statischen
+\series default
+ und einen 
+\series bold
+dynamischen
+\series default
+ Datentyp.
+\end_layout
+
+\begin_layout Paragraph
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{class}[text width=5 cm]{Fahrrad}{0 ,0}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{besitzer : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{marke : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{vorderRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{hinterRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+operation{fahren()}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{class}[text width=5cm]{Motorrad}{0,-2.2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+inherit{Fahrrad}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{vin : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{motor : BenzinMotor}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fahrrad ist die Elternklasse von Motorrad.
+ Das Motorrad hat mindestens alles was das Fahrrad hat plus einen Motor
+ und eine VIN.
+ Anhand dieser Informationen wissen wir, dass beides fahren() kann.
+ nun ist es egal welches der beiden Zweiräder wir als Objekt gegeben haben,
+ es können beide fahren.
+ Deshalb kann man Fahrrad auch einen Motorrad Typen zuweisen und anschließend
+ mit diesem fahren().
+ 
+\end_layout
+
+\begin_layout Section
+Dynamische Bindung
+\end_layout
+
+\begin_layout Description
+TL;DR Dynamische Bindung ermöglicht das korrekte Aufrufen einer Methode
+ in einer polymorphen Umgebung.
+ Sei 
+\series bold
+A
+\series default
+ ein Objekt von der Elternklasse und 
+\series bold
+B
+\series default
+ eines der Kindklasse, so lässt sich B auf eine Variable von Typ A zuweisen.
+ Sollte B nun eine Methode von A überschrieben haben, so garantiert die
+ dynamische Bindung, dass die richtige Methode aufgerufen wird.
+ 
+\end_layout
+
+\begin_layout Description
+Lang (Folien)
+\end_layout
+
+\begin_layout Standard
+Unter Bindung versteht man im Kontext von Programmiersprachen die Verknüpfung
+ des Aufrufs einer Operation (einer Prozedur, Funktion oder Methode) mit
+ der auszuführenden Folge von Anweisungen.
+ In Abhängigkeit vom Zeitpunkt, wann die Bindung stattfindet, kann man zwei
+ Ausprägungen unterscheiden: Bei nicht objektorientierten Programmiersprachen
+ kann die Verknüpfung für Prozedur- und Funktionsaufrufe entweder der Compiler
+ zur Übersetzungszeit (wenn das gesamte Programm in einer Übersetzungseinheit
+ vorliegt) oder der Binder (linker) zur Bindezeit herstellen.
+ In beiden Fällen erfolgt die Bindung vor der Programmausführung, weshalb
+ diese Art von Bindung als 
+\series bold
+statische Bindung
+\series default
+ bezeichnet wird.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Bei objektorientierten Programmiersprachen 
+\end_layout
+
+\begin_layout Standard
+gibt es (wegen des objektorientierten Paradigmas) auch Situationen, in denen
+ die Bindung von Methodenaufrufen mit einem bestimmten Codestück erst zur
+ Laufzeit durchgeführt werden kann, weshalb diese Art von Bindung als 
+\series bold
+dynamische Bindung 
+\series default
+bezeichnet wird.
+\end_layout
+
+\begin_layout Description
+Bindung = Verknüpfung zwischen Senden einer Nachricht und Auswahl einer
+ Methode 
+\end_layout
+
+\begin_layout Subsection
+Virtual Method Table
+\end_layout
+
+\begin_layout Standard
+Die VMT bildet die Grundlage für die dynamische Bindung.
+ In Ihr sind alle virtuellen Methoden gespeichert.
+ Wird die Methode in einem Codeabschnitt aufgerufen, so wird zuerst in der
+ VMT der original Klasse nachgeschaut (der Typ mit dem das Objekt erzeugt
+ wurde), sollte die Methode hier nicht gefunden werden beginnt die 
+\begin_inset Quotes gld
+\end_inset
+
+Super-Kaskade
+\begin_inset Quotes grd
+\end_inset
+
+ - es wird in der nächsten Elternklasse nach der Methode gesucht; sollte
+ sie hier nicht gefunden werden so wird erneut in die nächst höhere VMT
+ geschaut.
+ So lang bis die Methode gefunden wurde oder keine Elternklasse mehr gefunden
+ wird.
+\end_layout
+
+\begin_layout Paragraph
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{class}[text width=5 cm]{Fahrrad}{0 ,0}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{besitzer : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{marke : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{vorderRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{hinterRad : Reifen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+operation{fahren()}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+operation[0]{versperren(schloss : Schlosstyp)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{class}[text width=5cm]{Motorrad}{0,-2.6}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+inherit{Fahrrad}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{vin : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+attribute{motor : BenzinMotor}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+operation{fahren()}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Gegeben sei die von Fahrrad abgeleitete Klasse Motorrad.
+ wir erzeugen nun ein neues Motorradobjekt in der Variable vehicle vom Typen
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Fahrrad
+\begin_inset Quotes grd
+\end_inset
+
+.
+ (a.e.
+ Fahrrad vehicle = new Motorrad())
+\end_layout
+
+\begin_layout Standard
+Rufen wir nun bei vehicle die Methode 
+\series bold
+.fahren()
+\series default
+ auf wird in der VMT von Motorad nach ihr gesucht, dort wird sie auch gleich
+ gefunden und ausgeführt.
+ Rufen wir nun die Methode 
+\series bold
+.verperren(schloss) 
+\series default
+auf so wird in der VMT von Motorrad gesucht und nicht gefunden, als nächstes
+ wird die VMT der Elternklasse (Fahrrad) gesucht und hier wird sie anschließend
+ gefunden und ausgeführt.
+ 
+\end_layout
+
+\begin_layout Section
+Abstract
+\end_layout
+
+\begin_layout Description
+TL;DR Ein abstraktes Objekt gibt einen bestimmten Prozedur-teil vor, der
+ nicht konkret implementiert ist (= abstrakt), den aber jede abgeleitete
+ Klasse implementieren muss.
+\end_layout
+
+\begin_layout Description
+Lang (Folien)
+\end_layout
+
+\begin_layout Itemize
+Zur Faktorisierung von Gemeinsamkeiten und Strukturierung ist es sinnvoll
+ abstrakte Klassen, d.h.
+ Datentypen zu denen es keine konkreten Objekte gibt, zu verwenden
+\end_layout
+
+\begin_layout Itemize
+für Methoden solcher Klassen existiert uU keine sinnvolle Implementierung,
+ Nachrichten sollen aber möglich sein
+\end_layout
+
+\begin_layout Itemize
+es hat keinen Sinn, Objekte von abstrakten Klassen zu erzeugen 
+\end_layout
+
+\begin_layout Itemize
+die Methoden für die Messages abstrakter Klassen werden in den von ihnen
+ abgeleiteten (konkreten) Klassen implementiert 
+\end_layout
+
+\begin_layout Itemize
+es können „Familien“ von gemeinsamen Schnittstellen realisiert werden 
+\end_layout
+
+\begin_layout Section
+Faktorisierung
+\end_layout
+
+\begin_layout Itemize
+Zusammenfassen von Gemeinsamkeiten verwandter Klassen
+\end_layout
+
+\begin_layout Itemize
+Gemeinsamkeiten werden in (abstrakten) Basisklassen definiert
+\end_layout
+
+\begin_layout Section
+Sichtbarkeit
+\end_layout
+
+\begin_layout Description
+private Nur innerhalb der Klasse
+\end_layout
+
+\begin_layout Description
+protected innerhalb der Klasse und aller abgeleiteten Klassen
+\end_layout
+
+\begin_layout Description
+public von außen Sichtbar und zugreifbar
+\end_layout
+
+\begin_layout Description
+Achtung Datenkomponenten nur in Ausnahmefällen public setzen! Stets einen
+ Getter / Setter implementieren.
+ (Funktion zum setzen und Funktion zum lesen des Wertes)
+\end_layout
+
+\begin_layout Description
+Pitfall Sichtbarkeit ist auf Klassenlevel! Das heißt, dass wenn ein anderes
+ Objekt der Klasse als Argument übergeben wird die private Komponenten ebenfalls
+ in der Klasse sichtbar sind!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Generics
+\end_layout
+
+\begin_layout Description
+TL;DR Generics ermöglichen es einen Typen für ein Objekt meist einen Container
+ fix mitzugeben.
+ Zum Beispiel für eine Liste mit Type Generic List<INTEGER> für Integerliste
+ und List<STRING> haben die selbe Implementierung, lediglich der Typ der
+ Datenkomponente in der Node ist anders.
+ Wenn alle Datentypen / Objekte möglich sind ist es allgemeine Generizität,
+ wenn man definiert das nur Objekte die von einer bestimmten Klasse abgeleitet
+ sind oder ein bestimmten Interface implementieren, so spricht man von eingeschr
+änkter Generizität.
+ (Zum Beispiel: Die Liste darf nur Shapes beinhalten, also geht List<Circle>
+ List<Rect> aber List<Int> nicht)
+\end_layout
+
+\begin_layout Description
+Lang (Folien)
+\end_layout
+
+\begin_layout Standard
+Generische Klassen sollen die Möglichkeit bieten, einen Container so einzuschrän
+ken, dass er nur Objekte einer bestimmten Klasse (bzw.
+ von davon abgeleiteten Klassen) aufnehmen kann.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Probleme bei allgemeiner Generizität
+\end_layout
+
+\begin_layout Itemize
+die Parametrisierung kann mit jeder Klasse vorgenommen werden
+\end_layout
+
+\begin_layout Itemize
+innerhalb der generischen Klasse können keine Annahmen darüber gemacht werden,
+ welche Messages von Objekten der Parameterklasse akzeptiert werden
+\end_layout
+
+\begin_layout Itemize
+wenn es eine Wurzelklasse Object gibt, können nur die in ihr definierten
+ Messages verwendet werden
+\end_layout
+
+\begin_layout Subsubsection*
+Eingeschränkte Generizität
+\end_layout
+
+\begin_layout Standard
+Parameterklasse wird mit der Definition einer Mindestbasisklasse versehen
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Compiler- bau / design
+\end_layout
+
+\begin_layout Section
+Der Compiler
+\end_layout
+
+\begin_layout Standard
+Die Aufgabe des Compilers ist es eine Hochsprache in ausführbaren Maschinencode
+ zu übersetzen.
+\end_layout
+
+\begin_layout Paragraph
+Illustriert anhand von einem Pascal Programm
+\end_layout
+
+\begin_layout Itemize
+Der Benutzer schreibt ein Pascal Programm (*.pas) (high-level)
+\end_layout
+
+\begin_layout Itemize
+Der Pascal Compiler übersetzt es in 
+\begin_inset Quotes gld
+\end_inset
+
+assembler-ähnlichen
+\begin_inset Quotes grd
+\end_inset
+
+ Code (low-level)
+\end_layout
+
+\begin_layout Itemize
+Ein Assembler übersetzt nun den low-level Code in Maschinencode.
+\end_layout
+
+\begin_layout Itemize
+Der Linker führt nun alle vorbereiteten Teile zusammen in einen ausführbaren
+ Maschinencode.
+\end_layout
+
+\begin_layout Itemize
+Anschließend lädt der 
+\begin_inset Quotes gld
+\end_inset
+
+Loader
+\begin_inset Quotes grd
+\end_inset
+
+ die Anwedung in den Speicher und führt diese aus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=1cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+                    semithick]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+tikzstyle{every state}=[fill=red,draw=none,text=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tikzstyle{part}=[rectangle, draw=headlinec, fill=subheadlinec, text centered,
+ anchor=north, text=white, text width=2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+tikzstyle{source}=[rectangle, draw=headlinec, rounded corners, fill=subheadlinec
+, text centered, anchor=north, text=white, text width=2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+tikzstyle{addinfo}=[rectangle, draw=none, rounded corners, fill=none, text
+ centered, anchor=right, text=black, text width=2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tikzstyle{infoarrow}=[->, >=stealth, thin, dashed]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[source] (A)                    {$Quellcode$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (B) [below of=A] {$Compiler$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (C) [below of=B] {$Assembler$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (D) [below of=C] {$Linker$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (E) [below of=D] {$Loader$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (F) [below of=E] {$Speicher$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[addinfo]  (COMPILER) [below right of=B, xshift=2.2cm,yshift=0.2cm] {$Assembly
+ Code$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[addinfo]  (ASSEMBLER) [below right of=C,xshift=2.2cm,yshift=0.2cm] {$vorb.
+ Maschinen Code$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[addinfo]  (LINKER) [right of=D,xshift=1.4cm] {$Libraries / Units / Module$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[addinfo]  (LOADER) [below right of=E,xshift=2.2cm,yshift=0.2cm] {$ausf.
+ Maschinen Code$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+path (A) edge [titlec] (B)  
+\end_layout
+
+\begin_layout Plain Layout
+
+		(B) edge [titlec] (C)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(C) edge [titlec] (D)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(D) edge [titlec] (E)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(E) edge [titlec] (F);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+path  (B) edge [infoarrow] (COMPILER)  
+\end_layout
+
+\begin_layout Plain Layout
+
+		(COMPILER) edge [infoarrow] (C)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(C) edge [infoarrow] (ASSEMBLER)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(ASSEMBLER) edge [infoarrow] (D)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(E) edge [infoarrow] (LOADER)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(LOADER) edge [infoarrow] (F);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+path (D) edge [titlec] (LINKER)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(LINKER) edge [titlec, bend left] (D);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small{
+\end_layout
+
+\end_inset
+
+Vereinfachte Darstellung
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In dieser Darstellung ist kein Pre-Processor miteingabaut, welcher den Code
+ vor dem eigentlichen Compiler verarbeitet.
+ Dieser bereitet im Normalfall Codeteile die nicht von der ausführenden
+ Maschine abhängig sind so auf, dass sie beim weiteren kompilieren für eine
+ andere Maschine nicht neu kompiliert werden müssen.
+\end_layout
+
+\begin_layout Section
+Architektur
+\end_layout
+
+\begin_layout Standard
+Ein Compiler kann in zwei Phasen geteilt werden.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Quotes gld
+\end_inset
+
+Analysis Phase
+\begin_inset Quotes grd
+\end_inset
+
+ - Analytische Phase
+\end_layout
+
+\begin_layout Standard
+Auch bekannt als 
+\begin_inset Quotes gld
+\end_inset
+
+front-end
+\begin_inset Quotes grd
+\end_inset
+
+ des Compilers.
+ In der Analyse-Phase liest der Compiler den Quellcode ein, teilt diesen
+ in seine Kernstücke und überprüft auf lexikalische, syntaktische oder Grammatik
+-Fehler.
+ Aus der Analyse Phase heraus entsteht eine erste Repräsentation des Quellcodes
+ und eine Symboltabelle, beides dient der Synthese-Phase als 
+\begin_inset Quotes gld
+\end_inset
+
+Input
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Quotes gld
+\end_inset
+
+Synthesis Phase
+\begin_inset Quotes grd
+\end_inset
+
+ - Synthese-Phase
+\end_layout
+
+\begin_layout Standard
+Folglich das 
+\begin_inset Quotes gld
+\end_inset
+
+back-end
+\begin_inset Quotes grd
+\end_inset
+
+ des Compilers.
+ In der Synthese-Phase wird das Programm aus den in der Analyse-Phase gesammelte
+n Informationen generiert.
+\end_layout
+
+\begin_layout Paragraph
+Ein Compiler kann aus mehreren 
+\begin_inset Quotes gld
+\end_inset
+
+Phases
+\begin_inset Quotes grd
+\end_inset
+
+ und 
+\begin_inset Quotes gld
+\end_inset
+
+Passes
+\begin_inset Quotes grd
+\end_inset
+
+ bestehen
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Pass
+\series default
+: Ein 
+\begin_inset Quotes gld
+\end_inset
+
+Pass
+\begin_inset Quotes grd
+\end_inset
+
+ ist ein kompletter Durchlauf durch den Programmcode.
+ Der Standard-Pascalcompiler ist ein so genannter 
+\begin_inset Quotes gld
+\end_inset
+
+Single-Pass-Compiler
+\begin_inset Quotes grd
+\end_inset
+
+, dies ist unter anderem der Grund für 
+\begin_inset Quotes gld
+\end_inset
+
+forward
+\begin_inset Quotes grd
+\end_inset
+
+-Deklarationen, dieser läuft den Quellcode genau einmal durch.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Multi-Pass-Compiler
+\begin_inset Quotes grd
+\end_inset
+
+ benötigen diese im Regenfall nicht.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+Phase
+\series default
+: Eine 
+\begin_inset Quotes gld
+\end_inset
+
+Phase
+\begin_inset Quotes grd
+\end_inset
+
+ ist immer ein Schritt den der Compiler während des Übersetzens geht.
+ Dieser benötigt stets Daten von der vorherigen 
+\begin_inset Quotes gld
+\end_inset
+
+Phase
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Ein Pass kann aus mehreren 
+\begin_inset Quotes gld
+\end_inset
+
+Phases
+\begin_inset Quotes grd
+\end_inset
+
+ bestehen.
+\end_layout
+
+\begin_layout Section
+\begin_inset Quotes gld
+\end_inset
+
+Phases
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Während des kompilierens durchläuft der Compiler verschiedene Phasen, 
+\begin_inset Quotes gld
+\end_inset
+
+Phases
+\begin_inset Quotes grd
+\end_inset
+
+, die jeweils auf den Daten der vorherigen Phase weiterarbeiten.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=1cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+                    semithick]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+tikzstyle{every state}=[fill=red,draw=none,text=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tikzstyle{part}=[rectangle, draw=headlinec, fill=subheadlinec, text centered,
+ anchor=north, text=white, text width=2.9cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tikzstyle{util}=[rectangle, draw=headlinec, fill=titlec, text centered,
+ anchor=north, text=white, text width=2.9cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+tikzstyle{source}=[rectangle, draw=headlinec, rounded corners, fill=subheadlinec
+, text centered, anchor=north, text=white, text width=2.5cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+tikzstyle{addinfo}=[rectangle, draw=none, rounded corners, fill=none, text
+ centered, anchor=right, text=black, text width=2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tikzstyle{infoarrow}=[->, >=stealth, thin, dashed]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[source] (A)                    {$Quellcode$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (B) [below of=A] {$Lexikalischer A.$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (C) [below of=B] {$Syntaktischer A.$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (D) [below of=C] {$Semantischer A.$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (E) [below of=D] {$Intermediate Code Gen.$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (F) [below of=E] {$M.I.
+ Optimiser$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (G) [below of=F] {$Code Generator$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[part]   (H) [below of=G] {$M.D.
+ Optimiser$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[source]   (I) [below of=H] {$Ausführbarer Code$};
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[util,rotate=-90,yshift=2.8cm]   (SYMTABLE) [left of=F] {$Symbol Tabelle$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[util,rotate=90,yshift=2.8cm]   (ERRORHANDLER) [right of=F] {$Error Handler$}
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+path (A) edge [titlec] (B)  
+\end_layout
+
+\begin_layout Plain Layout
+
+		(B) edge [titlec] (C)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(C) edge [titlec] (D)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(D) edge [titlec] (E)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(E) edge [titlec] (F)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(F) edge [titlec] (G)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(G) edge [titlec] (H)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(H) edge [titlec] (I);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+path (SYMTABLE) edge [infoarrow] (B.east)  
+\end_layout
+
+\begin_layout Plain Layout
+
+		(SYMTABLE) edge [infoarrow] (C.east)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(SYMTABLE) edge [infoarrow] (D.east)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(SYMTABLE) edge [infoarrow] (E.east)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(SYMTABLE) edge [infoarrow] (F.east)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(SYMTABLE) edge [infoarrow] (G.east)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(SYMTABLE) edge [infoarrow] (H.east);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path (ERRORHANDLER) edge [infoarrow] (B.west)  
+\end_layout
+
+\begin_layout Plain Layout
+
+		(ERRORHANDLER) edge [infoarrow] (C.west)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(ERRORHANDLER) edge [infoarrow] (D.west)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(ERRORHANDLER) edge [infoarrow] (E.west)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(ERRORHANDLER) edge [infoarrow] (F.west)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(ERRORHANDLER) edge [infoarrow] (G.west)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(ERRORHANDLER) edge [infoarrow] (H.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tiny{
+\end_layout
+
+\end_inset
+
+Anmerkungen
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+M.I.
+ Opt.
+ (Maschine Independent) macht Code Optimierungen die nicht von der jeweiligen
+ Maschine abhängen für die kompiliert wird.
+ M.D.
+ Opt.
+ (Maschine Dependent) macht Code Optimierung speziell für die Maschine auf
+ der der Code laufen wird.
+\end_layout
+
+\begin_layout Subsection
+Lexikalische Analyse
+\end_layout
+
+\begin_layout Standard
+Der Scanner der ersten Phase ist nichts anderes als ein Plain-Text Scanner.
+ Dieser nimmt das rohe Textfile und konvertiert Zeichen für Zeiche in so
+ genannte 
+\begin_inset Quotes gld
+\end_inset
+
+lexemes
+\begin_inset Quotes grd
+\end_inset
+
+ bzw.
+ Tokens.
+ So werden aus dem Plain Text-File für den Rechner sinnvolle Symbole mit
+ denen er weiter arbeiten kann.
+ Eine gängige Form für diese Tokens ist (Name,Wert).
+\end_layout
+
+\begin_layout Subsection
+Syntaktische Analyse
+\end_layout
+
+\begin_layout Standard
+Die nächste Phase ist die syntaktische Analyse oder auch 
+\begin_inset Quotes gld
+\end_inset
+
+Parsing
+\begin_inset Quotes grd
+\end_inset
+
+ genannt.
+ Hier werden die Token aus der lexikalischen Analyse genommen und ein eine
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Parse-Tree
+\begin_inset Quotes grd
+\end_inset
+
+ bzw.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Syntax Tree
+\begin_inset Quotes grd
+\end_inset
+
+ generiert.
+ Dieser Prozess prüft die Anordnung der Tokens anhand der Grammatik, sprich
+ er prüft die syntaktische Korrektheit der Eingaben.
+\end_layout
+
+\begin_layout Subsection
+Semantische Analyse
+\end_layout
+
+\begin_layout Standard
+In der semantischen Analyse liest der Compiler den 
+\begin_inset Quotes gld
+\end_inset
+
+Parse-Tree
+\begin_inset Quotes grd
+\end_inset
+
+ / 
+\begin_inset Quotes gld
+\end_inset
+
+Syntax Tree
+\begin_inset Quotes grd
+\end_inset
+
+  der aus der syntaktischen Analyse ensteht und prüft ob dieser den Sprachstanda
+rds folgt.
+ Es wird unter anderem geprüft ob die Datentypen miteinander kompatiblen
+ sind (z.B.
+ String wird auf Integer addiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+rightarrow$
+\end_layout
+
+\end_inset
+
+ geht, je nach Sprache, nicht).
+ Des Weiteren werden alle 
+\begin_inset Quotes gld
+\end_inset
+
+Identifier
+\begin_inset Quotes grd
+\end_inset
+
+ mit deren Typ erfasst und alle 
+\begin_inset Quotes gld
+\end_inset
+
+Expressions
+\begin_inset Quotes grd
+\end_inset
+
+ in denen die 
+\begin_inset Quotes gld
+\end_inset
+
+Identifier
+\begin_inset Quotes grd
+\end_inset
+
+ vorkommen und ob diese überhaupt bereits richtig deklariert wurden.
+ Das Ergebnis ist eine so genannte 
+\begin_inset Quotes gld
+\end_inset
+
+annotated syntax tree
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Intermediate Code Generation
+\end_layout
+
+\begin_layout Standard
+Nach der semantischen Analyse generiert der Compiler einen 
+\begin_inset Quotes gld
+\end_inset
+
+intermediate code
+\begin_inset Quotes grd
+\end_inset
+
+ für die Maschine für die der Code kompiliert wird (x64,ARM etc).
+ Er stellt ein Programm für eine abstrakte Maschine da, er ist das Bindeglied
+ zwischen 
+\begin_inset Quotes gld
+\end_inset
+
+high-level
+\begin_inset Quotes grd
+\end_inset
+
+ und Maschinsprache.
+ Er wird üblicherweise so generiert, dass dieser möglichst einfach in Maschinenc
+ode für die Maschine auf der er laufen soll, übersetzt werden kann.
+\end_layout
+
+\begin_layout Subsection
+Code Optimierung
+\end_layout
+
+\begin_layout Standard
+Der nächste Schritt ist die Optimierung des 
+\begin_inset Quotes gld
+\end_inset
+
+intermediate code
+\begin_inset Quotes grd
+\end_inset
+
+ optimiert wird.
+ Hier werden überflüssige 
+\begin_inset Quotes gld
+\end_inset
+
+Lines of Code
+\begin_inset Quotes grd
+\end_inset
+
+ entfernt oder 
+\begin_inset Quotes gld
+\end_inset
+
+Statements
+\begin_inset Quotes grd
+\end_inset
+
+ neu angeordnet um Performance zu gewinnen.
+\end_layout
+
+\begin_layout Subsection
+Code Generierung
+\end_layout
+
+\begin_layout Standard
+In dieser Phase generiert der Compiler aus dem 
+\begin_inset Quotes gld
+\end_inset
+
+intermediate code
+\begin_inset Quotes grd
+\end_inset
+
+ den tatsächlichen Maschinencode für die Zielmaschine.
+\end_layout
+
+\begin_layout Subsection
+Symbol Table
+\end_layout
+
+\begin_layout Standard
+Die 
+\begin_inset Quotes gld
+\end_inset
+
+Symbol Table
+\begin_inset Quotes grd
+\end_inset
+
+ begleitet den gesamten Prozess.
+ In ihr stehen alle Identifiernamen mit ihren Typen.
+ Sie ermöglicht es dem Compiler Identifier schnell zu suchen und zu finden.
+ Ihr Aufgabe ist auch die Sichtbar/den Geltungsbereich von Variablen sicherzuste
+llen (Scope).
+\end_layout
+
+\begin_layout Subsection
+Error Handler
+\end_layout
+
+\begin_layout Standard
+Der Errorhandler begleitet ebenfalls den gesamten Prozess und dient dazu
+ Fehler zu sammeln um diese anschließend den Benutzer anzeigen zu können.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Attributierte Grammatiken
+\end_layout
+
+\begin_layout Section
+EBNF
+\end_layout
+
+\begin_layout Description
+[] Ein optionales Element kommt maximal 1x vor: Eckige Klammern Ja/Nein
+\end_layout
+
+\begin_layout Description
+{} Mehrfache Wiederholungen: Geschweifte Klammern
+\end_layout
+
+\begin_layout Description
+() Klammern verwendet man für das Leseverständnis 
+\end_layout
+
+\begin_layout Description
+| Alternativen werden mit Pipe-Symbol gekennzeichnet.
+\end_layout
+
+\begin_layout Description
+Nonterminalsymbole
+\begin_inset space ~
+\end_inset
+
+(Grammatikregeln) beginnen mit einem großen Buchstaben.
+\end_layout
+
+\begin_layout Description
+Terminalsymbole beginnen mit einem kleinen Buchstaben.
+\end_layout
+
+\begin_layout Description
+Attribute haben kurze Namen.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow
+\end_layout
+
+\end_inset
+
+ Ausgangsattribut,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrowd
+\end_layout
+
+\end_inset
+
+ Eingangsattribut
+\end_layout
+
+\begin_layout Section
+Beispiel: eine Notenliste
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Clean"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[ADF2]
+\end_layout
+
+\begin_layout Plain Layout
+
+Max Mustermann: NGD, BEF, SGT
+\end_layout
+
+\begin_layout Plain Layout
+
+Susi Super: BEF, GUT, SGT
+\end_layout
+
+\begin_layout Plain Layout
+
+Paul Faul: NGD, NGD
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aufgabe 1
+\end_layout
+
+\begin_layout Standard
+Jede Notenliste hat eine Vorlesung und mehrere Schüler + Noten, jeder Schüler
+ darf eine bis maximal drei Noten haben.
+\end_layout
+
+\begin_layout Subsubsection
+Ermittlung der Terminalsymbole
+\end_layout
+
+\begin_layout Standard
+Space/Leerzeichen und 
+\backslash
+r
+\backslash
+n / Zeilen sind keine Terminalsymbole.
+ Ein Leerzeichen trennt stets Terminalsymbole.
+ (Beispiel 
+\series bold
+137 
+\series default
+ist ein Terminalsymbol aber 
+\series bold
+13
+\series default
+ 
+\series bold
+7 
+\series default
+sind zwei Terminalsymbole)
+\end_layout
+
+\begin_layout Paragraph
+Terminalsymbole
+\end_layout
+
+\begin_layout Description
+[ leftBr
+\end_layout
+
+\begin_layout Description
+] rightBr
+\end_layout
+
+\begin_layout Description
+: colon
+\end_layout
+
+\begin_layout Description
+, comma
+\end_layout
+
+\begin_layout Description
+SGT sgt
+\end_layout
+
+\begin_layout Description
+GUT gut
+\end_layout
+
+\begin_layout Description
+BEF bef
+\end_layout
+
+\begin_layout Description
+GEN gen
+\end_layout
+
+\begin_layout Description
+NGD ngd
+\end_layout
+
+\begin_layout Paragraph
+Terminalklassen
+\end_layout
+
+\begin_layout Description
+name Buchstaben + Zahlen
+\end_layout
+
+\begin_layout Standard
+Achtung
+\end_layout
+
+\begin_layout Standard
+Kleinbuchstaben!
+\end_layout
+
+\begin_layout Subsubsection
+Ermittlung der Non-Terminalsymbole / Grammatik
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{grammar}
+\end_layout
+
+\begin_layout Plain Layout
+
+<
+\backslash
+underline{ResultList}> = LVA Results.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<LVA> = "leftBr" "name" "rightBr".
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Results> = Result "{"Result"}".
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Result> = Student "colon" Grades.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Grades> = Grade [comma Grade [comma Grade]].
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<Grade> = "sgt" | "gut" | "bef" | "gen" | "ngd".
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{grammar}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aufgabe 2: Semantik : Average 
+\end_layout
+
+\begin_layout Standard
+Notenschnitt von letzter Note aller Schüler in Liste 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Anmerkung
+\end_layout
+
+\begin_layout Standard
+Laut Horn sollen wir das, wenns wirs schaffen, immer gleich so hinschreiben.
+ Ist wurscht wenns dann eine A4 Seite braucht, wir können dann gleich hier
+ die Semantik machen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ResultList
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{avg:REAL}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+LVA
+\begin_inset Newline newline
+\end_inset
+
+Results
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+yelsem{avg}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\end_layout
+
+\begin_layout Description
+LVA 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+leftBr name 
+\begin_inset Newline newline
+\end_inset
+
+rightBr
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Results
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{avg:REAL}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> VAR grade,sum,count: INTEGER; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> count := 1; sum := 0; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Result
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{grade}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> sum := grade; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+{Result
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{grade}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> sum := sum + grade; count := count + 1; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+}
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{avg}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem>avg := sum / count; <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Result
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{grade:INTEGER}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+Student
+\begin_inset Newline newline
+\end_inset
+
+colon Grades
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{grade}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Student 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ =
+\begin_inset Newline newline
+\end_inset
+
+name
+\begin_inset Newline newline
+\end_inset
+
+name
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Grades
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{last:INTEGER}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{last}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+[comma Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{last}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+[comma Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{}
+\backslash
+yelsem{last}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+]
+\begin_inset Newline newline
+\end_inset
+
+]
+\begin_inset Newline newline
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Grade
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bluearrow{v:INTEGER}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+=
+\begin_inset Newline newline
+\end_inset
+
+sgt 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 1 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| gut 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 2 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| bef 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 3 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| gnd 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 4 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+| ngd 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\backslash
+semcom{
+\end_layout
+
+\end_inset
+
+<sem> v := 5 <endsem>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tipps
+\end_layout
+
+\begin_layout Itemize
+Terminalsymbole sind Sinneinheiten
+\end_layout
+
+\begin_layout Itemize
+Ein Buchstabe ist kein Terminalsymbol! Da es keine sinntragende Einheit
+ ist (Ausnahme z.B.
+ "a" im Englisch)
+\end_layout
+
+\begin_layout Itemize
+In unseren Angaben stehen IMMER nur Terminalsymbole!
+\end_layout
+
+\begin_layout Itemize
+Kann man in 2 Einheiten gliedern:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Name, Lehrveranstaltungen, Noten sind Terminalklassen, da es unendliche
+ viele Ausprägungen gibt! -> Eigennamen
+\end_layout
+
+\begin_layout Itemize
+Terminalklassen brauchen eine Bildungsregel!
+\end_layout
+
+\begin_layout Itemize
+Terminalsymbole ([],:,...)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Frage, ob eine Liste 0, 1 oder mehrere Einträge haben kann: Immer 1 oder
+ mehrere nehmen, weil 0 viel schwerer zu handeln ist.
+\end_layout
+
+\begin_layout Itemize
+Bei der Semantik: für jedes Symbol eine eigene Zeile! außer bei einem Terminalsy
+mbol kann man das nächste Symbol gleich dranschreiben, da ein Terminalsymbol
+ für sich eh keine Bedeutung hat.
+\end_layout
+
+\begin_layout Paragraph
+"Terminaklasse Name besteht aus lauter Buchstaben",
+\end_layout
+
+\begin_layout Standard
+Man kann "[", "Vorlesungsname", "]" nehmen, oder "[Vorlesungsname]" als
+ ganzes festlegen! Da hat man Spielraum.
+ Aber auch nur, wenn KEIN Leerzeichen dazwischen steht.
+ Sonst sinds sowieso eigene Terminalsymbole
+\end_layout
+
+\begin_layout Part
+Code
+\end_layout
+
+\begin_layout Chapter
+Code Snippets
+\end_layout
+
+\begin_layout Section
+Dateizugriff
+\end_layout
+
+\begin_layout Subsection
+IO Result abfragen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE HandleIOResult(res : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+   WriteLn('result = ', res);
+\end_layout
+
+\begin_layout Plain Layout
+
+   CASE res OF
+\end_layout
+
+\begin_layout Plain Layout
+
+      0: WriteLn('Ok');
+\end_layout
+
+\begin_layout Plain Layout
+
+      2: WriteLn('File not found');
+\end_layout
+
+\begin_layout Plain Layout
+
+      3: WriteLn('Path not found');
+\end_layout
+
+\begin_layout Plain Layout
+
+      4: WriteLn('Too many files open');
+\end_layout
+
+\begin_layout Plain Layout
+
+      5: WriteLn('Access denied');
+\end_layout
+
+\begin_layout Plain Layout
+
+      6: WriteLn('Invalid file handle');
+\end_layout
+
+\begin_layout Plain Layout
+
+      ELSE WriteLn('Generic error: ', res, '!');
+\end_layout
+
+\begin_layout Plain Layout
+
+   END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+   (*$I-*)
+\end_layout
+
+\begin_layout Plain Layout
+
+   Assign(f,'/..../../.');
+\end_layout
+
+\begin_layout Plain Layout
+
+   Reset(f);
+\end_layout
+
+\begin_layout Plain Layout
+
+   result := IOResult;
+\end_layout
+
+\begin_layout Plain Layout
+
+   IF (result <> 0) THEN BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      WriteLn('IOResult =', result);
+\end_layout
+
+\begin_layout Plain Layout
+
+      HandleIOResult(result);
+\end_layout
+
+\begin_layout Plain Layout
+
+   END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Patternmatching
+\end_layout
+
+\begin_layout Standard
+Alle Pattermatching Algorithmen unten setzen die Funktion Eq(a1,a2) : BOOLEAN
+ vorraus, welche einen Vergleich der beiden Argumente durchführt.
+\end_layout
+
+\begin_layout Subsection
+Knuth-Morris-Pratt
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE KnuthMorisPratt(s,p : STRING; VAR pos : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+    next : ARRAY[1..maxStrLen] OF INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+    sLen,pLen,i,j : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE InitNextImproved;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+    i,j : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  i := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  j := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  next[1] := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE i < pLen DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF (j=0) OR Eq(p[i],p[j]) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      Inc(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+      Inc(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+      IF NOT Eq(p[j], p[i]) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+      next[i] := j
+\end_layout
+
+\begin_layout Plain Layout
+
+      ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+      next[i] := next[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+    END ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+    j := next[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  sLen := Length(s);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pLen := Length(p);
+\end_layout
+
+\begin_layout Plain Layout
+
+  InitNextImproved;
+\end_layout
+
+\begin_layout Plain Layout
+
+  i := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  j := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  REPEAT
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF (j = 0) OR Eq(s[i],p[j]) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      Inc(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+      Inc(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+    END ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+    j := next[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+  UNTIL (i > sLen) OR (j > pLen);
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF (j > pLen) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+  pos := i - pLen
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+  pos := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rabin-Karp
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE RabinKarp(s,p : STRING; VAR pos : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+CONST
+\end_layout
+
+\begin_layout Plain Layout
+
+      q = 8355967;
+\end_layout
+
+\begin_layout Plain Layout
+
+      d = 256;
+\end_layout
+
+\begin_layout Plain Layout
+
+var
+\end_layout
+
+\begin_layout Plain Layout
+
+    sLen, pLen, i,j,dm,hp,hs : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+    iMax : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+    sPos : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  sLen := Length(s);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pLen := Length(p);
+\end_layout
+
+\begin_layout Plain Layout
+
+  dm := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  pos := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i := 1 TO pLen - 1 DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  dm := (d * dm) MOD q;
+\end_layout
+
+\begin_layout Plain Layout
+
+  hp := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  hs := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i := 1 TO pLen DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    hp := (hp * d + Ord(p[i])) MOD q;
+\end_layout
+
+\begin_layout Plain Layout
+
+    hs := (hs * d + Ord(s[i])) MOD q;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  i := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  j := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  iMax := sLen - pLen + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  WHILE (i <= iMax) AND (j <= pLen) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF hp = hs THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      j := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+      sPos := i;
+\end_layout
+
+\begin_layout Plain Layout
+
+      WHILE (j <= pLen) AND Eq(p[j],s[sPos]) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+      BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+        Inc(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+        Inc(sPos);
+\end_layout
+
+\begin_layout Plain Layout
+
+      END;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    hs := (hs + d * q - Ord(s[i]) * dm) MOD q;
+\end_layout
+
+\begin_layout Plain Layout
+
+    hs := (hs * d + ORD(s[i+pLen])) MOD q;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Inc(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF (i > iMax) AND (j <= pLen) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+  pos := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+  pos := i -1; (*match found *)
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Boyer Moore
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE BoyerMoore(s ,p : STRING; VAR pos : INTEGER);
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+    skip : ARRAY[CHAR] OF INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+    sLen, pLen, i, j : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE InitSkip;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+    ch : CHAR;
+\end_layout
+
+\begin_layout Plain Layout
+
+    j : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR ch := CHR(0) TO CHR(255) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  skip[ch] := pLen;
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR j := 1 TO pLen DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  skip[p[j]] := pLen - j;
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (* init skip *)
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  sLen := Length(s);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pLen := Length(p);
+\end_layout
+
+\begin_layout Plain Layout
+
+  InitSkip;
+\end_layout
+
+\begin_layout Plain Layout
+
+  i := pLen;
+\end_layout
+
+\begin_layout Plain Layout
+
+  j := pLen;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  REPEAT
+\end_layout
+
+\begin_layout Plain Layout
+
+    IF Eq(s[i],p[j]) THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      Dec(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+      Dec(j);
+\end_layout
+
+\begin_layout Plain Layout
+
+    END
+\end_layout
+
+\begin_layout Plain Layout
+
+    ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      IF pLen - j + 1 > skip[s[i]] THEN (* missmatch s[i] not in pattern*)
+\end_layout
+
+\begin_layout Plain Layout
+
+      i := i + pLen - j + 1 (* skip whole pattern  *)
+\end_layout
+
+\begin_layout Plain Layout
+
+      ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+      i := i + skip[s[i]];
+\end_layout
+
+\begin_layout Plain Layout
+
+      j := pLen;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  UNTIL (i > sLen) OR (j < 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF j < 1 THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+  pos := i + 1 + shift
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+  pos := 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (*boyer moore *)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+String Hashing
+\end_layout
+
+\begin_layout Subsection
+DJB2-custom
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION Shift(hash : LONGWORD; desiredLength : INTEGER) : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF hash = 0 THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  Shift := hash;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(* longword = unsinged *)
+\end_layout
+
+\begin_layout Plain Layout
+
+FUNCTION GetHashcodeFor(data : STRING; desiredLength : INTEGER) : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  hash : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+  i : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  (* original start value from dan bersteins djb2 used in comp.lang.c *)
+\end_layout
+
+\begin_layout Plain Layout
+
+  hash := 5381;
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i := 1 TO LENGTH(data) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    (* update rev 2 back to 33 from 37*)
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash := ((hash * 33) MOD desiredLength) + (Ord(data[i]) + (i * PosModifier))
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  GetHashcodeFor := Shift((hash MOD desiredLength),desiredLength);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+DJB2-custom
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION Shift(hash : LONGWORD; desiredLength : INTEGER) : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  IF hash = 0 THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash := 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  Shift := hash;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(* longword = unsinged *)
+\end_layout
+
+\begin_layout Plain Layout
+
+FUNCTION GetHashcodeFor(data : STRING; desiredLength : INTEGER) : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  hash : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+  i : INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  (* original start value from dan bersteins djb2 used in comp.lang.c *)
+\end_layout
+
+\begin_layout Plain Layout
+
+  hash := 5381;
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i := 1 TO LENGTH(data) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    (* update rev 2 back to 33 from 37*)
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash := ((hash * 33) MOD desiredLength) + (Ord(data[i]) + (i * PosModifier))
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  GetHashcodeFor := Shift((hash MOD desiredLength),desiredLength);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+FNV1a (
+\begin_inset Quotes gld
+\end_inset
+
+kleine
+\begin_inset Quotes grd
+\end_inset
+
+ Primzahl)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FUNCTION GetHashcodeFor(data : STRING; desiredLength : INTEGER) : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+VAR
+\end_layout
+
+\begin_layout Plain Layout
+
+  hash,prime : LONGWORD;
+\end_layout
+
+\begin_layout Plain Layout
+
+  i: INTEGER;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  hash := 2166136261;
+\end_layout
+
+\begin_layout Plain Layout
+
+  prime := 499;
+\end_layout
+
+\begin_layout Plain Layout
+
+  FOR i := 1 TO LENGTH(data) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash := (hash XOR Ord(data[i]));
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash := (hash MOD desiredLength) * prime;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  GetHashcodeFor := (hash + 1) MOD desiredLength;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rekursiver Abstieg
+\end_layout
+
+\begin_layout Standard
+Der rekursive Abstieg ist eine Methode, die im Compilerbau angewendet wird.
+ Ein Compiler, der diese Technik benützt, gehört zu den schnellsten Compilern
+ überhaupt.
+ Die Voraussetzung für den rekursiven Abstieg im Compilerbau ist, daß es
+ sich bei der Grammatik der Programmiersprache um eine LL1-Sprache handelt.
+ 
+\end_layout
+
+\begin_layout Subsection
+Verwendete Variablen und Prozeduren 
+\end_layout
+
+\begin_layout Description
+success globale Variable, die mit TRUE initialisiert wird und beim ersten
+ Fehler auf FALSE gesetzt wird – gibt an, ob kein Syntaxfehler aufgetreten
+ ist
+\end_layout
+
+\begin_layout Description
+sy globale Variable, die zu jedem Zeitpunkt das nächste noch nicht erkannte
+ Terminalsymbol enthält
+\end_layout
+
+\begin_layout Description
+NewSy Prozedur, die der (globalen) Variablen sy das nächste Terminalsymbol
+ zuweist (sie entspricht dem "lexikalischen Analysator") 
+\end_layout
+
+\begin_layout Subsection
+Erkennung von Terminal- und Nonterminalsymbolen
+\end_layout
+
+\begin_layout Subsubsection
+Terminalsymbol
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+IF sy <> aSy THEN BEGIN success := FALSE; Exit; END; NewSy; 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Nonterminalsymbol A
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+A; IF NOT success THEN Exit;  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Achtung Hierbei ist besonders zu beachten, dass NewSy immer nur nach der
+ Erkennung eines Terminalsymbols aufgerufen werden darf.
+ 
+\end_layout
+
+\begin_layout Subsection
+Erkennung von EBNF-Regeln 
+\end_layout
+
+\begin_layout Standard
+Für jede Regel (also jedes Nonterminalsymbol) der Grammatik wird eine eigene
+ Prozedur mit dem Namen dieses Nonterminalsymbols geschrieben.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+S = … 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PROCEDURE S;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  .
+ .
+ .
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (*S*)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+...
+ = a A b .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+IF sy <> aSy THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  success := FALSE; Exit
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+A; IF NOT success THEN Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+IF sy <> bSy THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  success := FALSE; Exit
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+NewSy;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+...
+ = [ a ] A [ b ] .
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+IF sy <> aSy THEN BEGIN success := FALSE; Exit END;
+\end_layout
+
+\begin_layout Plain Layout
+
+NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+IF sy = bSy THEN BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+	NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+	A; IF NOT success THEN Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (*IF*) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+...
+ = a [ b A ] .
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+IF sy = aSy THEN NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+A; IF NOT success THEN Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+IF sy = bSy THEN NewSy;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+...
+ = ( a | b | C ) .
+ 
+\begin_inset Formula $\implies$
+\end_inset
+
+C = d ...
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CASE sy OF
+\end_layout
+
+\begin_layout Plain Layout
+
+  aSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+  bSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+  dSy: 
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    C; IF NOT success THEN Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END
+\end_layout
+
+\begin_layout Plain Layout
+
+  ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    success := FALSE; Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (*CASE*)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+...
+ = [ a | b | C ] .
+ 
+\begin_inset Formula $\implies$
+\end_inset
+
+C = d ...
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CASE sy OF
+\end_layout
+
+\begin_layout Plain Layout
+
+  aSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+  bSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+  dSy: 
+\end_layout
+
+\begin_layout Plain Layout
+
+  BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+    C; IF NOT success THEN Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (*CASE*)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+...
+ = { a | b | C } c .
+ 
+\begin_inset Formula $\implies$
+\end_inset
+
+C = d ...
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+WHILE (sy = aSy) OR (sy = bSy) OR (sy = dSy) DO
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  CASE sy OF
+\end_layout
+
+\begin_layout Plain Layout
+
+    aSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+    bSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+    dSy: 
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      C; IF NOT success THEN Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END;
+\end_layout
+
+\begin_layout Plain Layout
+
+  END; (*CASE*)
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (*WHILE*)
+\end_layout
+
+\begin_layout Plain Layout
+
+IF sy <> cSy THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  success := FALSE; Exit
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+NewSy;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oder 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+WHILE sy <> cSy DO
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  CASE sy OF
+\end_layout
+
+\begin_layout Plain Layout
+
+    aSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+    bSy: NewSy;
+\end_layout
+
+\begin_layout Plain Layout
+
+    dSy: 
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      C; IF NOT success THEN Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END
+\end_layout
+
+\begin_layout Plain Layout
+
+    ELSE
+\end_layout
+
+\begin_layout Plain Layout
+
+    BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+      success := FALSE; Exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+    END
+\end_layout
+
+\begin_layout Plain Layout
+
+  END; (*CASE*)
+\end_layout
+
+\begin_layout Plain Layout
+
+END; (*WHILE*)
+\end_layout
+
+\begin_layout Plain Layout
+
+NewSy;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
