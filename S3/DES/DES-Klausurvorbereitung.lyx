@@ -1,0 +1,8848 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[breakable]{tcolorbox}
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault]{roboto}
+\usepackage[T1]{fontenc}
+
+\usepackage{newtxsf}
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\usepackage[simplified]{pgf-umlcd}
+
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\definecolor{whi}{HTML}{FFFFFF}
+\definecolor{bla}{HTML}{000000}
+
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{4pt}
+\setlength{\postmulticols}{4pt}
+\setlength{\multicolsep}{6pt}
+\setlength{\columnsep}{14pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex,
+  partopsep=0.5ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0.5ex,
+  itemsep=0.6ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+
+\setlist[description]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{\bfseries ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+%uml colors
+
+\renewcommand{\umltextcolor}{bla}
+\renewcommand{\umlfillcolor}{whi}
+\renewcommand{\umldrawcolor}{headlinec}
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,halign=center,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,breakable}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,sidebyside}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+DES
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+, v 1.0.0 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Unified Modeling Language
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+UML
+\series default
+ gehört zur Phase des konzeptuellen Entwurfs.
+ 
+\end_layout
+
+\begin_layout Standard
+UML-Klassendiagramme unterstützen objektorientierte Konzepte
+\end_layout
+
+\begin_layout Itemize
+standardisiert und ausdruckstärker
+\end_layout
+
+\begin_layout Itemize
+Spezifikation von Struktur und Verhalten (Methoden)
+\end_layout
+
+\begin_layout Itemize
+genauere Kardinalitätsrestriktionen (Multiplizitäten)
+\end_layout
+
+\begin_layout Itemize
+Unterstützung der Abstraktionskonzepte der
+\end_layout
+
+\begin_layout Itemize
+Generalisierung/Spezialisierung, Aggregation/Komposition
+\end_layout
+
+\begin_layout Itemize
+UML deckt den gesamten Softwareentwurf ab
+\end_layout
+
+\begin_layout Description
+Zweck Konzeptionelle Modellierungssprache für 
+\series bold
+objektorientierte
+\series default
+ 
+\series bold
+Softwaresysteme
+\series default
+ (GPL - General-purpose language)
+\end_layout
+
+\begin_layout Description
+Ausdrucksstärke Nicht auf DB-Schemata beschränkt (viele Diagrammarten -
+ kann Struktur und Verhalten modellieren), kann damit alles abbilden, was
+ auch mit EER abbildbar ist und noch viel darüber hinaus (z.B.
+ Verhalten!)
+\end_layout
+
+\begin_layout Description
+Entwicklungsstatus 
+\series bold
+Standardisiert
+\series default
+; de facto Modellierungssprache im Softwareentwicklungsbereich
+\end_layout
+
+\begin_layout Description
+Verbreitung Große Werkzeugunterstützung
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Generalisierung/Spezialisierung
+\end_layout
+
+\begin_layout Standard
+Foldenge Kriterien sind wichtig um eine Entscheidung über Generalisierung/Spezia
+lisierung zu treffen:
+\end_layout
+
+\begin_layout Itemize
+Speicherverbrauch gering
+\end_layout
+
+\begin_layout Itemize
+Einfacher Zugriff auf alle (abgeleiteten) Objekte einer Klasse (polymorphe
+ Abfrage)
+\end_layout
+
+\begin_layout Itemize
+Einfacher Zugriff auf alle Attribute einer Klasse
+\end_layout
+
+\begin_layout Itemize
+Konsistenzsicherung
+\end_layout
+
+\begin_layout Itemize
+Einfache Manipulation der Daten
+\end_layout
+
+\begin_layout Standard
+Anhand von Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}%[show background grid]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{class}[text width=2.5cm]{Person}{0.25,0}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{<<PK>> SVNR : number}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{Name : String}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{class}[text width=2.5cm]{Angestellte}{-1,-1.5}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+implement{Person}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{PersNr : number}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{Vertragart : string}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{class}[text width=2.5cm]{Student}{2,-1.5}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+implement{Person}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{MatrNr : number}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{Semster : number}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{class}[text width=2.5cm]{Assistent}{-2.5,-3}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+implement{Angestellte}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{Fachgebiet : string}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{class}[text width=2.5cm]{Professor}{0.5,-3}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+implement{Angestellte}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+attribute{Rang : string}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{class}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Basisrelationenmodell
+\end_layout
+
+\begin_layout Standard
+Jede Klasse wird durch 
+\series bold
+eine Relation 
+\series default
+abgebildet
+\end_layout
+
+\begin_layout Standard
+Jede Klasse ist 
+\series bold
+genau einmal und vollständig
+\series default
+ in ihrer Basisrelation gespeichert 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+Es wird eine 
+\series bold
+horizontale Partitionierung
+\series default
+ der Instanzen erreicht
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ minimaler Speicherverbrauch
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Zugriff auf alle Attribute einer Klasse erfordert nur eine Abfrage
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMehO
+\end_layout
+
+\end_inset
+
+ keine Änderungsanomalien falls Überdeckung disjunkt
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ Zugriff auf alle Objekte einer Klasse erfordert rekursives Suchen in Unterklass
+en (Nachfahren)
+\end_layout
+
+\begin_layout Subsubsection
+Ergebnis
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.65}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Person
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Angestellte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MatrNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Semster
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assistent
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fachgebiet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Professor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rang
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Partitionierungsmodell
+\end_layout
+
+\begin_layout Standard
+Jede Klasse wird entsprechend der Attribute in der 
+\series bold
+Vererbungshierarchie zerlegt
+\series default
+ und in Teilen in den zugehörigen Relationen gespeichert.
+\end_layout
+
+\begin_layout Standard
+Es wird der Primärschlüssel dupliziert
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+Es wird eine 
+\series bold
+vertikale Partitionierung
+\series default
+ der Instanzen erreicht
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ geringer Speicherverbrauch (PK/OID dupliziert)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ inhärente Integritätssicherung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Zugriff auf alle Objekte einer Klasse erfordert eine Abfrage
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ hohe Such- und Aktualisierungskosten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ Zugriff auf alle Attribute einer Klasse erfordert Verbundoperation (
+\begin_inset Formula $\triangleright\triangleleft$
+\end_inset
+
+) (alle Vorfahren)
+\end_layout
+
+\begin_layout Subsubsection
+Ergebnis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.65}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Person
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Angestellte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MatrNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Semster
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assistent
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fachgebiet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Professor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rang
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Volle Redundanz
+\end_layout
+
+\begin_layout Standard
+Jede Klasse wird durch 
+\series bold
+eine Relation
+\series default
+ abgebildet, wobei die 
+\series bold
+geerbten Attribute dupliziert
+\series default
+ werden (Flache Vererbungshierarchie), Primärschlüssel in Subklassen dupliziert
+\end_layout
+
+\begin_layout Standard
+Instanzen werden dupliziert: besitzen nun Werte der 
+\series bold
+geerbten und neuen Attribute
+\series default
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ nur eine Abfrage für Zugriff auf 
+\series bold
+alle
+\series default
+ 
+\series bold
+Objekte
+\series default
+ einer Klasse
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ nur eine Abfrage für Zugriff auf 
+\series bold
+alle
+\series default
+ 
+\series bold
+Attribute
+\series default
+ einer Klasse
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ sehr hoher Speicherverbrauch
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ erhöhte Gefahr von Änderungsanomalien
+\end_layout
+
+\begin_layout Subsubsection
+Ergebnis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.65}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Person
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Angestellte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MatrNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Semster
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assistent
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fachgebiet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Professor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rang
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ diskjunktes Einrelationenmodell
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Gesamte Vererbungshierarchie
+\series default
+ wird durch eine 
+\series bold
+einzige Relation
+\series default
+ abgebildet
+\end_layout
+
+\begin_layout Standard
+Typinformation der Instanzen wird in
+\series bold
+ Typ-Attribut
+\series default
+ gespeichert
+\end_layout
+
+\begin_layout Standard
+ergibt viele NULL-Werte wenn Instanz keine Werte für Attribute der Subklassen
+ hat
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Nur eine Abfrage für Zugriff auf 
+\series bold
+alle Objekte
+\series default
+ einer Klasse (Selektion mit Typ-Attribut)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Nur eine Abfrage für Zugriff auf 
+\series bold
+alle Attribute
+\series default
+ einer Klasse (Selektion mit Typ-Attribut)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ Einführen eines Typ-Attributes (Klassenkennzeichen)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ viele Nullwerte falls Untertypen viele spezifische Attribute besitzen
+\end_layout
+
+\begin_layout Paragraph
+vorteilhaft wenn
+\end_layout
+
+\begin_layout Itemize
+Untertypen wenige spezifische Attribute besitzen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+wenige Nullwerte
+\end_layout
+
+\begin_layout Itemize
+Vererbungshierarchie flach ist 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+kleine Tabellen
+\end_layout
+
+\begin_layout Itemize
+viele polymorphe Abfragen benötigt werden
+\end_layout
+
+\begin_layout Subsubsection
+Ergebnis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MatNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Semester
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fachgebiet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rang
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersonType
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+..
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pers., Angs., Stud.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ überlappendes Einrelationenmodell
+\end_layout
+
+\begin_layout Standard
+Mehrere boolesche Typ-Attribute bestimmen, zu welchen Untertypen eine Entität
+ gehört 
+\end_layout
+
+\begin_layout Description
+
+\series bold
+Vorteile
+\series default
+: siehe disjunktes Einrelationenmodell
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVNR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AngestellterTyp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PersNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertragsart
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+true/false
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{.7}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fachgebiet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rang
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Studenttyp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MatNr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Semster
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+true/false
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBomb
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Ergebnis
+\end_layout
+
+\begin_layout Standard
+Abbildung ist Abhängig von Use-Case!
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Sichten
+\end_layout
+
+\begin_layout Standard
+Eine Sicht ist ein gespeichertes SELECT-Statement, welches lesend wie eine
+ Tabelle genutzt werden kann.
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Materialisierte Sichten
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Was
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+Materialisierte Sicht = 
+\series bold
+Gespeicherte Tabelle
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+materialisiert Eine einmal berechnete Sicht wird für die weitere Bearbeitung
+ 
+\series bold
+permanent gespeichert
+\series default
+; ist eine 
+\series bold
+physische
+\series default
+ Kopie ganzer Tabellen oder von Teilen einer Tabelle; kann wie eine 
+\series bold
+Basistabelle
+\series default
+ verwendet werden.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Übersicht
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ können 
+\series bold
+Performance-Vorteile
+\series default
+ bringen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ ermöglichen 
+\series bold
+Query Rewriting
+\series default
+ von komplexen Anfragen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ sind 
+\series bold
+transparent
+\series default
+ für den Nutzer
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ erfordern
+\series bold
+ mehr Speicherplatz
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ verursachen Aktualisierungskosten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMehO
+\end_layout
+
+\end_inset
+
+ können 
+\series bold
+inkrementell
+\series default
+ oder mit 
+\series bold
+
+\begin_inset Quotes gld
+\end_inset
+
+Scheduler
+\begin_inset Quotes grd
+\end_inset
+
+
+\series default
+ aktualisiert werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMehO
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Auswahl und Pflege
+\series default
+ sind eine Herausforderung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ sind 
+\series bold
+nicht standardisiert
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Wann
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Bei überwiegend 
+\series bold
+lesendem Zugriff
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ auf weitgehend 
+\series bold
+stabiler Datenbasis
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Seltene Änderungen in der Datenbasis bedeuten 
+\series bold
+geringen
+\series default
+ 
+\series bold
+Aufwand
+\series default
+ bei der 
+\series bold
+Aktualisierung
+\series default
+ der Sichten 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Materialisierung
+\series bold
+ reduziert Berechnungsaufwand
+\series default
+ bei wiederkehrenden Anfrageteilen
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPencilSquareO
+\end_layout
+
+\end_inset
+
+ Datenbanksystem kann automatisch Anfrageteile erkennen, deren (Teil-)Ergebnisse
+ durch materialisierte Sichten bereits zur Verfügung stehen (= Anfrageumschreibu
+ng - Query Rewrite)
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Verbesserung der Performanz (Reduktion der Antwortzeiten)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Aktuelles Einsatzgebiet sind
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandPointerO
+\end_layout
+
+\end_inset
+
+ Data Warehouse Anwendungen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandPointerO
+\end_layout
+
+\end_inset
+
+ Replikation
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Motivation
+\end_layout
+
+\begin_layout Itemize
+Viele ähnliche/gleiche Anfragen (Data Warehouse) 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+z.B.
+ Bilanzen, Geschäftsberichte, Kennzahlenberechnung 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sichten zur Vereinfachung schnellerer Zugriff auf komplexe JOINs und Aggregation
+en
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Überwiegend 
+\series bold
+lesender
+\series default
+ Zugriff auf weitgehend 
+\series bold
+stabiler
+\series default
+ Datenbasis 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Materialisierung der Sichten ggf.
+ sinnvoll
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Realisierung
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+Die materialisierte Sicht ist kein SQL Standard!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faClose
+\end_layout
+
+\end_inset
+
+ Herstellerspezifische Erweiterungen von SQL (z.B.
+ Oracle, DB2)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faWrench
+\end_layout
+
+\end_inset
+
+ Durch Anlegen einer Tabelle und Einfügen der Tupel erzeugt 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faLongArrowRight
+\end_layout
+
+\end_inset
+
+ einfach realisierbar
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCodeFork
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+keine automatische Änderung
+\series default
+ in der materialisierten Sicht bei Änderungen an den Basistabellen erfolgt
+ (und umgekehrt) 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faLongArrowRight
+\end_layout
+
+\end_inset
+
+ dafür häufig ein erheblicher organisatorischer und systemtechnischer Aufwand
+ notwendig
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faRoad
+\end_layout
+
+\end_inset
+
+ oft 
+\series bold
+spezielle Konstrukte zur Aktualisierung
+\series default
+ (Snapshot oder Trigger)
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Wartung
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Änderungen im Basisdatenbestand 
+\series default
+erfordern:
+\end_layout
+
+\begin_layout Itemize
+Neuberechnung der Sicht (Rematerialisierung) oder 
+\end_layout
+
+\begin_layout Itemize
+Propagierung der Änderungsoperationen zu den Sichten (inkrementelle Aktualisieru
+ng)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Zeitpunkt der Aktualisierung
+\series default
+ erfolgt
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faClockO
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+sofort
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Sichten immer aktuell
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ dafür werden die Modifikationstransaktionen behindert
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faClockO
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+verzögert
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Entkoppelung der Aktualisierung von Modifikationstransaktion; bei Zugriff
+ auf Sicht wird diese aktualisiert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Sicht beim Lesen immer aktuell
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Lesende Transaktion trägt die Aktualisierungskosten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Unter Umständen müssen viele Modifikationen nachgezogen werden, wenn auf
+ die Sicht lange nicht zugegriffen wurde 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faClockO
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+durch Snapshot (asynchron)
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ asynchron zur Modifikation und zum Lesezugriff nach anwendungsspezifischen
+ Gesichtspunkten (bspw.
+ Intervallen)
+\end_layout
+
+\end_deeper
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Datensicherheit
+\end_layout
+
+\begin_layout Standard
+Schutz gegen 
+\series bold
+absichtliche Beschädigung
+\series default
+ und
+\series bold
+ unbefugte Nutzung und Manipulation
+\series default
+ durch
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Identifikation und Authentisierung (Benutzername, Passwort, ...)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Autorisierung und Zugriffskontrolle (Rechte vergeben & prüfen) 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Auditing (Überwachung und Protokollierung von Aktionen)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ SQL-Injektion (Einschleusen von schadhaften SQL-Anweisungen)
+\end_layout
+
+\begin_layout Description
+Systemsicherheit Zugriff und Verwendung der Datenbank auf Systemebene (Benutzer/
+Passwort, Systemoperationen)
+\end_layout
+
+\begin_layout Description
+Datensicherheit Zugriff und Verwendung von Datenbankobjekten sowie darauf
+ erlaubte Aktionen
+\end_layout
+
+\begin_layout Description
+Benutzer benötigen 
+\series bold
+Systemrechte
+\series default
+, für den Zugriff auf die Datenbank und 
+\series bold
+Objektrechte
+\series default
+, für den Zugriff auf Datenobjekte
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Zugriffskontrolle
+\end_layout
+
+\begin_layout Standard
+Besteht in SQL auf 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Autorisierung
+\series default
+ entweder 
+\series bold
+zentrale Vergabe
+\series default
+ der Zugriffsrechte (Datenbankadministrator) oder 
+\series bold
+dezentrale Vergabe
+\series default
+ der Zugriffsrechte (Eigentümer)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Objektgranulat
+\series default
+ entweder 
+\series bold
+wertunabhängige 
+\series default
+oder
+\series bold
+ wertabhängige Objektfestlegung (Sichtkonzept)
+\end_layout
+
+\begin_layout Standard
+Das Sicherheitskonzept stützt sich auf drei Annahmen: 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Fehlerfreie Benutzer-Identifikation/-Authentisierung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Erfolgreiche Abwehr von Eindringlingen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Schutzinformation (= Zugriffsmatrix) ist hochgradig geschützt
+\end_layout
+
+\begin_layout Standard
+(no, na, ned ...)
+\end_layout
+
+\begin_layout Description
+Discretionary
+\begin_inset space ~
+\end_inset
+
+Access
+\begin_inset space ~
+\end_inset
+
+Control
+\begin_inset space ~
+\end_inset
+
+(DAC) 
+\series bold
+(= benutzerdefiniert) 
+\series default
+Eigentümer gibt Zugriffsrechte auf Objekte weiter, 
+\series bold
+Standard
+\series default
+ bei Datenbank- und Betriebssystemen
+\end_layout
+
+\begin_layout Description
+Mandatory
+\begin_inset space ~
+\end_inset
+
+Access
+\begin_inset space ~
+\end_inset
+
+Control
+\begin_inset space ~
+\end_inset
+
+(MAC) 
+\series bold
+(= vorgeschrieben) 
+\series default
+Zugriffsrechte zentral vom System (Policy), Eigentümer kann Zugriffsrechte
+ nicht verändern
+\end_layout
+
+\begin_layout Description
+Role-based
+\begin_inset space ~
+\end_inset
+
+Access
+\begin_inset space ~
+\end_inset
+
+Control
+\begin_inset space ~
+\end_inset
+
+(RBAC) 
+\series bold
+(= rollenbasiert) 
+\series default
+vereinfachte Administration, auch in Kombination mit DAC und MAC, Benutzer
+ erhalten Zugriffsrechte über Rollenmitgliedschaft(en)
+\end_layout
+
+\begin_layout Subsubsection
+Systemrechte
+\end_layout
+
+\begin_layout Standard
+Der Datenbankadministrator (DBA) besitzt Systemrechte auf höchster Ebene.
+ Darf quasi alles.
+ Kann Benutzern feingranular einzelne Rechte zugestehen.
+\end_layout
+
+\begin_layout Subsubsection
+Discretionary Access Control
+\end_layout
+
+\begin_layout Standard
+Benutzer (Gruppen, Programme, Rechner, Geräte) kann nur zugreifen, wenn
+ er die Berechtigung für die Operation (lesen, ändern, ausführen, erzeugen,...)
+ auf das jeweilige Objekt (Relationen, Tupel, Attribute, Sichten) hat.
+\end_layout
+
+\begin_layout Standard
+Die jeweiligen Zugriffsrechte werden als Matrix modelliert.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Weit verbeitet, in SQL realisiert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMehO
+\end_layout
+
+\end_inset
+
+ Eigentümer (meist Ersteller) ist immer für Rechtevergabe verantwortlich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ Schutzinformation (= Zugriffsmatrix) ist hochgradig geschützt
+\end_layout
+
+\begin_layout Subsubsection
+Role-based Access Control (seit SQL99)
+\end_layout
+
+\begin_layout Standard
+Bei der rollenbasierten Zugriffskontrolle werden die Rechte nicht mehr direkt
+ an Benutzer, sondern an Rollen geknüpft.
+ 
+\series bold
+Rollenkonzept
+\series default
+ vereinfacht Berechtigungsmanagement.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Auditing
+\end_layout
+
+\begin_layout Standard
+Logging, alle Operationen werden Aufgezeichnet.
+ Hilft Fehler und Sicherheitslücken zu finden.
+ Klassiches Logging Problem: viel Müll, große Datenmengen, schwer auswertbar
+ über die Zeit.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+SQL Injection
+\end_layout
+
+\begin_layout Standard
+Durch Eingabe von SQL Steuerzeichen die nicht hinreichend bereinigt wurden.
+ Beispiel 
+\begin_inset Quotes gld
+\end_inset
+
+SELECT * FROM PASWORDS WHERE Password = 'EINGABE'
+\begin_inset Quotes grd
+\end_inset
+
+, Eingabe wird einfach durch String-Konkatination in das Statement eingefügt
+ jetzt könnte der Benutzer 
+\begin_inset Quotes gld
+\end_inset
+
+KA' OR '1' = '1
+\begin_inset Quotes grd
+\end_inset
+
+ in das Passwortfeld eingeben und folgende Abfrage würde generiert werden
+ SELECT * FROM PASSWORDS WHERE Password ='KA' OR '1' = '1' und es würden
+ alle Passwörter gelistet werden.
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Prozedurale Erweiterungen
+\end_layout
+
+\begin_layout Standard
+Entsprechende Produkte:
+\end_layout
+
+\begin_layout Itemize
+PostgreSQL: PL/pgSQL
+\end_layout
+
+\begin_layout Itemize
+Informix: SPL
+\end_layout
+
+\begin_layout Itemize
+IBM DB2: SQL/PSM (Persistent Stored Modules)
+\end_layout
+
+\begin_layout Itemize
+MS SQL Server, Sybase: Transact-SQL
+\end_layout
+
+\begin_layout Itemize
+MySQL: SQL/PSM (Persistent Stored Modules); ab Version 5
+\end_layout
+
+\begin_layout Itemize
+Oracle: PL/SQL (Procedural Language/Structured Query Language)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+nicht vollständig konform zum SQL-Standard
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Vorteile von gespeicherten Prozeduren/Funktionen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Vorübersetzte Ausführungspläne (wiederverwendbar, optimiert)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Performance-Steigerung: Datenbank-Zugriffe der Anwendungen werden reduziert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Zentrale 
+\begin_inset Quotes gld
+\end_inset
+
+Business Logic
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ nutzbar von verschiedenen Anwendungsprogrammen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ höherer Isolationsgrad der Anwendung von der Datenbank (Schichtenarchitektur)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Rechtevergabe für Prozeduren/Funktionen
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Nachvollziehbarkeit von Datenmanipulationen im Fehlerfall
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ keine 
+\begin_inset Quotes gld
+\end_inset
+
+externen
+\begin_inset Quotes grd
+\end_inset
+
+ Transaktionen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Zur Integritätssicherung: Aktionsteil von Triggern
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Nachteile von gespeicherten Prozeduren/Funktionen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ DBMS wird stärker belastet
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ kompliziertere Fehlersuche (Debugging)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ kaum Benutzerinteraktion möglich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ zusätzliche 
+\begin_inset Quotes gld
+\end_inset
+
+hybride
+\begin_inset Quotes grd
+\end_inset
+
+ Sprache notwendig
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+PL/SQL
+\end_layout
+
+\begin_layout Standard
+Besteht aus Blöcken bestehend aus:
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Deklarationsteil
+\series default
+ (optional)
+\end_layout
+
+\begin_layout Itemize
+Variablen/Konstanten
+\end_layout
+
+\begin_layout Itemize
+explizite Cursor
+\end_layout
+
+\begin_layout Itemize
+benutzerdefinierte Ausnahmen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Ausführungsteil
+\series default
+ (erforderlich)
+\end_layout
+
+\begin_layout Itemize
+SQL-Anweisungen
+\end_layout
+
+\begin_layout Itemize
+PL/SQL-Anweisungen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Fehler- und Ausnahmebehandlungsteil
+\series default
+ (optional)
+\end_layout
+
+\begin_layout Itemize
+Bearbeitung von Fehlersituationen durch „Exception Handler“
+\end_layout
+
+\begin_layout Standard
+Blöcke lassen sich schachteln, bilden Gültigkeitsbereiche
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Cursorkonzept
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+CURSOR = Iterator
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Cursor/Iterator ist einer Anfrage zugeordnet und stellt der Anwendung die
+ Zeilen der Ergebnismenge einzeln (one tuple at a time) bereit.
+\end_layout
+
+\begin_layout Description
+Cursor = Referenz auf privaten Arbeitsbereich
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Impliziter Cursor
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ für jede SQL-Anweisung, die nur eine einzige Zeile liefert, wird automatisch
+ vom DB-Server erstellt und verwaltet
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Expliziter Cursor
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ für mengenorientierte Abfragen, die mehr als eine Zeile liefern können
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ ermöglicht 
+\series bold
+zeilenweise
+\series default
+ 
+\series bold
+Abarbeitung
+\series default
+ des Abfrageergebnisses
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ muss im Programm 
+\series bold
+explizit
+\series default
+ deklariert werden
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Expliziter Cursor: Vorgangsweise
+\end_layout
+
+\begin_layout Enumerate
+Deklarieren eines Cursors
+\end_layout
+
+\begin_layout Enumerate
+Öffnen des Cursors
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+veranlasst Ausführung der SQL-Anweisung im Server ohne jedoch Daten in den
+ Programmbereich zu transferieren
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Übertragen von Datensätzen aus der Datenbank in den Programmbereich
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+mit dem SQL-Befehl FETCH wird der jeweils nächste Datensatz in die spezifizierte
+ Variable geladen
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Schließen des Cursors
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+definiertes Beenden der Leseoperation und Freigeben aller Ressourcen
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CURSOR <Cursor> [(<Param> {, <Param>})]
+\end_layout
+
+\begin_layout Plain Layout
+
+IS <SFW-Block> [FOR UPDATE [OF <Attribute>]
+\end_layout
+
+\begin_layout Plain Layout
+
+[NOWAIT | WAIT n]];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CURSOR c1 (name_var VARCHAR2) IS -- Datentyp
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT mit_name, mit_geb, mit_abtnr
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM mitarbeiter
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE mit_name LIKE name_var
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY mit_name;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Zur Überprüfung der Cursor-Statusinformationen
+\end_layout
+
+\begin_layout Description
+%FOUND 'wahr', wenn zuletzt ausgeführte FETCH-Anweisung Datensatz gefunden
+ hat
+\end_layout
+
+\begin_layout Description
+%NOTFOUND 'wahr', wenn zuletzt ausgeführte FETCH- Anweisung keinen Datensatz
+ gefunden hat
+\end_layout
+
+\begin_layout Description
+%ROWCOUNT Anzahl bisher gelesener Datensätze
+\end_layout
+
+\begin_layout Description
+%ISOPEN 'wahr', wenn der Cursor geöffnet ist
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+IF NOT c1%ISOPEN THEN
+\end_layout
+
+\begin_layout Plain Layout
+
+OPEN c1('Huber');
+\end_layout
+
+\begin_layout Plain Layout
+
+END IF;
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+FETCH c1 INTO ...
+\end_layout
+
+\begin_layout Plain Layout
+
+IF c1%FOUND THEN ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cursor-FOR-Schleife
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DECLARE
+\end_layout
+
+\begin_layout Plain Layout
+
+CURSOR emp_cursor(deptid NUMBER) IS
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT employee_id, last_name FROM employees
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE department_id = deptid;
+\end_layout
+
+\begin_layout Plain Layout
+
+BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+FOR emp_record IN emp_cursor(90)
+\end_layout
+
+\begin_layout Plain Layout
+
+LOOP
+\end_layout
+
+\begin_layout Plain Layout
+
+DBMS_OUTPUT.PUT_LINE(
+\end_layout
+
+\begin_layout Plain Layout
+
+emp_record.employee_id ||
+\end_layout
+
+\begin_layout Plain Layout
+
+' ' ||
+\end_layout
+
+\begin_layout Plain Layout
+
+emp_record.last_name);
+\end_layout
+
+\begin_layout Plain Layout
+
+END LOOP;
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Prozeduren - Funktionen
+\end_layout
+
+\begin_layout Standard
+Prozeduren und Funktionen
+\end_layout
+
+\begin_layout Itemize
+Speicherung in kompilierter Form in der Datenbank
+\end_layout
+
+\begin_layout Itemize
+bei Aufruf Ausführung im DB-Server 
+\series bold
+bessere Performanz
+\end_layout
+
+\begin_layout Description
+Anonyme
+\begin_inset space ~
+\end_inset
+
+Blöcke
+\end_layout
+
+\begin_layout Itemize
+Unbenannte PL/SQL-Blöcke
+\end_layout
+
+\begin_layout Itemize
+Jedes Mal kompiliert
+\end_layout
+
+\begin_layout Itemize
+Nicht in der Datenbank gespeichert
+\end_layout
+
+\begin_layout Itemize
+Können nicht von anderen Anwendungen aufgerufen werden
+\end_layout
+
+\begin_layout Itemize
+Geben keine Werte zurück
+\end_layout
+
+\begin_layout Itemize
+Können keine Parameter annehmen
+\end_layout
+
+\begin_layout Description
+Gespeicherte
+\begin_inset space ~
+\end_inset
+
+Prozeduren/Funktionen
+\end_layout
+
+\begin_layout Itemize
+Benannte PL/SQL-Blöcke
+\end_layout
+
+\begin_layout Itemize
+Nur einmal kompiliert
+\end_layout
+
+\begin_layout Itemize
+In der Datenbank gespeichert
+\end_layout
+
+\begin_layout Itemize
+Werden benannt und können daher von anderen Anwendungen aufgerufen werden
+\end_layout
+
+\begin_layout Itemize
+Als Funktionen bezeichnete Unterprogramme müssen Werte zurückgeben
+\end_layout
+
+\begin_layout Itemize
+Können Parameter annehmen
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Pakete
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ kapseln Prozeduren, Funktionen, Typen, Variablen, Ausnahmen und Zugriffsprivile
+gien zu einem 
+\series bold
+Modul
+\series default
+ bzw.
+ zu einer 
+\series bold
+Bibliothek
+\series default
+ oder Einheit zusammen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ bestehen aus zwei Teilen
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Spezifikationsteil (öffentlich)
+\end_layout
+
+\begin_layout Itemize
+Rumpf (falls erforderlich) (privat)
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ werden in der Datenbank gespeichert
+\end_layout
+
+\begin_layout Subsubsection
+Paketspezifikation
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CREATE [OR REPLACE] 
+\end_layout
+
+\begin_layout Plain Layout
+
+PACKAGE <Paketname> AS|IS
+\end_layout
+
+\begin_layout Plain Layout
+
+<glob.
+ Deklarationen: Typen, VAR,>
+\end_layout
+
+\begin_layout Plain Layout
+
+<Prozedur- & Funktionsdeklarationen>
+\end_layout
+
+\begin_layout Plain Layout
+
+END [<Paketname>];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Paketrumpf
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CREATE [OR REPLACE] 
+\end_layout
+
+\begin_layout Plain Layout
+
+PACKAGE BODY <Paketname> AS|IS
+\end_layout
+
+\begin_layout Plain Layout
+
+<lokale Deklarationen: Typen, Var, >
+\end_layout
+
+\begin_layout Plain Layout
+
+<Prozedur- & Funktionsrümpfe>
+\end_layout
+
+\begin_layout Plain Layout
+
+[BEGIN
+\end_layout
+
+\begin_layout Plain Layout
+
+<Initialisierungsanweisungen>]
+\end_layout
+
+\begin_layout Plain Layout
+
+END [<Paketname>];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Überladen (Overloading)
+\end_layout
+
+\begin_layout Itemize
+Prozeduren/Funktionen können gleichen Namen haben
+\end_layout
+
+\begin_layout Itemize
+durch unterschiedliche Anzahl oder unterschiedliche Datentypen der Parameter
+ unterscheidbar
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CREATE PACKAGE xyz
+\end_layout
+
+\begin_layout Plain Layout
+
+IS
+\end_layout
+
+\begin_layout Plain Layout
+
+-- valid
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE P (arg NUMBER); 
+\end_layout
+
+\begin_layout Plain Layout
+
+-- valid (number of args)
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE P (arg1 NUMBER, arg2 NUMBER); 
+\end_layout
+
+\begin_layout Plain Layout
+
+-- valid (type of args)
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE P (arg DATE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+ -- NOT valid
+\end_layout
+
+\begin_layout Plain Layout
+
+PROCEDURE P (arg2 NUMBER);
+\end_layout
+
+\begin_layout Plain Layout
+
+END;
+\end_layout
+
+\begin_layout Plain Layout
+
+/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Pakete entfernen/rekomplieren
+\end_layout
+
+\begin_layout Paragraph
+Paket-Spezifikation und -Rumpf entfernen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DROP PACKAGE <PackageName>;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Nur Paket-Rumpf entfernen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DROP PACKAGE BODY <PackageName>;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Paket neu übersetzen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ALTER PACKAGE <Name> COMPILE SPECIFICATION;
+\end_layout
+
+\begin_layout Plain Layout
+
+ALTER PACKAGE <Name> COMPILE BODY;
+\end_layout
+
+\begin_layout Plain Layout
+
+ALTER PACKAGE <Name> COMPILE; -- both
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Ausnahmebehandlung
+\end_layout
+
+\begin_layout Standard
+Fehler, die zur Laufzeit auftreten, werden als Ausnahmen (Exceptions) bezeichnet
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Eine 
+\series bold
+Ausnahme
+\series default
+ ist ein 
+\series bold
+Fehler
+\series default
+ in PL/SQL, der bei der Ausführung ausgelöst wird.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Eine Ausnahme kann wie folgt ausgelöst werden:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Implizit vom Oracle-Server (Oracle-Fehler tritt auf)
+\end_layout
+
+\begin_layout Itemize
+Explizit vom Programm
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Eine Ausnahme kann wie folgt behandelt werden:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Durch Abfangen mit einem "Exception Handler"
+\end_layout
+
+\begin_layout Itemize
+Durch Propagieren an die aufrufende Umgebung (z.B.
+ SQL*Plus, PL/SQL-Programm, umschließender Block)
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Dynamisches SQL
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ SQL-Anweisung heißt 
+\series bold
+dynamisch
+\series default
+, wenn sie zur Laufzeit erstellt und dann auch ausgeführt wird.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Einzige Möglichkeit, DDL-Anweisungen in PL/SQL zu verarbeiten
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Früher: Built-in Packet DBMS_SQL
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Seit ORACLE 8 : Native Dynamic SQL (NDS)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Einfache Handhabung
+\end_layout
+
+\begin_layout Itemize
+Verwendung von :vars und USING um SQL-Injection zu verhindern (außer für
+ Namen von Schemaobjekten)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+EXECUTE IMMEDIATE 
+\end_layout
+
+\begin_layout Plain Layout
+
+	'Zeichenkette' ;
+\end_layout
+
+\begin_layout Plain Layout
+
+EXECUTE IMMEDIATE 
+\end_layout
+
+\begin_layout Plain Layout
+
+	'CREATE TABLE Test (..)';
+\end_layout
+
+\begin_layout Plain Layout
+
+EXECUTE IMMEDIATE 
+\end_layout
+
+\begin_layout Plain Layout
+
+	'ALTER TABLE Test 
+\end_layout
+
+\begin_layout Plain Layout
+
+	DISABLE ALL CONSTRAINTS';
+\end_layout
+
+\begin_layout Plain Layout
+
+-- SELECT – Anweisungen 
+\end_layout
+
+\begin_layout Plain Layout
+
+-- erst zur Laufzeit erstellen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Zusammenfassung Prozedurale SQL-Erweiterung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ vereint die Vorteile der deklarativen Abfragesprache SQL mit denen einer
+ prozeduralen Sprache wie
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Kontrollfluss
+\end_layout
+
+\begin_layout Itemize
+Blockstruktur
+\end_layout
+
+\begin_layout Itemize
+Prozedur, Funktion, Paket
+\end_layout
+
+\begin_layout Itemize
+Fehlerbehandlung
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ ermöglicht das Speichern und Ausführen von Programmen auf dem Datenbank-Server
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ ist eine proprietäre Sprache
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ bildet auch die Grundlage für die Umsetzung von
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+prozeduralen Integritätsbedingungen: 
+\series bold
+Trigger
+\end_layout
+
+\begin_layout Itemize
+objektrelationalen Konzepten
+\end_layout
+
+\end_deeper
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Integritätskontrolle & Trigger
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Integritätsbedingungen
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Integrität versus Konsistenz
+\end_layout
+
+\begin_layout Description
+Integrität korrekte, vollständige Abbildung der Miniwelt
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Integrität kann verletzt sein
+\end_layout
+
+\begin_layout Itemize
+obwohl Konsistenz der DB gewahrt bleibt
+\end_layout
+
+\begin_layout Itemize
+DBS kann nur die Konsistenz der Daten sichern!
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Konsistenz (korrekter) DB interner Zusammenhang von
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Speicherungsstrukturen
+\end_layout
+
+\begin_layout Itemize
+Zugriffspfaden und
+\end_layout
+
+\begin_layout Itemize
+sonstigen Verwaltungsinformationen
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Constraints Sprachkonzepte für die Sicherstellung der Konsistenz
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wertebereiche
+\end_layout
+
+\begin_layout Itemize
+Primär- & Fremdschlüssel
+\end_layout
+
+\begin_layout Itemize
+Check-Klauseln
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+Trotzdem spricht man bei Datenbanken von 
+\series bold
+Integritätssicherung
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+also Referentielle Integrität anstatt Referentielle Konsistenz
+\end_layout
+
+\begin_layout Itemize
+Constraints (Integritätsbedingungen) spezifizieren
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+akzeptable DB-Zustände
+\end_layout
+
+\begin_layout Itemize
+nicht aktuelle Zustände der Miniwelt
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Änderungen werden nur zurückgewiesen wenn sie
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+entsprechend der Integritätsbedingungen
+\end_layout
+
+\begin_layout Itemize
+als falsch erkannt werden
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Arten
+\end_layout
+
+\begin_layout Description
+Semantische
+\begin_inset space ~
+\end_inset
+
+Integrität edeutet logische Widerspruchsfreiheit der Daten; physische Integrität
+ wäre z.B.
+ korrekte Implementierung der DB bzw.
+ der Hardware
+\end_layout
+
+\begin_layout Description
+strukturelle
+\begin_inset space ~
+\end_inset
+
+Integritätsbedingungen Vorhandensein bestimmten von Relationen und Attributen
+\end_layout
+
+\begin_layout Description
+wertabhängige
+\begin_inset space ~
+\end_inset
+
+Integritätsbedingungen
+\end_layout
+
+\begin_layout Description
+operationale
+\begin_inset space ~
+\end_inset
+
+Integritätsbedingungen
+\begin_inset space ~
+\end_inset
+
+(Trigger) korrekter Übergang von einem Zustand zum nächsten
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Deklarative Integritätsbedingungen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ PRIMARY KEY
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ UNIQUE
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ NOT NULL/NULL
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ FOREIGN KEY/
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ REFERENCES
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ CHECK
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ ASSERTION
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ (DEFAULT)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+geringe Reichweite, sofort, statisch, zurückweisend
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Als Attribut- oder als Tabellen-Integritätsbedingung spezifiziert 
+\end_layout
+
+\begin_layout Standard
+Name kann vergeben werden, über den später auf die Integritätsbedingung
+ Bezug genommen werden kann (sehr wichtig für verständliche Fehlermeldungen)
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Prozedurale Integritätsbedingungen (Trigger)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ BEFORE-Statement-Trigger
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ BEFORE-Row-Trigger
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ AFTER-Row-Trigger
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChevronCircleRight
+\end_layout
+
+\end_inset
+
+ AFTER-Statement-Trigger
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+größere Reichweite, verzögert, dynamisch, Korrekturmaßnahmen möglich
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Prüfung bei bestimmten Situationen oder Ereignissen
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Wenn
+\series default
+ <Bedingung verletzt> 
+\series bold
+dann
+\series default
+ <Führe Korrekturmassnahmen durch>
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Zusammenhangsregel (kausale, logische oder „beliebige“ Verknüpfung) statt
+ statischem Prädikat
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Wenn
+\series default
+ Mitarbeiter.Gehalt um mehr als 10% erhöht wird, 
+\series bold
+dann
+\series default
+ benachrichtige Top-Level-Manager
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Je mehr Integritätsbedingungen des modellierten Systems explizit repräsentiert
+ sind, umso mehr kann das DBS 
+\begin_inset Quotes gld
+\end_inset
+
+aktiv
+\begin_inset Quotes grd
+\end_inset
+
+ werden!
+\end_layout
+
+\begin_layout Paragraph
+Auslöser
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ DML-Ereignis: INSERT, UPDATE, DELETE
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CREATE [OR REPLACE] 
+\end_layout
+
+\begin_layout Plain Layout
+
+	TRIGGER <TriggerName>
+\end_layout
+
+\begin_layout Plain Layout
+
+	(BEFORE | AFTER | INSTEAD OF)
+\end_layout
+
+\begin_layout Plain Layout
+
+	(INSERT | UPDATE [OF <Spalte>] 
+\end_layout
+
+\begin_layout Plain Layout
+
+	| DELETE) ON <Tabelle/View>
+\end_layout
+
+\begin_layout Plain Layout
+
+	[<REFERENCING-Klausel>]
+\end_layout
+
+\begin_layout Plain Layout
+
+	[FOR EACH ROW]
+\end_layout
+
+\begin_layout Plain Layout
+
+	[WHEN <Bedingung>]
+\end_layout
+
+\begin_layout Plain Layout
+
+	<Trigger-Aktion>
+\end_layout
+
+\begin_layout Plain Layout
+
+END [<TriggerName>];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ System- oder Benutzerereignis (STARTUP, SHUTDOWN, SERVERERROR, LOGON, CREATE,
+ ALTER, GRANT...)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL,basicstyle={\ttfamily}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+CREATE [OR REPLACE] 
+\end_layout
+
+\begin_layout Plain Layout
+
+	TRIGGER <TriggerName>
+\end_layout
+
+\begin_layout Plain Layout
+
+	(BEFORE | AFTER)
+\end_layout
+
+\begin_layout Plain Layout
+
+	(<Systemereignis> 
+\end_layout
+
+\begin_layout Plain Layout
+
+	| <Benutzerereignis>)
+\end_layout
+
+\begin_layout Plain Layout
+
+	ON (DATABASE | SCHEMA)
+\end_layout
+
+\begin_layout Plain Layout
+
+	[WHEN <Bedingung>]
+\end_layout
+
+\begin_layout Plain Layout
+
+	<Trigger-Aktion>
+\end_layout
+
+\begin_layout Plain Layout
+
+END [<TriggerName>];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Wofür
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Automatischen Ableiten von Spalten-Werten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Erzwingen von Integritätsbedingungen ("Implementierung" von statischen/dynamisc
+hen Integritäts- u.
+ Konsistenzregeln)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Auditing von Datenbankaktionen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Transparentes Ereignis-Logging
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Statistiken über Tabellen-Zugriff
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Propagierung von Datenbankänderungen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Synchronisieren von Tabellen-Replikaten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Komplexe Geschäftsregeln
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Historisierung und Archivierung von Daten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faChain
+\end_layout
+
+\end_inset
+
+ Zugriffsschutz
+\end_layout
+
+\begin_layout Paragraph
+INSTEAD OF-Trigger: Verwendung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Sichten für den Zugriffsschutz
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Ergänzung von NOT NULL-Spalten, die in der Sicht fehlen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Einschränkung der Datenmanipulation, wenn z.B.
+ bestimmte Benutzer bestimmte Werte nur innerhalb vorgegebener Grenzen verändern
+ dürfen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Transparenz von Schemaänderungen, d.h.
+ eine Änderung in der Tabellenstruktur kann mit einer Sicht und darauf definiert
+en INSTEAD OF-Trigger verborgen bzw.
+ gekapselt werden.
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleORight
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ Transaktionen
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Basics
+\end_layout
+
+\begin_layout Description
+Transaktion Eine Transaktion ist eine Folge von Operationen (Aktionen),
+ die die Datenbank von einem konsistenten Zustand in einen konsistenten,
+ eventuell veränderten, Zustand überführt, wobei das ACID-Prinzip eingehalten
+ werden muss.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+ACID
+\end_layout
+
+\begin_layout Description
+Atomicity Atomarität oder Unteilbarkeit
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Transaktion wird ganz oder gar nicht ausgeführt
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Nach Abbruch keine Zwischenstände in der DB
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Consistency Konsistenz oder Integritätserhaltung
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ DB ist vor und nach Transaktion in konsistenten Zustand
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Nach Abbruch muss immer konsistenter Zustand hergestellt werden
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Isolation Mehrbenutzerbetrieb
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Nutzer, der mit einer DB arbeitet, sollte den Eindruck haben, dass er mit
+ dieser DB alleine arbeitet
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Durability Dauerhaftigkeit oder Persistenz
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Nach erfolgreichem Transaktionsabschluss muss das Ergebnis dieser Transaktion
+ 
+\begin_inset Quotes gld
+\end_inset
+
+dauerhaft
+\begin_inset Quotes grd
+\end_inset
+
+ in der DB gespeichert werden
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+SQL
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+begin of transaction (bot) 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ kennzeichnet den Beginn einer Transaktion (in SQL implizit!)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+commit
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ alle Änderungen der Transaktion in der DB dauerhaft festschreiben
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+abort (rollback)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ bricht Transaktion ab (explizit oder implizit)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ DB muss sicherstellen, dass Datenbasis wieder in den Zustand zurückversetzt
+ wird, der vor der Transaktion existierte
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+define savepoint
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ definiert einen Sicherungspunkt, auf den sich die noch aktive Transaktion
+ zurücksetzen lässt
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Änderungen bis zu diesem Sicherungspunkt werden noch nicht in die Datenbasis
+ eingebracht (es kann noch ein abort geben)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+backup transaction (rollback to savepoint)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ aktive Transaktion wird auf den jüngsten (letzten) oder den angegebenen
+ Sicherungspunkt zurückgesetzt
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxy}
+\end_layout
+
+\end_inset
+
+Es gibt 
+\series bold
+KEINE
+\series default
+ transaktionslosen DB-Operationen, d.h.
+ jeder 
+\series bold
+lesende
+\series default
+ oder 
+\series bold
+schreibende
+\series default
+ Zugriff auf die DB kann nur innerhalb einer Transaktion stattfinden
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Mehrbenutzerbetrieb
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ Sperrbasierte Verfahren
+\end_layout
+
+\begin_layout Standard
+Sperrende (pessimistische) Verfahren stellen während des laufenden Betriebs
+ sicher, dass der resultierende Ausführungsplan serialisierbar bleibt.
+\end_layout
+
+\begin_layout Description
+Bevor eine Transaktion eine Operation ausführen darf, muss sie eine entsprechend
+e Sperre für das betreffende Datenbankobjekt erhalten haben.
+\end_layout
+
+\begin_layout Description
+Sperrprotokoll: = Vorschrift bzgl.
+ des Setzens von Sperren, garantiert Konfliktserialisierbarkeit ohne zusätzliche
+ Tests!
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ Zwei-Phasen-Sperrprotokoll (2PL)
+\end_layout
+
+\begin_layout Standard
+Jede Transaktion durchläuf
+\series bold
+t zwei Phasen:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Anforderungsphase
+\series default
+, in der Sperren angefordert werden, aber keine freigegeben werden dürfen
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Freigabephase
+\series default
+, in der bisher erworbene Sperren freigegeben werden, aber keine neunen
+ angefordert werden dürfen
+\end_layout
+
+\begin_layout Standard
+Bei 
+\series bold
+Transaktionsende
+\series default
+ müssen alle erworbenen Sperren zurückgegeben werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 2PL garantiert serialisierbaren Ablauf paralleler Transaktionen, verhindert
+ aber weder das Phantom-Problem noch Deadlocks
+\end_layout
+
+\begin_layout Paragraph
+Strict Two-Phase Locking
+\end_layout
+
+\begin_layout Standard
+Vermeidet kaskadierendes Rücksetzen!
+\end_layout
+
+\begin_layout Itemize
+Alle Sperren werden bis zum Transaktionsende gehalten damit ist kaskadierendes
+ Rücksetzen ausgeschlossen
+\end_layout
+
+\begin_layout Paragraph
+Conservativ Two-Phase Locking
+\end_layout
+
+\begin_layout Standard
+Transaktionen werden erst dann begonnen, wenn alle Sperranforderungen beim
+ Transaktionsbeginn erfüllt sind
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Würde Deadlocks vermeiden
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aber: Woher weiß man welche DB-Objekte benötigt werden?
+\end_layout
+
+\begin_layout Itemize
+Deswegen in der Praxis 
+\series bold
+kaum
+\series default
+ 
+\series bold
+realisierbar
+\series default
+!
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ Nicht-sperrbasierte Verfahren
+\end_layout
+
+\begin_layout Paragraph
+Zeitstempel-basierende Verfahren
+\end_layout
+
+\begin_layout Standard
+Nicht-sperrende Verfahren versuchen, Konflikte bei der verschränkten Ausführung
+ von Transaktionen zu erkennen und aufzulösen.
+\end_layout
+
+\begin_layout Itemize
+Einfache Auflösung durch Zurücksetzen von Transaktionen
+\end_layout
+
+\begin_layout Itemize
+Keine Deadlocks
+\end_layout
+
+\begin_layout Itemize
+Potentiell höhere Parallelität als bei Sperrverfahren
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Bei 
+\series bold
+Konflikt
+\series default
+, wird Transaktion, die zu dem Konflikt geführt hat, 
+\series bold
+abgebrochen
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+lange Transaktionen bearbeiten ihre späteren Schritte länger nach der Vergabe
+ der Zeitmarke
+\end_layout
+
+\begin_layout Itemize
+kommen damit häufiger "zu spät" und müssen abgebrochen werden
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Zum Erkennen von Konflikten werden 
+\series bold
+Transaktionen
+\series default
+ und 
+\series bold
+Datenobjekten
+\series default
+ 
+\series bold
+Zeitstempel
+\series default
+ zugeordnet
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Jede Transaktion erhält als eindeutigen Zeitstempel den Zeitpunkt des Transaktio
+nsbeginns
+\end_layout
+
+\begin_layout Itemize
+Jedem Datenobjekt 
+\begin_inset Formula $O$
+\end_inset
+
+ werden zwei Marken zugeordnet:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $tr(O)$
+\end_inset
+
+Zeitstempel der jüngsten T, die 
+\begin_inset Formula $O$
+\end_inset
+
+ gelesen hat
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $tw(O)$
+\end_inset
+
+Zeitstempel der jüngsten T, die 
+\begin_inset Formula $O$
+\end_inset
+
+ geschrieben hat
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Zeistempel-Bedingungen stellen sicher, dass Abarbeitung der Transaktionen
+ in Zeitstempel-Reihenfolge äquivalent zu einer seriellen Ausführung ist:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T1$
+\end_inset
+
+mit Zeitstempel 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ will 
+\begin_inset Formula $O$
+\end_inset
+
+ lesen, also 
+\begin_inset Formula $r_{1}(O)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T1$
+\end_inset
+
+darf 
+\begin_inset Formula $O$
+\end_inset
+
+ mit Schreibstempel 
+\begin_inset Formula $tw(O)$
+\end_inset
+
+ nicht lesen, falls 
+\begin_inset Formula $tw(O)>t_{1}$
+\end_inset
+
+, also wenn 
+\begin_inset Formula $O$
+\end_inset
+
+ von jüngerer/späterer Transaktion verändert wurde: 
+\series bold
+Transaktion 
+\begin_inset Formula $T1$
+\end_inset
+
+ muss zurückgesetzt werden
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $T_{1}$
+\end_inset
+
+mit Zeitstempel 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ will 
+\begin_inset Formula $O$
+\end_inset
+
+ schreiben, also 
+\begin_inset Formula $w_{1}(O)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T_{1}$
+\end_inset
+
+darf 
+\begin_inset Formula $O$
+\end_inset
+
+ mit Lesestempel 
+\begin_inset Formula $tr(O)$
+\end_inset
+
+ und Schreibstempel
+\begin_inset Formula $tw(O)$
+\end_inset
+
+ nicht verändern, falls 
+\series bold
+
+\begin_inset Formula $tr(O)>t1$
+\end_inset
+
+ oder 
+\begin_inset Formula $tw(O)>t1$
+\end_inset
+
+
+\series default
+ also wenn O von jüngerer/späterer Transaktion gelesen oder überschrieben
+ wurde: 
+\series bold
+Transaktion 
+\begin_inset Formula $T1$
+\end_inset
+
+ muss zurückgesetzt werden
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Serialisierungsgraph-Tester
+\end_layout
+
+\begin_layout Standard
+verwalten einen Konfliktgraphen und realisieren daher eine direkte Überprüfung
+ der Konfliktserialisierbarkeit
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+MVCC
+\end_layout
+
+\begin_layout Standard
+Siehe kleiner Zettel
+\end_layout
+
+\begin_layout Subsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Isolation(sebenen in SQL)
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ READ UNCOMMITTED
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Lesen von nicht endgültig geschriebene Daten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ z.B.
+ für statistische Transaktionen
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ungefährer Überblick, Trendanalyse
+\end_layout
+
+\begin_layout Itemize
+nur lesender Zugriff möglich
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Keine Sperren auf Tabellenebene nötig, keine Lesesperren
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+effizient ausführbar
+\end_layout
+
+\begin_layout Itemize
+keine anderen Transaktionen werden behindert
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ READ COMMITTED
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Nur Lesen endgültig geschriebener Daten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Non-Repeatable Read und Phantom- Problem möglich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Realisierungsmöglichkeiten:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lesesperre wird unmittelbar nach Lesevorgang zurück gegeben
+\end_layout
+
+\begin_layout Itemize
+Letzter gültiger Zustand des Datenwertes wird für Leseoperation aufbewahrt
+ (Multiversion concurrency control (MVCC))
+\end_layout
+
+\begin_layout Itemize
+Zeitstempelverfahren
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ REPEATABLE READ
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Gelesene Daten einer Transaktion können durch andere Transaktionen nicht
+ verändert werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Phantom-Problem möglich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Realisierung
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+basiert auf einer Lese-Sperre, die bis zum Transaktionsende gehalten wird
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowCircleOUp
+\end_layout
+
+\end_inset
+
+ SERIALIZABLE
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Garantiert Serialisierbarkeit einer Transaktion
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Transaktion sieht nur Änderungen, die zu Beginn der Transaktion endgültig
+ geschrieben wurden (inkl.
+ eigene Änderungen)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Realisierungsmöglichkeiten
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lese-Sperre der gesamten Tabelle
+\end_layout
+
+\begin_layout Itemize
+Range-Locks
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1404 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass paper
+\begin_preamble
+\usepackage[rm,light]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage[breakable]{tcolorbox}
+\usepackage{fontawesome}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{darkred}{HTML}{9b0909}
+\definecolor{mildred}{HTML}{cc0606}
+\definecolor{brightred}{HTML}{e52d2d}
+\usepackage{listings}
+\usepackage{tikz}
+
+\newtcolorbox{boxy}{colback=white,colframe=darkred,arc=0mm,boxrule=0.3mm,top=0.2mm,bottom=0.2mm,left=0.2mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=darkred,arc=0mm,boxrule=0.2mm,top=0.2mm,bottom=0.2mm,title=#1,breakable}
+\newtcolorbox{boxys}[1]{colback=white,colframe=darkred,arc=0mm,boxrule=0.2mm,top=0.2mm,bottom=0.2mm,title=#1,sidebyside}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 1
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language={C++},basicstyle={\ttfamily},keywordstyle={\color{blue}\ttfamily},stringstyle={\color{red}\ttfamily},commentstyle={\color{darkred}\ttfamily},morecomment={[l][\color{magenta}]{\#}},frame=tb,breaklines=true,breakatwhitespace=false,numbers=left,numbersep=5pt,numberstyle={\tiny},xleftmargin={0.5cm}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+C++: Die Regel der Drei / Die Regel der Fünf
+\end_layout
+
+\begin_layout Abstract
+Copy Constructor, Copy Assignment Operator & Destructor in C++, Transkript
+ aus stackoverflow Thread
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://stackoverflow.com/questions/4172722/what-is-the-rule-of-three
+\end_layout
+
+\end_inset
+
+ und Wikipedia
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://en.wikipedia.org/wiki/Rule_of_three_%28C%2B%2B_programming%29
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+Die Regel der Drei
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...wenn 
+\series bold
+Copy Constructor
+\series default
+, 
+\series bold
+Destructor
+\series default
+ oder 
+\series bold
+Copy Assignment Operator
+\series default
+ als explicit deklariert wird, muss man mit hoher Sicherheit alle Drei als
+ explicit deklarieren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Original
+\series default
+: The Rule of Three claims that if one of these had to be defined by the
+ programmer, it means that the compiler-generated version does not fit the
+ needs of the class in one case and it will probably not fit in the other
+ cases either.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+Die Regel der Fünf
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Durch die C++ 11 Erweiterung in Bezug auf die 
+\begin_inset Quotes gld
+\end_inset
+
+move-semantic
+\begin_inset Quotes grd
+\end_inset
+
+ wird die Regel der Drei erweitert auf:
+\end_layout
+
+\begin_layout Itemize
+destructor 
+\end_layout
+
+\begin_layout Itemize
+copy constructor 
+\end_layout
+
+\begin_layout Itemize
+move constructor 
+\end_layout
+
+\begin_layout Itemize
+copy assignment operator 
+\end_layout
+
+\begin_layout Itemize
+move assignment operator
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Einführung / Problemstellung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class Person
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	private:
+\end_layout
+
+\begin_layout Plain Layout
+
+		string name;
+\end_layout
+
+\begin_layout Plain Layout
+
+		int age;
+\end_layout
+
+\begin_layout Plain Layout
+
+	public:
+\end_layout
+
+\begin_layout Plain Layout
+
+		person(const string& name, int age) : name(name), age(age)
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+    Person a("Bjarne Stroustrup", 60);
+\end_layout
+
+\begin_layout Plain Layout
+
+    Person b(a);   // What happens here?
+\end_layout
+
+\begin_layout Plain Layout
+
+    b = a;         // And here?
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Die Grundfrage
+\end_layout
+
+\begin_layout Standard
+die sich stellt ist, was heißt es eine 
+\begin_inset Quotes eld
+\end_inset
+
+Kopie
+\begin_inset Quotes erd
+\end_inset
+
+ eines Objektes anzulegen, die vom Compiler generierte 
+\begin_inset Quotes gld
+\end_inset
+
+Kopier-Funktionalität
+\begin_inset Quotes grd
+\end_inset
+
+ kopiert einen Pointer / eine Referenz in dem sie einfach die Speicheradresse
+ kopiert, dies führt dazu das die Kopie nur eine Referenz auf das selbe
+ Objekt ist - was wir aber in diesem Fall wollen ist eine autarke Kopie
+ des Objektes - genauer der Datenkomponenten, das oben angeführte Beispiel
+ zeigt 2 
+\begin_inset Quotes eld
+\end_inset
+
+Kopier-Szenarien
+\begin_inset Quotes erd
+\end_inset
+
+ einerseits, den Kopier-Konstruktor
+\series bold
+ Person b(a)
+\series default
+, dieser hat die Aufgabe eine neues Objekt aus den Daten des bestehenden
+ Objektes zu konstruieren andererseits den Kopier-Zuweisungsoperator 
+\series bold
+b = a
+\series default
+, dieser ist schwieriger zu realisieren da sich das Objekt auf der linken
+ Seite bereits in einem gültigen Zustand befindet.
+\end_layout
+
+\begin_layout Paragraph
+Nachdem
+\end_layout
+
+\begin_layout Standard
+wir weder Kopier-Konstruktor noch den Assignment Operator definiert haben
+ werden diese implizit vom Compiler gestellt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+Auszug aus dem C++ Standard (Section 12 §1)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The [...] copy constructor and copy assignment operator, [...] and destructor
+ are special member functions.
+ [ Note:
+\series bold
+ The implementation will implicitly declare these member functions for some
+ class types when the program does not explicitly declare them
+\series default
+.
+ The implementation will implicitly define them if they are used ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implizite Definition
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// 1.
+ copy ctor
+\end_layout
+
+\begin_layout Plain Layout
+
+Person(const person& that) : name(that.name), age(that.age)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 2.
+ copy assignment operator
+\end_layout
+
+\begin_layout Plain Layout
+
+Person& operator=(const person& that)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+    name = that.name;
+\end_layout
+
+\begin_layout Plain Layout
+
+    age = that.age;
+\end_layout
+
+\begin_layout Plain Layout
+
+    return *this;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 3.
+ destructor
+\end_layout
+
+\begin_layout Plain Layout
+
+~Person()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Die 
+\begin_inset Quotes gld
+\end_inset
+
+Drei
+\begin_inset Quotes grd
+\end_inset
+
+ implizit definiert.
+\end_layout
+
+\begin_layout Standard
+Die Kopie klont unsere Datenkomponenten und legt uns eine neue unabhängige
+ Person an, der Destruktor bleibt leer.
+ Das ist das 
+\begin_inset Quotes gld
+\end_inset
+
+Geschenk des Compilers
+\begin_inset Quotes grd
+\end_inset
+
+ - das passiert wenn man diese 
+\begin_inset Quotes gld
+\end_inset
+
+Special Member Functions
+\begin_inset Quotes grd
+\end_inset
+
+ nicht selbst angibt.
+ Alles 
+\begin_inset Quotes gld
+\end_inset
+
+Fun and Games
+\begin_inset Quotes grd
+\end_inset
+
+ bis zu dem Moment wo eine Datenkomponente nicht ein einfaches 
+\begin_inset Quotes gld
+\end_inset
+
+Primitive
+\begin_inset Quotes grd
+\end_inset
+
+ bzw.
+ Skalar ist.
+ Und wie wir inzwischen wissen: Regel der Drei/Fünf, sobald wir einen anlegen
+ müssen - müssen (oder zumindest sollten :P) wir die anderen auch anlegen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{boxyt}{
+\end_layout
+
+\end_inset
+
+Auszug aus dem C++ Standard (Section 12.8)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+§16 The implicitly-defined copy constructor for a non-union class X performs
+ a memberwise copy of its subobjects.
+ 
+\end_layout
+
+\begin_layout Description
+§30 The implicitly-defined copy assignment operator for a non-union class
+ X performs memberwise copy assignment of its subobjects
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{boxyt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dynamische Datenobjekte
+\end_layout
+
+\begin_layout Standard
+Hier fängt jetzt die Krux an, nehmen wir das selbe Beispiel - nur anstatt
+ eines Strings nehmen wir jetzt, der 
+\begin_inset Quotes gld
+\end_inset
+
+Einfachheit
+\begin_inset Quotes grd
+\end_inset
+
+ halber, ein char-Array.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class Person
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	char* name;
+\end_layout
+
+\begin_layout Plain Layout
+
+	int age;
+\end_layout
+
+\begin_layout Plain Layout
+
+	public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// the constructor acquires a resource:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// in this case, dynamic memory obtained via new[]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Person(const char* the_name, int the_age)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		name = new char[strlen(the_name) + 1];
+\end_layout
+
+\begin_layout Plain Layout
+
+		strcpy(name, the_name);
+\end_layout
+
+\begin_layout Plain Layout
+
+		age = the_age;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	// the destructor must release this resource via delete[]
+\end_layout
+
+\begin_layout Plain Layout
+
+	~Person()
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		delete[] name;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Problem 
+\end_layout
+
+\begin_layout Standard
+Hier wird wieder 
+\begin_inset Quotes gld
+\end_inset
+
+member-wise
+\begin_inset Quotes grd
+\end_inset
+
+ kopiert, das heißt aber bei dem Char-Array, dass der Skalar-Wert kopiert
+ wird und dieser beinhaltet nicht die Daten auf der Adresse sondern die
+ Adresse selbst.
+ Nun teilt sich die Kopie die entsteht einen Speicherbereich mit dem Original
+ und wir bekommen unerwünschtes Verhalten.
+\end_layout
+
+\begin_layout Enumerate
+Alle Änderungen des Namens von Person a wird ist automatisch auch in dem
+ kopierten Objekt Person b.
+\end_layout
+
+\begin_layout Enumerate
+Sobald b zerstört wird, ist der Pointer in a ein ungültiger Pointer
+\end_layout
+
+\begin_layout Enumerate
+Einen ungültigen Pointer erneut löschen erzeugt undefinierbares Verhalten.
+\end_layout
+
+\begin_layout Enumerate
+Memory Leaks über Zeit 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang ngerman
+Explizite
+\lang naustrian
+ Definition
+\end_layout
+
+\begin_layout Standard
+Nachdem wir nun das Problem der implicit Kopie (
+\begin_inset Quotes gld
+\end_inset
+
+member-wise cloning
+\begin_inset Quotes grd
+\end_inset
+
+) kennen und eben dieses Verhalten nicht wollen müssen wir einen Kopier-Konstruk
+tor und einen 
+\begin_inset Quotes gld
+\end_inset
+
+Copy-Assignment-Operator
+\begin_inset Quotes grd
+\end_inset
+
+ bzw Kopier-Zuweisungsoperator selbst anlegen um dieses Problem zu beheben.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// 1.
+ copy constructor
+\end_layout
+
+\begin_layout Plain Layout
+
+Person(const person& that)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	name = new char[strlen(that.name) + 1];
+\end_layout
+
+\begin_layout Plain Layout
+
+	strcpy(name, that.name);
+\end_layout
+
+\begin_layout Plain Layout
+
+	age = that.age;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 2.
+ copy assignment operator
+\end_layout
+
+\begin_layout Plain Layout
+
+Person& operator=(const person& that)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (this != &that)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		delete[] name;
+\end_layout
+
+\begin_layout Plain Layout
+
+		// This is a dangerous point in the flow of execution!
+\end_layout
+
+\begin_layout Plain Layout
+
+		// We have temporarily invalidated the class invariants,
+\end_layout
+
+\begin_layout Plain Layout
+
+		// and the next statement might throw an exception,
+\end_layout
+
+\begin_layout Plain Layout
+
+		// leaving the object in an invalid state 
+\end_layout
+
+\begin_layout Plain Layout
+
+		name = new char[strlen(that.name) + 1];
+\end_layout
+
+\begin_layout Plain Layout
+
+		strcpy(name, that.name);
+\end_layout
+
+\begin_layout Plain Layout
+
+		age = that.age;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	return *this;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Achtung
+\end_layout
+
+\begin_layout Standard
+Hier wird nun auch der oben erwähnte Komplexitätsunterschied zwischen Kopier-Kon
+struktor und Kopier-Zuweisungsoperator sichtbar.
+ Wir müssen im Kopier-Zuweisungsoperator prüfen ob es sich nicht um das
+ selbe Objekt handelt, da wir sonst das Quell-Array zerstören würden und
+ nicht wieder herstellen könnten.
+ Außerdem müssen wir das Char-Array löschen um keine Memory Leaks zu produzieren
+, da dieses, anders als beim Kopier-Konstrukt bereits existiert.
+ Was an dem oberen Beispiel immer noch ein Problem darstellen kann, ist
+ wenn der Speicher zum erneuten Reservieren des Arrays nicht mehr ausreicht,
+ hier kann es durch das fangen der geworfenen Exception passieren, dass
+ das Objekt in einem ungültigen Zustand hinterlassen wird.
+\end_layout
+
+\begin_layout Section
+Kopierschutz
+\end_layout
+
+\begin_layout Standard
+Wenn man nun nicht möchte, dass das Objekt kopiert werden kann so setzt
+ man den Kopier-Zuweisungsoperator und den Kopierkonstruktor einfach private
+ ohne Implmentierung:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+private:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Person(const person& that);
+\end_layout
+
+\begin_layout Plain Layout
+
+	Person& operator=(const person& that);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+C++ 11 aufwärts
+\end_layout
+
+\begin_layout Standard
+unterstütz eine eigene Semantik um diesen Kopierschutz umzusetzen: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	Person(const person& that) = delete
+\end_layout
+
+\begin_layout Plain Layout
+
+	Person& operator=(const person& that) = delete
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Erweiterung 
+\begin_inset Quotes gld
+\end_inset
+
+move-semantics
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ab C++11 sind die so genannten 
+\begin_inset Quotes gld
+\end_inset
+
+move-semantics
+\begin_inset Quotes grd
+\end_inset
+
+ dazu gekommen, diese ermöglichen es einem anderen Objekt einem anderen
+ Daten zu 
+\begin_inset Quotes gld
+\end_inset
+
+stehlen
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Zusammen mit den Drei vorher genannten 
+\begin_inset Quotes gld
+\end_inset
+
+Special Member Functions
+\begin_inset Quotes grd
+\end_inset
+
+ bilden die zwei Weiteren, Move-Konstruktor und Move-Zuweisungsoperator,
+ die 
+\series bold
+Regel der Fünf
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// 1.
+ Move Ctor
+\end_layout
+
+\begin_layout Plain Layout
+
+Person&(Person&& that)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	//if its unsure that that.name is initialized
+\end_layout
+
+\begin_layout Plain Layout
+
+	//also add a check for nullptr
+\end_layout
+
+\begin_layout Plain Layout
+
+	name = that.name;
+\end_layout
+
+\begin_layout Plain Layout
+
+	age = that.age;
+\end_layout
+
+\begin_layout Plain Layout
+
+	//'stolen' data
+\end_layout
+
+\begin_layout Plain Layout
+
+	that.name = nullptr;
+\end_layout
+
+\begin_layout Plain Layout
+
+	//'stolen' scalar value gets its 'default'
+\end_layout
+
+\begin_layout Plain Layout
+
+	that.age = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 2.
+ Move-Assignment Operator for Person
+\end_layout
+
+\begin_layout Plain Layout
+
+Person& operator=(Person&& that)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (this != &that)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		delete[] name;
+\end_layout
+
+\begin_layout Plain Layout
+
+		name = that.name;
+\end_layout
+
+\begin_layout Plain Layout
+
+		age = that.age;
+\end_layout
+
+\begin_layout Plain Layout
+
+		// we have 'stolen' the data
+\end_layout
+
+\begin_layout Plain Layout
+
+		that.name = nullptr;
+\end_layout
+
+\begin_layout Plain Layout
+
+		that.age = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	return *this;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.1ex"
+width "50col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+Transkribiert und überarbeitet von jan@subkonstrukt.at, wer Fehler findet
+ darf sie selber fixen: 
+\begin_inset CommandInset href
+LatexCommand href
+name "GH"
+target "https://github.com/eisenwinter/fh-hgb-stuff"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
