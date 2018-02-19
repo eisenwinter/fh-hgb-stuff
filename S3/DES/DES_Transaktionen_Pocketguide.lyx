@@ -1,0 +1,1445 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrartcl
+\begin_preamble
+
+\usepackage[margin=0.75in,a4paper,includefoot,bottom=0.3in,footskip=2em]{geometry} 
+\usepackage[showmarks]{pocketmod}
+\usepackage{enumitem}
+\setlist{leftmargin=\parindent,labelindent=*}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{fontawesome}
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\setlist[description]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{\bfseries ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\title{KORE Pocket Guide}
+\author{Jan Caspar}
+\date{\texttt{jan@subkonstrukt.at}}
+
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\color{headlinec}\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\color{subheadlinec}\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small\color{headlinec}}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\end_preamble
+\options fontsize=24pt
+\use_default_options false
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{0}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Fehler bei Mehrbenutzerbetrieb
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Verlorengegangene Änderungen (lost update)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Lesen von nicht freig.
+ Änderungen (dirty read)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Nicht wiederholbares Lesen (non-repeatable Read)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Lesen inkonsistenter Zustände
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Phantomproblem
+\end_layout
+
+\begin_layout Section
+Transaktionen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Folge von DB-Operationen, die bzgl.
+ Integritätsüberwachung als eine Einheit angesehen werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ DB muß nur vor und nach Transaktionsausführung in konsistentem Zustand
+ sein
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ müssen ACID-Eigenschaften erfüllen:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+A: Atomarität; Transaktion wird ganz oder gar nicht ausgeführt
+\end_layout
+
+\begin_layout Description
+C: Konsistenz; DB muß nach Transaktion in zulässigem Zustand sein
+\end_layout
+
+\begin_layout Description
+I: Isolation; evtl.
+ parallel ablaufende Transaktionen sind isoliert, können sich nicht gegenseitig
+ beeinflussen
+\end_layout
+
+\begin_layout Description
+D: Dauerhaftigkeit; Wirkung einer erfolgreich beendeten Transaktion ist
+ dauerhaft
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Konfliktmatrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{2}(y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w_{2}(y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{1}(y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{green}
+\backslash
+faCheckCircle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{red}
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w_{1}(y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{red}
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{red}
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Konflikte können Auftreten sobald mindestens eine Schreiboperation stattfindet!
+\end_layout
+
+\begin_layout Section
+Sperren (Locks)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ von Datenelementen:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ ganze Relation
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ einzelne Tupel
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ einzelne Attributwerte
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ einzelne Seiten
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ je größ er Datenelement, umso geringer Verwaltungsaufwand, aber auch umso
+ geringer Parallelität
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+lock
+\series default
+: Transaktion sperrt Datenelement vor Bearbeitung; ist Datenelement schon
+ (von anderer Transaktion) gesperrt: warten, bis Sperre aufgehoben, dann
+ sperren
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+unlock
+\series default
+: Entsperren des Datenelements nach Bearbeitung
+\end_layout
+
+\begin_layout Section
+Deadlock (Verklemmungen)
+\end_layout
+
+\begin_layout Description
+Behinderungen: eine Transaktion versucht, ein Datenelement zu sperren; dieses
+ ist ständig durch andere Transaktionen abwechselnd gesperrt
+\end_layout
+
+\begin_layout Description
+DBMS muß Verklemmungen vorbeugen, erkennen, behandeln z.B.
+ 
+\series bold
+Behinderungen
+\series default
+ durch 
+\series bold
+Warteschlangen
+\series default
+, in die sich Transaktionen einreihen müssen, z.B.
+ bei 
+\series bold
+Deadlocks
+\series default
+, Stoppen von Transaktionen, später 
+\series bold
+erneutes Anlaufen
+\end_layout
+
+\begin_layout Section
+Livelock-Problem
+\end_layout
+
+\begin_layout Standard
+Es ist möglich, dass eine Transaktion eine Sperre anfordert, diese aber
+ nie bekommt, weil andere Transaktion vorgezogen werden (Starvation, Live-Lock).
+ Abhilfe: 
+\series bold
+First-Come-First-Served-Strategie.
+\end_layout
+
+\begin_layout Section
+Serialisierbarkeit
+\end_layout
+
+\begin_layout Standard
+Ausführung konkurrierender Transaktionen ist korrekt, wenn Ergebnis dem
+ einer seriellen Abarbeitung der Transaktionen (in bel.
+ Reihenfolge) entspricht
+\end_layout
+
+\begin_layout Section
+Serialisierbarkeit überprüfen
+\end_layout
+
+\begin_layout Standard
+Wenn Konfliktgraph azyklisch ist.
+\end_layout
+
+\begin_layout Description
+Konfliktgraph 
+\begin_inset Formula $G(s)=(N,E)$
+\end_inset
+
+ von Schedule s
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Knotenmenge
+\series default
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ enthält alle Transaktionen von s
+\series bold
+ Kantenmenge 
+\series default
+
+\begin_inset Formula $E$
+\end_inset
+
+
+\series bold
+ 
+\series default
+enthält alle konfliktären Operationen als gerichtete Kanten
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Schedule-Klassen
+\end_layout
+
+\begin_layout Description
+CSR konfliktserialisierbare Schedules (orthogonal (also unabhängig))
+\end_layout
+
+\begin_layout Description
+RC rücksetzbare Schedules: Eine Transaktion darf erst dann ihr COMMIT durchführe
+n, wenn 
+\series bold
+alle Transaktionen, von denen sie gelesen hat, beendet sind.
+\end_layout
+
+\begin_layout Description
+ACA Schedules ohne kaskadierendes Rücksetzen: Eine Transaktion darf 
+\series bold
+nur Daten lesen, die zuletzt von einer bereits abgeschlossenen Transaktion
+ geschrieben
+\series default
+ wurden.
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faArrowRight
+\end_layout
+
+\end_inset
+
+ Dirty Read wird verhindert)
+\end_layout
+
+\begin_layout Description
+ST strikte Schedules: Es darf 
+\series bold
+kein geändertes Datenobjekt einer noch nicht beendeten Transaktion gelesen
+\series default
+ oder 
+\series bold
+überschrieben
+\series default
+ werden.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faExclamationCircle
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $seriell\subseteq ST\subseteq ACA\subseteq RC$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faExclamationCircle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Serialisierbarkeit Transaktionsmodelle
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+einfaches lock-unlock-Modell
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Sperren
+\begin_inset space ~
+\end_inset
+
+setzen:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+lock A - mit implizitem read A, unlock A - mit implizitem write A,dazwischen
+ Funktion(en), die den Wert von A verändern
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+2-Phasen-Sperr-Protokoll
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ alle Sperren (1.
+ Phase) kommen vor allen Freigaben (2.
+ Phase)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ erfüllen alle Transaktionen jeweils obige Bedingung: Schedule immer serialiserb
+ar
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Deadlock-Problem aber damit 
+\series bold
+nicht
+\series default
+ gelöst
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Transaktionsabbruch
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ laufende Transaktion (vor COMMIT): kann noch abgebrochen werden, Änderungen
+ nicht dauerhaft gespeichert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ abgeschlossene Transaktion (nach COMMIT): darf wegen Eigenschaft D nicht
+ zurückgesetzt werden
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+kritischer Befehl ist COMMIT.
+\end_layout
+
+\begin_layout Standard
+Es kann zu einem 
+\series bold
+Cascading Rollback bzw.
+ Cascading Abort 
+\series default
+kommen.
+ Dieser ist unerwünscht da er bei einem Abbruch alle laufenden Transaktionen
+ wieder zurücksetzt (Snowball Problem).
+\end_layout
+
+\begin_layout Subsection
+Abhilfe: striktes 2-Phasen-Sperr-Protokoll
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Transaktion darf nicht in DB schreiben, bevor sie COMMIT erreicht hat
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ vor COMMIT werden keine unlocks ausgelöst
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ d.h.
+ (neuer) Wert in DB kann nur von COMMITed Transaktion geschrieben werden,
+ Transaktion ist sicher dauerhaft
+\end_layout
+
+\begin_layout Section
+Hierarchische Sperrverfahren
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Ermöglichen Transaktionen mit wenigen Zugriffen pro Granularitätsstufe
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandPointerO
+\end_layout
+
+\end_inset
+
+ auf niedriger Hierarchiestufe (= kleine Granularität) zu sperren.
+ d.h.
+ 
+\series bold
+höherer Parallelitätsgrad
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Ermöglichen Transaktionen mit vielen Zugriffen pro Granularitätsstufe
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandPointerO
+\end_layout
+
+\end_inset
+
+ auf entsprechend höherer Hierarchiestufe (= große Granularität) zu sperren
+ d.h.
+ 
+\series bold
+geringerer Sperraufwand
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Lock Escalation
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+sobald eine bestimmte Anzahl von Sperren in der kleineren Granularität erworben
+ wurde, wird automatisch auf die nächsthöhere Granularität umgeschaltet
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Flexible Sperrgranularität
+\end_layout
+
+\begin_layout Itemize
+Einführung zusätzlicher Sperrmodi, mit flexiblen Sperrgranulaten pro Transaktion
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Intentionale Sperren 
+\series default
+– Anwartschaftssperre (I-Sperre) Zeigen auf höherer Ebene der Granularitätshiera
+rchie die „Absicht“ einer weiter unten in der Hierarchie gesetzten Sperre
+ an
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Intentionale Lesesperre (irl)
+\end_layout
+
+\begin_layout Itemize
+Intentionale Schreibsperre (iwl)
+\end_layout
+
+\begin_layout Itemize
+Lese- und intentionale Schreibsperre (riwl)
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Nicht-sperrbasierte Verfahren
+\end_layout
+
+\begin_layout Standard
+Nicht-sperrende Verfahren versuchen, Konflikte bei der verschränkten Ausführung
+ von Transaktionen zu erkennen und aufzulösen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Einfache Auflösung durch Zurücksetzen von Transaktionen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Keine Deadlocks
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Potentiell höhere Parallelität als bei Sperrverfahren
+\end_layout
+
+\begin_layout Subsection
+Zeitstempel-basierte Verfahren
+\end_layout
+
+\begin_layout Standard
+erzwingen eine korrekte Reihenfolge der Bearbeitungsschritte mittels geeigneter
+ Markierungen der Transaktionen.
+ Es werden die jeweiligen Zeitstempel miteinander verglichen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ einfache Realisierung in verteilten Systemen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+ Anfälligkeit gegen stark variierende Laufzeiten von Transaktionen
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+lang andauernde Transaktionen bearbeiten ihre letzten Schritte längere Zeit
+ nach der Vergabe der Zeitmarke, kommen damit mit diesen Schritten mit größerer
+ Wahrscheinlichkeit 
+\series bold
+zu spät
+\end_layout
+
+\end_deeper
+\begin_layout Section
+MVCC
+\end_layout
+
+\begin_layout Standard
+Multi-Version Concurrency Control
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Reduzierung der Konflikte, durch führen mehrerer Versionen (Mehrversionen-Sched
+uler)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Jede Transaktion bekommt eine eigene Momentaufnahme (lesekonsistente Sicht)
+ der Datenobjekte zu sehen.
+\end_layout
+
+\begin_layout Standard
+Jede Änderungsoperation 
+\begin_inset Formula $w$
+\end_inset
+
+ erzeugt neue Version 
+\begin_inset Formula $w'$
+\end_inset
+
+ des Datenobjektes
+\end_layout
+
+\begin_layout Itemize
+Leseoperationen können passende Version wählen und setzen keine Sperren
+\end_layout
+
+\begin_layout Itemize
+Versionen sind transparent für Applikationen
+\end_layout
+
+\begin_layout Subsection
+Zusammenfassung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faExpand
+\end_layout
+
+\end_inset
+
+ Entkopplung von Lese- und Änderungsoperationen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faRefresh 
+\end_layout
+
+\end_inset
+
+ Keine Synchronisation von Lesetransaktionen notwendig
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faExchange
+\end_layout
+
+\end_inset
+
+ Synchronisation von Änderungsoperationen durch andere Verfahren
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHddO 
+\end_layout
+
+\end_inset
+
+ zusätzlicher Speicher- und Wartungsaufwand
+\end_layout
+
+\end_body
+\end_document

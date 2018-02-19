@@ -1,0 +1,917 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass paper
+\begin_preamble
+\usepackage[rm,light]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage[breakable]{tcolorbox}
+\usepackage{fontawesome}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{darkred}{HTML}{9b0909}
+\definecolor{mildred}{HTML}{cc0606}
+\definecolor{brightred}{HTML}{e52d2d}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{fit,calc,shadows}
+\usetikzlibrary{shapes.callouts}
+\usetikzlibrary{positioning}
+
+\newtcolorbox{boxy}{colback=white,colframe=darkred,arc=0mm,boxrule=0.3mm,top=0.2mm,bottom=0.2mm,left=0.2mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=darkred,arc=0mm,boxrule=0.2mm,top=0.2mm,bottom=0.2mm,title=#1,breakable}
+\newtcolorbox{boxys}[1]{colback=white,colframe=darkred,arc=0mm,boxrule=0.2mm,top=0.2mm,bottom=0.2mm,title=#1,sidebyside}
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+   {-3.25ex\@plus -1ex \@minus -.2ex}%
+   {1.5ex \@plus .2ex}%
+   {\normalfont\normalsize}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 1
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language={C++},basicstyle={\ttfamily},keywordstyle={\color{blue}\ttfamily},stringstyle={\color{red}\ttfamily},commentstyle={\color{darkred}\ttfamily},morecomment={[l][\color{magenta}]{\#}},frame=tb,breaklines=true,breakatwhitespace=false,numbers=left,numbersep=5pt,numberstyle={\tiny},xleftmargin={0.5cm},showstringspaces=false,tabsize=4"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Präprozessor & C-C++ Mixin
+\end_layout
+
+\begin_layout SubTitle
+Nicht von mir aber hilfreich!
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Präprozessor
+\end_layout
+
+\begin_layout Standard
+Der Präprozessor ist ein mächtiges und gleichzeitig fehleranfälliges Werkzeug,
+ um bestimmte Funktionen auf den Code anzuwenden, bevor er vom Compiler
+ verarbeitet wird.
+\end_layout
+
+\begin_layout Subsection
+Direktiven
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://de.wikibooks.org/wiki/C-Programmierung:_Pr%C3%A4prozessor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Anweisungen an den Präprozessor werden als Direktiven bezeichnet.
+ Diese Direktiven stehen in der Form 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#Direktive Parameter
+\end_layout
+
+\end_inset
+
+ im Code.
+ Sie beginnen mit # und müssen nicht mit einem Semikolon abgeschlossen werden.
+ Eventuell vorkommende Sonderzeichen in den Parametern müssen nicht escaped
+ werden.
+\end_layout
+
+\begin_layout Subsubsection
+#include
+\end_layout
+
+\begin_layout Standard
+Include-Direktiven sind in den Beispielprogrammen bereits vorgekommen.
+ Sie binden die angegebene Datei in die aktuelle Source-Datei ein.
+ Es gibt zwei Arten der #include-Direktive, nämlich
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <Datei.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+//bzw
+\end_layout
+
+\begin_layout Plain Layout
+
+ #include "Datei.h"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die erste Anweisung sucht die Datei im Standard-Includeverzeichnis des Compilers
+, die zweite Anweisung sucht die Datei zuerst im Verzeichnis, in der sich
+ die aktuelle Sourcedatei befindet; sollte dort keine Datei mit diesem Namen
+ vorhanden sein, sucht sie ebenfalls im Standard-Includeverzeichnis.
+\end_layout
+
+\begin_layout Subsubsection
+#define
+\end_layout
+
+\begin_layout Standard
+Für die #define-Direktive gibt es verschiedene Anweisungen.
+ Die erste Anwendung besteht im Definieren eines Symbols mit 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#define SYMBOL
+\end_layout
+
+\end_inset
+
+ wobei SYMBOL jeder gültige Bezeichner in C sein kann.
+ Mit den Direktiven #ifdef bzw.
+ #ifndef kann geprüft werden, ob diese Symbole definiert wurden.
+ Die zweite Anwendungsmöglichkeit ist das Definieren einer Konstante mit
+ 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#define KONSTANTE Wert
+\end_layout
+
+\end_inset
+
+ wobei KONSTANTE wieder jeder gültige Bezeichner sein darf und Wert ist
+ der Wert oder Ausdruck durch den KONSTANTE ersetzt wird.
+ Insbesondere wenn arithmetische Ausdrücke als Konstante definiert sind,
+ ist die Verwendung einer Klammer sehr ratsam, z.B.: 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#define ERDBESCHLEUNIGUNG (9.80665)
+\end_layout
+
+\end_inset
+
+.
+ Zwischen dem Namen der Konstante und einer evtl.
+ öffnenden Klammer des Wertes muss mindestens ein Leerzeichen stehen.
+ Die dritte Anwendung ist die Definition eines Makros mit 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#define MAKRO(parameter...) Ausdruck
+\end_layout
+
+\end_inset
+
+ wobei MAKRO der Name des Makros ist und Ausdruck den Ersetzungstext für
+ das Makros darstellt.
+ Die öffnende Klammer für die Parameter muss unmittelbar auf den Makronamen
+ folgen.
+ Wird das Makro benutzt, werden die konstanten Textteile des Ausdruckes
+ unverändert übernommen, Vorkommen der Parameter werden durch die Parameter-Wert
+e des jeweiligen Makro-Aufrufes ersetzt.
+\begin_inset Newline newline
+\end_inset
+
+Sowohl der Gesamtausdruck als auch alle Vorkommen der Parameter sollten
+ in Klammern stehen, da sich sonst je nach Umgebung des Makro-Aufrufes eine
+ unerwartete Rangfolge der Operatoren ergeben kann.
+\begin_inset Newline newline
+\end_inset
+
+Wird beispielsweise ein Makro MAX mit den Parametern a und b definiert 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#define MAX(a,b) ((a >= b) ? (a) : (b))
+\end_layout
+
+\end_inset
+
+ kann man dieses später verwenden, z.B.
+ mit 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+maximum = MAX(5,eingabe);
+\end_layout
+
+\end_inset
+
+ In diesem Fall wird also 5 als aktueller Text für den Parameter a angegeben
+ und eingabe als Text für den Parameter b.
+\end_layout
+
+\begin_layout Standard
+Die Ersetzung ergibt dann 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+maximum = ((5 >= eingabe) ? (5) : (eingabe));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+#undef
+\end_layout
+
+\begin_layout Standard
+Die Direktive #undef löscht ein mit define gesetztes Symbol.
+ Syntax: 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#undef SYMBOL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+#ifdef
+\end_layout
+
+\begin_layout Standard
+Mit der #ifdef-Direktive kann geprüft werden, ob ein Symbol definiert wurde.
+ Falls nicht, wird der Code nach der Direktive nicht an den Compiler weitergegeb
+en.
+ Eine #ifdef-Direktive muss durch eine #endif-Direktive abgeschlossen werden.
+\end_layout
+
+\begin_layout Subsubsection
+#ifndef
+\end_layout
+
+\begin_layout Standard
+Die #ifndef-Direktive ist das Gegenstück zur #ifdef-Direktive.
+ Sie prüft, ob ein Symbol nicht definiert ist.
+ Sollte es doch sein, wird der Code nach der Direktive nicht an den Compiler
+ weitergegeben.
+ Eine #ifndef-Direktive muss ebenfalls durch eine #endif-Direktive abgeschlossen
+ werden.
+\end_layout
+
+\begin_layout Subsubsection
+#endif
+\end_layout
+
+\begin_layout Standard
+Die #endif-Direktive schließt die vorhergehende #ifdef-, #ifndef-, #if-
+ bzw #elif-Direktive ab.
+ Syntax:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#ifdef SYMBOL
+\end_layout
+
+\begin_layout Plain Layout
+
+// Code, der nicht an den Compiler weitergegeben wird
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#define SYMBOL
+\end_layout
+
+\begin_layout Plain Layout
+
+#ifndef SYMBOL
+\end_layout
+
+\begin_layout Plain Layout
+
+// Wird ebenfalls nicht kompiliert
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\begin_layout Plain Layout
+
+#ifdef SYMBOL
+\end_layout
+
+\begin_layout Plain Layout
+
+// Wird kompiliert
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solche Konstrukte werden häufig verwendet, um Debug-Anweisungen im fertigen
+ Programm von der Übersetzung auszuschließen oder um mehrere, von außen
+ gesteuerte, Übersetzungsvarianten zu ermöglichen.
+\end_layout
+
+\begin_layout Subsubsection
+#error
+\end_layout
+
+\begin_layout Standard
+Die #error-Direktive wird verwendet, um den Kompilierungsvorgang mit einer
+ (optionalen) Fehlermeldung abzubrechen.
+ Syntax: 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+#error Fehlermeldung
+\end_layout
+
+\end_inset
+
+.
+ Die Fehlermeldung muss nicht in Anführungszeichen stehen.
+\end_layout
+
+\begin_layout Subsubsection
+#if
+\end_layout
+
+\begin_layout Standard
+Mit #if kann ähnlich wie mit #ifdef eine bedingte Übersetzung eingeleitet
+ werden, jedoch können hier konstante Ausdrücke ausgewertet werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#if (DEBUGLEVEL >= 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+#  define print1 printf
+\end_layout
+
+\begin_layout Plain Layout
+
+#else
+\end_layout
+
+\begin_layout Plain Layout
+
+#  define print1(...) (0)
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#if (DEBUGLEVEL >= 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+#  define print2 printf
+\end_layout
+
+\begin_layout Plain Layout
+
+#else
+\end_layout
+
+\begin_layout Plain Layout
+
+#  define print2(...) (0)
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hier wird abhängig vom Wert der Präprozessorkonstante DEBUGLEVEL definiert,
+ was beim Aufruf von print2() oder print1() passiert.
+\end_layout
+
+\begin_layout Standard
+Der Präprozessorausdruck innerhalb der Bedingung folgt den gleichen Regeln
+ wie Ausdrücke in C, jedoch muss das Ergebnis zum Übersetzungszeitpunkt
+ bekannt sein.
+\end_layout
+
+\begin_layout Subsubsection
+defined
+\end_layout
+
+\begin_layout Standard
+defined ist ein unärer Operator, der in den Ausdrücken der #if und #elif
+ Direktiven eingesetzt werden kann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#define FOO
+\end_layout
+
+\begin_layout Plain Layout
+
+#if defined FOO || defined BAR
+\end_layout
+
+\begin_layout Plain Layout
+
+#error "FOO oder BAR ist definiert"
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die genaue Syntax ist 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+defined SYMBOL
+\end_layout
+
+\end_inset
+
+ Ist das Symbol definiert, so liefert der Operator den Wert 1, anderenfalls
+ den Wert 0.
+\end_layout
+
+\begin_layout Subsubsection
+#elif
+\end_layout
+
+\begin_layout Standard
+Ähnlich wie in einem else-if Konstrukt kann mit Hilfe von #elif etwas in
+ Abhängigkeit einer früheren Auswahl definiert werden.
+ Der folgende Abschnitt verdeutlicht das.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#define BAR
+\end_layout
+
+\begin_layout Plain Layout
+
+#ifdef FOO
+\end_layout
+
+\begin_layout Plain Layout
+
+#error "FOO ist definiert"
+\end_layout
+
+\begin_layout Plain Layout
+
+#elif defined BAR
+\end_layout
+
+\begin_layout Plain Layout
+
+#error "BAR ist definiert"
+\end_layout
+
+\begin_layout Plain Layout
+
+#else
+\end_layout
+
+\begin_layout Plain Layout
+
+#error "hier ist nichts definiert"
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Compiler würde hier BAR ist definiert ausgeben.
+\end_layout
+
+\begin_layout Subsubsection
+#else
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#ifdef FOO
+\end_layout
+
+\begin_layout Plain Layout
+
+#error "FOO ist definiert"
+\end_layout
+
+\begin_layout Plain Layout
+
+#else
+\end_layout
+
+\begin_layout Plain Layout
+
+#error "FOO ist nicht definiert"
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+#else dient dazu, allen sonstigen nicht durch #ifdef oder #ifndef abgefangenen
+ Fälle einen Bereich zu bieten.
+\end_layout
+
+\begin_layout Subsubsection
+#pragma
+\end_layout
+
+\begin_layout Standard
+Bei den #pragma Anweisungen handelt es sich um compilerspezifische Erweiterungen
+ der Sprache C.
+ Diese Anweisungen steuern meist die Codegenerierung.
+ Sie sind aber zu sehr von den Möglichkeiten des jeweiligen Compilers abhängig,
+ als dass man hierzu eine allgemeine Aussage treffen kann.
+\end_layout
+
+\begin_layout Subsection
+Beispiele
+\end_layout
+
+\begin_layout Subsubsection
+Print Token
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#define PRINT_TOKEN(token) printf(#token " is %d", token)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Swap (Multiline)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#define SWAP(a, b)  {                   
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                        a ^= b;         
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                        b ^= a;         
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+                        a ^= b;         
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                    } 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Swap
+\end_layout
+
+\begin_layout Standard
+Mehrere Statements werden mit do {} while(0) trick als Macro verwendet
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#define SWAP(a, b)  do { a ^= b; b ^= a; a ^= b; } while ( 0 )
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Include Guard
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#ifndef _FILE_NAME_H_
+\end_layout
+
+\begin_layout Plain Layout
+
+#define _FILE_NAME_H_
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/* code */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif // #ifndef _FILE_NAME_H_
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Array Size
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#define ARRAYSIZE(arr) (sizeof(arr) / sizeof(arr[0]))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Increment
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#define INCREMENT(x) x++
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
