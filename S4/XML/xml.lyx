@@ -1,0 +1,3443 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage[defaultfam,light,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serig
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[many,breakable]{tcolorbox}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+
+
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{varwidth}
+
+\usepackage{tikz-qtree}
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+\usetikzlibrary{arrows,backgrounds,snakes}
+\usetikzlibrary{shadows}
+
+\tcbuselibrary{skins}
+\tcbuselibrary{theorems}
+\tcbuselibrary{raster}
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.5pt plus .5ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {0.75ex plus -.5ex minus -0.2ex}%
+                                 {0.5ex plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{4pt}
+\setlength{\postmulticols}{4pt}
+\setlength{\multicolsep}{4pt}
+\setlength{\columnsep}{14pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1.2em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\color{headlinec}\bfseries}
+{\thesection}{1em}{}
+
+
+\titlespacing*{\section}
+{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}
+{0pt}{0pt}{0pt}
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{\bfseries ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[description]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,colframe=titlec,arc=0mm,boxrule=0.3mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title={#1},breakable}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title={#1},sidebyside}
+
+\def\doubleunderline#1{\underline{\underline{#1}}}
+
+\newtcolorbox{ff}[2]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=#1mm,arc=0mm,boxsep=2pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries] {#2} ([xshift=#1mm]frame.north west);\end{tcbclipinterior}}}
+
+\newtcolorbox{ffa}[1]{enhanced,boxsep=1.5pt,colframe=titlec,nobeforeafter,arc=0mm,tcbox raise base,boxrule=0.4pt,left=1mm,right=1mm,top=0.5mm,bottom=0.5mm,title=\sffamily\bfseries{#1}}
+
+\newtcolorbox{ffn}[1]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=4mm,arc=0mm,boxsep=1.4pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries,rotate=90] {#1} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+
+\newtcolorbox{ffnr}[1]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,colback=titlec!20!white,
+  right=0mm,left=4mm,arc=0mm,boxsep=1.4pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries,rotate=90] {#1} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+
+
+\newcommand{\eqav}[2]{\begin{ffa}{#1}#2\end{ffa}}
+\newcommand{\eqah}[2]{\begin{ff}{14}{#1}#2\end{ff}}
+\newcommand{\eqahr}[2]{\begin{ffn}{#1}#2\end{ffn}}
+\newcommand{\eqahrr}[2]{\begin{ffnr}{#1}#2\end{ffnr}}
+
+
+\pgfplotsset{compat=1.7}
+
+\newcommand*\keystroke[1]{%
+  \tikz[baseline=(key.base)]
+    \node[%
+      draw=titlec,
+      fill=white,
+      drop shadow={shadow xshift=0.25ex,shadow yshift=-0.25ex,fill=titlec,opacity=0.75},
+      rectangle,
+      rounded corners=2pt,
+      inner sep=0.5pt,
+      line width=0.5pt,
+      outer sep=0,
+      font=\scriptsize\sffamily
+    ](key) {~#1~\strut}
+  ;
+}
+
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{0pt}
+\renewcommand*{\ttdefault}{pcr}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+bfseries
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCode
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ XML - Extensible Markup Language
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar,Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+,v 1.0.0 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+4
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Basics
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Generische Auszeichnungssprache (Markup-Sprache)
+\end_layout
+
+\begin_layout Description
+XML ist eine effiziente, flexible und einfache Metasprache, mit der Auszeichnung
+ssprachen definiert werden können, d.h.
+ eine Sprache mit der Sprachen beschrieben werden können
+\end_layout
+
+\begin_layout Description
+XML bildet den Kern einer „Technologie-Familie“
+\end_layout
+
+\begin_layout Description
+XML ist ein W3C-Standard und offen
+\end_layout
+
+\begin_layout Description
+XML ist 
+\series bold
+keine
+\series default
+ Programmiersprache
+\end_layout
+
+\begin_layout Description
+XML ist 
+\series bold
+kein
+\series default
+ Transportprotokoll
+\end_layout
+
+\begin_layout Description
+XML ist 
+\series bold
+keine
+\series default
+ Datenbank
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Merkmale
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Layout-Unabhängigkeit:
+\series default
+ Trennung Struktur u.
+ Semantik des Inhalts von dessen Darstellung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Plattform- und Herstellerunabhängigkeit:
+\series default
+ Lizenzfreie W3C-Standards
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Erweiterbarkeit
+\series default
+: Tags und Attribute können neu definiert werden (Metasprache)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Strukturierbarkeit
+\series default
+: Tags können beliebig geschachtelt werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Semistrukturiertheit
+\series default
+: Inhalt kann nicht-strukturierte Teile enthalten, Information trägt einen
+ Teil der Struktur mit sich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Selbstbeschreibend
+\series default
+: für den Menschen: einfach zu lesen u.
+ zu erstellen, für die Maschine: einfach zu generieren u.
+ zu parsen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Validierbarkeit
+\series default
+: XML-Dokumente können ein Dokumentenmodell, d.h.
+ eine formale Beschreibung ihres Vokabulars und ihrer Grammatik aufweisen
+ und gegenüber diesem validiert werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Wohlgeformtheit (Well-formedness)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Es existiert genau ein Wurzelelement
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Jedes Start-Tag muss ein dazugehöriges End-Tag besitzen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Tags dürfen einander nicht überschneiden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Attributwerte müssen in Anführungszeichen stehen (paarweise "...
+ " oder '...')
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Element- und Attributbezeichner müssen XML-Namen sein (Namenskonvention)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ XML ist case-sensitive (pda != PDA)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Ein Element darf nicht zwei Attribute mit gleichem Namen besitzen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Kommentare dürfen nicht innerhalb Tags stehen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Reservierte Zeichen < und & dürfen nicht innerhalb von Elementinhalten
+ oder Attributwerten auftreten (müssen ggf.
+ maskiert werden)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Validität (Validity)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ein wohlgeformtes XML-Dokument wird als gültig oder valide bezeichnet, wenn
+ es den Regeln einer DTD folgt.
+ Ein Dokument kann also wohlgeformt und nicht gültig sein, aber niemals
+ gültig und nicht wohlgeformt.
+ Außerdem ergibt sich, dass ein Dokument immer nur bezüglich einer DTD,
+ und nicht von sich aus gültig sein kann.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Gültigkeit
+\begin_inset space ~
+\end_inset
+
+(Validität) 
+\begin_inset Formula $\implies$
+\end_inset
+
+ XML-Dokument ist wohlgeformt und entspricht einem formalen Dokumentenmodell
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Formales
+\begin_inset space ~
+\end_inset
+
+Dokumentenmodell definiert die ihr bekannten bzw.
+ von ihr akzeptierten Elemente (Vokabular) sowie die Dokumentenstruktur
+ (Grammatik)
+\end_layout
+
+\begin_layout Standard
+Ein formales Dokumentenmodell kann mit Hilfe von Schemas definiert werden,
+ z.B.
+ mit einer sog.
+ Document Type Declaration (DTD, beschränkte Möglichkeiten) oder einem XML
+ Schema (aktuell)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Gültiges XML Dokument
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ein gülties XML Dokument ist sowohl 
+\series bold
+wohlgeformt
+\series default
+ als auch 
+\series bold
+valide
+\series default
+.
+ Ein gültiges XML Dokument ist nichts mehr als ein valides Dokument, welches
+ auf seine DTD passt.
+\begin_inset Newline newline
+\end_inset
+
+Während die meisten XML Parser nicht validieren werden sie nur auf die Wohlgefor
+mtheit achten.
+ Die Wohlgeformtheit ist obligat.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Entities
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Referenzierbare, mit Namen versehene Teile eines XML-Dokuments (Text, Markup
+ oder Dateien) oder einer DTD.
+\end_layout
+
+\begin_layout Description
+Zweck: Zeichen-/Textersetzung, Modularisierung
+\end_layout
+
+\begin_layout Description
+Verarbeitung: Referenzen werden beim Parse-Vorgang expandiert
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Element oder Attribut
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es gibt keine allgemeingültige Antwort, aber Anhaltspunkte
+\end_layout
+
+\begin_layout Paragraph
+Element muss verwendet werden, wenn
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Inhalt weiter strukturiert werden soll
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Reihenfolge relevant ist (bei Attributen beliebig!)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Elemente mehrmals vorkommen sollen (Attribut kann pro Element nur einmal
+ vorkommen!)
+\end_layout
+
+\begin_layout Paragraph
+Attribut muss verwendet werden, wenn man
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Aufzählungstyp, Vorgabewert, Fixwert, ID/IDREF einsetzen möchte
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandRockO
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+Faustregel
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Attribute für einfache, unstrukturierte Zusatz- bzw.
+ Metainformationen für Elemente geeignet
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Alternative Bedingungen sollten durch Attributwerte repräsentiert werden
+ und nicht durch die An- bzw.
+ Abwesenheit von Elementen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Elemente sollen für die eigentlichen Daten genutzt werden oder als "künstliches
+" Gruppierungselement
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Einheitliche Darstellung mit Elementen eleganter (aber speicherintensiver),
+ Darstellung mit Attributen kompakter
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+DTD
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DTD unterstützt eine kompakte Strukturdefinition von XML-(Text-)Dokumenten
+\end_layout
+
+\begin_layout Paragraph
+Schwächen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Keine XML-Syntax
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Fehlende Datentypisierung, insbesondere beim Elementinhalt
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Unzureichende Kardinalitätsangaben
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Keine Namensräume
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Eingeschränkte Wiederverwendbarkeit und Erweiterbarkeit
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Namensräume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vermeidung von Namenskonflikten bei der Verwendung unterschiedlicher Markup-Voka
+bulare.
+ XML-Namensraum ist ein Mechanismus, der Elemente und Attribute global eindeutig
+ identifiziert.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Namensräume werden über URIs identifiziert (Konvention)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Jeder Element- od.
+ Attributname ist einem Namensraum zugeordnet
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Zuordnung erfolgt über ein Präfix, das mit Hilfe des vordefinierten Attributs
+ xmlns an eine URI gebunden ist
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Zuordnung ist für das Element gültig, in dem sie getroffen wurde, und für
+ alle Subelemente, bis eine Redefinition des Präfixes erfolgt
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Default-Namensraum wird über das vordefinierte Attribut xmlns - ohne Präfix
+ - deklariert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Nichtqualifizierte Subelementnamen unterliegen automatisch dem Default-Namensra
+um, Attributnamen nicht
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Default-Namensraum kann in Subelementen überschrieben werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Namensräume sind prinzipiell unabhängig von DTDs, jedoch müssen alle im
+ XML-Dokument qualifizierten Elemente und Attribute auch entsprechend in
+ der DTD deklariert werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ In der DTD kann ein Default-Namensraum spezifiziert werden
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XPath
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ XPath dient zum Navigieren in XML-Dokumenten
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ Grundlage für XQuery und XSLT
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ verwendet dasselbe Datenmodell wie andere XML- Technologien (XDM)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ unterstützt eine Vielzahl von eingebauten Funktionen und Operatoren (FO)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XML Schema
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Vorteile
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ XML als Syntax
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ zahlreiche vordefinierte Datentypen (f.
+ Elemente & Attribute)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Benutzerdefinierte einfache und komplexe Datentypen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Wiederverwendungskonzepte auf Typ-, Element- und Attributebene (strukturelle
+ Vererbungsmechanismen)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Komplexe Integritätsbedingungen formulierbar
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Schlüssel, Referenz: flexibles Konzept
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Unterstützung von XML- Namensräume
+\end_layout
+
+\begin_layout Paragraph
+Schlüssel und Schlüsselreferenzen 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Eigenschaften eines Schlüssels (key): Wert(kombination) muss eindeutig sein,
+ Wert muss vorhanden sein
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Als Schlüssel können definiert werden (field): Elemente (nur einfache Datentypen
+), Attribute, Kombinationen von Elementen u.
+ Attributen
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Gültigkeitsbereich kann definiert werden (selector)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Verweis auf Schlüssel über Referenz (keyref)
+\end_layout
+
+\begin_layout Standard
+Weiters können Elemente, Attribute bzw.
+ Kombinationen davon als eindeutig spezifiziert werden (unique) Wert(kombination
+) muss eindeutig sein, Wert muss nicht vorhanden sein
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XML Schema: Modellierungsstile
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Russische Matrjoschka (Russian Doll Design)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Elementdeklarationen ineinander schachteln, Ein einziges globales Element
+ (sonst nur lokale Deklarationen), ermeidet globale Typdefinitionen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Struktur offensichtlich (entspricht Struktur des XML-Dokuments), Vermeidung
+ von Seiteneffekte, restriktive Strukturen möglich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ u.U.
+ tiefe Schachtelungstiefe der Elemente (Redundanzen), keine Wiederverwendung
+ von Deklarationen (import / include), keine Erweiterbarkeit (Ableitung),
+ nur eine XML-Schema-Datei möglich
+\end_layout
+
+\begin_layout Paragraph
+Salamischeiben-Stil (Salami Slice)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ globale Elementdeklarationen, Verwendung globaler Elemente per Referenz
+ (ref-Attribut), jedes globale Element kann Wurzelelement sein, lokale Typdeklar
+ationen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Wiederverwendung von Elementen (global definierte Elemente, lokale Typdeklarati
+on), mehrere Wurzelelemente möglich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ große Menge an globalen Elementen (XML Schema-Code wird umfangreicher und
+ unübersichtlicher, Seiteneffekte bei Änderungen an globalen Deklarationen
+ möglich), keine Erweiterbarkeit (Ableitung)
+\end_layout
+
+\begin_layout Paragraph
+Jalousien-Design (Venetian Blinds Design)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ globale Typendeklarationen, Elemente, mit Ausnahme des Wurzelelements,
+ sind lokal deklariert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Wiederverwendung von Typen (zu jedem Element und Attribut gibt es einen
+ benannten Typ, Typen können aus anderem Schema importiert werden), Erweiterbark
+eit (Ableitung, <redefine>)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ große Menge an globalen Typen
+\end_layout
+
+\begin_layout Paragraph
+Garden of Eden - Mischform aus Venetian Blinds und Salami Slice
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Jedes Element wird unter dem Wurzelelement definiert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Schemata sind stark wiederverwendbar, da alle Elemente und Typen global
+ definiert wurden., Sinnvoll vor allem bei der Entwicklung von Bibliotheken
+ mit umfangreichen Anwendungsbereich (oder wenn der Anwendungsbereich vorab
+ noch nicht genau bekannt ist)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ Viele unterschiedliche Wurzelelemente möglich, Datenkapselung durch die
+ globalen Elemente/Typen schwierig, Oft schwierig zu lesen und zu interpretieren
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XQuery
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Warum eine Abfragesprache für XML?
+\end_layout
+
+\begin_layout Standard
+Logische/physische
+\begin_inset space ~
+\end_inset
+
+Datenunabhängigkeit: Abstraktes Datenmodell gewährleistet Unabhängigkeit
+ von konkreter physischer Speicherung
+\end_layout
+
+\begin_layout Standard
+Deklarative
+\begin_inset space ~
+\end_inset
+
+Programmierung: Beschreibe das “WAS”, nicht das “WIE”
+\end_layout
+
+\begin_layout Paragraph
+Grundlagen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ FLWOR (for-let-where-order-return) -Ausdruck 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ entspricht SELECT-FROM-WHERE in SQL
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Generieren von XML
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Sortieren u.
+ Gruppieren von Ergebnissen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Operatoren für Typen: Typprüfung während statischer Analyse- und / oder
+ dynamischer Evaluierungs-Phase
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Benutzerdefinierte Funktionen (Modularisierung von umfangreichen Anfragen,
+ Rekursive Verarbeitung von Daten)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Streng typisiert: statisch wie dynamisch
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XSLT
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+eXtensible Stylesheet Language (for) Transformations
+\end_layout
+
+\begin_layout Description
+Stylesheet = Datei, die Regeln für die Strukturierung, Transformation und
+ Formatierung des Inhalts einer Quelldatei enthält
+\end_layout
+
+\begin_layout Description
+Regeln werden nicht in einer Applikation fest codiert § Prozessor zur Verarbeitu
+ng von Stylesheets ist generisch
+\end_layout
+
+\begin_layout Standard
+Ein und derselbe Inhalt ist, unterschiedlich strukturierbar, umordnen, erweitern
+, einschränken etc., umwandeln in andere Text-basierte Formate, (z.B.
+ CSV (Comma-separated Values) für Datenbank-Anwendungen, JSON (JavaScript
+ Object Notation) für Web-Anwendungen), unterschiedlich formatierbar (verschiede
+ne Ausgabeformate – (X)HTML, PDF, SVG etc.
+ - und Ausgabegeräte - PC, Handhelds etc.)
+\end_layout
+
+\begin_layout Standard
+Content-Provider müssen sich nicht um Layout-Fragen kümmern
+\end_layout
+
+\begin_layout Description
+XSLT: XSL Transformations Sprache zur Transformation der Struktur eines
+ XML-Dokuments, Ausgabe in XML (primäres Ziel des W3C), aber auch in (X)HTML
+ oder beliebigem anderen ASCII-Format, verwendet XPath zur Adressierung
+ von Dokumentteilen
+\end_layout
+
+\begin_layout Description
+XSL-FO: XSL Formatting Objects XML-Vokabular zur Spezifikation von Formatierungs
+semantik, unabhängig von konkreten Ausgabeformaten, im (professionellen)
+ Print/Publishing-Bereich eingesetzt
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XML Parser
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Parser analysiert XML-Dokument und liefert Tags, Text-Inhalte und Attribut-Wert-
+Paare
+\end_layout
+
+\begin_layout Description
+Serialisierer generiert aus Datenstrukturen XML-Dokument
+\end_layout
+
+\begin_layout Paragraph
+Kategorien von Parsern 
+\end_layout
+
+\begin_layout Description
+Validierender
+\begin_inset space ~
+\end_inset
+
+vs.
+\begin_inset space ~
+\end_inset
+
+nicht-validierender 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Zum validieren DTD oder XML-Schema erforderlich
+\end_layout
+
+\begin_layout Description
+Pull-
+\begin_inset space ~
+\end_inset
+
+vs.
+\begin_inset space ~
+\end_inset
+
+Push-Parser Wer hat die Kontrolle über das Parsen? 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Anwendung oder Parser
+\end_layout
+
+\begin_layout Description
+Einschritt-
+\begin_inset space ~
+\end_inset
+
+vs.
+\begin_inset space ~
+\end_inset
+
+Mehrschritt-Parser wird das XML-Dokument in einem Schritt vollständig geparst
+ oder Schritt für Schritt?
+\end_layout
+
+\begin_layout Paragraph
+Pull Parser
+\end_layout
+
+\begin_layout Standard
+Anwendung hat Kontrolle über den Parse-Vorgang.
+ Analyse der nächsten syntaktischen Einheit muss aktiv angefordert werden.,
+ Beachte: "Pull" aus Perspektive der Anwendung.
+ 
+\series bold
+(DOM, Stax)
+\end_layout
+
+\begin_layout Paragraph
+Push Parser
+\end_layout
+
+\begin_layout Standard
+Parser hat Kontrolle über den Parse-Vorgang., obald Parser eine syntaktische
+ Einheit analysiert hat, übergibt Parser das Analyseergebnis., Beachte: "Push"
+ aus Perspektive der Anwendung.
+ (
+\series bold
+SAX
+\series default
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XML Parser: SAX – Simple API for XML
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mehrschritt-Push-Parser
+\end_layout
+
+\begin_layout Standard
+SAX realisiert ereignisgesteuertes Vorgehen
+\end_layout
+
+\begin_layout Itemize
+Parser definiert API-Signaturen für Callback-Methoden (vgl.
+ Observer Pattern)
+\end_layout
+
+\begin_layout Itemize
+Anwendung implementiert Callback- Methoden und registriert Callbacks beim
+ Parser
+\end_layout
+
+\begin_layout Itemize
+Parser liest XML-Dokument;initiiert von Anwendung
+\end_layout
+
+\begin_layout Itemize
+Parser liefert ein Ereignis je Start-Tag, End-Tag etc.
+ in Form von Callback-Methodenaufrufen
+\end_layout
+
+\begin_layout Itemize
+Ausschließlich sequentielle Abarbeitung eines XML-Dokuments
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ Geeignet für große und einfach strukturierte XML-Dokumente, Geeignet für
+ Streaming-Anwendungen (d.h.
+ Verarbeiten des Dokuments, bevor es vollständig übertragen ist), Geringe
+ Speicheranforderungen, performant
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ Zugriff ausschließlich sequentiell, Anwendung muss Puffer-Datenstrukturen
+ nachbilden, um Zugriff auf Kontext eines Ereignisses zu haben (SAX ist
+ zustandslos!), Weniger geeignet für komplexe Bearbeitung (die Navigationsmöglic
+hkeiten erfordern), Manipulation (Ändern und Schreiben) der XML-Dokumente
+ nicht möglich – ausschließlich lesender Zugriff
+\end_layout
+
+\begin_layout Paragraph
+SAX ist geeignet, wenn
+\end_layout
+
+\begin_layout Standard
+es genügt, ein XML-Dokument einmal zu durchlaufen § man nur einzelne Bestandteil
+e eines XML-Dokuments benötigt, die Puffer-Datenstruktur "einfacher" als
+ das XML-Dokument ist, der Kontext der benötigten Daten nicht von besonderem
+ Interesse ist, Speicher-Restriktionen bestehen (bspw.
+ im Kontext von mobilen Geräten)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XML Parser: DOM – Document Object Model
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DOM – Document Object Model
+\end_layout
+
+\begin_layout Standard
+Einschritt-Pull-Parser
+\end_layout
+
+\begin_layout Standard
+Hauptspeicherrepräsentation (=DOM-Baum)
+\end_layout
+
+\begin_layout Itemize
+Baumstruktur wird im Speicher verwaltet 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Verarbeitung großer XML-Dokumente kann Probleme mit sich bringen
+\end_layout
+
+\begin_layout Itemize
+DOM API enthält Schnittstellen für das Navigieren, Manipulieren und Erstellen
+ von XML-Dokumenten
+\end_layout
+
+\begin_layout Itemize
+§ DOM API spezifiziert nur die Schnittstelle der Methoden (z.B.: createElement(Str
+ing name))
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Implementierung den Parsern (bspw.
+ von Apache, Oracle, Microsoft) überlassen
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Struktur und Inhalt des Baumes kann mittels DOM-Methoden verändert werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle
+\end_layout
+
+\end_inset
+
+ W3C Standard von vielen Parsern implementiert, Einfache Verarbeitung von
+ XML-Dokumenten, Bietet auch die Möglichkeit XML-Dokumente zu erstellen
+ und zu modifizieren
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle
+\end_layout
+
+\end_inset
+
+ Hoher Speicherbedarf bei großen XML-Dokumenten, Hohe Geschwindigkeitsverluste
+ bei großen XML-Dokumenten, Nicht für Streaming geeignet; Traversieren erst
+ möglich, wenn XML-Dokument vollständig geladen, Abstrahiert nicht von der
+ XML-Syntax
+\end_layout
+
+\begin_layout Paragraph
+DOM versus SAX
+\end_layout
+
+\begin_layout Standard
+DOM ist dokumenten-orientiert, SAX ist ereignis-orientiert
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+StAX – Streaming API for XML
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jüngster Ansatz zum Parsen von XML-Dokumenten (2004)
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ereignisorientierter (Mehrschritt-) Pull Parser, Einzelne Bestandteile des
+ XML-Dokuments werden „auf Anfrage“ sequentiell vom XML-Parser geholt.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gründe für Pull-basierten Parser: Verarbeitung, wenn Applikation bereit,
+ Zustandsverwaltung
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verbindet die Vorteile von SAX und DOM: effizientes Arbeiten mit großen
+ Dokumenten, Schreiben/Erzeugen von XML-Dokumenten
+\end_layout
+
+\begin_layout Standard
+Besteht aus Cursor und Iterator API
+\end_layout
+
+\begin_layout Paragraph
+Zusammenfassung StAX
+\end_layout
+
+\begin_layout Itemize
+Dritte Variante für Zugriff auf XML-Daten
+\end_layout
+
+\begin_layout Itemize
+Durch die verschiedenen API- Realisierungen flexiblerer Umgang
+\end_layout
+
+\begin_layout Itemize
+Je nach Wahl ähnliche Performance wie SAX
+\end_layout
+
+\begin_layout Itemize
+Unterstützt die Serialisierung von XML-Dokumenten
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,basicstyle={\scriptsize\ttfamily},showstringspaces=false,caption={Leere Elemente}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<HerstellerNr nr="h1234"></HerstellerNr>
+\end_layout
+
+\begin_layout Plain Layout
+
+<HerstellerNr nr="h1234"/>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,basicstyle={\scriptsize\ttfamily},showstringspaces=false,caption={Attribute}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<PDA name="iPhone 7"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<PDA name='iPhone 7'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<PDA name='iPhone"7"'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<PDA name="iPhone'7'"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<PDA name="iPhone 7" jahr="1999"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<!-- Jedes nur Attribute 1x -->
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,basicstyle={\scriptsize\ttfamily},showstringspaces=false,caption={Processing Instruction (PI)}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<?xml version="1.0" encoding="UTF-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<?apache include file = "Kopfzeile.html"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<!-- wird an die Anwendung weitergegeben -->
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Folien Haslinger
+\end_layout
+
+\begin_layout Standard
+https://www.sitepoint.com/really-good-introduction-xml/
+\end_layout
+
+\begin_layout Standard
+http://www.software-kompetenz.de/servlet/is/12801/?print=true
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
