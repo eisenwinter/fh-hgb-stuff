@@ -1,0 +1,1163 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrartcl
+\begin_preamble
+
+\usepackage[margin=0.75in,a4paper,includefoot,bottom=0.3in,footskip=2em]{geometry} 
+\usepackage[showmarks]{pocketmod}
+\usepackage{enumitem}
+\setlist{leftmargin=\parindent,labelindent=*}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{booktabs}
+\usepackage{fontawesome}
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\setlist[description]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{\bfseries ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\title{KORE Pocket Guide}
+\author{Jan Caspar}
+\date{\texttt{jan@subkonstrukt.at}}
+
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\color{headlinec}\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\color{subheadlinec}\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small\color{headlinec}}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\end_preamble
+\options fontsize=24pt
+\use_default_options false
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{0}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Performance
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $T_{1}\dots$
+\end_inset
+
+ runtime of a singleprocessor program
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $T_{n}\dots$
+\end_inset
+
+ runtime of a multiprocessor program
+\end_layout
+
+\begin_layout Description
+Speedup 
+\begin_inset Formula $S_{n}=\frac{T_{!}}{T_{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Efficiency 
+\begin_inset Formula $E_{n}=\frac{S_{n}}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Amdahl's Law
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{n}=\leq\frac{S_{n}}{n}=\frac{\frac{1}{\sigma+^{\frac{(1-\sigma)}{n}}}}{n}=\frac{1}{\sigma(n-1)+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Amdahl’s Gesetz ist zu pessimistisch
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ weil es von einem Problem fixer Größe ausgeht
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Mit mehr Prozessoren können größere Probleme gelöst werden können
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ ist nicht konstant bei steigender Prozessorzahl
+\end_layout
+
+\begin_layout Subsection
+Gustafson's Law
+\end_layout
+
+\begin_layout Standard
+Gustafson’s Gesetz besagt, dass bei zunehmender Problemgröße Speedup und
+ Effizienz gesteigert werden können, vorausgesetzt der sequentiell abzuarbeitend
+e Programmteil wächst langsamer als der parallelisierbare Teil.
+\end_layout
+
+\begin_layout Standard
+Der entscheidende Unterschied zu Amdahl ist, dass der parallele Anteil mit
+ der Anzahl der Prozessoren wächst.
+ Der sequentielle Teil wirkt hier nicht beschränkend, da er mit zunehmendem
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ unbedeutender wird.
+ Geht 
+\begin_inset Formula $N$
+\end_inset
+
+ gegen unendlich, so wächst der SpeedUp linear mit der Anzahl der Prozessoren
+ 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Superlinear Speedup
+\end_layout
+
+\begin_layout Standard
+Ein Speedup von 
+\begin_inset Formula $S_{n}>n$
+\end_inset
+
+ ist möglich
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Caching Effekte
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Ineffiziente sequentielle Algorithmen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Unnatürliche sequentielle Algorithmen
+\end_layout
+
+\begin_layout Section
+Concurrency ≠ Parallelism
+\end_layout
+
+\begin_layout Description
+Concurrency processes are only virtually parallel, execution is teethed,
+ just one process is executed at a time, can be done with just one CPU
+\end_layout
+
+\begin_layout Description
+Parallelism processes are physically parallel, multiple processes are executed
+ at a time, multiple cores or CPUs necessary
+\end_layout
+
+\begin_layout Section
+Multithreading
+\end_layout
+
+\begin_layout Subsection
+Risiko
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes gld
+\end_inset
+
+
+\emph on
+Deadlocks, Starvation, Race Conditions
+\emph default
+
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Safety
+\series default
+ - shared data might be corrupted 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Liveness
+\series default
+ - threads might "starve" if not properly coordinated
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Non-determinism
+\series default
+ - the same program run twice may lead to different results 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Run-time Overhead
+\series default
+ - thread creation, context switching, synchronization takes time
+\end_layout
+
+\begin_layout Subsection
+Lösungen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle 
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Critical Sections
+\series default
+ - define "dangerous" areas, code fragments that use shared resources, ensure
+ that critical sections are atomic
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle 
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Mutual Exclusion
+\series default
+ - only one process at a time may enter a critical section, all other processes
+ must wait, requires locks, semaphores, monitors, … 
+\end_layout
+
+\begin_layout Section
+C# Threading
+\end_layout
+
+\begin_layout Standard
+Warum kein 
+\begin_inset Quotes gld
+\end_inset
+
+
+\emph on
+Abort
+\emph default
+
+\begin_inset Quotes grd
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+Exception, unbekannter Abbruchspunkt, Ressourcen möglicherweise nicht freigegebe
+n
+\end_layout
+
+\begin_layout Description
+Lock
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faPlusCircle 
+\end_layout
+
+\end_inset
+
+ protecting critical sections, locking particular objects, Locking is very
+ fast
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faMinusCircle 
+\end_layout
+
+\end_inset
+
+ not known beyond process boundaries, hard to perform more complex signalling
+\end_layout
+
+\begin_layout Section
+Parallel
+\end_layout
+
+\begin_layout Subsection
+TPL Reduce
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={[Sharp]C},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+static double IntegrateTPL(int n, double a, double b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+ object locker = new object();
+\end_layout
+
+\begin_layout Plain Layout
+
+ double sum = 0.0;
+\end_layout
+
+\begin_layout Plain Layout
+
+ double w = (b - a) / n;
+\end_layout
+
+\begin_layout Plain Layout
+
+ var rangePartitioner = Partitioner.Create(0, n);
+\end_layout
+
+\begin_layout Plain Layout
+
+ Parallel.ForEach(rangePartitioner,
+\end_layout
+
+\begin_layout Plain Layout
+
+  () => 0.0,
+\end_layout
+
+\begin_layout Plain Layout
+
+  (range, state, partialResult) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+   for (int i = range.Item1; i < range.Item2; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    partialResult += w * F(a + w * (i + 0.5));
+\end_layout
+
+\begin_layout Plain Layout
+
+   }
+\end_layout
+
+\begin_layout Plain Layout
+
+   return partialResult;
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  partialResult => {
+\end_layout
+
+\begin_layout Plain Layout
+
+   lock(locker) sum += partialResult;
+\end_layout
+
+\begin_layout Plain Layout
+
+  });
+\end_layout
+
+\begin_layout Plain Layout
+
+ return sum;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+OMP Reduce
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+double integrateOMP(int n, double a, double b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  double sum = 0.0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  double w = (b - a) / n;
+\end_layout
+
+\begin_layout Plain Layout
+
+  #pragma omp parallel for reduction(+ : sum)
+\end_layout
+
+\begin_layout Plain Layout
+
+  for (int i = 0; i < n; ++i) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    sum += w * f(a + w * (i + 0.5));
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  return sum;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+OMP
+\end_layout
+
+\begin_layout Subsection
+OpenMP Scheduling
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#pragma omp parallel for num_threads(THREADS)
+\end_layout
+
+\begin_layout Plain Layout
+
+for (i = 0; i < N; i++)...
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#pragma omp parallel for schedule(static) num_threads(THREADS)
+\end_layout
+
+\begin_layout Plain Layout
+
+for (i = 0; i < N; i++) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+size –optionaler Parameter
+\end_layout
+
+\begin_layout Description
+Static Hier werden den Threads Iterationen zugeteilt bevor sie die Schleifendurc
+hläufe ausführen.
+ Die Iterationen werden standardmäßig zwischen den Threads aufgeteilt, wenn
+ nicht der Parameter „chunk“ angegeben wird.
+\end_layout
+
+\begin_layout Description
+Dynamic Hier werden den Threads eine bestimmte Anzahl an Iterationen(chunk)
+ zugeteilt (default = 1).
+ Hat ein Thread eine Iteration erledigt, holt es sich eine neue Iteration
+ von den noch über gebliebenen Iterationen.
+\end_layout
+
+\begin_layout Description
+Guided Ähnlich wie bei Dynamic, nur wird hier anfangs eine große Anzahl
+ an Iterationen zugeteilt.
+ Diese Anzahl verringert sich exponential bis sie eine definierte Size erreicht
+ hat.
+\end_layout
+
+\begin_layout Description
+Runtime Schedule Schema wird durch die Umgebungsvariable OMP_SCHEDULE festgelegt.
+\end_layout
+
+\begin_layout Section
+TPL Queues
+\end_layout
+
+\begin_layout Description
+Globale
+\begin_inset space ~
+\end_inset
+
+Queue FIFO, globale Queue in die alle Threads außer den Worker-Threads des
+ Thread-Pools Tasks stellen
+\end_layout
+
+\begin_layout Description
+Worker
+\begin_inset space ~
+\end_inset
+
+Queue LIFO, beinhaltet von Worker erzeugte Tasks, wenn leer 
+\begin_inset Quotes gld
+\end_inset
+
+work stealing
+\begin_inset Quotes grd
+\end_inset
+
+ zuerst global task queue, dann local von anderen workern, 
+\begin_inset Quotes gld
+\end_inset
+
+work stealing 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ FIFO)
+\end_layout
+
+\begin_layout Section
+OMP ohne Reduce
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int _tmain(int argc, _TCHAR* argv[]) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  int v1[] = {1, 2, 3, 4, 5};
+\end_layout
+
+\begin_layout Plain Layout
+
+  int v2[] = {6, 7, 8, 9, 10};
+\end_layout
+
+\begin_layout Plain Layout
+
+  int result = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+  #pragma omp parallel default(shared)
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+    #pragma omp for
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = 0; i < 5; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      #pragma omp critical
+\end_layout
+
+\begin_layout Plain Layout
+
+      { result += v1[i] * v2[i]; }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  cout << "result: " << result << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+  cin.get();
+\end_layout
+
+\begin_layout Plain Layout
+
+  return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Worker Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={[Sharp]C},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Woker {
+\end_layout
+
+\begin_layout Plain Layout
+
+ private readonly int numThreads;
+\end_layout
+
+\begin_layout Plain Layout
+
+ private readonly object lockObj = new object();
+\end_layout
+
+\begin_layout Plain Layout
+
+ public Woker(int numThreads) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  this.numThreads = numThreads;
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+ public int GetMax(int[] values) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  var threads = new Thread[numThreads];
+\end_layout
+
+\begin_layout Plain Layout
+
+  int max = Int32.MinValue;
+\end_layout
+
+\begin_layout Plain Layout
+
+  int index = -1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  for (int i = 0; i < numThreads; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   threads[i] = new Thread(() => {
+\end_layout
+
+\begin_layout Plain Layout
+
+    int cur = Interlocked.Increment(ref index);
+\end_layout
+
+\begin_layout Plain Layout
+
+    while (cur < values.Length) {
+\end_layout
+
+\begin_layout Plain Layout
+
+     if (values[cur] > max) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      lock(lockObj) {
+\end_layout
+
+\begin_layout Plain Layout
+
+       if (values[cur] > max)
+\end_layout
+
+\begin_layout Plain Layout
+
+        max = values[cur];
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+     }
+\end_layout
+
+\begin_layout Plain Layout
+
+     cur = Interlocked.Increment(ref index);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+   });
+\end_layout
+
+\begin_layout Plain Layout
+
+   threads[i].Start();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  foreach(Thread t in threads) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   t.Join();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  return max;
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Queue Beispiel
+\end_layout
+
+\begin_layout Standard
+WIP
+\end_layout
+
+\end_body
+\end_document
