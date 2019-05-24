@@ -196,20 +196,6 @@ Performance
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $T_{1}\dots$
-\end_inset
-
- runtime of a singleprocessor program
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $T_{n}\dots$
-\end_inset
-
- runtime of a multiprocessor program
-\end_layout
-
-\begin_layout Description
 Speedup 
 \begin_inset Formula $S_{n}=\frac{T_{!}}{T_{n}}$
 \end_inset
@@ -236,7 +222,50 @@ Amdahl's Law
 
 \end_layout
 
+\begin_layout Description
+Grundaussage 
+\emph on
+Die Leistung eines Systems bei der Hinzunahme von 
+\begin_inset Formula $n$
+\end_inset
+
+ Prozessoren ist geringer als die 
+\begin_inset Formula $n$
+\end_inset
+
+-fache Leistung eines Einzelprozessors.
+ Bei einer Zahl von n Prozessoren bringt der 
+\begin_inset Formula $(n-1$
+\end_inset
+
+)-te hinzugenommene Prozessor noch einen stärkeren Leistungszuwachs, als
+ der 
+\begin_inset Formula $n$
+\end_inset
+
+-te Prozessor.
+\end_layout
+
 \begin_layout Standard
+Die mögliche Erhöhung der Prozessorzahl eines Systems führt nicht immer
+ zu einer deutlichen Erhöhung der Leistung eines System.
+ Mindestens die wesentlichen Teile eines Programmes (die am häufigsten genutzten
+ Teile) müssen parallelisiert werden.
+ Mit der Prozessorzahl muß auch die Größe des Problems ansteigen, damit
+ eine steigende parallelisierung dann auch mit steigender absoluter Leistung
+ korrespondiert.
+ Wesentlich für eine hohe Effiziens ist eine gleichmäßige Verteilung der
+ Aufgaben auf die Prozessoren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Amdahl’s Gesetz ist zu pessimistisch
 \end_layout
 
@@ -605,7 +634,25 @@ faMinusCircle
 
 \end_inset
 
- not known beyond process boundaries, hard to perform more complex signalling
+ not known beyond process boundaries
+\end_layout
+
+\begin_layout Description
+Task
+\end_layout
+
+\begin_layout Standard
+Unterscheid Run vs Factory.StartNew
+\end_layout
+
+\begin_layout Description
+Run Task.Factory.StartNew(A, CancellationToken.None, TaskCreationOptions.DenyChildAt
+tach, TaskScheduler.Default);
+\end_layout
+
+\begin_layout Description
+StartNew Task.Factory.StartNew(A, CancellationToken.None, TaskCreationOptions.None,
+ TaskScheduler.Current);
 \end_layout
 
 \begin_layout Section
@@ -793,21 +840,7 @@ status open
 
 \begin_layout Plain Layout
 
-#pragma omp parallel for num_threads(THREADS)
-\end_layout
-
-\begin_layout Plain Layout
-
-for (i = 0; i < N; i++)...
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-#pragma omp parallel for schedule(static) num_threads(THREADS)
+#pragma omp parallel for [schedule(static)] [num_threads(THREADS)]
 \end_layout
 
 \begin_layout Plain Layout
@@ -898,17 +931,7 @@ status open
 
 \begin_layout Plain Layout
 
-int _tmain(int argc, _TCHAR* argv[]) {
-\end_layout
-
-\begin_layout Plain Layout
-
-  int v1[] = {1, 2, 3, 4, 5};
-\end_layout
-
-\begin_layout Plain Layout
-
-  int v2[] = {6, 7, 8, 9, 10};
+int scalar(int argc, _TCHAR* argv[]) {
 \end_layout
 
 \begin_layout Plain Layout
@@ -958,17 +981,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 
 \begin_layout Plain Layout
 
-  cout << "result: " << result << endl;
-\end_layout
-
-\begin_layout Plain Layout
-
-  cin.get();
-\end_layout
-
-\begin_layout Plain Layout
-
-  return 0;
+  return result;
 \end_layout
 
 \begin_layout Plain Layout
@@ -982,7 +995,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 \end_layout
 
 \begin_layout Section
-Worker Beispiel
+Max Worker Beispiel
 \end_layout
 
 \begin_layout Standard
@@ -993,122 +1006,22 @@ status open
 
 \begin_layout Plain Layout
 
-public class Woker {
+ class MaxWorkerThread {
 \end_layout
 
 \begin_layout Plain Layout
 
- private readonly int numThreads;
+  private readonly int threads;
 \end_layout
 
 \begin_layout Plain Layout
 
- private readonly object lockObj = new object();
+  public MaxWorkerThread(int threads) {
 \end_layout
 
 \begin_layout Plain Layout
 
- public Woker(int numThreads) {
-\end_layout
-
-\begin_layout Plain Layout
-
-  this.numThreads = numThreads;
-\end_layout
-
-\begin_layout Plain Layout
-
- }
-\end_layout
-
-\begin_layout Plain Layout
-
- public int GetMax(int[] values) {
-\end_layout
-
-\begin_layout Plain Layout
-
-  var threads = new Thread[numThreads];
-\end_layout
-
-\begin_layout Plain Layout
-
-  int max = Int32.MinValue;
-\end_layout
-
-\begin_layout Plain Layout
-
-  int index = -1;
-\end_layout
-
-\begin_layout Plain Layout
-
-  for (int i = 0; i < numThreads; i++) {
-\end_layout
-
-\begin_layout Plain Layout
-
-   threads[i] = new Thread(() => {
-\end_layout
-
-\begin_layout Plain Layout
-
-    int cur = Interlocked.Increment(ref index);
-\end_layout
-
-\begin_layout Plain Layout
-
-    while (cur < values.Length) {
-\end_layout
-
-\begin_layout Plain Layout
-
-     if (values[cur] > max) {
-\end_layout
-
-\begin_layout Plain Layout
-
-      lock(lockObj) {
-\end_layout
-
-\begin_layout Plain Layout
-
-       if (values[cur] > max)
-\end_layout
-
-\begin_layout Plain Layout
-
-        max = values[cur];
-\end_layout
-
-\begin_layout Plain Layout
-
-      }
-\end_layout
-
-\begin_layout Plain Layout
-
-     }
-\end_layout
-
-\begin_layout Plain Layout
-
-     cur = Interlocked.Increment(ref index);
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-   });
-\end_layout
-
-\begin_layout Plain Layout
-
-   threads[i].Start();
+   this.threads = threads;
 \end_layout
 
 \begin_layout Plain Layout
@@ -1118,12 +1031,86 @@ public class Woker {
 
 \begin_layout Plain Layout
 
-  foreach(Thread t in threads) {
+  public int getMax(int[] values) {
 \end_layout
 
 \begin_layout Plain Layout
 
-   t.Join();
+   int max = int.MinValue;
+\end_layout
+
+\begin_layout Plain Layout
+
+   var partitioner = Partitioner.Create(0, 
+\end_layout
+
+\begin_layout Plain Layout
+
+		values.Length, 
+\end_layout
+
+\begin_layout Plain Layout
+
+		Math.Ceiling(values.Length / threads));
+\end_layout
+
+\begin_layout Plain Layout
+
+   var ts =
+\end_layout
+
+\begin_layout Plain Layout
+
+    partitioner
+\end_layout
+
+\begin_layout Plain Layout
+
+    .GetDynamicPartitions()
+\end_layout
+
+\begin_layout Plain Layout
+
+    .Select(s => new Thread(() => {
+\end_layout
+
+\begin_layout Plain Layout
+
+     for (int i = s.Item1; i < s.Item2; i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+      if (values[i] > max)
+\end_layout
+
+\begin_layout Plain Layout
+
+       Interlocked.Exchange(ref max, values[i]);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    })).ToList();
+\end_layout
+
+\begin_layout Plain Layout
+
+   ts.ForEach(t => t.Start());
+\end_layout
+
+\begin_layout Plain Layout
+
+   ts.ForEach(t => t.Join());
+\end_layout
+
+\begin_layout Plain Layout
+
+   return max;
 \end_layout
 
 \begin_layout Plain Layout
@@ -1133,12 +1120,52 @@ public class Woker {
 
 \begin_layout Plain Layout
 
-  return max;
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Autoreset Event
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={[Sharp]C},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+AutoResetEvent ar = new AutoResetEvent(false);
 \end_layout
 
 \begin_layout Plain Layout
 
- }
+public void Run() {
+\end_layout
+
+\begin_layout Plain Layout
+
+ Task task = Task.Factory.StartNew(() => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  //process
+\end_layout
+
+\begin_layout Plain Layout
+
+  ar.Set(); });
+\end_layout
+
+\begin_layout Plain Layout
+
+ ar.WaitOne();
 \end_layout
 
 \begin_layout Plain Layout
@@ -1156,7 +1183,109 @@ Queue Beispiel
 \end_layout
 
 \begin_layout Standard
-WIP
+\begin_inset listings
+lstparams "language={[Sharp]C},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+BlockingCollection<object> bc = new BlockingCollection <object>();
+\end_layout
+
+\begin_layout Plain Layout
+
+public WorkerAsyncBc() {
+\end_layout
+
+\begin_layout Plain Layout
+
+ Task.Factory.StartNew(() => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  while (!bc.IsCompleted)
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (bc.TryTake(out object item))
+\end_layout
+
+\begin_layout Plain Layout
+
+    Console.WriteLine("ran job " + item.ToString());
+\end_layout
+
+\begin_layout Plain Layout
+
+ });
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public void ProcessJobAsync(object job) => bc.Add(job);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Semaphore
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={[Sharp]C},basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+private int _counter = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+private Semaphore _semaphore = new Semaphore(3, 3);
+\end_layout
+
+\begin_layout Plain Layout
+
+public void DoSomething() {
+\end_layout
+
+\begin_layout Plain Layout
+
+ _semaphore.WaitOne();
+\end_layout
+
+\begin_layout Plain Layout
+
+ _counter++; //max 3 weil max 3
+\end_layout
+
+\begin_layout Plain Layout
+
+ _semaphore.Release();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
