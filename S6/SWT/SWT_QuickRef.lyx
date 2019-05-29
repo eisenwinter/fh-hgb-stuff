@@ -1,0 +1,1470 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage[defaultfam,light,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serig
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[many,breakable]{tcolorbox}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+
+
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+
+\usepackage{varwidth}
+\usepackage{booktabs}
+\usepackage{varwidth}
+
+\usepackage{tikz-qtree}
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+\usetikzlibrary{arrows,backgrounds,snakes}
+\usetikzlibrary{shadows}
+
+\tcbuselibrary{skins}
+\tcbuselibrary{theorems}
+\tcbuselibrary{raster}
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.5pt plus .5ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {0.75ex plus -.5ex minus -0.2ex}%
+                                 {0.5ex plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{4pt}
+\setlength{\postmulticols}{4pt}
+\setlength{\multicolsep}{4pt}
+\setlength{\columnsep}{14pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1.2em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\color{headlinec}\bfseries}
+{\thesection}{1em}{}
+
+
+\titlespacing*{\section}
+{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}
+{0pt}{0pt}{0pt}
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{\bfseries ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[description]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,colframe=titlec,arc=0mm,boxrule=0.3mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title={#1},breakable}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title={#1},sidebyside}
+
+\def\doubleunderline#1{\underline{\underline{#1}}}
+
+\newtcolorbox{ff}[2]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=#1mm,arc=0mm,boxsep=2pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries] {#2} ([xshift=#1mm]frame.north west);\end{tcbclipinterior}}}
+
+\newtcolorbox{ffa}[1]{enhanced,boxsep=1.5pt,colframe=titlec,nobeforeafter,arc=0mm,tcbox raise base,boxrule=0.4pt,left=1mm,right=1mm,top=0.5mm,bottom=0.5mm,title=\sffamily\bfseries{#1}}
+
+\newtcolorbox{ffn}[1]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=4mm,arc=0mm,boxsep=1.4pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries,rotate=90] {#1} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+
+\newtcolorbox{ffnr}[1]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,colback=titlec!20!white,
+  right=0mm,left=4mm,arc=0mm,boxsep=1.4pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries,rotate=90] {#1} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+
+
+\newcommand{\eqav}[2]{\begin{ffa}{#1}#2\end{ffa}}
+\newcommand{\eqah}[2]{\begin{ff}{14}{#1}#2\end{ff}}
+\newcommand{\eqahr}[2]{\begin{ffn}{#1}#2\end{ffn}}
+\newcommand{\eqahrr}[2]{\begin{ffnr}{#1}#2\end{ffnr}}
+
+
+\pgfplotsset{compat=1.7}
+
+\newcommand*\keystroke[1]{%
+  \tikz[baseline=(key.base)]
+    \node[%
+      draw=titlec,
+      fill=white,
+      drop shadow={shadow xshift=0.25ex,shadow yshift=-0.25ex,fill=titlec,opacity=0.75},
+      rectangle,
+      rounded corners=2pt,
+      inner sep=0.5pt,
+      line width=0.5pt,
+      outer sep=0,
+      font=\scriptsize\sffamily
+    ](key) {~#1~\strut}
+  ;
+}
+
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{0pt}
+\renewcommand*{\ttdefault}{pcr}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+bfseries
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCode
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ OSGi, Hibernate, Spring
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar,Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+,v 1.0.0 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi BundleActivator
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset listings
+lstparams "language=Java,basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.sample.myservice
+\end_layout
+
+\begin_layout Plain Layout
+
+import org.osgi.framework.BundleActivator;
+\end_layout
+
+\begin_layout Plain Layout
+
+import org.osgi.framework.BundleContext;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Activator implements BundleActivator   {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void start(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("Starting!");
+\end_layout
+
+\begin_layout Plain Layout
+
+        ctx.registerService(SampleFactory.class, new SampleFactory(), null);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void stop(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("Stopping!");
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi Manifest
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Manifest-Version: 1.0
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-ManifestVersion: 2
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-Name: MyService bundle
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-SymbolicName: com.sample.myservice
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-Version: 1.0.0
+\end_layout
+
+\begin_layout Standard
+Bundle-Activator: com.sample.myservice.Activator
+\end_layout
+
+\begin_layout Standard
+Import-Package: org.apache.commons.logging;version="1.0.4"
+\end_layout
+
+\begin_layout Standard
+Export-Package: com.sample.myservice.api;version="1.0.0"
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.2pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Bundle-SymbolicName A name that identifies the bundle uniquely.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Bundle-Version This header describes the version of the bundle, and enables
+ multiple versions of a bundle to be active concurrently in the same framework
+ instance.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Bundle-Activator This header notifies the bundle of lifecycle changes.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Import-Package This header declares the external dependencies of the bundle
+ that the OSGi Framework uses to resolve the bundle.
+ Specific versions or version ranges for each package can be declared.
+ In this example manifest file, the org.apache.commons.logging package is required
+ at Version 1.0.4 or later.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Export-Package This header declares the packages that are visible outside
+ the bundle.
+ If a package is not declared in this header, it is visible only within
+ the bundle.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi Bundle Lifecycle
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Graphics
+	filename bundle-lc.PNG
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Bundles haben einen definierten Lebenszyklus
+\end_layout
+
+\begin_layout Itemize
+Zustandsänderungen können programmatisch oder durch einen Management Agent
+ getriggert werden
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi Service Abfragen über den BundleContext:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset listings
+lstparams "language=Java,basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ServiceReference serviceReference = 
+\end_layout
+
+\begin_layout Plain Layout
+
+		ctx.getServiceReference(Logger.class.getName());
+\end_layout
+
+\begin_layout Plain Layout
+
+if(serviceReference != null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  Logger logger =
+\end_layout
+
+\begin_layout Plain Layout
+
+    (Logger) ctx.getService(serviceReference);
+\end_layout
+
+\begin_layout Plain Layout
+
+  if(Logger != null) { [...] }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi ServiceTracker
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ ServiceListener: Callbacks, wenn sich etwas ändert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ ServiceTracker: Verfolgen von Service Listener Events
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset listings
+lstparams "language=Java,basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class LoggerServiceTracker extends ServiceTracker {
+\end_layout
+
+\begin_layout Plain Layout
+
+  public LoggerServiceTracker(BundleContext context) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    super(context, Logger.class.getName(), null);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public Object addingService(ServiceReference reference) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    Logger logger =
+\end_layout
+
+\begin_layout Plain Layout
+
+      (Logger) super.addingService(reference);
+\end_layout
+
+\begin_layout Plain Layout
+
+    // do something here...
+\end_layout
+
+\begin_layout Plain Layout
+
+    return logEventStore;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void removedService(ServiceReference reference,
+\end_layout
+
+\begin_layout Plain Layout
+
+    Object service) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // do something here...
+\end_layout
+
+\begin_layout Plain Layout
+
+    super.removedService(reference, service);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Activator implements BundleActivator {
+\end_layout
+
+\begin_layout Plain Layout
+
+  private ServiceTracker _serviceTracker;
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void start(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+    _serviceTracker =
+\end_layout
+
+\begin_layout Plain Layout
+
+      new LoggerServiceTracker(ctx);
+\end_layout
+
+\begin_layout Plain Layout
+
+    _serviceTracker.open();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void stop(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+    _serviceTracker.close();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi vs.
+ Java Module
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Das Java-Modulsystem stellt ein einfaches, allgemein einsetzbares Modulsystem
+ dar.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ einfachere Handhabung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Keine Versionierung auf Modul- und Paketebene möglich.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Import geschieht auf Modul- nicht auf Paketebene.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Das Java-Modulsystem unterstützt keine dynamischen Module.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ OSGi definiert ein komplexes Modulsystem für spezielle Anwendungsszenarien.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ In bestimmten Anwendungsszenarien (z.
+ B.
+ bei hochverfügbaren Systemen) ist auch in aktuellen Java-Versionen OSGi
+ erforderlich.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
