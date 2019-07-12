@@ -1,0 +1,777 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass tufte-handout
+\begin_preamble
+\usepackage{multicol}
+\end_preamble
+\use_default_options true
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language={Pascal},aboveskip=3mm,belowskip=3mm,showstringspaces=false,columns=flexible,basicstyle={\ttfamily},numbers=left,numbersep=8pt,stepnumber=1,numberstyle={\tiny\color{gray}},keywordstyle={\color{blue}},commentstyle={\color{dkgreen}},stringstyle={\color{mauve}},breaklines=true,breakatwhitespace=true,tabsize=3,basicstyle={\scriptsize\color{black}\ttfamily},morekeywords={INTERFACE,UNIT,OBJECT,IMPLEMENTATION,CONSTRUCTOR,FINALIZATION,USES,Randomize,PUBLIC,PRIVATE,Assert,Dispose,STRING,STATIC,VIRTUAL,NIL},deletekeywords={COMP,page},keepspaces=true,prebreak={\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}}}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Beispiel 39
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Aufstellen Standardform
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{flalign}
+x_{1}+y_{1} & =11\\
+2x_{1}+3x_{2}+y_{2} & =6\\
+x_{1}-2x_{2}+y_{3} & =2\\
+-x_{1}+x_{2}+y_{4} & \boldsymbol{=5}\\
+x_{1}-3x_{2}+y_{5} & =1\\
+x_{2}+y_{6} & =8\\
+2x_{1}-x_{2}+y_{7} & =15\\
+\hline x_{1},x_{2},y_{1\dots7} & \geq0\\
+\hline -3x_{1}-x_{2} & \rightarrow MIN
+\end{flalign}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Achtung, bei (4) Umkehrung für Standardform!
+\end_layout
+
+\begin_layout Section*
+Blockmatrix (E|A)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{ccccccc|cc}
+e_{1} & e_{2} & e_{3} & e_{4} & e_{5} & e_{6} & e_{7}\\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 2 & 3\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & -2\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & -1 & 1\\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & -3\\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & -1
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Tablau
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\begin{array}{c|cc|c|c}
+ & x_{1} & x_{2} & b & q\\
+\hline y_{1} & {\color{blue}1} & 0 & 11 & \frac{1}{11}\\
+y_{2} & {\color{blue}2} & 3 & 6 & 3\\
+y_{3} & {\color{blue}1} & -2 & 2 & 2\\
+y_{4} & {\color{blue}-1} & 1 & 5 & -5\\
+y_{5} & {\color{blue}1} & {\color{green}-3} & {\color{green}1} & {\color{green}1}\\
+y_{6} & {\color{blue}0} & {\color{green}} & 8 & /\\
+y_{7} & {\color{blue}2} & -1 & 15 & \frac{15}{2}\\
+\hline  & {\color{red}3} & 1 & 0
+\end{array}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{red}
+\end_layout
+
+\end_inset
+
+Rot: Höchster Koeffizient Zielfunktion
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{blue}
+\end_layout
+
+\end_inset
+
+Blau: Spalte mit wo der q berechnet wird, weil größter Koef.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{green}
+\end_layout
+
+\end_inset
+
+Grün: Zeile mit kleinstem 
+\begin_inset Formula $q>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also größter Zielfunktionskoeff.
+ > 0 wählen, für Spalte das q (in dem Fall 1 bei 
+\begin_inset Formula $[y_{5};x_{1}]$
+\end_inset
+
+, 1 durch b für jede Zeile) ausrechnen, das kleinste 
+\begin_inset Formula $q>0$
+\end_inset
+
+ wählen, 
+\begin_inset Formula $y_{5}$
+\end_inset
+
+ also tauschen wir mit 
+\begin_inset Formula $e_{5}$
+\end_inset
+
+ (siehe Blockmatrix)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\begin{array}{c|cc|cc}
+ & x_{1} & x_{2} & b & e_{5}\\
+\hline y_{1} & {\color{red}0} & 3 & 10 & {\color{green}-1}\\
+y_{2} & {\color{red}0} & 3 & 4 & {\color{green}-2}\\
+y_{3} & {\color{red}0} & 1 & 1 & {\color{green}-1}\\
+y_{4} & {\color{red}0} & 2 & 4 & {\color{green}-1}\\
+y_{5} & {\color{red}1} & -3 & 1 & {\color{green}1}\\
+y_{6} & {\color{red}0} & 1 & 8 & {\color{green}0}\\
+y_{7} & {\color{red}0} & 5 & 13 & {\color{green}-2}\\
+\hline  & 0 & 10 & -5 & -3
+\end{array}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tausch durchziehen dadurch das man 
+\begin_inset Formula $e_{5}$
+\end_inset
+
+ dazu anschreibt und so lange umformt bis 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ jetzt (der alte) 
+\begin_inset Formula $e_{5}$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{red}
+\end_layout
+
+\end_inset
+
+Rot: jetzt alter Einheitsvektor 
+\begin_inset Formula $e_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{green}
+\end_layout
+
+\end_inset
+
+Grün: jetzt neuer 
+\begin_inset Formula $e_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit ist der Spaß getauscht
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Anschreiben
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\begin{array}{c|cc|c}
+ & {\color{red}y_{5}} & x_{2} & b\\
+\hline y_{1} & -1 & 3 & 10\\
+y_{2} & -2 & 3 & 4\\
+y_{3} & -1 & 1 & 1\\
+y_{4} & -1 & 2 & 4\\
+{\color{red}x_{1}} & 1 & -3 & 1\\
+y_{6} & 0 & 1 & 8\\
+y_{7} & 2 & 5 & 13\\
+\hline  & -3 & {\color{green}10} & -5
+\end{array}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{red}
+\end_layout
+
+\end_inset
+
+Rot: getauscht
+\end_layout
+
+\begin_layout Standard
+Damit ist der Spaß getauscht, jetzt gehts wieder zu
+\series bold
+ Schritt 1
+\series default
+ mit dem Tablau und das ganze wieder durch, so lange bis unten kein positiver
+ Zielfunktionskoeff steht.
+ (Nächster ist 10, grün markiert)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Abschluss
+\end_layout
+
+\begin_layout Standard
+Am ende habe wir das Tablau
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\begin{array}{c|cc|c}
+ & y_{7} & y_{1} & b\\
+\hline y_{4} & 0 & -1 & 2\\
+y_{5} & 0 & -1 & 14\\
+{\color{red}x_{2}} & 0 & 0 & {\color{red}8}\\
+y_{3} & 0 & -1 & 7\\
+{\color{red}x_{1}} & 0 & 1 & {\color{red}11}\\
+y_{6} & 1 & -2 & 1\\
+y_{2} & 0 & -2 & 8\\
+\hline  & {\color{green}0} & {\color{green}-3} & {\color{green}-41}
+\end{array}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vozeichen umdrehen bei Zielfunktionskoeff und rein in die Zielfunktion 
+\begin_inset Formula $3x_{1}-x_{2}$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset Formula $3*11+1*8=41$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
