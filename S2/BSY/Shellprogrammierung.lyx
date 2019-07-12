@@ -1,0 +1,1380 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[breakable]{tcolorbox}
+\usepackage{amsthm}
+\usepackage{lscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {1.25ex plus -1ex minus -0.2ex}%
+                                 {0.1pt plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{3pt}
+\setlength{\postmulticols}{3pt}
+\setlength{\multicolsep}{3pt}
+\setlength{\columnsep}{12pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\em}
+{\thesection}{1em}{}
+
+
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.6ex,
+  leftmargin=!, labelsep=0mm,labelwidth=12mm,
+  align=left,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,enforce breakable,height fixed for=all}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1,sidebyside}
+
+\newtcolorbox{regexhint}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title=#1}
+\raggedcolumns
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Shellprogrammierung Snippets
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar, Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+, v 1.0.0 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Built-In Variablen
+\end_layout
+
+\begin_layout Description
+$# Anzahl der Argumente die übergeben wurden.
+\end_layout
+
+\begin_layout Description
+$@ Alle Vraiblen die Übergeben wurden (mit Leerzeichen getrennt)
+\end_layout
+
+\begin_layout Description
+$? War der letzte Befehl erfolgreich, 0 = Ja
+\end_layout
+
+\begin_layout Description
+$$ Prozess ID des Scripts
+\end_layout
+
+\begin_layout Description
+$1,$2,
+\begin_inset Formula $\dots$
+\end_inset
+
+$n die einzelnen Argumente
+\end_layout
+
+\begin_layout Subsection
+Abschneiden von Mustern
+\end_layout
+
+\begin_layout Description
+${variable%muster} 
+\begin_inset space ~
+\end_inset
+
+Entfernt rechts das kleinste passende Stück.
+\end_layout
+
+\begin_layout Description
+${variable%%muster} 
+\begin_inset space ~
+\end_inset
+
+Entfernt rechts das größte passende Stück
+\end_layout
+
+\begin_layout Description
+${variable#muster} 
+\begin_inset space ~
+\end_inset
+
+Entfernt links das kleinste passende Stück.
+\end_layout
+
+\begin_layout Description
+${variable##muster} 
+\begin_inset space ~
+\end_inset
+
+Entfernt links das größte passende Stück
+\end_layout
+
+\begin_layout Subsubsection
+Beispiel
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+pfadname="/var/www/index.html"
+\end_layout
+
+\begin_layout Plain Layout
+
+echo $pfadname  #/var/www/index.html
+\end_layout
+
+\begin_layout Plain Layout
+
+echo "Pfad: ${pfadname%/*}"  #Pfad: /var/www
+\end_layout
+
+\begin_layout Plain Layout
+
+echo "Dateiname: ${pfadname##*/}" #Dateiname: index.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Umgebungsvariablen
+\end_layout
+
+\begin_layout Description
+HOME Enthält das Homeverzeichnis des Benutzers.
+\end_layout
+
+\begin_layout Description
+PATH Suchpfad für Kommandos.
+\end_layout
+
+\begin_layout Description
+PWD Enthält das Aktuelle Verzeichnis.
+\end_layout
+
+\begin_layout Description
+? Enthält den Exitstatus des letzten Kommandos
+\end_layout
+
+\begin_layout Subsection
+Standardeingabe
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+#Einfaches einlesen
+\end_layout
+
+\begin_layout Plain Layout
+
+read -p "Geben sie ihren Namen ein:" name
+\end_layout
+
+\begin_layout Plain Layout
+
+echo Hallo: $name
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Optionen abfragen
+\end_layout
+
+\begin_layout Plain Layout
+
+read -p "A (a) oder B (b)?, Abbruch anderen Taste" kommando; 
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ $kommando == 'a' ]; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	then 
+\end_layout
+
+\begin_layout Plain Layout
+
+		starte_programm_a; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	elif [ $kommando == 'b' ]; 
+\end_layout
+
+\begin_layout Plain Layout
+
+		then starte_programm_b; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	else 
+\end_layout
+
+\begin_layout Plain Layout
+
+		echo "Abbruch."; 
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Files checken
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ -f /home/user/test.txt ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo "File exists."
+\end_layout
+
+\begin_layout Plain Layout
+
+elif [ -d /home/user/test.txt ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo "File is a directory."
+\end_layout
+
+\begin_layout Plain Layout
+
+	exit 1
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo "File not found."
+\end_layout
+
+\begin_layout Plain Layout
+
+	exit 1
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Parameteranzahl <> 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ $# -eq 0 ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo "Args missing!"
+\end_layout
+
+\begin_layout Plain Layout
+
+exit 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IFS wechseln
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+IFSAVE=IFS
+\end_layout
+
+\begin_layout Plain Layout
+
+IFS=';'
+\end_layout
+
+\begin_layout Plain Layout
+
+#do stuff
+\end_layout
+
+\begin_layout Plain Layout
+
+IFS=IFSAVE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Textdatei zeilenweise verarbeiten
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+#$1 should contain file
+\end_layout
+
+\begin_layout Plain Layout
+
+#might need to adapt IFS
+\end_layout
+
+\begin_layout Plain Layout
+
+while read x y z
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+	echo "processing $x $y $z"
+\end_layout
+
+\begin_layout Plain Layout
+
+	res="${x} @ testscript"
+\end_layout
+
+\begin_layout Plain Layout
+
+done < $1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Beispiel: Wetter
+\end_layout
+
+\begin_layout Standard
+Wetterevent aus 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+04.05.2017 - 16:22 Uhr
+\end_layout
+
+\begin_layout Plain Layout
+Hagel in Brunnhof (Amstetten)
+\end_layout
+
+\begin_layout Plain Layout
+04.05.2017 - 16:20 Uhr
+\end_layout
+
+\begin_layout Plain Layout
+Hagel in Miesenbach bei Birkfeld (Weiz)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+suchen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ ! -f ./wetter ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "File wetter not found"
+\end_layout
+
+\begin_layout Plain Layout
+
+ exit 1
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ $# -ne 1 ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "Wrong number of arguments!"
+\end_layout
+
+\begin_layout Plain Layout
+
+ exit 2
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
+R=`grep -Ec "^$1 " wetter`
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ $R -eq 0 ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "Wetterereignis $1 ist nicht vorgekommen!"
+\end_layout
+
+\begin_layout Plain Layout
+
+ exit 3
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
+rm ./output 2> /dev/null
+\end_layout
+
+\begin_layout Plain Layout
+
+rm ./tmp 2> /dev/null
+\end_layout
+
+\begin_layout Plain Layout
+
+grep -E "^$1 " wetter > ./tmp
+\end_layout
+
+\begin_layout Plain Layout
+
+echo "$1 gab es in folgenden Orten:" > ./output
+\end_layout
+
+\begin_layout Plain Layout
+
+while read v1 v2 v3
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+ O=`echo $v3 | cut -f1 -d'('`
+\end_layout
+
+\begin_layout Plain Layout
+
+ B=`echo $v3 | cut -f2 -d'('`
+\end_layout
+
+\begin_layout Plain Layout
+
+ B1=`echo $B | sed -r 's/
+\backslash
+)//g'`
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo $O im Bezirk $B1 >> output
+\end_layout
+
+\begin_layout Plain Layout
+
+done < ./tmp
+\end_layout
+
+\begin_layout Plain Layout
+
+cat ./output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Beispiel: Skigebiete
+\end_layout
+
+\begin_layout Standard
+Schreiben Sie ein Shell Script formatieren, dass den File schi_gebiet entspreche
+nd der Darstellung unten umformatiert und im File schigebiet_2 speichert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Großglockner Resort;13;€ 45 (Tageskarte Hauptsaison)
+\end_layout
+
+\begin_layout Plain Layout
+Matrei in Osttirol, Kals am Großglockner, Großdorf, Lesach, Virgen
+\end_layout
+
+\begin_layout Plain Layout
+Lermoos – Grubigstein;8;€ 43 (Tageskarte Hauptsaison)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Der File schi_gebiet wurde unter Windows generiert.
+\end_layout
+
+\begin_layout Enumerate
+Überprüfen Sie, ob der File schi_gebiet wirklich existiert.
+\end_layout
+
+\begin_layout Enumerate
+Pro Schigebiet sind zwei Zeilen vorzusehen.
+ In der ersten Zeile sind Name des Schigebiets, Anzahl der Lifte und Preis
+ der Tageskarte vorzusehen.
+ Die einzelnen Felder sind durch Strichpunkte zu trennen.
+ In der zweiten Zeile sind die am Schigebiet beteiligten Ortschaften zu
+ listen, die jeweils durch Beistriche voneinander zu trennen sind.
+\end_layout
+
+\begin_layout Enumerate
+Die Ortschaften pro Schigebiet sind zusätzlich einzeln in den File gemeinde
+ zu schreiben.
+ Dieser File soll die Ortschaften aller Schigebiete beinhalten, er ist vor
+ Ende des Shell Scripts absteigend sortiertauszugeben.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+if [ ! -f ./schi_gebiet ]
+\end_layout
+
+\begin_layout Plain Layout
+
+then
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "File ./schi_gebiet missing..."
+\end_layout
+
+\begin_layout Plain Layout
+
+ exit 1
+\end_layout
+
+\begin_layout Plain Layout
+
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
+rm ./schigebiet_2 ./gemeinde 2> /dev/null
+\end_layout
+
+\begin_layout Plain Layout
+
+while read line
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+ read ort
+\end_layout
+
+\begin_layout Plain Layout
+
+ out2=`echo $ort | cut -f2 -d";"`
+\end_layout
+
+\begin_layout Plain Layout
+
+ read lift
+\end_layout
+
+\begin_layout Plain Layout
+
+ out3=`echo $lift| cut -f2 -d";" `
+\end_layout
+
+\begin_layout Plain Layout
+
+ read karte
+\end_layout
+
+\begin_layout Plain Layout
+
+ out6=`echo $karte | cut -f2 -d";"`
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "${line};${out3};$out6" >> schigebiet_2
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo "$out2" >> schigebiet_2
+\end_layout
+
+\begin_layout Plain Layout
+
+ read leerzeile
+\end_layout
+
+\begin_layout Plain Layout
+
+ IFSAVE=$IFS
+\end_layout
+
+\begin_layout Plain Layout
+
+ IFS=","
+\end_layout
+
+\begin_layout Plain Layout
+
+ for ort in $out2
+\end_layout
+
+\begin_layout Plain Layout
+
+ do
+\end_layout
+
+\begin_layout Plain Layout
+
+ echo $ort >> gemeinde
+\end_layout
+
+\begin_layout Plain Layout
+
+ done
+\end_layout
+
+\begin_layout Plain Layout
+
+ IFS=$IFSAVE
+\end_layout
+
+\begin_layout Plain Layout
+
+done < ./schi_gebiet
+\end_layout
+
+\begin_layout Plain Layout
+
+echo
+\end_layout
+
+\begin_layout Plain Layout
+
+echo
+\end_layout
+
+\begin_layout Plain Layout
+
+cat schigebiet_2
+\end_layout
+
+\begin_layout Plain Layout
+
+echo
+\end_layout
+
+\begin_layout Plain Layout
+
+echo
+\end_layout
+
+\begin_layout Plain Layout
+
+sort gemeinde
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Beispiel: mmv
+\end_layout
+
+\begin_layout Standard
+Erstellen Sie ein Shellscript mmv (=multiple move), das die Extensions von
+ Filenamen, die sich in im aktuellen Arbeitsverzeichnis befinden, ändert.
+ Überprüfen Sie auch die Anzahl der Argumente.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+
+#args prüfen!
+\end_layout
+
+\begin_layout Plain Layout
+
+for f in *.$1
+\end_layout
+
+\begin_layout Plain Layout
+
+do
+\end_layout
+
+\begin_layout Plain Layout
+
+ if [ -f $f ]
+\end_layout
+
+\begin_layout Plain Layout
+
+ then
+\end_layout
+
+\begin_layout Plain Layout
+
+	mv ./"$f" "${f%$1}$2"
+\end_layout
+
+\begin_layout Plain Layout
+
+ fi
+\end_layout
+
+\begin_layout Plain Layout
+
+done
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
