@@ -1,0 +1,5706 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+\usepackage[defaultfam,light,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serig
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usepackage[many,breakable]{tcolorbox}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage[bottom]{footmisc}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+
+
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0pt}
+
+\usepackage{varwidth}
+\usepackage{booktabs}
+\usepackage{varwidth}
+
+\usepackage{tikz-qtree}
+\usetikzlibrary{positioning, fit, shapes.misc}
+\usetikzlibrary{decorations.pathreplacing, calc}
+\usetikzlibrary{arrows,backgrounds,snakes}
+\usetikzlibrary{shadows}
+
+\tcbuselibrary{skins}
+\tcbuselibrary{theorems}
+\tcbuselibrary{raster}
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+
+
+\definecolor{headlinec}{HTML}{9b0909}
+\definecolor{subheadlinec}{HTML}{cc0606}
+\definecolor{titlec}{HTML}{9b0909}
+
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.6in}
+
+\setlist{itemsep=0.2pt}
+
+\makeatletter
+
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                 {-1ex plus -.5ex minus -0.4ex}%
+                                 {0.5pt plus .5ex}%
+                                {\normalfont\small}}
+
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {0.75ex plus -.5ex minus -0.2ex}%
+                                 {0.5ex plus .2ex}%
+                                {\normalfont\small}}
+
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern3pt\hbox{.}\kern2.5pt}\vfill}}
+\makeatother
+
+
+\setlength{\premulticols}{4pt}
+\setlength{\postmulticols}{4pt}
+\setlength{\multicolsep}{4pt}
+\setlength{\columnsep}{14pt}
+
+\setcounter{secnumdepth}{0}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{headlinec}\normalfont\large\bfseries}
+{\color{headlinec}\thesection}{1.2em}{}
+
+\titleformat{\subsection}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+{\color{subheadlinec}\thesection}{1em}{}
+{\color{subheadlinec}\normalfont\normalsize\bfseries}
+
+\titleformat{\subsubsection}
+{\color{headlinec}\normalfont\bfseries}
+{\color{headlinec}\thesection}{1em}{}
+
+
+\titleformat{\paragraph}
+{\normalfont\color{headlinec}\bfseries}
+{\thesection}{1em}{}
+
+
+\titlespacing*{\section}
+{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}
+{0pt}{0pt}{0pt}
+
+\DeclareMathSizes{8}{8}{8}{8}
+
+\setlist[description]{%
+ topsep=0.2ex,
+  partopsep=0.2ex,
+  parsep=.05ex,
+  itemsep=0.5ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[enumerate]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{\bfseries ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[itemize]{%
+  topsep=-0.2ex plus 3.1ex minus 1.1ex,
+  partopsep=0.1ex,
+  labelindent=0pt,
+  leftmargin=2.2em,
+  parsep=0ex,
+  itemsep=0.3ex,
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+\setlist[description]{%
+  topsep=0.2ex,
+  partopsep=0.52ex,
+  parsep=.25ex,
+  itemsep=0.5ex,
+  leftmargin=!,
+  labelwidth=\widthof{ab},
+  font={\bfseries\sffamily\color{headlinec}}, % if colour is needed
+}
+
+
+%fancy boxes!
+\newtcolorbox{boxy}{colback=white,colframe=titlec,arc=0mm,boxrule=0.3mm,top=0.2mm,bottom=0.2mm,left=0.3mm}
+\newtcolorbox{boxyt}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title={#1},breakable}
+\newtcolorbox{boxys}[1]{colback=white,colframe=titlec,arc=0mm,boxrule=0.1mm,top=0.2mm,bottom=0.2mm,title={#1},sidebyside}
+
+\def\doubleunderline#1{\underline{\underline{#1}}}
+
+\newtcolorbox{ff}[2]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=#1mm,arc=0mm,boxsep=2pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries] {#2} ([xshift=#1mm]frame.north west);\end{tcbclipinterior}}}
+
+\newtcolorbox{ffa}[1]{enhanced,boxsep=1.5pt,colframe=titlec,nobeforeafter,arc=0mm,tcbox raise base,boxrule=0.4pt,left=1mm,right=1mm,top=0.5mm,bottom=0.5mm,title=\sffamily\bfseries{#1}}
+
+\newtcolorbox{ffn}[1]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=4mm,arc=0mm,boxsep=1.4pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries,rotate=90] {#1} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+
+\newtcolorbox{ffnr}[1]{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,colback=titlec!20!white,
+  right=0mm,left=4mm,arc=0mm,boxsep=1.4pt,before upper={\vphantom{dlg}},
+  colframe=titlec,
+  overlay={\begin{tcbclipinterior}\fill[titlec] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries,rotate=90] {#1} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+
+
+\newcommand{\eqav}[2]{\begin{ffa}{#1}#2\end{ffa}}
+\newcommand{\eqah}[2]{\begin{ff}{14}{#1}#2\end{ff}}
+\newcommand{\eqahr}[2]{\begin{ffn}{#1}#2\end{ffn}}
+\newcommand{\eqahrr}[2]{\begin{ffnr}{#1}#2\end{ffnr}}
+
+
+\pgfplotsset{compat=1.7}
+
+\newcommand*\keystroke[1]{%
+  \tikz[baseline=(key.base)]
+    \node[%
+      draw=titlec,
+      fill=white,
+      drop shadow={shadow xshift=0.25ex,shadow yshift=-0.25ex,fill=titlec,opacity=0.75},
+      rectangle,
+      rounded corners=2pt,
+      inner sep=0.5pt,
+      line width=0.5pt,
+      outer sep=0,
+      font=\scriptsize\sffamily
+    ](key) {~#1~\strut}
+  ;
+}
+
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{0pt}
+\renewcommand*{\ttdefault}{pcr}
+
+
+\DeclareCaptionFont{scriptsize}{\tiny}
+\DeclareCaptionFormat{listing}{{#3}}
+\captionsetup[lstlisting]{format=listing,font={scriptsize}}
+\end_preamble
+\options landscape
+\use_default_options true
+\maintain_unincluded_children false
+\language naustrian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language=Java,columns=fullflexible,xleftmargin=0mm,aboveskip=0pt,belowskip={0.5pt},fontadjust=true,basicstyle={\fontsize{6}{6}\selectfont},frame=lines,resetmargins=true,framerule={0.2pt}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{headlinec}
+\backslash
+bfseries
+\backslash
+large
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCode
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ JavaBeans, OSGi, Hibernate, Spring
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+ Jan Caspar,Aktualisiert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+,v 1.0.0 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.4pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols*}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Java Beans
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java Beans sind einfache Java Klassen die speziellen Konventionen folgen
+ um in Java ein Komponentenmodell zu realisieren
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCoffee
+\end_layout
+
+\end_inset
+
+ Ein Java Bean muss immer einen leeren Konstruktor haben, es kann mehrere
+ Konstruktoren haben muss aber mindestens einen leeren besitzen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCoffee
+\end_layout
+
+\end_inset
+
+ Ein Java Bean kann aus folgenden Konstrukten bestehen: Properties, Methods,
+ Events für die Persistence eigenschaft sollte es Serializable erben.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCoffee
+\end_layout
+
+\end_inset
+
+ Ein Java Bean darf keine öffentlichen Felder haben.
+ Öffentliche Felder müssen in Properties gewrappt werden.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCoffee
+\end_layout
+
+\end_inset
+
+ Property Getter & Setter müssen mit 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+T getProperty()
+\end_layout
+
+\end_inset
+
+ und 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+void setProperty(T val)
+\end_layout
+
+\end_inset
+
+ annotiert werden, die Ausnahme bilden boolean-Getter sie werden mit 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+boolean isProperty()
+\end_layout
+
+\end_inset
+
+ annotiert.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCoffee
+\end_layout
+
+\end_inset
+
+ Events müssen ebenfalls einem strikten Namensmuster folgen, das Anhängen
+ eines Listeners muss in der Form 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+void addEventTypeListener(EventTypeListener ev)
+\end_layout
+
+\end_inset
+
+ und das Abhängen in der Form 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+void removeEventTypeListener(EventTypeListener ev)
+\end_layout
+
+\end_inset
+
+ geschrieben werden.
+ Wobei EventType der Name des Events (ohne Postfix s.u.) sein muss.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Eventtypen selbst müssen per Konvention mit Event enden und sollten von
+ 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+java.util.EventObject
+\end_layout
+
+\end_inset
+
+ erben.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ EventListenerTypen sollten den auf Listener enden und von 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+java.util.EventListener
+\end_layout
+
+\end_inset
+
+ erben.
+ Als Beispiel 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SampleEvent extends EventObject
+\end_layout
+
+\end_inset
+
+ und 
+\begin_inset listings
+lstparams "language=Java"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SampleListener extends EventListener
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqahrr{
+\backslash
+faInfoCircle 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Info
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+Jede Klasse die diesen Konventionen folgt ist eine JavaBean, es ist nicht
+ notewendig von einer JavaBean Klasse oder einem Bean Interface zu erben.
+ Jede Klasse muss sich lediglich an dieses Muster halten.
+ JavaBeans sind 
+\series bold
+keine
+\series default
+ Enterprise JavaBeans! Was nicht notwendig ist aber in den Folien auch behandelt
+ wurde ist die 
+\series bold
+BeanInfo-
+\series default
+Klasse, diese wird angelegt um die Properties für visuelle Editoren (z.B.
+ GUI Tools) zur Verfügungs zu stellen.
+ Sie ermöglicht es für die Tools Metadaten zum Bean zur Verfügung zu stellen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset listings
+lstparams "language=Java,caption={Beispiel Event Implementierung in Bean}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface TimerListener 
+\end_layout
+
+\begin_layout Plain Layout
+
+ extends EventListener { void expired(TimerEvent event); }
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Timer {
+\end_layout
+
+\begin_layout Plain Layout
+
+ private Vector<TimerListener> listeners = new Vector<>();
+\end_layout
+
+\begin_layout Plain Layout
+
+ void fireEvent(TimerEvent te) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  Vector<TimerListener> listenersClone = (Vector<TimerListener>) listeners.clone(
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+  for (TimerListener l: listenersClone) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   l.expired(te);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+ public void addTimerListener(TimerListener listener) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  this.listeners.add(listener);
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+ public void removeTimerListener(TimerListener listener) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  this.listeners.remove(listener);
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//Benutzung
+\end_layout
+
+\begin_layout Plain Layout
+
+timer.addTimerListener(e -> { //do something with e  });
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi BundleActivator
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset listings
+lstparams "language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.sample.myservice
+\end_layout
+
+\begin_layout Plain Layout
+
+import org.osgi.framework.BundleActivator;
+\end_layout
+
+\begin_layout Plain Layout
+
+import org.osgi.framework.BundleContext;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Activator implements BundleActivator   {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void start(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("Starting!");
+\end_layout
+
+\begin_layout Plain Layout
+
+        ctx.registerService(SampleFactory.class, new SampleFactory(), null);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void stop(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("Stopping!");
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi Manifest
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Manifest-Version: 1.0
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-ManifestVersion: 2
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-Name: MyService bundle
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-SymbolicName: com.sample.myservice
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bundle-Version: 1.0.0
+\end_layout
+
+\begin_layout Standard
+Bundle-Activator: com.sample.myservice.Activator
+\end_layout
+
+\begin_layout Standard
+Import-Package: org.apache.commons.logging;version="1.0.4"
+\end_layout
+
+\begin_layout Standard
+Export-Package: com.sample.myservice.api;version="1.0.0"
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.2pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Bundle-SymbolicName A name that identifies the bundle uniquely.
+\end_layout
+
+\begin_layout Description
+Bundle-Version This header describes the version of the bundle, and enables
+ multiple versions of a bundle to be active concurrently in the same framework
+ instance.
+\end_layout
+
+\begin_layout Description
+Bundle-Activator This header notifies the bundle of lifecycle changes.
+\end_layout
+
+\begin_layout Description
+Import-Package This header declares the external dependencies of the bundle
+ that the OSGi Framework uses to resolve the bundle.
+ Specific versions or version ranges for each package can be declared.
+ In this example manifest file, the org.apache.commons.logging package is required
+ at Version 1.0.4 or later.
+\end_layout
+
+\begin_layout Description
+Export-Package This header declares the packages that are visible outside
+ the bundle.
+ If a package is not declared in this header, it is visible only within
+ the bundle.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi Bundle Lifecycle
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Graphics
+	filename bundle-lc.PNG
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Bundles haben einen definierten Lebenszyklus
+\end_layout
+
+\begin_layout Itemize
+Zustandsänderungen können programmatisch oder durch einen Management Agent
+ getriggert werden
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi Service Abfragen über den BundleContext:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset listings
+lstparams "language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ServiceReference serviceReference = 
+\end_layout
+
+\begin_layout Plain Layout
+
+		ctx.getServiceReference(Logger.class.getName());
+\end_layout
+
+\begin_layout Plain Layout
+
+if(serviceReference != null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  Logger logger =
+\end_layout
+
+\begin_layout Plain Layout
+
+    (Logger) ctx.getService(serviceReference);
+\end_layout
+
+\begin_layout Plain Layout
+
+  if(Logger != null) { [...] }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi ServiceTracker
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ ServiceListener: Callbacks, wenn sich etwas ändert
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ ServiceTracker: Verfolgen von Service Listener Events
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset listings
+lstparams "language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class LoggerServiceTracker extends ServiceTracker {
+\end_layout
+
+\begin_layout Plain Layout
+
+  public LoggerServiceTracker(BundleContext context) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    super(context, Logger.class.getName(), null);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public Object addingService(ServiceReference reference) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    Logger logger =
+\end_layout
+
+\begin_layout Plain Layout
+
+      (Logger) super.addingService(reference);
+\end_layout
+
+\begin_layout Plain Layout
+
+    // do something here...
+\end_layout
+
+\begin_layout Plain Layout
+
+    return logEventStore;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void removedService(ServiceReference reference,
+\end_layout
+
+\begin_layout Plain Layout
+
+    Object service) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // do something here...
+\end_layout
+
+\begin_layout Plain Layout
+
+    super.removedService(reference, service);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Activator implements BundleActivator {
+\end_layout
+
+\begin_layout Plain Layout
+
+  private ServiceTracker _serviceTracker;
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void start(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+    _serviceTracker =
+\end_layout
+
+\begin_layout Plain Layout
+
+      new LoggerServiceTracker(ctx);
+\end_layout
+
+\begin_layout Plain Layout
+
+    _serviceTracker.open();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void stop(BundleContext ctx) throws Exception {
+\end_layout
+
+\begin_layout Plain Layout
+
+    _serviceTracker.close();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eqav{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+OSGi vs.
+ Java Module
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Das Java-Modulsystem stellt ein einfaches, allgemein einsetzbares Modulsystem
+ dar.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ einfachere Handhabung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Keine Versionierung auf Modul- und Paketebene möglich.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Import geschieht auf Modul- nicht auf Paketebene.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faTimesCircleO
+\end_layout
+
+\end_inset
+
+ Das Java-Modulsystem unterstützt keine dynamischen Module.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ OSGi definiert ein komplexes Modulsystem für spezielle Anwendungsszenarien.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCheckSquareO
+\end_layout
+
+\end_inset
+
+ In bestimmten Anwendungsszenarien (z.
+ B.
+ bei hochverfügbaren Systemen) ist auch in aktuellen Java-Versionen OSGi
+ erforderlich.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring Application Context
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Hauptaufgabe des Applikationskontexts:
+\end_layout
+
+\begin_layout Itemize
+Verwalten des Lebenszyklus der Spring-Beans
+\end_layout
+
+\begin_layout Itemize
+Aufbau des Bean-Grafen
+\end_layout
+
+\begin_layout Standard
+Weitere Aufgaben
+\end_layout
+
+\begin_layout Itemize
+Laden von Ressourcen (Filesystem, Klassenpfad etc.)
+\end_layout
+
+\begin_layout Itemize
+Internationalisierung
+\end_layout
+
+\begin_layout Itemize
+Feuern von Events
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Erzeugen und Schließen eines Applikationskontexts}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try (AbstractApplicationContext factory =
+\end_layout
+
+\begin_layout Plain Layout
+
+  new ClassPathXmlApplicationContext(
+\end_layout
+
+\begin_layout Plain Layout
+
+    "<path>/applicationContext.xml")) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      // work with beans
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Erzeugen des Context aus Java Config}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+AbstractApplicationContext ctx = 
+\end_layout
+
+\begin_layout Plain Layout
+
+  new AnnotationConfigApplicationContext(
+\end_layout
+
+\begin_layout Plain Layout
+
+    Application.class);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring Bean Configuration
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Bean in Java konfiguriert}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Configuration
+\end_layout
+
+\begin_layout Plain Layout
+
+public class AppConfig {
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Bean
+\end_layout
+
+\begin_layout Plain Layout
+
+  public EmployeeDao employeeDao() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return new EmployeeDaoImpl();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Bean(name="workLog")
+\end_layout
+
+\begin_layout Plain Layout
+
+  public WorkLogFacade getWorkLog() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return new WorklogImpl(employeeDao());
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@Configuration Definition einer Klasse, die als Bean-Factory fungiert.
+\end_layout
+
+\begin_layout Description
+@Bean Factory-Methode, die Bean-Instanz erzeugt.
+\end_layout
+
+\begin_layout Standard
+Standardmäßig legt der Methodenname den Namen des Beans fest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring DI XML
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,caption={Setter Injection}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<bean id="workLog" class="swt6.spring.WorkLogImpl">
+\end_layout
+
+\begin_layout Plain Layout
+
+  <property name="employeeDao" ref="employeeDao" />
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=XML,caption={CTOR Injection}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<bean id="workLog" class="swt6.spring.WorkLogImpl">
+\end_layout
+
+\begin_layout Plain Layout
+
+  <constructor-arg ref="employeeDao" />
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring DI @Autowired
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Mit @Autowired wird der annotierten Property ein Bean vom Typ der Property
+ zugewiesen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Mit Qualifizierern wird die Auswahl eingeschränkt.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Kein/mehrere passende(s) Beans 
+\emph on
+UnsatisfiedDependencyException
+\emph default
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Datenkomponenten und Setter-Methoden können annotiert werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Qualifier setzen}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<context:annotation-config />
+\end_layout
+
+\begin_layout Plain Layout
+
+<bean id="employeeDaoJdbc" class="swt6.spring.EmployeeDaoJdbcImpl">
+\end_layout
+
+\begin_layout Plain Layout
+
+  <qualifier type="DefaultDao" />
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Qualifier benutzen}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class WorkLogImpl implements WorkLogFacade {
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Autowired(required=true)
+\end_layout
+
+\begin_layout Plain Layout
+
+  @DefaultDao
+\end_layout
+
+\begin_layout Plain Layout
+
+  private EmployeeDao employeeDao;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring DI @Resource
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Resource ist Java EE-Annotation.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Beans werden über deren ID angesprochen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Wird bei @Resource kein Name angegeben, wird dafür der Name der annotierten
+ Property verwendet.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Ist die Suche per Namen erfolglos, wird per Typ gesucht.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Bean Config}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<context:annotation-config />
+\end_layout
+
+\begin_layout Plain Layout
+
+ <bean id="employeeDaoJdbc" class="swt6.spring.EmployeeDaoJdbcImpl">
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Resource Verwendung}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class WorkLogImpl implements WorkLogFacade {
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Resource(name="employeeDaoJdbc") // default for name is employeeDao
+\end_layout
+
+\begin_layout Plain Layout
+
+  private EmployeeDao employeeDao;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring DI @Inject
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Spring interpretiert Annotationen des JSR 330 (DI for Java).
+\end_layout
+
+\begin_layout Description
+@Inject: Einer Datenkomponente wird ein typkompatibles Objekt zugewiesen.
+\end_layout
+
+\begin_layout Description
+@Named: Komponente mit dem angegebenen Namen wird injiziert.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Standardname: Bezeichner der Datenkomponenten
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Bean Config}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<context:annotation-config />
+\end_layout
+
+\begin_layout Plain Layout
+
+  <bean id="employeeDao" class="swt6.spring.EmployeeDaoJdbc">
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Resource Verwendung}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class WorkLogImpl implements WorkLogFacade {
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Inject @Named("employeeDao")
+\end_layout
+
+\begin_layout Plain Layout
+
+  private EmployeeDao employeeDao;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring DI @Qualifier
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faCube
+\end_layout
+
+\end_inset
+
+ Definition eines Qualifizierers mit @Qualifier (JSR 330):
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Qualifizierers definieren}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Qualifier
+\end_layout
+
+\begin_layout Plain Layout
+
+@Target({ElementType.FIELD, ElementType.TYPE})
+\end_layout
+
+\begin_layout Plain Layout
+
+@Retention(RetentionPolicy.RUNTIME)
+\end_layout
+
+\begin_layout Plain Layout
+
+public @interface Dao {
+\end_layout
+
+\begin_layout Plain Layout
+
+  String technology() default "JPA"
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,caption={Bean Config für Qualifizierer}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<bean id="employeeDaoJdbc" class="swt6.spring.EmployeeDaoJdbcImpl">
+\end_layout
+
+\begin_layout Plain Layout
+
+  <qualifier type="Dao">
+\end_layout
+
+\begin_layout Plain Layout
+
+    <attribute key="technology" value="JDBC" />
+\end_layout
+
+\begin_layout Plain Layout
+
+  </qualifier>
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Verwendung des Qualifizierers}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Dao(technology="JDBC")
+\end_layout
+
+\begin_layout Plain Layout
+
+public class EmployeeDaoJdbc implements EmployeeDao { ...
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Injizieren anhand des  Qualifizierers}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class WorkLogImpl implements WorkLogFacade {
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Inject @Dao(technology="JDBC")
+\end_layout
+
+\begin_layout Plain Layout
+
+  private EmployeeDao employeeDao;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring @Configuration
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+@Configuration gibt an das diese Klasse verwendet wird um Spring zu konfiguriere
+n (anstatt XML).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring @ComponentScan & @Component
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+@ComponentScan muss in Kombination mit @Configuration angegeben werden und
+ ist gleichwertig mit der XML Notation <context:component-scan>.
+ @ComponentScan bewirkt das Spring nach 
+\emph on
+@Component
+\emph default
+ annotierten Klassen sucht (auch nach Derivaten von @Component wie etwa
+ @
+\emph on
+Repository
+\emph default
+, @
+\emph on
+Controller @Service
+\emph default
+ oder auch @
+\emph on
+Configuration
+\emph default
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Dies geschieht in dem Package (unter allen Unterpackages von diesem) in
+ dem @ComponentScan annotiert ist, sollte das Package in dem gesucht wird
+ abweichen so kann man dies @ComponentScan mitgeben @ComponentScan(basePackages
+ = { "com.sample.zeuch" }).
+ 
+\end_layout
+
+\begin_layout Standard
+Es gibt weitere Filtermöglichkeiten wie etwa Regex um Compenents explizit
+ auszunehmen oder implizit miteinzubeziehen.
+ Alles was von @ComponentScan gefunden wurde wird automatisch in den Application
+Context aufgenommen.
+\end_layout
+
+\begin_layout Standard
+Die verschiedenen Arten von @Component beziehen sich auf die jeweilige Schicht
+ in 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Component ist eine generische Komponente ohne besondere Zuordnung
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Service markiert eine Komponente für den 
+\begin_inset Quotes gld
+\end_inset
+
+Service Layer
+\begin_inset Quotes grd
+\end_inset
+
+ - die Geschäftsschicht
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Repository markiert eine Komponente für den 
+\begin_inset Quotes gld
+\end_inset
+
+Persistence Layer
+\begin_inset Quotes grd
+\end_inset
+
+ - Die Datenschicht
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Controller markiert einen Spring MVC Contoller - Er gehört zur Präsentationsch
+icht
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Configuration markiert das die Komponente eine Konfiguration ist
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Aspect markiert eine Komponente als Aspect für AOP
+\end_layout
+
+\begin_layout Standard
+Spring scannt den ClassPath nach diesen Annotation und nimmt sie automatisch
+ durch @ComponentScan in den ApplicationContext auf.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring Transaktionen mit @Transactional
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Deklarative Transaktionen über AOP, sprich Sie sind als Cross-Cutting-Concern
+ von der Geschäftslogik getrennt.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Default Wert für readonly ist false
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faLightbulbO
+\end_layout
+
+\end_inset
+
+ @Transactional wird über AOP abgehandelt, das heißt @Transactional funktioniert
+ nur bei Zugriff über den von Spring generierten Proxy.
+ Eine selbst intazierte Version hat keine Transaktionsfunktionalität.
+ Da die Annotation auch auf Methoden gemacht werden kann, ist darauf zu
+ achten das klasseninterne Aufrufe auch 
+\series bold
+nicht
+\series default
+ vom Proxy erfasst werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,caption={Aktivieren von @Transactional über XML}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<tx:annotation-driven transaction-manager="txManager"/>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,caption={Konfiguration des Transaction Manager (DataSource)}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<bean id="txManager" 
+\end_layout
+
+\begin_layout Plain Layout
+
+  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+\end_layout
+
+\begin_layout Plain Layout
+
+  <property name="dataSource" ref= "datasource" />
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,caption={Konfiguration des Transaction Manager (JPA)}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<bean id="txManager" 
+\end_layout
+
+\begin_layout Plain Layout
+
+  class="org.springframework.orm.jpa.JpaTransactionManager">
+\end_layout
+
+\begin_layout Plain Layout
+
+  <property name="entityManagerFactory" ref="entityManagerFactory" />
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Beispiel DAO mit @Transactional (Methodenebene)}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Repository
+\end_layout
+
+\begin_layout Plain Layout
+
+public class TestDao {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JdbcTemplate jdbcTemplate;
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Autowired
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void setDataSource(DataSource dataSource) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Transactional
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void insertData(String arg) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        this.jdbcTemplate.update("...", arg);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring + JPA @PersistenceContext
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes gld
+\end_inset
+
+
+\emph on
+Expresses a dependency on a container-managed EntityManager and its associated
+ persistence context.
+\emph default
+
+\begin_inset Quotes grd
+\end_inset
+
+ - ofizelle JPA Doku.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Spring interpretiert die @
+\emph on
+PersistenceContext
+\emph default
+ Annotation und injiziert automatisch einen EntityManager.
+ Unter der Haube generiert der 
+\emph on
+PersistenceAnnotationBeanPostProcessor
+\emph default
+ automatisch einen JPA Entity Manager und injiziert diesen.
+ 
+\end_layout
+
+\begin_layout Standard
+Über @
+\emph on
+PersistenceContext
+\emph default
+(unitName=
+\begin_inset Quotes grd
+\end_inset
+
+name
+\begin_inset Quotes grd
+\end_inset
+
+) lässt sich ein bestimmter Persistence Context aus der Config laden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Beispiel generisches DAO mit @PersistenceContext}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public abstract class AbstractJpaDAO< T extends Serializable > {
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  @PersistenceContext
+\end_layout
+
+\begin_layout Plain Layout
+
+  EntityManager entityManager;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  private Class<T> clazz;
+\end_layout
+
+\begin_layout Plain Layout
+
+  public final void setClazz(Class<T> clazzToSet) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    this.clazz = clazzToSet;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public List<T> findAll(){
+\end_layout
+
+\begin_layout Plain Layout
+
+    return entityManager
+\end_layout
+
+\begin_layout Plain Layout
+
+      .createQuery( "from " + clazz.getName() )
+\end_layout
+
+\begin_layout Plain Layout
+
+      .getResultList();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void create(T entity){ entityManager.persist( entity ); }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public T update(T entity){ return entityManager.merge( entity ); }
+\end_layout
+
+\begin_layout Plain Layout
+
+  public void delete(T entity){ entityManager.remove(entity); }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring MVC
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Spring MVC wird aktiviert in dem bei @Configuration zusätzlich die Annotation
+ @EnableWebMvc angibt.
+ 
+\end_layout
+
+\begin_layout Standard
+Spring MVC handelt alles Requests über einen globalen Dispatcher, dieser
+ sucht in dem HandlerMapping (Route Table / Routing Table für nicht Spring
+ Leute ...) nach einer definierten Route und delegiert dies dann an den passenden
+ Controller weiter, dieser verarbeitet den Request und gibt ein View Objekt
+ retour welches anschließend durch die vom ViewResolver definierte ViewEngine
+ gerendert und zurückgegeben wird.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename spring-mvc.PNG
+	lyxscale 10
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Beispiel MVC Controller aus Folien}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Controller
+\end_layout
+
+\begin_layout Plain Layout
+
+public class ViewLogbookEntriesController {
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Autowired
+\end_layout
+
+\begin_layout Plain Layout
+
+  private WorkLogFacade workLog;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  @RequestMapping("/employees/{employeeId}/entries")
+\end_layout
+
+\begin_layout Plain Layout
+
+  public String listLogbookEntries (
+\end_layout
+
+\begin_layout Plain Layout
+
+    @PathVariable("employeeId") long employeeId, Model model) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    Employee empl = this.workLog.findEmployeeById(employeeId);
+\end_layout
+
+\begin_layout Plain Layout
+
+    model.addAttribute("employee", empl);
+\end_layout
+
+\begin_layout Plain Layout
+
+    model.addAttribute("logbookEntries", empl.getLogbookEntries());
+\end_layout
+
+\begin_layout Plain Layout
+
+    return "logbookEntriesOfEmployee";
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Beispiel REST Controller}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@RestController
+\end_layout
+
+\begin_layout Plain Layout
+
+public class QuoteController {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private QuoteRepository repository;
+\end_layout
+
+\begin_layout Plain Layout
+
+    public QuoteController(@Autowired QuoteRepository repository){
+\end_layout
+
+\begin_layout Plain Layout
+
+        this.repository = repository;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    @RequestMapping(value="/")
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Iterable<Quote> index(Model m){
+\end_layout
+
+\begin_layout Plain Layout
+
+        return repository.findAll();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    @RequestMapping(value="/quote/{id}")
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Optional<Quote> getQuoteById(@PathVariable("id") long id){
+\end_layout
+
+\begin_layout Plain Layout
+
+        return repository.findById(id);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    @PostMapping(value = "/quote/add
+\begin_inset Quotes grd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Quote addQuote(@RequestBody Quote q){
+\end_layout
+
+\begin_layout Plain Layout
+
+        return repository.save(q);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Spring Advices
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ein Advice ist eine Aktion auf einen Aspekte an einem JoinPoint ausgeführt
+ wird.
+ Dies kann vor dem Aufruf (before), nach dem Aufruf (after) oder bei beiden
+ (arround) passieren.
+ Das Hauptaufgabengebiet von Aspekten sind Cross Cutting Concerns wie logging,
+ profiling, caching und transaction management.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Beispiel Aspect der vor jedem Methodenaufruf in @Repository loggt}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Component
+\end_layout
+
+\begin_layout Plain Layout
+
+@Aspect
+\end_layout
+
+\begin_layout Plain Layout
+
+public class LoggingAspect {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Pointcut("@target(org.springframework.stereotype.Repository)")
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void repositoryMethods() {};
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Before("repositoryMethods()")
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void logMethodCall(JoinPoint jp) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        String methodName = jp.getSignature().getName();
+\end_layout
+
+\begin_layout Plain Layout
+
+        logger.info("Before " + methodName);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Beispiel Aspect der die Ausführngszeit jeder @Repository Methode misst}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Aspect
+\end_layout
+
+\begin_layout Plain Layout
+
+@Component
+\end_layout
+
+\begin_layout Plain Layout
+
+public class PerformanceAspect {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Pointcut("within(@org.springframework.stereotype.Repository *)")
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void repositoryClassMethods() {};
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Around("repositoryClassMethods()")
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Object measureMethodExecutionTime(ProceedingJoinPoint joinPoint)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+      throws Throwable {
+\end_layout
+
+\begin_layout Plain Layout
+
+        long start = System.nanoTime();
+\end_layout
+
+\begin_layout Plain Layout
+
+        Object returnValue = joinPoint.proceed();
+\end_layout
+
+\begin_layout Plain Layout
+
+        long end = System.nanoTime();
+\end_layout
+
+\begin_layout Plain Layout
+
+        String methodName = joinPoint.getSignature().getName();
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println(
+\end_layout
+
+\begin_layout Plain Layout
+
+          "Execution of " + methodName + " took " + 
+\end_layout
+
+\begin_layout Plain Layout
+
+          TimeUnit.NANOSECONDS.toMillis(end - start) + " ms");
+\end_layout
+
+\begin_layout Plain Layout
+
+        return returnValue;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pointscuts können auch über XML definiert werden
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,caption={Aktivieren von @Transactional über XML}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<aop:config>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <aop:pointcut id="anyDaoMethod"
+\end_layout
+
+\begin_layout Plain Layout
+
+      expression="@target(org.springframework.stereotype.Repository)"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+</aop:config>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es gibt folgenden Möglichkeiten in PointCuts einzugreifen
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Before("pointCutName()") resultiert in einer Methode mit 
+\emph on
+(JoinPoint jp)
+\emph default
+ Argument
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @After("pointCutName()") resultiert in einer Methode mit 
+\emph on
+(JoinPoint jp)
+\emph default
+ Argument, egal ob eine Exception gefolgen ist oder nicht
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @AfterReturning("pointCutName()") resultiert in einer Methode mit 
+\emph on
+(JoinPoint jp, Object entity)
+\emph default
+ Argument, wobei Entity das von der Methode zurückgegeben Objekt ist.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @AfterThrowing ("pointCutName()", throwing = e) resultiert in einer Methode
+ mit 
+\emph on
+(JoinPoint jp, Exception e)
+\emph default
+ Argument, wird aufgeführt wenn eine Exception geflogen ist
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ @Around("pointCutName()") resultiert in einer Methode mit 
+\emph on
+(ProceedingJoinPoint pjp)
+\emph default
+ Argument
+\end_layout
+
+\begin_layout Subsubsection
+JoinPoint
+\end_layout
+
+\begin_layout Standard
+Der JoinPoint verfügt über folgende Methoden
+\end_layout
+
+\begin_layout Description
+getArgs() gibt die Argumente die übegeben wurden retour
+\end_layout
+
+\begin_layout Description
+getThis() gibt das Proxy Objekt retour
+\end_layout
+
+\begin_layout Description
+getTarget() gibt das eigentlich Objekte hinter dem Proxy retour
+\end_layout
+
+\begin_layout Description
+getSignature() gibt die Methodensignatur retour
+\end_layout
+
+\begin_layout Standard
+Der 
+\series bold
+ProceedingJoinPoint
+\series default
+ verfügt über eine Methode 
+\emph on
+.proceed() 
+\emph default
+welche ihn anweist, dass der Before Teil abgeschlossen ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+JPA - Entity Manager
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entitäten haben verschiedene Zustände, dieser kann Transient (New), Persistent
+ (Managed) oder Detached sein.
+ Dieser kann sich durch Interaktion mit dem Entity Manager ändern.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jpa-states.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aufgaben des Persistenz-Managers
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Speichern, Laden und Aktualisieren von Objekten.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Durchführung von Abfragen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Überwachung und Durchführung von Transaktionen.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Verwaltung der gepufferten Objekte (Cache).
+\end_layout
+
+\begin_layout Subsubsection
+Funktionen des Entity Managers
+\end_layout
+
+\begin_layout Description
+persist(entity) Speichern einer Entität in DB.
+ transient 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ persistent
+\end_layout
+
+\begin_layout Description
+merge(entity) transient, detached, persistent 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ persistent
+\end_layout
+
+\begin_layout Description
+remove(entity) Löschen aus der DB, persistent 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ transient
+\end_layout
+
+\begin_layout Description
+find(entityClass,id) Laden einer Entität mit ID.
+\end_layout
+
+\begin_layout Description
+getReference(entityClass,id) Laden einer Entität mit ID.
+ Referenz kann ein Proxy-Objekt sein.
+\end_layout
+
+\begin_layout Description
+createQuery(jql) Abfrage in JPA-QL
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={JPA: Speichern von Entity}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+EntityManager em = emFactory.createEntityManager();
+\end_layout
+
+\begin_layout Plain Layout
+
+EntityTransaction tx = em.getTransaction();
+\end_layout
+
+\begin_layout Plain Layout
+
+tx.begin();
+\end_layout
+
+\begin_layout Plain Layout
+
+em.persist(employee);
+\end_layout
+
+\begin_layout Plain Layout
+
+tx.commit();
+\end_layout
+
+\begin_layout Plain Layout
+
+em.close();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={JPA: Laden von Entities}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+EntityManager em = emFactory.createEntityManager();
+\end_layout
+
+\begin_layout Plain Layout
+
+EntityTransaction tx = em.getTransaction();
+\end_layout
+
+\begin_layout Plain Layout
+
+tx.begin();
+\end_layout
+
+\begin_layout Plain Layout
+
+List<Employee> emplList =
+\end_layout
+
+\begin_layout Plain Layout
+
+  em.createQuery("select e from Employee e").getResultList();
+\end_layout
+
+\begin_layout Plain Layout
+
+for (Employee e : emplList) System.out.println(e);
+\end_layout
+
+\begin_layout Plain Layout
+
+tx.commit();
+\end_layout
+
+\begin_layout Plain Layout
+
+em.close();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={JPA: Aktualisieren von Entities}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+EntityManager em = emFactory.createEntityManager();
+\end_layout
+
+\begin_layout Plain Layout
+
+EntityTransaction tx = em.getTransaction();
+\end_layout
+
+\begin_layout Plain Layout
+
+tx.begin();
+\end_layout
+
+\begin_layout Plain Layout
+
+Employee empl = em.find(Employee.class, emplId);
+\end_layout
+
+\begin_layout Plain Layout
+
+empl.setFirstName("Hugo");
+\end_layout
+
+\begin_layout Plain Layout
+
+tx.commit();
+\end_layout
+
+\begin_layout Plain Layout
+
+em.close();
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+JPA Annotationen auf Klassen
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@Entity muss jede Entität haben
+\end_layout
+
+\begin_layout Description
+@Embeddable Annotiert das diese Klassen in einer Entität eingebettet werden
+ kann
+\end_layout
+
+\begin_layout Description
+@Table definiert den Table Namen in der Datenbank (Standard = Entitätenname)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+JPA Annotationen auf Properties
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@Id annotiert den Primärschlüssel, ist für jede Entität erforderlich
+\end_layout
+
+\begin_layout Description
+@GeneratedValue(strategy=) Schlüsselgenerierungsverfahren (Standard = Auto),
+ Möglichkeiten: SEQUENCE, IDENTITY, TABLE (HI LO Alg.)
+\end_layout
+
+\begin_layout Description
+@SequenceGenerator Mit @SequenceGenerator bzw @
+\series bold
+TableGenerator
+\series default
+ kann die DB-Sequenz bzw.
+ -Tabelle näher spezifiziert werden.
+\end_layout
+
+\begin_layout Description
+@EmbeddedId wird für zusammengesetzt Schlüssel benötigt - dieser wird als
+ @Embeddable annotierte Klasse implementiert
+\end_layout
+
+\begin_layout Description
+@JoinColumn(name="fkId") verhindert das Fremdschlüssel in eigener Tabelle
+ generiert werden
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+JPA Vererbungsstrategien
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vererbung kann auf drei Arten realisiert werden
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Tabelle pro konkreter Klasse 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Tabelle für gesamte Klassenhierarchie (TPH)
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faHandORight
+\end_layout
+
+\end_inset
+
+ Tabelle pro Klasse (TPC)
+\end_layout
+
+\begin_layout Subsubsection
+Tabelle pro konkreter Klasse 
+\end_layout
+
+\begin_layout Standard
+Die abstrake Klasse wird nicht @Entity annotiert sondern @MappedSuperClass
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Tabelle pro konkreter Klasse}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@MappedSuperClass
+\end_layout
+
+\begin_layout Plain Layout
+
+public abstract class Employee { ...
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+@Entity
+\end_layout
+
+\begin_layout Plain Layout
+
+public class PermanentEmployee extends Employee { ...
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tabelle für gesamte Klassenhierarchie
+\end_layout
+
+\begin_layout Standard
+Es wird in der Tabelle ein Discrimantor festgelegt welcher es ermöglicht
+ zu erkennen um welches Objekt es sich handelt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={In der Tabelle steht für Permanent P und Temporary T in der Spalte emType}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+\end_layout
+
+\begin_layout Plain Layout
+
+@DiscriminatorColumn(name="emType",
+\end_layout
+
+\begin_layout Plain Layout
+
+  discriminatorType=DiscriminatorType.STRING)
+\end_layout
+
+\begin_layout Plain Layout
+
+public abstract class Employee { ...
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@DiscriminatorValue("P") 
+\end_layout
+
+\begin_layout Plain Layout
+
+class PermanentEmployee { ...
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+@DiscriminatorValue("T") 
+\end_layout
+
+\begin_layout Plain Layout
+
+class TemporaryEmployee { ...
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tabelle pro Klasse 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jpa-tbc.PNG
+	lyxscale 20
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={Eine Tabelle pro Klasse}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Entity
+\end_layout
+
+\begin_layout Plain Layout
+
+@Inheritance(strategy=
+\end_layout
+
+\begin_layout Plain Layout
+
+  InheritanceType.JOINED)
+\end_layout
+
+\begin_layout Plain Layout
+
+public abstract class Employee { ...
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Entity 
+\end_layout
+
+\begin_layout Plain Layout
+
+public class PermanentEmployee 
+\end_layout
+
+\begin_layout Plain Layout
+
+  extends Employee { ...
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ffa}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+faBookmarkO
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+JPA Assozitationen
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+FetchTypes
+\end_layout
+
+\begin_layout Description
+Eager lädt alles sofort mit
+\end_layout
+
+\begin_layout Description
+Lazy lädt bei ersten Zugriff Daten aus DB nach
+\end_layout
+
+\begin_layout Subsubsection
+Cascade
+\end_layout
+
+\begin_layout Description
+CascadeType.PERSIST: cascades the persist (create) operation to associated
+ entities persist() is called or if the entity is managed
+\end_layout
+
+\begin_layout Description
+CascadeType.MERGE: cascades the merge operation to associated entities if
+ merge() is called or if the entity is managed
+\end_layout
+
+\begin_layout Description
+CascadeType.REMOVE: cascades the remove operation to associated entities
+ if delete() is called
+\end_layout
+
+\begin_layout Description
+CascadeType.REFRESH: cascades the refresh operation to associated entities
+ if refresh() is called
+\end_layout
+
+\begin_layout Description
+CascadeType.DETACH: cascades the detach operation to associated entities
+ if detach() is called
+\end_layout
+
+\begin_layout Description
+CascadeType.ALL: all of the above
+\end_layout
+
+\begin_layout Description
+orphanRemoval=true entfernt automatisch verwaist Einträge
+\end_layout
+
+\begin_layout Subsubsection
+Mapping
+\end_layout
+
+\begin_layout Description
+@OneToOne 1 : 1 Beziehung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={OneToOne mit Foreign Key}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Entity
+\end_layout
+
+\begin_layout Plain Layout
+
+public class User {
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Id
+\end_layout
+
+\begin_layout Plain Layout
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Column(name = "id")
+\end_layout
+
+\begin_layout Plain Layout
+
+    private Long id;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    @OneToOne(cascade = CascadeType.ALL)
+\end_layout
+
+\begin_layout Plain Layout
+
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+\end_layout
+
+\begin_layout Plain Layout
+
+    private Address address;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Entity
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Address {
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Id
+\end_layout
+
+\begin_layout Plain Layout
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Column(name = "id")
+\end_layout
+
+\begin_layout Plain Layout
+
+    private Long id;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+    @OneToOne(mappedBy = "address")
+\end_layout
+
+\begin_layout Plain Layout
+
+    private User user;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@OneToMany 1 : N Beziehung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={OneToMany auf objName Feld}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@OneToMany(mappedBy = "objName", 
+\end_layout
+
+\begin_layout Plain Layout
+
+  fetch = FetchType.Lazy, 
+\end_layout
+
+\begin_layout Plain Layout
+
+  cascade = CascadeType.ALL)
+\end_layout
+
+\begin_layout Plain Layout
+
+private Set<Obj> objs = new HashSet<>();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@ManyToMany N : M Beziehung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={ManyToMany mit Join Table}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@ManyToMany(cascade = CascadeType.ALL, 
+\end_layout
+
+\begin_layout Plain Layout
+
+  fetch = FetchType.LAZY)
+\end_layout
+
+\begin_layout Plain Layout
+
+@JoinTable(name ="OBJ1_OBJ2", 
+\end_layout
+
+\begin_layout Plain Layout
+
+  joinColumns = 
+\end_layout
+
+\begin_layout Plain Layout
+
+    @JoinColumn(name ="OBJ1_ID"), 
+\end_layout
+
+\begin_layout Plain Layout
+
+  inverseJoinColumns = 
+\end_layout
+
+\begin_layout Plain Layout
+
+    @JoinColumn(name = "OBJ2_ID"))
+\end_layout
+
+\begin_layout Plain Layout
+
+  private Set<Obj2> obj2s = new HashSet<>();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@ManyToOne N : 1 Beziehung
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,caption={ManyToOne}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@ManyToOne(fetch = FetchType.LAZY, 
+\end_layout
+
+\begin_layout Plain Layout
+
+  cascade = CascadeType.ALL)
+\end_layout
+
+\begin_layout Plain Layout
+
+    private Obj obj;
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ffa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
