@@ -1,0 +1,219 @@
+\usepackage[utf8]{inputenc}  
+\usepackage[ngerman]{babel} 
+\usepackage{eulerpx}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage[babelshorthands=true]{german}
+\usepackage[dvipsnames,table]{xcolor}
+
+
+\usepackage[parfill]{parskip}
+
+
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage[framemethod=tikz]{mdframed}
+
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{array}
+
+
+\geometry{
+	paper=a4paper, % Paper size, change to letterpaper for US letter size
+	top=2.5cm, % Top margin
+	bottom=3cm, % Bottom margin
+	left=2.5cm, % Left margin
+	right=2.5cm, % Right margin
+	headheight=14pt, % Header height
+	footskip=1.5cm, % Space from the bottom margin to the baseline of the footer
+	headsep=1.2cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+\mdfdefinestyle{question}{
+	innertopmargin=1.2\baselineskip,
+	innerbottommargin=0.8\baselineskip,
+	roundcorner=0pt,
+	nobreak,
+	singleextra={%
+		\draw(P-|O)node[xshift=1em,anchor=west,fill=white,draw,rounded corners=0pt]{%
+		Beispiel \theQuestion\questionTitle};
+	},
+}
+
+\newcounter{Question} % Stores the current question number that gets iterated with each new question
+
+% Define a custom environment for numbered questions
+\newenvironment{question}[1][\unskip]{
+	\bigskip
+	\stepcounter{Question}
+	\newcommand{\questionTitle}{~#1}
+	\begin{mdframed}[style=question]
+}{
+	\end{mdframed}
+	\medskip
+}
+
+
+\mdfdefinestyle{answertyle}{%
+linecolor=gray!50,linewidth=2pt,%
+backgroundcolor=gray!10,
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,
+topline=false,bottomline=false,
+innertopmargin=\topskip,
+innerbottommargin=\topskip
+}
+
+
+\newenvironment{answer}[1][\unskip]{
+	\bigskip
+	\begin{mdframed}[style=answertyle]
+		}{
+			\end{mdframed}
+			\medskip
+}
+
+
+\mdfdefinestyle{warning}{
+	topline=false, bottomline=false,
+	leftline=false, rightline=false,
+	nobreak,
+	singleextra={%
+		\draw(P-|O)++(-0.5em,0)node(tmp1){};
+		\draw(P-|O)++(0.5em,0)node(tmp2){};
+		\fill[black,rotate around={45:(P-|O)}](tmp1)rectangle(tmp2);
+		\node at(P-|O){\color{white}\scriptsize\bf !};
+		\draw[very thick](P-|O)++(0,-1em)--(O);%--(O-|P);
+	}
+}
+
+% Define a custom environment for warning text
+\newenvironment{warn}[1][Warning:]{ % Set the default warning to "Warning:"
+	\medskip
+	\begin{mdframed}[style=warning]
+		\noindent{\textbf{#1}}
+}{
+	\end{mdframed}
+}
+
+\mdfdefinestyle{info}{%
+	topline=false, bottomline=false,
+	leftline=false, rightline=false,
+	nobreak,
+	singleextra={%
+		\fill[black](P-|O)circle[radius=0.4em];
+		\node at(P-|O){\color{white}\scriptsize\bf i};
+		\draw[very thick](P-|O)++(0,-0.8em)--(O);%--(O-|P);
+	}
+}
+
+% Define a custom environment for information
+\newenvironment{info}[1][Info:]{ % Set the default title to "Info:"
+	\medskip
+	\begin{mdframed}[style=info]
+		\noindent{\textbf{#1}}
+}{
+	\end{mdframed}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{shadows,decorations.pathreplacing,angles,quotes,decorations,decorations.markings,decorations.text,calc,positioning,shapes,arrows,patterns}
+\usepackage{tikzsymbols}
+\usepackage{booktabs}
+
+\pgfkeys{/pgf/decoration/.cd,
+      distance/.initial=10pt
+}  
+
+\pgfdeclaredecoration{add dim}{final}{
+\state{final}{% 
+\pgfmathsetmacro{\dist}{5pt*\pgfkeysvalueof{/pgf/decoration/distance}/abs(\pgfkeysvalueof{/pgf/decoration/distance})} 
+          %\pgfpathmoveto{\pgfpoint{0pt}{0pt}}             
+          %\pgfpathlineto{\pgfpoint{0pt}{2*\dist}}   
+          %\pgfpathmoveto{\pgfpoint{\pgfdecoratedpathlength}{0pt}} 
+          %\pgfpathlineto{\pgfpoint{(\pgfdecoratedpathlength}{2*\dist}}
+          %\pgfusepath{stroke} 
+          \pgfsetdash{{0.1cm}{0.1cm}{0.1cm}{0.1cm}}{0cm}     
+          \pgfsetarrowsstart{|}
+          \pgfsetarrowsend{|}  
+          \pgfpathmoveto{\pgfpoint{0pt}{\dist}}
+          \pgfpathlineto{\pgfpoint{\pgfdecoratedpathlength}{\dist}} 
+          \pgfusepath{stroke} 
+          \pgfsetdash{}{0pt}
+          \pgfpathmoveto{\pgfpoint{0pt}{0pt}}
+          \pgfpathlineto{\pgfpoint{\pgfdecoratedpathlength}{0pt}}
+}}
+
+\tikzset{dim/.style args={#1,#2}{decoration={add dim,distance=#2},
+                decorate,
+                postaction={decorate,decoration={text along path,
+                                                 raise=#2,
+                                                 text align={align=center},
+                                                 text={#1}}}}}
+
+\def\spvec#1{\left(\vcenter{\halign{\hfil$##$\hfil\cr \spvecA#1;;}}\right)}
+\def\spvecA#1;{\if;#1;\else #1\cr \expandafter \spvecA \fi}
+
+\tikzset{
+  grid/.style={step=1cm,gray!30,very thin},
+  axis/.style={thick,<->},
+  vect/.style={-stealth,line width=2pt},
+  vnode/.style={midway,font=\scriptsize},
+  proj/.style={dashed,color=gray!50,->},
+  poly/.style={fill=blue!30,opacity=0.3}
+}
+
+
+% carry macro
+\usepackage{mathtools}
+\newcommand*{\carry}[1][1]{\overset{\textcolor{Gray}{#1}}}
+\newcolumntype{B}[1]{r*{#1}{@{\,}r}}
+
+% ieee drawing fun
+\usepackage{bytefield}
+
+% circuits
+\usepackage{circuitikz}
+
+% columns for circuits
+\usepackage{multicol}
+
+
+% circuit boxes
+
+\mdfdefinestyle{cbox}{%
+	topline=false, bottomline=false,
+	leftline=false, rightline=false,
+	nobreak,
+	backgroundcolor= gray!5,
+	singleextra={%
+		\draw[thick](P-|O)++(0,0)--(O);%--(O-|P);
+	}
+}
+
+
+\newenvironment{cbox}[1][\unskip]{ 
+	\begin{mdframed}[style=cbox]
+		\begin{center}
+		\noindent{\small\textbf{#1}}
+		
+}{
+	\end{center}
+	\end{mdframed}
+}
+
+
+% kv diagramme 
+\usepackage{kvmap}
+
+% automaten
+
+\usetikzlibrary{arrows,automata}
